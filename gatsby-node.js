@@ -3,42 +3,45 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const result = await graphql(`
+  const fiches = await graphql(`
     {
       allFile(
         filter: {
           extension: { eq: "md" }
-          sourceInstanceName: { eq: "personnas" }
+          sourceInstanceName: { eq: "fiches" }
         }
       ) {
         nodes {
-          relativePath
+          id
           childMarkdownRemark {
+            id
             frontmatter {
               title
             }
-            excerpt
           }
         }
       }
     }
   `)
 
-  if (result.errors) {
+  if (fiches.errors) {
     reporter.panicOnBuild(
       `GraphQL could not query pages. Create pages aborted.`
     )
     return
   }
-  const templatePath = path.resolve(`./src/templates/fiches-display.js`)
-
-  console.log(result.data.allFile)
-  result.data.allFile.forEach(node => {
+  // console.log('coucou')
+  // console.log(fiches.data.allFile.nodes)
+  fiches.data.allFile.nodes.forEach(node => {
+    const templatePath = path.resolve(`./src/templates/fiches-display.js`)
+    const _path = encodeURI(node.childMarkdownRemark.frontmatter.title)
     createPage({
-      path: `${node.relativePath}`,
+      path: `fiches/${node.id}`,
       component: templatePath,
       context: {
-        slug: `${node.relativePath}`,
+        id: node.id,
+        remarkID: node.childMarkdownRemark.id,
+        type: 'fiches',
       },
     })
   })
