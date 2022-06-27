@@ -1,13 +1,37 @@
+import { Link, graphql } from 'gatsby'
+
 import { Layout } from '../components'
 import React from 'react'
-import { graphql } from 'gatsby'
 
 export default function Home({ data }) {
   return (
     <Layout>
       <div>Hello world!</div>
       <main>
-        <pre>{JSON.stringify(data, null, 4)}</pre>
+        <h2>Fiches</h2>
+        <ul>
+          {data.fichesWP.nodes.map((fiche, index) => {
+            return (
+              <li key={index}>
+                <Link to={`fiches/${fiche.id}`}>
+                  {fiche.childMarkdownRemark.frontmatter.title}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+        <h2>Personnas</h2>
+        <ul>
+          {data.personnas.nodes.map((personnas, index) => {
+            return (
+              <li key={index}>
+                <Link to={`personnas/${personnas.id}`}>
+                  {personnas.childMarkdownRemark.frontmatter.title}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
       </main>
     </Layout>
   )
@@ -19,6 +43,7 @@ export const query = graphql`
       filter: { extension: { eq: "md" }, sourceInstanceName: { eq: "fiches" } }
     ) {
       nodes {
+        id
         relativePath
         childMarkdownRemark {
           frontmatter {
@@ -34,6 +59,7 @@ export const query = graphql`
       }
     ) {
       nodes {
+        id
         relativePath
         childMarkdownRemark {
           frontmatter {

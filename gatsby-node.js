@@ -3,6 +3,7 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  // Fiches WP
   const fiches = await graphql(`
     {
       allFile(
@@ -30,11 +31,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     )
     return
   }
-  // console.log('coucou')
-  // console.log(fiches.data.allFile.nodes)
   fiches.data.allFile.nodes.forEach(node => {
     const templatePath = path.resolve(`./src/templates/fiches-display.js`)
-    const _path = encodeURI(node.childMarkdownRemark.frontmatter.title)
     createPage({
       path: `fiches/${node.id}`,
       component: templatePath,
@@ -42,6 +40,47 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         id: node.id,
         remarkID: node.childMarkdownRemark.id,
         type: 'fiches',
+      },
+    })
+  })
+
+  // Presonnas
+  const personnas = await graphql(`
+    {
+      allFile(
+        filter: {
+          extension: { eq: "md" }
+          sourceInstanceName: { eq: "personnas" }
+        }
+      ) {
+        nodes {
+          id
+          childMarkdownRemark {
+            id
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (personnas.errors) {
+    reporter.panicOnBuild(
+      `GraphQL could not query pages. Create pages aborted.`
+    )
+    return
+  }
+  personnas.data.allFile.nodes.forEach(node => {
+    const templatePath = path.resolve(`./src/templates/personnas-display.js`)
+    createPage({
+      path: `personnas/${node.id}`,
+      component: templatePath,
+      context: {
+        id: node.id,
+        remarkID: node.childMarkdownRemark.id,
+        type: 'personnas',
       },
     })
   })
