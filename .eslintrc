@@ -1,0 +1,6 @@
+{
+  "globals": {
+    "tw": true
+  },
+  "extends": "react-app"
+}

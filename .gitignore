@@ -1,1 +1,6 @@
 slite-organization-backup-2022-05-31.zip
+
+# Gatsby
+.cache
+node_modules
+public
