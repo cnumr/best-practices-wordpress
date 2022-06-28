@@ -11,7 +11,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b site-static"
+    "deploy": "gatsby build && gh-pages -d public -b site-static-deployed"
   },
   "dependencies": {
     "classnames": "^2.3.1",
