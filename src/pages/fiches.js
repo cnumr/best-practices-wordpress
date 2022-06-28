@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import React from 'react'
 
 export default function Home({ data }) {
+  console.log('tableOfContents', data)
   return (
     <Layout>
       <main>
@@ -12,7 +13,11 @@ export default function Home({ data }) {
           {data.fichesWP.nodes.map((fiche, index) => {
             if (fiche.childMarkdownRemark?.fields.slug)
               return (
-                <Card key={index} markdownRemark={fiche.childMarkdownRemark} />
+                <Card
+                  key={index}
+                  markdownRemark={fiche.childMarkdownRemark}
+                  type="fiches"
+                />
               )
           })}
         </ul>

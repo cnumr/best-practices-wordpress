@@ -1,9 +1,7 @@
-import { InternalNav, Layout, Seo } from '../components'
-import { Link, graphql } from 'gatsby'
+import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
 
-import Markdown from 'react-markdown'
 import React from 'react'
-import remarkGfm from 'remark-gfm'
+import { graphql } from 'gatsby'
 
 export default function PersonnasDisplay({
   data, // this prop will be injected by the GraphQL query below.
@@ -13,19 +11,16 @@ export default function PersonnasDisplay({
   // console.log('pageContext', pageContext)
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { previous, next } = data
-  const { frontmatter, html, rawMarkdownBody } = markdownRemark
+  const { frontmatter } = markdownRemark
   return (
     <Layout>
       <Seo title={frontmatter.title} description={frontmatter.excerpt} />
       <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>
-            <span className="capitalize">{pageContext.type}</span> -{' '}
-            {frontmatter.title}
-          </h1>
-          <p>{JSON.stringify(frontmatter)}</p>
-          <Markdown remarkPlugins={[remarkGfm]}>{rawMarkdownBody}</Markdown>
-        </div>
+        <MarkdownDisplay
+          data={data}
+          pageContext={pageContext}
+          type="personnas"
+        />
         <InternalNav
           className="mt-8"
           pageContext={pageContext}

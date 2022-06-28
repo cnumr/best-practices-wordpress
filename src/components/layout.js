@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header
+        id="top"
         className="mx-auto lg:max-w-5xl"
         siteTitle={data.site.siteMetadata?.title || `Title`}
       />
@@ -35,6 +36,12 @@ const Layout = ({ children }) => {
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
+      <a
+        href="#top"
+        className=" sticky bottom-4 right-4 border-2 rounded-full p-4 bg-primary/20 hover:bg-primary/100"
+      >
+        <span>⬆︎</span>
+      </a>
     </>
   )
 }

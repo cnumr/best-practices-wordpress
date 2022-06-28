@@ -11,7 +11,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy": "gatsby build && gh-pages -d public -b site-static"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -21,6 +21,7 @@
     "gatsby-plugin-sass": "^5.17.0",
     "gatsby-plugin-sharp": "^4.17.0",
     "gatsby-plugin-tailwindcss": "^1.0.3",
+    "gatsby-remark-autolink-headers": "^5.17.0",
     "gatsby-remark-images": "^6.17.0",
     "gatsby-remark-prismjs": "^6.17.0",
     "gatsby-source-filesystem": "^4.17.0",
@@ -37,6 +38,7 @@
     "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.6.2"
   },
   "repository": {

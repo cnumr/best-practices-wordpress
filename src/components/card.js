@@ -1,15 +1,22 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-function Card({ markdownRemark }) {
+function Card({ markdownRemark, type = 'personnas' }) {
   return (
-    <li className="rounded-md bg-slate-100 p-4">
+    <li className="box interactive">
       <Link
-        to={`fiches${markdownRemark.fields.slug}`}
-        className="flex flex-col justify-between h-full"
+        to={`/${type}${markdownRemark.fields.slug}`}
+        className="flex flex-col h-full"
       >
-        <h3>{markdownRemark.frontmatter.title}</h3>
-        <p>{markdownRemark.excerpt}</p>
+        {type === 'personnas' && (
+          <div>
+            <strong>Famille: </strong> {markdownRemark.frontmatter.family}
+          </div>
+        )}
+        <div className="flex flex-col justify-between h-full">
+          <h3>{markdownRemark.frontmatter.title}</h3>
+          <p>{markdownRemark.excerpt}</p>
+        </div>
       </Link>
     </li>
   )

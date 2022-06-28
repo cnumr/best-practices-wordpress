@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 function InternalNav({ pageContext, previous, next, className }) {
   return (
-    <nav className={classNames('blog-post-nav', className)}>
+    <nav className={classNames('blog-post-nav border-t-2 pt-4', className)}>
       <ul className="flex justify-between noliststyle">
         {previous && (
           <li>

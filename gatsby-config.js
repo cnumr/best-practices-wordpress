@@ -51,6 +51,7 @@ module.exports = {
               maxWidth: 800,
             },
           },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

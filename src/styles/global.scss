@@ -28,21 +28,25 @@
     @apply text-2xl;
   }
   a {
-    @apply font-medium;
+    @apply font-medium hover:text-primary;
   }
   blockquote {
     @apply border-l-4 pl-4 py-2 text-lg;
   }
   // prismjs
-  p code {
-    @apply bg-slate-100 rounded-sm inline-block px-2;
-  }
-  pre code[class*='language-'] {
-    @apply bg-slate-100 rounded-lg border-2 block p-4;
-  }
-  pre code[class*='language-'].line-numbers {
-    @apply pl-11;
-  }
+  // p code {
+  //   @apply inline-block px-2;
+  // }
+  // pre code[class*='language-'] {
+  //   @apply block p-4 overflow-x-scroll;
+  // }
+  // p code,
+  // pre code[class*='language-'] {
+  //   @apply bg-slate-100 rounded-md border-2 shadow-lg;
+  // }
+  // pre code[class*='language-'].line-numbers {
+  //   @apply pl-11;
+  // }
 }
 
 /* components styles */
@@ -52,5 +56,20 @@
   }
   main .noliststyle li {
     @apply list-none ml-0;
+  }
+  .box {
+    @apply rounded-md bg-slate-100 p-4 flex flex-col gap-1 border-2;
+  }
+  .box.interactive {
+    @apply hover:bg-stone-50 hover:shadow-lg;
+  }
+  table {
+    @apply w-full border-2 rounded-md shadow-lg;
+    thead {
+      @apply bg-slate-100;
+    }
+    td {
+      @apply p-4;
+    }
   }
 }
