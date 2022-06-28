@@ -1,15 +1,18 @@
-import { Layout, Seo } from '../components'
+import { InternalNav, Layout, Seo } from '../components'
+import { Link, graphql } from 'gatsby'
 
 import Markdown from 'react-markdown'
 import React from 'react'
-import { graphql } from 'gatsby'
 import remarkGfm from 'remark-gfm'
 
 export default function PersonnasDisplay({
   data, // this prop will be injected by the GraphQL query below.
   pageContext,
 }) {
+  // console.log('data', data)
+  // console.log('pageContext', pageContext)
   const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { previous, next } = data
   const { frontmatter, html, rawMarkdownBody } = markdownRemark
   return (
     <Layout>
@@ -20,16 +23,27 @@ export default function PersonnasDisplay({
             <span className="capitalize">{pageContext.type}</span> -{' '}
             {frontmatter.title}
           </h1>
-          <h2>{JSON.stringify(frontmatter)}</h2>
+          <p>{JSON.stringify(frontmatter)}</p>
           <Markdown remarkPlugins={[remarkGfm]}>{rawMarkdownBody}</Markdown>
         </div>
+        <InternalNav
+          className="mt-8"
+          pageContext={pageContext}
+          next={next}
+          previous={previous}
+        />
       </div>
     </Layout>
   )
 }
 
 export const personnasQuery = graphql`
-  query ($remarkID: String!, $id: String!) {
+  query (
+    $remarkID: String!
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
     markdownRemark(id: { eq: $remarkID }) {
       html
       rawMarkdownBody
@@ -41,6 +55,22 @@ export const personnasQuery = graphql`
     }
     file(id: { eq: $id }) {
       id
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
     }
   }
 `

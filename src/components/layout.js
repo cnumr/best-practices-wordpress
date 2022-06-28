@@ -25,14 +25,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
-      <footer
-        style={{
-          marginTop: `var(--space-5)`,
-          fontSize: `var(--font-sm)`,
-        }}
-      >
+      <Header
+        className="mx-auto lg:max-w-5xl"
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+      />
+      <main className="mx-auto lg:max-w-5xl my-8">{children}</main>
+      <footer className="mx-auto lg:max-w-5xl">
         © {new Date().getFullYear()} &middot; Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>

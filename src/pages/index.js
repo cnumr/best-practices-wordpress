@@ -1,35 +1,32 @@
+import { Card, Layout } from '../components'
 import { Link, graphql } from 'gatsby'
 
-import { Layout } from '../components'
 import React from 'react'
 
 export default function Home({ data }) {
   return (
     <Layout>
-      <div>Hello world!</div>
       <main>
+        <h1>{data.site.siteMetadata.title}</h1>
         <h2>Fiches</h2>
-        <ul>
+        <ul className="noliststyle grid grid-cols-3 gap-2">
           {data.fichesWP.nodes.map((fiche, index) => {
-            return (
-              <li key={index}>
-                <Link to={`fiches/${fiche.id}`}>
-                  {fiche.childMarkdownRemark.frontmatter.title}
-                </Link>
-              </li>
-            )
+            if (fiche.childMarkdownRemark?.fields.slug)
+              return (
+                <Card key={index} markdownRemark={fiche.childMarkdownRemark} />
+              )
           })}
         </ul>
         <h2>Personnas</h2>
-        <ul>
-          {data.personnas.nodes.map((personnas, index) => {
-            return (
-              <li key={index}>
-                <Link to={`personnas/${personnas.id}`}>
-                  {personnas.childMarkdownRemark.frontmatter.title}
-                </Link>
-              </li>
-            )
+        <ul className="noliststyle grid grid-cols-3 gap-2">
+          {data.personnas.nodes.map((personna, index) => {
+            if (personna.childMarkdownRemark?.fields.slug)
+              return (
+                <Card
+                  key={index}
+                  markdownRemark={personna.childMarkdownRemark}
+                />
+              )
           })}
         </ul>
       </main>
@@ -39,33 +36,37 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     fichesWP: allFile(
-      filter: { extension: { eq: "md" }, sourceInstanceName: { eq: "fiches" } }
+      filter: { sourceInstanceName: { eq: "fiches" } }
+      sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
     ) {
       nodes {
-        id
-        relativePath
-        childMarkdownRemark {
-          frontmatter {
-            title
-          }
-        }
+        ...FileFragment
       }
     }
     personnas: allFile(
-      filter: {
-        extension: { eq: "md" }
-        sourceInstanceName: { eq: "personnas" }
-      }
+      filter: { sourceInstanceName: { eq: "personnas" } }
+      sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
     ) {
       nodes {
-        id
-        relativePath
-        childMarkdownRemark {
-          frontmatter {
-            title
-          }
-        }
+        ...FileFragment
+      }
+    }
+  }
+  fragment FileFragment on File {
+    childMarkdownRemark {
+      excerpt(pruneLength: 100)
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        typeDocument
       }
     }
   }

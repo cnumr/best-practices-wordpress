@@ -5,8 +5,52 @@
 
 /* base styles */
 @layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold text-primary mt-2 mb-8;
+  }
+  p,
+  li {
+    @apply text-gray-600 mb-3 leading-8;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  a {
+    @apply font-medium;
+  }
+  blockquote {
+    @apply border-l-4 pl-4 py-2 text-lg;
+  }
+  // prismjs
+  p code {
+    @apply bg-slate-100 rounded-sm inline-block px-2;
+  }
+  pre code[class*='language-'] {
+    @apply bg-slate-100 rounded-lg border-2 block p-4;
+  }
+  pre code[class*='language-'].line-numbers {
+    @apply pl-11;
+  }
 }
 
 /* components styles */
 @layer components {
+  main li {
+    @apply list-disc ml-8;
+  }
+  main .noliststyle li {
+    @apply list-none ml-0;
+  }
 }
