@@ -27,14 +27,22 @@ const Layout = ({ children }) => {
     <>
       <Header
         id="top"
-        className="mx-auto lg:max-w-5xl"
+        className=""
         siteTitle={data.site.siteMetadata?.title || `Title`}
       />
-      <main className="mx-auto lg:max-w-5xl my-8">{children}</main>
-      <footer className="mx-auto lg:max-w-5xl">
+      <main className="mx-auto px-4 lg:px-0 lg:max-w-5xl my-8 min-h-[400px]">
+        {children}
+      </main>
+      <footer className="mx-auto px-4 lg:px-0 lg:max-w-5xl">
         © {new Date().getFullYear()} &middot; Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a target="_blank" href="https://www.gatsbyjs.com">
+          Gatsby
+        </a>{' '}
+        {` `} by{' '}
+        <a target="_blank" href="https://www.greenit.fr">
+          CNUMR
+        </a>
       </footer>
       <a
         href="#top"

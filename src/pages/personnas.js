@@ -8,12 +8,13 @@ export default function Home({ data }) {
     <Layout>
       <main>
         <h1>Personnas</h1>
-        <ul className="noliststyle grid grid-cols-3 gap-2">
+        <ul className="wp-grid">
           {data.personnas.nodes.map((personna, index) => {
-            if (personna.childMarkdownRemark?.fields.slug)
+            if (personna.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
                   key={index}
+                  type={Card.PERSONNAS}
                   markdownRemark={personna.childMarkdownRemark}
                 />
               )

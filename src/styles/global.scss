@@ -72,4 +72,13 @@
       @apply p-4;
     }
   }
+  .wp-grid {
+    @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
+  }
+  .btn {
+    @apply bg-primary px-2 py-1 border text-white uppercase cursor-pointer;
+  }
+  input {
+    @apply px-1;
+  }
 }

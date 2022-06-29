@@ -20,9 +20,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             frontmatter {
               title
-            }
-            fields {
-              slug
+              path
             }
           }
         }
@@ -45,9 +43,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       index === fiches.length - 1
         ? null
         : fiches[index + 1].childMarkdownRemark?.id
-    if (node.childMarkdownRemark?.fields.slug)
+    if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `fiches${node.childMarkdownRemark.fields.slug}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}`,
         component: templatePath,
         context: {
           id: node.id,
@@ -78,9 +76,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             frontmatter {
               title
-            }
-            fields {
-              slug
+              path
             }
           }
         }
@@ -103,9 +99,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       index === personnas.length - 1
         ? null
         : personnas[index + 1].childMarkdownRemark?.id
-    if (node.childMarkdownRemark?.fields.slug)
+    if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `personnas${node.childMarkdownRemark.fields.slug}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}`,
         component: templatePath,
         context: {
           id: node.id,
@@ -118,19 +114,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = createFilePath({ node, getNode })
 
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
-}
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     })
+//   }
+// }
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -144,14 +140,11 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(`
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
-      fields: Fields
     }
     type Frontmatter {
       title: String
       typeDocument: String
-    }
-    type Fields {
-      slug: String
+      path: String
     }
   `)
 }

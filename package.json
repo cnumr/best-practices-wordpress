@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
+    "formik": "^2.2.9",
     "gatsby": "^4.17.0",
     "gatsby-plugin-image": "^2.17.0",
+    "gatsby-plugin-local-search": "^2.0.1",
     "gatsby-plugin-react-helmet": "^5.17.0",
     "gatsby-plugin-sass": "^5.17.0",
     "gatsby-plugin-sharp": "^4.17.0",
@@ -33,11 +35,13 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.3",
     "react-syntax-highlighter": "^15.5.0",
+    "react-use-flexsearch": "^0.1.1",
     "remark-gfm": "^3.0.1",
     "sass": "^1.53.0",
     "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2",
     "gh-pages": "^4.0.0",
     "prettier": "^2.6.2"
   },

@@ -9,14 +9,14 @@ export default function Home({ data }) {
     <Layout>
       <main>
         <h1>Fiches</h1>
-        <ul className="noliststyle grid grid-cols-3 gap-2">
+        <ul className="wp-grid">
           {data.fichesWP.nodes.map((fiche, index) => {
-            if (fiche.childMarkdownRemark?.fields.slug)
+            if (fiche.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
                   key={index}
                   markdownRemark={fiche.childMarkdownRemark}
-                  type="fiches"
+                  type={Card.FICHES}
                 />
               )
           })}

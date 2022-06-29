@@ -12,7 +12,7 @@ Dans la deuxième partie se trouve le contenu de la fiche elle-même, au format 
 
 ## Medias utilisé(s) dans la fiche
 
-Les médias doivent regroupés par fiche dans un dossier au format suivant `medias_<Nom de la fiche>`
+Les médias doivent regroupés par fiche dans un dossier au format suivant `medias_<numero de la fiche>`
 
 ## Ajouter la fiche à la liste des fiches
 
@@ -21,6 +21,7 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
 ## Métadatas de la fiche
 
 - `title`: \<NUM de la fiche>. \<NOM de la fiche>
+- `path`: /fiches/\<slug de la fiche>
 - `people`: \<Noms des particpants>
 - `family`: \<Famille de la fiche>
   - Cache
@@ -34,10 +35,10 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
   - Thèmes
   - Vidéos/Audio
 - `state_validation`: <Status le création de la fiche>
-  1. TO DO
-  2. DOING
-  3. TO VALIDATE
-  4. DONE 🚀
+  - 1 - TO DO
+  - 2 - DOING
+  - 3 - TO VALIDATE
+  - 4 - DONE 🚀
 - `targeted_people`: <Liste des cible(s) visé(s), Personnas concernée(s)>
   - Code(use·ur) → Développeu·se·r
   - Designeu(se·r)

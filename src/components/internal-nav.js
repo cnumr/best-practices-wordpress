@@ -8,7 +8,7 @@ function InternalNav({ pageContext, previous, next, className }) {
       <ul className="flex justify-between noliststyle">
         {previous && (
           <li>
-            <Link to={`/${pageContext.type}${previous.fields.slug}`} rel="prev">
+            <Link to={`${previous.frontmatter.path}`} rel="prev">
               ← {previous.frontmatter.title}
             </Link>
           </li>
@@ -20,7 +20,7 @@ function InternalNav({ pageContext, previous, next, className }) {
         </li>
         {next && (
           <li>
-            <Link to={`/${pageContext.type}${next.fields.slug}`} rel="next">
+            <Link to={`${next.frontmatter.path}`} rel="next">
               {next.frontmatter.title} →
             </Link>
           </li>

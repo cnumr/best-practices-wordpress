@@ -9,6 +9,7 @@ complexity_implementation: <Niveau de difficulté de mise en œuvre>
 priority_implementation: <Priorité de mise en œuvre>
 environmental_impact: <Niveau de l'impact écologique>
 saved_resources: <liste des ressources économisées>
+path: /fiches/<slug de la fiche>
 ---
 
 > exemple de fiche de la https://github.com/cnumr/best-practices/blob/main/chapters/BP_001_fr.md à éditer

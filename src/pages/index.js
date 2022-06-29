@@ -4,44 +4,49 @@ import { Link, graphql } from 'gatsby'
 import React from 'react'
 
 export default function Home({ data }) {
+  console.log('Card.PERSONNAS', Card.PERSONNAS)
   return (
     <Layout>
-      <main>
+      <main className="">
         <h1>{data.site.siteMetadata.title}</h1>
         <nav>
           <ul className="noliststyle flex flex-row gap-4">
             <li className="font-black">Navigation: </li>
             <li>
-              <a href="#fiches">Fiches</a>
+              <a href="#fiches" title="Aller aux fiches">
+                Fiches
+              </a>
             </li>
             <li>|</li>
             <li>
-              <a href="#personnas">Personnas</a>
+              <a href="#personnas" title="Aller aux Personnas">
+                Personnas
+              </a>
             </li>
           </ul>
         </nav>
         <hr />
         <h2 id="fiches">Fiches</h2>
-        <ul className="noliststyle grid grid-cols-3 gap-2">
+        <ul className="wp-grid">
           {data.fichesWP.nodes.map((fiche, index) => {
-            if (fiche.childMarkdownRemark?.fields.slug)
+            if (fiche.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
                   key={index}
-                  type="fiches"
+                  type={Card.FICHES}
                   markdownRemark={fiche.childMarkdownRemark}
                 />
               )
           })}
         </ul>
         <h2 id="personnas">Personnas</h2>
-        <ul className="noliststyle grid grid-cols-3 gap-2">
+        <ul className="wp-grid">
           {data.personnas.nodes.map((personna, index) => {
-            if (personna.childMarkdownRemark?.fields.slug)
+            if (personna.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
                   key={index}
-                  type="personnas"
+                  type={Card.PERSONNAS}
                   markdownRemark={personna.childMarkdownRemark}
                 />
               )
@@ -81,13 +86,11 @@ export const query = graphql`
       excerpt(pruneLength: 100)
       timeToRead
       tableOfContents
-      fields {
-        slug
-      }
       frontmatter {
         title
         typeDocument
         family
+        path
       }
     }
   }
