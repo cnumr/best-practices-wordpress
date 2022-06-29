@@ -5,6 +5,9 @@
 
 /* base styles */
 @layer base {
+  html {
+    @apply scroll-pt-24; // fix for anchor
+  }
   h1,
   h2,
   h3,
