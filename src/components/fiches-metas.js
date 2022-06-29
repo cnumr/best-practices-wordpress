@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import classNames from 'classnames'
 
@@ -7,9 +8,16 @@ function Item({ frontmatter, item }) {
   if (Array.isArray(values)) {
     return (
       <li className="my-0">
-        <strong>→ {item}:</strong>
+        <strong className="capitalize">→ {item.replace('_', ' ')}:</strong>
         <ul className="ml-8">
           {values.map((intItem, index) => {
+            if (item === 'targeted_people') {
+              return (
+                <li key={index} className="my-0">
+                  <Link to={`/personnas/${intItem}`}>➡︎ {intItem}</Link>
+                </li>
+              )
+            }
             return (
               <li key={index} className="my-0">
                 ➡︎ {intItem}
@@ -22,7 +30,8 @@ function Item({ frontmatter, item }) {
   }
   return (
     <li className="my-0">
-      <strong>→ {item}:</strong> {toDisplay || 'TBD'}
+      <strong className="capitalize">→ {item.replace('_', ' ')}:</strong>{' '}
+      {toDisplay || 'TBD'}
     </li>
   )
 }
