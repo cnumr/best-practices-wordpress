@@ -21,6 +21,10 @@ function Recherche() {
   const results = useFlexSearch(query, index, store)
   return (
     <Layout>
+      <Seo
+        title="Recherche"
+        description="Rechercher des personnas ou des Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
+      />
       <main>
         <h1>Recherche de fiches & personnnas</h1>
         <Formik

@@ -10,6 +10,10 @@ export default function Home({ data }) {
   }
   return (
     <Layout>
+      <Seo
+        title="Fiches"
+        description="Les Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
+      />
       <main>
         <h1>Fiches</h1>
         <SearchButtons

@@ -1,4 +1,4 @@
-import { Card, Layout } from '../components'
+import { Card, Layout, Seo } from '../components'
 import { Link, graphql } from 'gatsby'
 
 import React from 'react'
@@ -6,6 +6,10 @@ import React from 'react'
 export default function Home({ data }) {
   return (
     <Layout>
+      <Seo
+        title="Personnas"
+        description="Les Personnas pour rendre WordPress plus respectueux de l'environnement."
+      />
       <main>
         <h1>Personnas</h1>
         <ul className="wp-grid">

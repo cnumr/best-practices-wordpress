@@ -1,12 +1,15 @@
-import { Card, Layout } from '../components'
+import { Card, Layout, Seo } from '../components'
 import { Link, graphql } from 'gatsby'
 
 import React from 'react'
 
 export default function Home({ data }) {
-  console.log('Card.PERSONNAS', Card.PERSONNAS)
   return (
     <Layout>
+      <Seo
+        title="Accueil"
+        description="Fiches et Personnas pour rendre WordPress plus respectueux de l'environnement."
+      />
       <main className="">
         <h1>{data.site.siteMetadata.title}</h1>
         <nav>
