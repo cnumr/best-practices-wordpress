@@ -22,7 +22,7 @@ function Recherche() {
   return (
     <Layout>
       <main>
-        <h1>Recherche de fiches</h1>
+        <h1>Recherche de fiches & personnnas</h1>
         <Formik
           initialValues={{ query: '' }}
           onSubmit={(values, { setSubmitting }) => {
