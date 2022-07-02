@@ -1,4 +1,4 @@
-import { Card, Layout, SearchButtons } from '../components'
+import { Card, Layout, SearchButtons, Seo } from '../components'
 import { Link, graphql } from 'gatsby'
 import React, { useState } from 'react'
 
