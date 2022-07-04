@@ -34,6 +34,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
     "react-syntax-highlighter": "^15.5.0",
     "react-use-flexsearch": "^0.1.1",
@@ -48,9 +49,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/cnumr/fiches-wordpress-greenit"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cnumr/fiches-wordpress-greenit/issues"
   }
 }

@@ -1,9 +1,10 @@
+import { BsGithub } from 'react-icons/bs'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import classNames from 'classnames'
 
-const Header = ({ siteTitle, className }) => {
+const Header = ({ siteTitle, className, repoURL }) => {
   return (
     <header
       className={classNames(
@@ -16,7 +17,7 @@ const Header = ({ siteTitle, className }) => {
           {siteTitle}
         </Link>
         <nav>
-          <ul className="flex flex-row gap-4 m-0 p-0">
+          <ul className="flex flex-row gap-4 m-0 p-0 items-center">
             <li className="!m-0">
               <Link to="/fiches" title="Voir les fiches">
                 Fiches
@@ -31,6 +32,16 @@ const Header = ({ siteTitle, className }) => {
               <Link to="/recherche" title="Rechercher une fiche">
                 Rechercher
               </Link>
+            </li>
+            <li className="!m-0">
+              <a
+                href={repoURL}
+                target="_blank"
+                rel="no-follow"
+                title="Voir le repository GitHub de CNUMR"
+              >
+                <BsGithub />
+              </a>
             </li>
           </ul>
         </nav>

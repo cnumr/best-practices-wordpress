@@ -10,6 +10,7 @@ module.exports = {
     title: 'CNUMR WordPress Best Practices',
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    repoURL: `https://github.com/cnumr/fiches-wordpress-greenit`,
   },
   plugins: [
     {
