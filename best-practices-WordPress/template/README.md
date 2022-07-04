@@ -12,7 +12,7 @@ Dans la deuxième partie se trouve le contenu de la fiche elle-même, au format 
 
 ## Medias utilisé(s) dans la fiche
 
-Les médias doivent regroupés par fiche dans un dossier au format suivant `medias_<numero de la fiche>`
+Les médias doivent être regroupés par fiche dans un dossier au format suivant `medias_<numero de la fiche>`
 
 ## Ajouter la fiche à la liste des fiches
 
