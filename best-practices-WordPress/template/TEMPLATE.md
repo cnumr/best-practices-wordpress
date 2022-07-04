@@ -1,10 +1,10 @@
 ---
 title: <NUM de la fiche>. <NOM de la fiche>
 people: <Noms des particpants>
-family: <Famille de la fiche>
+scope: <Famille de la fiche>
 state_validation: <Status le création de la fiche>
-targeted_people: <Liste des cible(s) visé(s), Personnas concernée(s)>
-design_phase: <Phase de "conception" concernée>
+responsible: <Liste des cible(s) visé(s), Personnas concernée(s)>
+lifecycle: <Phase de "conception" concernée>
 complexity_implementation: <Niveau de difficulté de mise en œuvre>
 priority_implementation: <Priorité de mise en œuvre>
 environmental_impact: <Niveau de l'impact écologique>

@@ -44,14 +44,14 @@ export const ficheQuery = graphql`
       frontmatter {
         title
         complexity_implementation
-        design_phase
+        lifecycle
         environmental_impact
-        family
+        scope
         people
         priority_implementation
         saved_resources
         state_validation
-        targeted_people
+        responsible
       }
     }
     file(id: { eq: $id }) {

@@ -92,8 +92,11 @@ export const query = graphql`
       frontmatter {
         title
         typeDocument
-        family
         path
+        scope
+        priority_implementation
+        lifecycle
+        environmental_impact
       }
     }
   }

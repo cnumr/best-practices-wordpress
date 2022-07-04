@@ -23,7 +23,7 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
 - `title`: \<NUM de la fiche>. \<NOM de la fiche>
 - `path`: /fiches/\<slug de la fiche>
 - `people`: \<Noms des particpants>
-- `family`: \<Famille de la fiche>
+- `scope`: \<Famille de la fiche>
   - Cache
   - Documents
   - Fonctionnalités
@@ -39,12 +39,12 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
   - 2 - DOING
   - 3 - TO VALIDATE
   - 4 - DONE 🚀
-- `targeted_people`: <Liste des cible(s) visé(s), Personnas concernée(s)>
+- `responsible`: <Liste des cible(s) visé(s), Personnas concernée(s)>
   - Code(use·ur) → Développeu·se·r
   - Designeu(se·r)
   - Low-code → Freelance et développeur Front-End d'agences
   - No-code → Madame et Monsieur tout le monde
-- `design_phase`: <Phase de "conception" concernée>
+- `lifecycle`: <Phase de "conception" concernée>
   - 1 - En amont
   - 2 - Conception / Design
   - 3 - Développement

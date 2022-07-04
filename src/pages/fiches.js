@@ -18,7 +18,7 @@ export default function Home({ data }) {
         <h1>Fiches</h1>
         <SearchButtons
           fullList={data.fichesWP.nodes}
-          propertyToMatch="childMarkdownRemark.frontmatter.family"
+          propertyToMatch="childMarkdownRemark.frontmatter.scope"
           setList={setFichesWP}
           setBackToAllItems={setBackToAllFiches}
           allItemsLabel="Toutes les fiches"
