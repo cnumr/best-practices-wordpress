@@ -20,9 +20,9 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
 
 ## Métadatas de la fiche
 
-- `title`: \<NUM de la fiche>. \<NOM de la fiche>
-- `path`: /fiches/\<slug de la fiche>
-- `people`: \<Noms des particpants>
+- `title`: \<NUM de la fiche sur deux digits>. \<NOM de la fiche>
+- `path`: /fiches/\<NUM de la fiche sur deux digits>-<NOM de la fiche>
+- `people`: \<Noms des rédacteurs>
 - `scope`: \<Famille de la fiche>
   - Cache
   - Documents
@@ -34,35 +34,31 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
   - Stockage
   - Thèmes
   - Vidéos/Audio
-- `state_validation`: <Status le création de la fiche>
+- `state_validation`: \<Status le création de la fiche>
   - 1 - TO DO
   - 2 - DOING
   - 3 - TO VALIDATE
   - 4 - DONE 🚀
-- `responsible`: <Liste des cible(s) visé(s), Personnas concernée(s)>
+- `responsible`: \<Liste des cible(s) visé(s), Personnas concernée(s)>
   - Code(use·ur) → Développeu·se·r
   - Designeu(se·r)
   - Low-code → Freelance et développeur Front-End d'agences
   - No-code → Madame et Monsieur tout le monde
-- `lifecycle`: <Phase de "conception" concernée>
+- `lifecycle`: \<Phase de "conception" concernée>
   - 1 - En amont
   - 2 - Conception / Design
   - 3 - Développement
   - 4 - Mise en ligne
   - 5 - Maintenance
-- `complexity_implementation`: <Niveau de difficulté de mise en œuvre>
-  - Facile 🐣
-  - Standard 😁
-  - Difficile 😅
-- `priority_implementation`: <Priorité de mise en œuvre>
+- `priority_implementation`: \<Priorité de mise en œuvre>
   - Faible 👍
   - Moyen 👍👍
   - Fort 👍👍👍
-- `environmental_impact`: <Niveau de l'impact écologique>
+- `environmental_impact`: \<Niveau de l'impact écologique>
   - Faible 🌱
   - Moyen 🌱🌱
   - Fort 🌱🌱🌱
-- `saved_resources`: <liste des ressources économisées>
+- `saved_resources`: \<liste des ressources économisées>
   - Processeur
   - Mémoire vive
   - Stockage
