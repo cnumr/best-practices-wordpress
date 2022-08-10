@@ -42,7 +42,6 @@ function FichesMetasDisplay({ frontmatter, className, tableOfContents }) {
       <ul
         className={classNames('noliststyle flex flex-col gap-1 box col-span-2')}
       >
-        <Item frontmatter={frontmatter} item="complexity_implementation" />
         <Item frontmatter={frontmatter} item="lifecycle" />
         <Item frontmatter={frontmatter} item="environmental_impact" />
         <Item frontmatter={frontmatter} item="scope" />

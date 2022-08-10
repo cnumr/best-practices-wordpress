@@ -43,7 +43,6 @@ export const ficheQuery = graphql`
       tableOfContents
       frontmatter {
         title
-        complexity_implementation
         lifecycle
         environmental_impact
         scope
