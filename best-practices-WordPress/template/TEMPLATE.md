@@ -3,7 +3,7 @@ title: <NUM de la fiche>. <NOM de la fiche>
 people: <Noms des particpants>
 scope: <Famille de la fiche>
 state_validation: <Status le création de la fiche>
-responsable: <Liste des cible(s) visé(s), Personnas concernée(s)>
+responsible: <Liste des cible(s) visé(s), Personnas concernée(s)>
 lifecycle: <Phase de "conception" concernée>
 priority_implementation: <Priorité de mise en œuvre>
 environmental_impact: <Niveau de l'impact écologique>
