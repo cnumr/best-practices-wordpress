@@ -5,13 +5,14 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
+    "prepare": "husky install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b site-static-deployed"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",
     "gh-pages": "^4.0.0",
+    "husky": "^8.0.1",
     "prettier": "^2.6.2"
   },
   "repository": {

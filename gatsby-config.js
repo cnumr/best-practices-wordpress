@@ -12,6 +12,7 @@ module.exports = {
     author: `@gatsbyjs`,
     repoURL: `https://github.com/cnumr/fiches-wordpress-greenit`,
   },
+  pathPrefix: '/fiches-wordpress-greenit',
   plugins: [
     {
       resolve: 'gatsby-plugin-local-search',
