@@ -3,4 +3,4 @@
 
 # npm run deploy && echo "[Husky] pre-push"
 echo "[Husky] pre-push"
-echo \"deploy to https://cnumr.github.io/fiches-wordpress-greenit/\"
+echo "[Husky] deploy to https://cnumr.github.io/fiches-wordpress-greenit/ ⌛"
