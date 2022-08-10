@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npm run deploy && echo "[Husky] pre-push"
+echo "[Husky] pre-push"
+echo "[Husky] deploy to https://cnumr.github.io/fiches-wordpress-greenit/ ⌛"

@@ -2,6 +2,7 @@
 title: Code(use·ur) → Développeu·se·r
 created at: Wed Jun 30 2021 13:49:35 GMT+0000 (Coordinated Universal Time)
 updated at: Thu Jul 01 2021 09:56:42 GMT+0000 (Coordinated Universal Time)
+path: /personnas/Code(use·ur) → Développeu·se·r
 ---
 
 # Code(use·ur) → Développeu·se·r
