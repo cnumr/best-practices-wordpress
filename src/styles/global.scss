@@ -34,7 +34,7 @@
     @apply font-medium hover:text-primary;
   }
   blockquote {
-    @apply border-l-4 pl-4 py-2 text-lg;
+    @apply border-l-4 border-l-teal-300 pl-4 py-2 text-base rounded bg-teal-50 shadow mb-2 pb-[0.1rem];
   }
   // prismjs
   // p code {
