@@ -112,6 +112,62 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
   })
+
+  // Lexique
+  const _lexique = await graphql(`
+    {
+      allFile(
+        filter: {
+          extension: { eq: "md" }
+          sourceInstanceName: { eq: "lexique" }
+        }
+        sort: {
+          fields: childrenMarkdownRemark___frontmatter___title
+          order: ASC
+        }
+      ) {
+        nodes {
+          id
+          childMarkdownRemark {
+            id
+            frontmatter {
+              title
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (_lexique.errors) {
+    reporter.panicOnBuild(
+      `GraphQL could not query pages. Create pages aborted.`
+    )
+    return
+  }
+  const lexique = _lexique.data.allFile.nodes
+  lexique.forEach((node, index) => {
+    const templatePath = path.resolve(`./src/templates/personnas-display.js`)
+    const previousPostId =
+      index === 0 ? null : lexique[index - 1].childMarkdownRemark?.id
+    const nextPostId =
+      index === lexique.length - 1
+        ? null
+        : lexique[index + 1].childMarkdownRemark?.id
+    if (node.childMarkdownRemark?.frontmatter.path)
+      createPage({
+        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        component: templatePath,
+        context: {
+          id: node.id,
+          remarkID: node.childMarkdownRemark.id,
+          type: 'lexique',
+          previousPostId,
+          nextPostId,
+        },
+      })
+  })
 }
 
 // exports.onCreateNode = ({ node, actions, getNode }) => {

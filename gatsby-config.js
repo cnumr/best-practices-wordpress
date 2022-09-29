@@ -91,6 +91,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `lexique`,
+        path: `${__dirname}/lexique`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [
@@ -121,6 +128,15 @@ module.exports = {
               classPrefix: 'language-',
               showLineNumbers: false,
             },
+          },
+          {
+            resolve: 'wikilinks-md',
+            options: {
+              sourceFolder: `${__dirname}/lexique`,
+            },
+          },
+          {
+            resolve: 'highlight-md',
           },
         ],
       },
