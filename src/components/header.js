@@ -1,4 +1,5 @@
 import { BsGithub } from 'react-icons/bs'
+import Licence from './licence'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -13,9 +14,12 @@ const Header = ({ siteTitle, className, repoURL }) => {
       )}
     >
       <div className="w-full mx-auto lg:max-w-5xl flex flex-row justify-between items-center">
-        <Link to="/" className="font-semibold" title="Retour à l'accueil">
-          {siteTitle}
-        </Link>
+        <div>
+          <Link to="/" className="font-semibold" title="Retour à l'accueil">
+            {siteTitle}
+          </Link>
+          <Licence size="sm" />
+        </div>
         <nav>
           <ul className="flex flex-row gap-4 m-0 p-0 items-center">
             <li className="!m-0">
