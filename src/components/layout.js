@@ -10,6 +10,7 @@ import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Header from './header'
+import Licence from './licence'
 import PropTypes from 'prop-types'
 
 const Layout = ({ children }) => {
@@ -45,6 +46,7 @@ const Layout = ({ children }) => {
         <a target="_blank" href="https://www.greenit.fr">
           CNUMR
         </a>
+        <Licence />
       </footer>
       <a
         href="#top"
