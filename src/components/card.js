@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 Card.PERSONNAS = 'personnas'
 Card.FICHES = 'fiches'
+Card.LEXIQUE = 'lexique'
 
 function MetaItem({ metas, meta, fontSize = 'normal' }) {
   if (Array.isArray(metas[meta])) {
@@ -53,7 +54,14 @@ function Card({ markdownRemark, type = Card.PERSONNAS }) {
         )}
         <div className="flex flex-col justify-between h-full">
           <h3>{markdownRemark.frontmatter.title}</h3>
-          <p>{markdownRemark.excerpt}</p>
+          {type === Card.LEXIQUE ? (
+            <div
+              className="markdown-content"
+              dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+            />
+          ) : (
+            <p>{markdownRemark.excerpt}</p>
+          )}
           {type === Card.FICHES && (
             <div>
               <hr />
