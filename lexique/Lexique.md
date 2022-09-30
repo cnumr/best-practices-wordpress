@@ -2,6 +2,8 @@
 title: Lexique
 created at: Wed Jun 30 2021 14:13:41 GMT+0000 (Coordinated Universal Time)
 updated at: Thu Jan 06 2022 19:29:20 GMT+0000 (Coordinated Universal Time)
+path: /lexique/sommaire
+toIndex: false
 ---
 
 # Lexique

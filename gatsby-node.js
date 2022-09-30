@@ -120,6 +120,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         filter: {
           extension: { eq: "md" }
           sourceInstanceName: { eq: "lexique" }
+          childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
         }
         sort: {
           fields: childrenMarkdownRemark___frontmatter___title

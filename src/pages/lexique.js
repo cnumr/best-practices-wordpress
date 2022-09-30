@@ -34,7 +34,11 @@ export default Lexique
 export const query = graphql`
   {
     lexiqueEntries: allFile(
-      filter: { extension: { eq: "md" }, sourceInstanceName: { eq: "lexique" } }
+      filter: {
+        extension: { eq: "md" }
+        sourceInstanceName: { eq: "lexique" }
+        childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+      }
       sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
     ) {
       nodes {
