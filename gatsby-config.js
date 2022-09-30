@@ -11,6 +11,28 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     repoURL: `https://github.com/cnumr/fiches-wordpress-greenit`,
+    navigation: [
+      {
+        url: `/fiches`,
+        label: `Fiches`,
+        title: `Voir les fiches`,
+      },
+      {
+        url: `/personnas`,
+        label: `Personnas`,
+        title: `Voir les Personnas`,
+      },
+      {
+        url: `/lexique`,
+        label: `Lexique`,
+        title: `Lexique des termes utilisés`,
+      },
+      {
+        url: `/recherche`,
+        label: `Rechercher`,
+        title: `Rechercher une fiche`,
+      },
+    ],
   },
   pathPrefix: '/fiches-wordpress-greenit',
   plugins: [
