@@ -25,6 +25,7 @@ const Header = ({ siteTitle, className, repoURL, navigation }) => {
       <div className="w-full mx-auto lg:max-w-5xl flex flex-row justify-between items-center">
         <div className="flex items-center gap-4">
           <StaticImage
+            alt="Logo CNUMR"
             src={`../assets/logo-cnumr.png`}
             class={`w-[80px] -m-3`}
           />
