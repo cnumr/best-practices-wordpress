@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.DEPLOY_KEY_TOKEN }}
+          ssh-key: ${{ secrets.DEPLOY_KEY_TOKEN }}
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
