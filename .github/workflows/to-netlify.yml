@@ -1,9 +1,11 @@
 name: 'Netlify Deploy'
 
+# Only trigger, when the build workflow succeeded
 on:
-  deployment:
-    branches:
-      - gh-pages
+  workflow_run:
+    workflows: ["CI build"]
+    types:
+      - completed
 
 jobs:
   deploy:
