@@ -1,7 +1,7 @@
 name: 'Netlify Deploy'
 
 on:
-  push:
+  deployment:
     branches:
       - gh-pages
 
