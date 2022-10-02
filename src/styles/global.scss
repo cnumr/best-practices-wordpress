@@ -1,0 +1,140 @@
+/* ./src/styles/global.scss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base styles */
+@layer base {
+  html {
+    @apply scroll-pt-24; // fix for anchor
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold text-primary mt-2 mb-8;
+  }
+  p,
+  li {
+    @apply text-gray-600 mb-3 leading-8;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  a {
+    @apply font-medium hover:text-primary;
+  }
+  blockquote {
+    @apply border-l-4 border-l-teal-300 pl-4 py-2 text-base rounded bg-teal-50 shadow mb-2 pb-[0.1rem];
+  }
+  // prismjs
+  // p code {
+  //   @apply inline-block px-2;
+  // }
+  // pre code[class*='language-'] {
+  //   @apply block p-4 overflow-x-scroll;
+  // }
+  // p code,
+  // pre code[class*='language-'] {
+  //   @apply bg-slate-100 rounded-md border-2 shadow-lg;
+  // }
+  // pre code[class*='language-'].line-numbers {
+  //   @apply pl-11;
+  // }
+}
+
+/* components styles */
+@layer components {
+  main li {
+    @apply list-disc ml-8;
+  }
+  main .noliststyle li {
+    @apply list-none ml-0;
+  }
+  .box {
+    @apply rounded-md bg-slate-100 p-4 flex flex-col gap-1 border-2;
+  }
+  .box.interactive {
+    @apply hover:bg-stone-50 hover:shadow-lg;
+  }
+  table {
+    @apply w-full border-2 rounded-md shadow-lg;
+    thead {
+      @apply bg-slate-100;
+    }
+    td {
+      @apply p-4;
+    }
+  }
+  .wp-grid {
+    @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
+  }
+  .btn {
+    @apply bg-primary px-2 py-1 border text-white uppercase cursor-pointer;
+  }
+  input {
+    @apply px-1;
+  }
+}
+
+/* Tooltip */
+.tooltip {
+  display:inline-block;
+  position:relative;
+  border-bottom:1px dotted #666;
+  text-align:left;
+}
+
+.tooltip .bottom {
+  min-width:300px;
+  // max-width:100%;
+  top:40px;
+  left:50%;
+  transform:translate(-50%, 0);
+  padding:20px;
+  color:#666666;
+  background-color:#EEEEEE;
+  font-weight:normal;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:99999999;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  display:none;
+}
+
+.tooltip:hover .bottom {
+  display:block;
+}
+
+
+.tooltip .bottom i {
+  position:absolute;
+  bottom:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+
+.tooltip .bottom i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%,50%) rotate(45deg);
+  background-color:#EEEEEE;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}

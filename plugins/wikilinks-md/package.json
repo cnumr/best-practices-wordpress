@@ -1,0 +1,5 @@
+{
+  "name": "wikilinks-md",
+  "version": "0.1.0",
+  "description": "Wikilinks dans .md avec, comme Obsidian, [[ ]]"
+}
