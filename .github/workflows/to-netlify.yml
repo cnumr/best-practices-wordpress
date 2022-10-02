@@ -1,4 +1,4 @@
-name: 'Build Gatsby and deploy to Netlify'
+name: 'Gatsby Build and publish to Netlify'
 
 on:
   # 1. Trigger the workflow push on main branch
@@ -15,7 +15,7 @@ jobs:
     name: 'Deploy'
     # 2. Using the latest Ubuntu image
     runs-on: ubuntu-latest
-    
+
     steps:
       # Check out the current repository code
       - uses: actions/checkout@v3
@@ -23,7 +23,7 @@ jobs:
       - name: Setup node and build Gatsby
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
           cache: 'npm'
       - run: npm install
       # This triggers `gatsby build` script in "package.json"

@@ -1,4 +1,4 @@
-name: Gatsby Publish
+name: 'Gatsby Build and publish to GitHub Pages'
 
 on:
   push:
@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
