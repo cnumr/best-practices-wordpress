@@ -13,3 +13,68 @@
 - [Guide des 'n' bonnes pratiques pour WordPress](/best-practices-WordPress/README.md)
 - [Personas / profils ciblés](./personnas/README.md)
 - [Lexique](./lexique/Lexique.md)
+
+## Branches du repo
+
+- `main`: Branche principale des fiches (Release) ;
+- `develop`: Branche des fiches à valider (develop-fiche dans le diagramme) ;
+- `site-gatsby-generator`: Branche principale du site en Gatsby (Release) ;
+- `develop-site-gatsby`: Branch du site à valider ;
+- `feat/*`: Convention de nommage de branche pour les évolutions de fiches ;
+- `feat-site/*`: Convention de nommage de branche pour les évolutions du site.
+
+```mermaid
+  gitGraph
+       commit id: "init"
+       commit id: "create branches" type:HIGHLIGHT
+       branch develop-fiche
+       branch site-gatsby-generator
+
+       checkout develop-fiche
+       commit id: "change fiche 1"
+       commit id: "change fiche 2"
+       checkout site-gatsby-generator
+       commit id: "Init Gatsby" tag:"v0" type:HIGHLIGHT
+       branch develop-site-gatsby
+       commit
+       checkout develop-site-gatsby
+       commit
+       commit
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-1"
+       checkout main
+       merge develop-fiche tag:"Fiches Release-1"
+       checkout site-gatsby-generator
+       merge main
+       checkout develop-fiche
+       commit id: "change fiche 3"
+       commit id: "change fiche 4"
+       checkout develop-site-gatsby
+       commit
+       commit
+       commit
+       checkout main
+       merge develop-fiche tag:"Fiches Release-2"
+       checkout site-gatsby-generator
+       merge main
+       checkout develop-fiche
+       commit id: "change fiche 5"
+       commit id: "change fiche 6"
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-2"
+       checkout develop-fiche
+       commit id: "change fiche 7"
+       checkout main
+       merge develop-fiche tag:"Fiches Release-3"
+       checkout site-gatsby-generator
+       merge main
+       checkout develop-site-gatsby
+       commit
+       commit
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-3"
+       checkout develop-fiche
+       commit id: "change fiche n"
+       #merge main
+
+```
