@@ -17,8 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      # Check out the current repository code
+      - uses: actions/checkout@v3
       # 3. https://github.com/actions/setup-node#usage
-      - uses: actions/setup-node@v1
+      - name: Setup node and build Gatsby
+        uses: actions/setup-node@v1
         with:
           node-version: "16.x"
           cache: 'npm'
@@ -26,7 +29,6 @@ jobs:
       # This triggers `gatsby build` script in "package.json"
       - run: npm run build
       # 4. Deploy the gatsby build to Netlify
-      - uses: actions/checkout@v3
       - name: Deploy to netlify
         uses: netlify/actions/cli@master
         env:
