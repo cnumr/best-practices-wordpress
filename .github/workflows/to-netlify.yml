@@ -1,9 +1,9 @@
-name: 'Netlify Deploy'
+name: 'Build Gatsby and deploy to Netlify'
 
-# Only trigger, when the build workflow succeeded
 on:
+  # 1. Trigger the workflow push on main branch
   push:
-    branches: 'gh-pages'
+    branches: 'main'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -13,21 +13,26 @@ on:
 jobs:
   deploy:
     name: 'Deploy'
+    # 2. Using the latest Ubuntu image
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v2
+      # 3. https://github.com/actions/setup-node#usage
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+          cache: 'npm'
+      - run: npm install
+      # This triggers `gatsby build` script in "package.json"
+      - run: npm run build
+      # 4. Deploy the gatsby build to Netlify
+      - uses: actions/checkout@v3
       - name: Deploy to netlify
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: deploy --dir=. --prod
+          # 5. "gatsby build" creates "public" folder, which is what we are deploying
+          args: deploy --dir=public --prod
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-      #- uses: jsmrcaga/action-netlify-deploy@master
-      #  with:
-      #    NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      #    NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      #    NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
-      #    NETLIFY_DEPLOY_TO_PROD: true
