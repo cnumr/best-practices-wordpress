@@ -45,11 +45,11 @@ const Layout = ({ children }) => {
       <footer className="mx-auto px-4 lg:px-0 lg:max-w-5xl">
         © {new Date().getFullYear()} &middot; Built with
         {` `}
-        <a target="_blank" href="https://www.gatsbyjs.com">
+        <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com">
           Gatsby
         </a>{' '}
         {` `} by{' '}
-        <a target="_blank" href="https://www.greenit.fr">
+        <a target="_blank" rel="noreferrer" href="https://www.greenit.fr">
           CNUMR
         </a>
         <Licence />

@@ -1,6 +1,7 @@
 import { Card, Layout, SearchButtons, Seo } from '../components'
-import { Link, graphql } from 'gatsby'
 import React, { useState } from 'react'
+
+import { graphql } from 'gatsby'
 
 export default function Home({ data }) {
   const [fichesWP, setFichesWP] = useState(data.fichesWP.nodes)
@@ -35,6 +36,7 @@ export default function Home({ data }) {
                   type={Card.FICHES}
                 />
               )
+            else return <div>No fiches</div>
           })}
         </ul>
       </main>

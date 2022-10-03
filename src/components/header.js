@@ -24,11 +24,13 @@ const Header = ({ siteTitle, className, repoURL, navigation }) => {
     >
       <div className="w-full mx-auto lg:max-w-5xl flex flex-row justify-between items-center">
         <div className="flex items-center gap-4">
-          <StaticImage
-            alt="Logo CNUMR"
-            src={`../assets/logo-cnumr.png`}
-            class={`w-[80px] -m-3`}
-          />
+          <Link to="/" className="font-semibold" title="Retour à l'accueil">
+            <StaticImage
+              alt="Logo CNUMR"
+              src={`../assets/logo-cnumr.png`}
+              class={`w-[80px] -m-3`}
+            />
+          </Link>
           <div>
             <Link to="/" className="font-semibold" title="Retour à l'accueil">
               {siteTitle}
@@ -69,7 +71,7 @@ const Header = ({ siteTitle, className, repoURL, navigation }) => {
                 href={repoURL}
                 className={`text-white md:text-inherit text-xl md:text-base`}
                 target="_blank"
-                rel="no-follow"
+                rel="noreferrer"
                 title="Voir le repository GitHub de CNUMR"
               >
                 <BsGithub />

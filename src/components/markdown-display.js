@@ -1,11 +1,9 @@
 import FichesMetasDisplay from './fiches-metas'
-import Markdown from 'react-markdown'
 import React from 'react'
-import remarkGfm from 'remark-gfm'
 
 function MarkdownDisplay({ type = 'personna', data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, rawMarkdownBody, tableOfContents, html } = markdownRemark
+  const { frontmatter, tableOfContents, html } = markdownRemark
   return (
     <section className="blog-post">
       <h1>
@@ -23,7 +21,6 @@ function MarkdownDisplay({ type = 'personna', data, pageContext }) {
           className="my-8"
         />
       )}
-      {/* <Markdown remarkPlugins={[remarkGfm]}>{rawMarkdownBody}</Markdown> */}
       <div
         className="markdown-content"
         dangerouslySetInnerHTML={{ __html: html }}

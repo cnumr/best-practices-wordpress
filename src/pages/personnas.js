@@ -22,6 +22,7 @@ export default function Home({ data }) {
                   markdownRemark={personna.childMarkdownRemark}
                 />
               )
+            else return <div>No Persona</div>
           })}
         </ul>
       </main>

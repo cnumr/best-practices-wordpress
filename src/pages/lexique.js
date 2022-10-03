@@ -1,7 +1,7 @@
 import { Card, Layout, Seo } from '../components'
-import { Link, graphql } from 'gatsby'
 
 import React from 'react'
+import { graphql } from 'gatsby'
 
 function Lexique({ data }) {
   return (
@@ -22,6 +22,7 @@ function Lexique({ data }) {
                   markdownRemark={entry.childMarkdownRemark}
                 />
               )
+            else return <div>No lexique</div>
           })}
         </ul>
       </main>

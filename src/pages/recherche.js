@@ -1,10 +1,8 @@
-import { Button, Field, Form, Formik } from 'formik'
-import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
+import { Field, Form, Formik } from 'formik'
+import { Layout, Seo } from '../components'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import React, { useState } from 'react'
 
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import { useFlexSearch } from 'react-use-flexsearch'
 
 function Recherche() {

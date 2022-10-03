@@ -38,9 +38,16 @@ function Item({ frontmatter, item }) {
 
 function FichesMetasDisplay({ frontmatter, className, tableOfContents }) {
   return (
-    <div className={classNames(className, 'grid grid-cols-3 gap-4 ')}>
+    <div
+      className={classNames(
+        className,
+        'grid grid-cols-1 md:grid-cols-3 gap-4 '
+      )}
+    >
       <ul
-        className={classNames('noliststyle flex flex-col gap-1 box col-span-2')}
+        className={classNames(
+          'noliststyle flex flex-col gap-1 box col-span-1 md:col-span-2'
+        )}
       >
         <Item frontmatter={frontmatter} item="lifecycle" />
         <Item frontmatter={frontmatter} item="environmental_impact" />

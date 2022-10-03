@@ -1,7 +1,7 @@
 import { Card, Layout, Seo } from '../components'
-import { Link, graphql } from 'gatsby'
 
 import React from 'react'
+import { graphql } from 'gatsby'
 
 export default function Home({ data }) {
   return (
@@ -40,6 +40,7 @@ export default function Home({ data }) {
                   markdownRemark={fiche.childMarkdownRemark}
                 />
               )
+            else return <div>No fiches</div>
           })}
         </ul>
         <h2 id="personnas">Personnas</h2>
@@ -53,6 +54,7 @@ export default function Home({ data }) {
                   markdownRemark={personna.childMarkdownRemark}
                 />
               )
+            else return <div>No persona</div>
           })}
         </ul>
       </main>
