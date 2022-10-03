@@ -53,6 +53,8 @@
        commit
        commit
        commit
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-2"
        checkout main
        merge develop-fiche tag:"Fiches Release-2"
        checkout site-gatsby-generator
@@ -60,8 +62,6 @@
        checkout develop-fiche
        commit id: "change fiche 5"
        commit id: "change fiche 6"
-       checkout site-gatsby-generator
-       merge develop-site-gatsby tag:"Site Release-2"
        checkout develop-fiche
        commit id: "change fiche 7"
        checkout main
@@ -76,5 +76,4 @@
        checkout develop-fiche
        commit id: "change fiche n"
        #merge main
-
 ```
