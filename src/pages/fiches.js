@@ -36,7 +36,7 @@ export default function Home({ data }) {
                   type={Card.FICHES}
                 />
               )
-            else return <div>No fiches</div>
+            else return null
           })}
         </ul>
       </main>

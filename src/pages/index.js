@@ -40,7 +40,7 @@ export default function Home({ data }) {
                   markdownRemark={fiche.childMarkdownRemark}
                 />
               )
-            else return <div>No fiches</div>
+            else return null
           })}
         </ul>
         <h2 id="personnas">Personnas</h2>

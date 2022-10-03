@@ -22,7 +22,7 @@ function Lexique({ data }) {
                   markdownRemark={entry.childMarkdownRemark}
                 />
               )
-            else return <div>No lexique</div>
+            else return null
           })}
         </ul>
       </main>
