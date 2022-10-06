@@ -38,7 +38,7 @@ Une autre notion dans GIT est importante, les `branch`(es).
 Il y a une `branch`(e) centrale qui est définie comme la "bonne version", chez nous, la `branch`(e) **main**.
 
 Dans les équipes de développement, on a l'habitude de travailler chacun dans son coin. Chacun crée sa propre `branch`(e) puis quand on a fini, on transfère ces modifications à un responsable qui se charge de valider et fusionner sa branche.
-Pour ce faire, on crée une branche dans laquelle on fait toutes ces modifications. On commit et l'on push régulièrement et lorsqu'on a fini, on fait une demande de fusion/validation. Ce que l'on appelle un Pull Request (PR) sur GitHub ou une Merge Request (MR) sur GitLab.
+Pour ce faire, on crée une branche dans laquelle on fait toutes ces modifications. On commit et l'on `push` régulièrement et lorsqu'on a fini, on fait une demande de fusion/validation. Ce que l'on appelle un `Pull Request` (PR) sur GitHub ou une `Merge Request` (MR) sur GitLab.
 Ainsi le validateur regarde le contenu de la branche, il valide que les modifications sont valides, qu'elles correspondent aux normes par exemple.
 
 - S'il n'est pas satisfait, il commente la PR et vous demande de faire des modifications. Vous faites les modifications demandées, puis nouveau `commit`+`push` et vous lui redemander de regarder, en commentant la PR déjà ouverte.
