@@ -28,7 +28,7 @@ GitHub est un des services permettant la centralisation de ces modifications. Il
 
 En règle générale, on copie/`clone` (`clone` étant le mot utilisé dans le "langage de GIT") le `repository` sur son ordinateur, on fait ses modifications en local puis on les valide en faisant un `commit` (ce qui crée une version dans notre exemple avec Word) puis on pousse sa modification validée en réalisant un `push` ce qui la met à disposition des autres sur GitHub.
 
-Quand de multiples personne collaborent, il se peut qu'ils aient modifié les mêmes fichiers, il faut alors fusionner leurs modifications.
+Quand de multiples personnes collaborent, il se peut qu'ils aient modifié les mêmes fichiers, il faut alors fusionner leurs modifications.
 On fait une demande d'import de la dernière version du code présent sur GitHub (`git pull origine main`) et à ce moment-là, il y a deux scénarios possibles :
 
 1. Git fait alors une fusion/`merge` des deux versions et ne rencontre aucun conflit qu'il ne sait pas résoudre tout seul.
