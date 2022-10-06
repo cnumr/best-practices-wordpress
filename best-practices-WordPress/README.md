@@ -28,6 +28,8 @@ title: Guide des 'n' bonnes pratiques pour WordPress
 |   **BP** |         `main`          |       `develop`       |
 | **Site** | `site-gatsby-generator` | `develop-site-gatsby` |
 
+Plus d'informations [ici](https://youtu.be/BPOWY_QCc2g)
+
 ### Comment créer une nouvelle fiche ou éditer une fiche
 
 Lire [ici](./template/README.md).
