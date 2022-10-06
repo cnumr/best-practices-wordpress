@@ -6,7 +6,7 @@ updated at: Thu Jul 01 2021 12:11:57 GMT+0000 (Coordinated Universal Time)
 
 # Guide des 'n' bonnes pratiques pour WordPress
 
-<mark>Lien vers la mailling list : <https://groups.google.com/g/greenit--wordpress></mark>
+<mark>Lien vers la mailling list : https://groups.google.com/g/greenit--wordpress</mark>
 
 ## [Préface de la publication](./fiches/0.%20Pr%C3%A9face.md)
 
@@ -16,6 +16,117 @@ updated at: Thu Jul 01 2021 12:11:57 GMT+0000 (Coordinated Universal Time)
 
 Lire [ici](./template/README.md).
 
+## Comment créer ou mettre à jour des fiches sur le repository GIT
+
+Pour ceux qui ne sont pas à l'aise avec Git, voici un petit tour d'horizon où vous trouverez des notions et des mots du patois Git.
+
+> Ceux qui connaissent GIT par cœur n'apprendront rien dans cette première partie et peuvent aller directement à la proposition de worflow.
+
+### Git, c'est quoi et comment on travaille avec ?
+
+Git est un système de **versionning de code**, c'est-à-dire que comme Word ou autre, on a un historique des modifications du code. Le code chez nous étant le contenu des fiches.
+
+GitHub est un des services permettant la centralisation de ces modifications. Il en existe d'autre comme GitLab, Gitea, etc.
+
+En règle générale, on copie/`clone` (`clone` étant le mot utilisé dans le "langage de GIT") le `repository` sur son ordinateur, on fait ses modifications en local puis on les valide en faisant un `commit` (ce qui crée une version dans notre exemple avec Word) puis on pousse sa modification validée en réalisant un `push` ce qui la met à disposition des autres sur GitHub.
+
+Quand de multiples personne collaborent, il se peut qu'ils aient modifié les mêmes fichiers, il faut alors fusionner leurs modifications.
+On fait une demande d'import de la dernière version du code présent sur GitHub (`git pull origine main`) et à ce moment-là, il y a deux scénarios possibles :
+
+1. Git fait alors une fusion/`merge` des deux versions et ne rencontre aucun conflit qu'il ne sait pas résoudre tout seul.
+2. Lors de cette fusion, Git n'arrive pas à résoudre tout seul les conflits, on doit alors faire soi-même le `merge`. Git fusionne les modifications et l'on doit lui indiquer quelle est la bonne version, ligne à ligne. Une fois cela fait, on valide/commit et l'on pousse/`push` sur GitHub.
+
+Une autre notion dans GIT est importante, les `branch`(es).
+Il y a une `branch`(e) centrale qui est définie comme la "bonne version", chez nous, la `branch`(e) **main**.
+
+Dans les équipes de développement, on a l'habitude de travailler chacun dans son coin. Chacun crée sa propre `branch`(e) puis quand on a fini, on transfère ces modifications à un responsable qui se charge de valider et fusionner sa branche.
+Pour ce faire, on crée une branche dans laquelle on fait toutes ces modifications. On commit et l'on push régulièrement et lorsqu'on a fini, on fait une demande de fusion/validation. Ce que l'on appelle un Pull Request (PR) sur GitHub ou une Merge Request (MR) sur GitLab.
+Ainsi le validateur regarde le contenu de la branche, il valide que les modifications sont valides, qu'elles correspondent aux normes par exemple.
+
+- S'il n'est pas satisfait, il commente la PR et vous demande de faire des modifications. Vous faites les modifications demandées, puis nouveau `commit`+`push` et vous lui redemander de regarder, en commentant la PR déjà ouverte.
+- S'il est satisfait, il va réaliser lui-même la fusion de cette branche dans la `branch` **main**.
+
+Voilà rapidement un aperçu du travail en équipe avec Git et GitHub.
+
+#### Pour en savoir plus sur Git
+
+Voici une liste de lien expliquant en détail les notions dont j'ai parlé :
+
+- Rudiments de Git https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Rudiments-de-Git
+- `clone` (section **Cloner un dépôt existant**) https://git-scm.com/book/fr/v2/Les-bases-de-Git-D%C3%A9marrer-un-d%C3%A9p%C3%B4t-Git
+- `branch` https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Les-branches-en-bref
+- `commit` (section **Valider vos modifications**) https://git-scm.com/book/fr/v2/Les-bases-de-Git-Enregistrer-des-modifications-dans-le-d%C3%A9p%C3%B4t
+- `push` (section **Pousser son travail sur un dépôt distant**) https://git-scm.com/book/fr/v2/Les-bases-de-Git-Travailler-avec-des-d%C3%A9p%C3%B4ts-distants
+
+### Workflow
+
+Afin que vous n'ayez pas à réaliser vous-même les fusions, ce qui est assez pénible et afin que nous assurions la conformité du code, nous vous demandons de travailler avec des branches et que vous ouvriez des PR pour que nous les fusionnions dans la branche principale **main**.
+
+### Branches du repo
+
+- `main`: Branche principale des fiches (Release) ;
+- `develop`: Branche des fiches à valider (develop-fiche dans le diagramme) ;
+- `site-gatsby-generator`: Branche principale du site en Gatsby (Release) ;
+- `develop-site-gatsby`: Branch du site à valider ;
+- `feat/*`: Convention de nommage de branche pour les évolutions de fiches ;
+- `feat-site/*`: Convention de nommage de branche pour les évolutions du site.
+
+```mermaid
+  gitGraph
+       commit id: "init"
+       commit id: "create branches" type:HIGHLIGHT
+       branch develop-fiche
+       branch site-gatsby-generator
+
+       checkout develop-fiche
+       commit id: "change fiche 1"
+       commit id: "change fiche 2"
+       checkout site-gatsby-generator
+       commit id: "Init Gatsby" tag:"v0" type:HIGHLIGHT
+       branch develop-site-gatsby
+       commit
+       checkout develop-site-gatsby
+       commit
+       commit
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-1"
+       checkout main
+       merge develop-fiche tag:"Fiches Release-1"
+       checkout site-gatsby-generator
+       merge main
+       checkout develop-fiche
+       commit id: "change fiche 3"
+       commit id: "change fiche 4"
+       checkout develop-site-gatsby
+       commit
+       commit
+       commit
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-2"
+       checkout main
+       merge develop-fiche tag:"Fiches Release-2"
+       checkout site-gatsby-generator
+       merge main
+       checkout develop-fiche
+       commit id: "change fiche 5"
+       commit id: "change fiche 6"
+       checkout develop-fiche
+       commit id: "change fiche 7"
+       checkout main
+       merge develop-fiche tag:"Fiches Release-3"
+       checkout site-gatsby-generator
+       merge main
+       checkout develop-site-gatsby
+       commit
+       commit
+       checkout site-gatsby-generator
+       merge develop-site-gatsby tag:"Site Release-3"
+       checkout develop-fiche
+       commit id: "change fiche n"
+       #merge main
+```
+
+<!--
 ## Worflow avec les Status
 
 1. TO DO
@@ -63,3 +174,5 @@ Lire [ici](./template/README.md).
 ## Liste des fiches non-WordPress
 
 - [07. Utiliser une version de headless / sans tête](./fiches/07.%20Utiliser%20une%20version%20de%20headless%20_%20sans%20t%C3%AAte.md)
+
+-->
