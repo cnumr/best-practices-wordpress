@@ -77,3 +77,5 @@
        commit id: "change fiche n"
        #merge main
 ```
+
+[Introduction sur git et quelle est l'organisation mise en place](./best-practices-WordPress/README.md#comment-créer-ou-mettre-à-jour-des-fiches-sur-le-repository-git)
