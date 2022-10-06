@@ -78,4 +78,5 @@
        #merge main
 ```
 
-[Introduction sur git et quelle est l'organisation mise en place](./best-practices-WordPress/README.md#comment-créer-ou-mettre-à-jour-des-fiches-sur-le-repository-git)
+- [Introduction sur git et quelle est l'organisation mise en place](./best-practices-WordPress/README.md#comment-créer-ou-mettre-à-jour-des-fiches-sur-le-repository-git)
+- [Organisation de création de fiche](./best-practices-WordPress/README.md#organisation-de-création-de-fiche)
