@@ -41,7 +41,7 @@ Dans les équipes de développement, on a l'habitude de travailler chacun dans s
 Pour ce faire, on crée une branche dans laquelle on fait toutes ces modifications. On commit et l'on `push` régulièrement et lorsqu'on a fini, on fait une demande de fusion/validation. Ce que l'on appelle un `Pull Request` (PR) sur GitHub ou une `Merge Request` (MR) sur GitLab.
 Ainsi le validateur regarde le contenu de la branche, il valide que les modifications sont valides, qu'elles correspondent aux normes par exemple.
 
-- S'il n'est pas satisfait, il commente la PR et vous demande de faire des modifications. Vous faites les modifications demandées, puis nouveau `commit`+`push` et vous lui redemander de regarder, en commentant la PR déjà ouverte.
+- S'il n'est pas satisfait, il commente la PR et vous demande de faire des modifications. Vous faites les modifications demandées, puis nouveau `commit`+`push` et vous lui redemandez de regarder, en commentant la PR déjà ouverte.
 - S'il est satisfait, il va réaliser lui-même la fusion de cette branche dans la `branch` **main**.
 
 Voilà rapidement un aperçu du travail en équipe avec Git et GitHub.
