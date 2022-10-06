@@ -1,7 +1,5 @@
 ---
 title: Guide des 'n' bonnes pratiques pour WordPress
-created at: Wed Jun 30 2021 13:28:29 GMT+0000 (Coordinated Universal Time)
-updated at: Thu Jul 01 2021 12:11:57 GMT+0000 (Coordinated Universal Time)
 ---
 
 # Guide des 'n' bonnes pratiques pour WordPress
