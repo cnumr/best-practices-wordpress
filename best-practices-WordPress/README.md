@@ -24,7 +24,7 @@ Pour ceux qui ne sont pas à l'aise avec Git, voici un petit tour d'horizon où 
 
 Git est un système de **versionning de code**, c'est-à-dire que comme Word ou autre, on a un historique des modifications du code. Le code chez nous étant le contenu des fiches.
 
-GitHub est un des services permettant la centralisation de ces modifications. Il en existe d'autre comme GitLab, Gitea, etc.
+GitHub est un des services permettant la centralisation de ces modifications. Il en existe d'autres comme GitLab, Gitea, etc.
 
 En règle générale, on copie/`clone` (`clone` étant le mot utilisé dans le "langage de GIT") le `repository` sur son ordinateur, on fait ses modifications en local puis on les valide en faisant un `commit` (ce qui crée une version dans notre exemple avec Word) puis on pousse sa modification validée en réalisant un `push` ce qui la met à disposition des autres sur GitHub.
 
