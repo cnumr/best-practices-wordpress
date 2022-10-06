@@ -10,7 +10,25 @@ title: Guide des 'n' bonnes pratiques pour WordPress
 
 ## Fiches
 
-## Comment créer une nouvelle fiche ou éditer une fiche
+### Organisation de création de fiche
+
+1. Création d'une **Discussion**, échanges puis **l'équipe de pilotages du projet** `flag` à **Answered**.
+2. Création d'une `issue` (qui apparait automatiquement dans la vue projet en le lui affectant) par la personne qui `answered` la discussion. L'issue est assignée soit à la personne qui a ouvert la discussion, soit à la personne en charge de cette partie.
+3. Création d'une branche `feat/***` sur laquelle la personne assignée travail (si c'est impossible, elle indique ces modifications dans l'issue et une personne du comité de pilotage fera le process).
+4. Au fil de l'avancement, l'assigné coche les sous-tâches achevées dans l'issue. Ne pas hésiter à ajouter les termes utilisés au lexique et à les lier au contenu de la fiche en faisant `[[nom du fichier .md|Label à afficher]]`.
+5. Une fois le processus achevé, l'assigné fait une `PR` ou `Pull Request` de sa branch vers la branch `develop`. La `PR` doit être affecté à un **Reviewer** (la personne ayant créé l'issue), la personne se l'assigne et la lie à un Millestone, celui de l'issue.
+6. Échanges, commentaires, etc. In-fine, ce sera l'équipe de pilotages du projet qui validera que la fiche est finalisée.
+7. La `PR` est validée par le **Reviewer**.
+8. Un référent de l'équipe de pilotages du projet `merge` la branch `develop` dans la branch `main` et ajoute mise à jour au site en faisant un merge de `main` dans `site-gatsby-generator` ce qui déclenche le build et la publication.
+
+> Ce process est le même pour les `bp` et `site`, seule les branchs sont différentes
+
+|    Sujet |     Branch release      |       Branch QA       |
+| -------: | :---------------------: | :-------------------: |
+|   **BP** |         `main`          |       `develop`       |
+| **Site** | `site-gatsby-generator` | `develop-site-gatsby` |
+
+### Comment créer une nouvelle fiche ou éditer une fiche
 
 Lire [ici](./template/README.md).
 
