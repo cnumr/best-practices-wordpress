@@ -72,10 +72,10 @@ Dans l'onglet [Issues](https://github.com/cnumr/fiches-wordpress-greenit/issues)
 
 Dans celle-ci, nous vous invitons à créer une branche (`create a branch`) en la nommant : `feat/` + nom de l'issue. Sur cette branche, vous pouvez faire vos ajouts, modifications ou suppressions en fonction du sujet de l'issue.
 
-**Pour tout ajout ou modification de BP, veuillez respecter le [template](https://github.com/cnumr/fiches-wordpress-greenit/blob/main/best-practices-WordPress/template/TEMPLATE.md).**
+**Pour tout ajout ou modification de BP, veuillez respecter le [template](https://github.com/cnumr/fiches-wordpress-greenit/blob/main/best-practices-WordPress/TEMPLATE.md).**
 
 Lors de la rédaction de votre BP, nous vous recommandons d'utiliser le lexique déjà en place ou de l'augmenter en fonction de vos besoins. 
-- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition|label à afficher]]`.
+- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition sans .md|label à afficher]]` (ex: [[extension|plug-in]] plug-in sera affiché et pointera vers le fichier du lexique extension.md).
 - Pour surligner une notion importante, utilisez cette écriture : `==Phrase à surligner==`.
 
 Une fois que vous êtes satisfait de votre proposition et que vous avez coché les tâches, il est nécessaire de faire une `Pull Request` vers `develop` associée à l'issue. Une `Pull Request` peut-être `review` par tous les participants qui souhaitent soumettre des corrections au niveau de l'orthographe, de la syntaxe, de compréhension, de vulgarisation, etc.
