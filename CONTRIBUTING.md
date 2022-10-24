@@ -42,6 +42,8 @@ Pour une meilleure organisation, nous avons établi un workflow identique pour l
 - des bonnes pratiques
 - des définitions du lexique
 
+Nous vous proposons une courte vidéo, encore brouillonne, des manipulations décrite ci-dessous : [https://youtu.be/BPOWY_QCc2g](https://youtu.be/BPOWY_QCc2g)
+
 ### 1.   Tout commence par une discussion !
 
 Dans l'onglet [discussion](https://github.com/cnumr/fiches-wordpress-greenit/discussions), n'hésitez pas à regarder les discussions déjà ouvertes avant d'en créer une nouvelle, peut-être qu'une autre personne a eu la même idée que vous.
