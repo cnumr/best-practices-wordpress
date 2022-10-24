@@ -1,28 +1,27 @@
-# Comment créer une fiche
+# Prise en main du template
 
-## Template de fiche
+## Template de bonne pratique
 
-Utiliser le template présent [ici](./TEMPLATE.md).
+Nous vous mettons à disposition le template [suivant](./TEMPLATE.md).
 
-Il est découpé en deux blocs, le premier est encadré par des `---`.
+Il est découpé en deux blocs, le premier est encadré par des `---` :
+1. Dans cette première partie, vous trouverez les métadatas utiles pour générer convenablement le site (cf. [frontmatter](https://frontmatter.codes)).
+2. Dans la deuxième partie se trouve le contenu de la bonne pratique elle-même.
 
-Dans cette première partie, vous trouverez les métadas qui peuvent servir à utiliser les fichiers markdown pour génrérer des sites (cf. [frontmatter](https://frontmatter.codes)).
+> ⚠️ Attention si vous souhaitez utiliser des images, audios ou vidéos, il est nécessaire de tous les regrouper par bonne pratique dans le dossier `medias_<numero de la bonne pratique>` que vous aurez crée dans le dossier `fiche`.
 
-Dans la deuxième partie se trouve le contenu de la fiche elle-même, au format `cnumr / best-practices` que vous trouverez [ici](https://github.com/cnumr/best-practices).
+## Explication de certaines métadatas
 
-## Medias utilisé(s) dans la fiche
+### Le cycle de vie
 
-Les médias doivent être regroupés par fiche dans un dossier au format suivant `medias_<numero de la fiche>`
+- `lifecycle`: \<Phase de "conception" concernée>
+  - 1 - En amont
+  - 2 - Conception / Design
+  - 3 - Développement
+  - 4 - Mise en ligne
+  - 5 - Maintenance
 
-## Ajouter la fiche à la liste des fiches
-
-Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les listants](../README.md). Il faut y reporter les métadatas de la fiche.
-
-## Métadatas de la fiche
-
-- `title`: \<NUM de la fiche sur deux digits>. \<NOM de la fiche>
-- `path`: /fiches/\<NUM de la fiche sur deux digits>-<NOM de la fiche>
-- `people`: \<Noms des rédacteurs>
+### Le scope
 - `scope`: \<Famille de la fiche>
   - Cache
   - Documents
@@ -34,33 +33,26 @@ Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les lista
   - Stockage
   - Thèmes
   - Vidéos/Audio
-- `state_validation`: \<Status le création de la fiche>
-  - 1 - TO DO
-  - 2 - DOING
-  - 3 - TO VALIDATE
-  - 4 - DONE 🚀
-- `responsible`: \<Liste des cible(s) visé(s), Personnas concernée(s)>
-  - Code(use·ur) → Développeu·se·r
-  - Designeu(se·r)
-  - Low-code → Freelance et développeur Front-End d'agences
-  - No-code → Madame et Monsieur tout le monde
-- `lifecycle`: \<Phase de "conception" concernée>
-  - 1 - En amont
-  - 2 - Conception / Design
-  - 3 - Développement
-  - 4 - Mise en ligne
-  - 5 - Maintenance
+
+### La priorité d'implementation
+
 - `priority_implementation`: \<Priorité de mise en œuvre>
   - Faible 👍
   - Moyen 👍👍
   - Fort 👍👍👍
+  
+### L'impact environnemental
+
 - `environmental_impact`: \<Niveau de l'impact écologique>
   - Faible 🌱
   - Moyen 🌱🌱
   - Fort 🌱🌱🌱
+  
+### Les ressources sauvegardées
+
 - `saved_resources`: \<liste des ressources économisées>
   - Processeur
   - Mémoire vive
   - Stockage
   - Réseau
-  - Requêtes
+  - Requêtes)
