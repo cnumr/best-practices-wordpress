@@ -4,7 +4,10 @@ path: /fiches/<Numéro de la bonne pratqiue sur deux digits>-<nom de la bonne pr
 people: <Nom(s) de(s) rédacteur(s) de la bonne pratique>
 scope: <Famille de la bonne pratique à définir parmi : Cache | Documents | Fonctionnalités | Front-Office | Hébergement | Images | Sécurité | Stockage | Thèmes | Vidéos/Audio>
 state_validation: <Status de création de la bonne pratique à définir parmi : 1 - TO DO | 2 - DOING | 3 - TO VALIDATE | 4 - DONE 🚀>
-responsible: <Liste des cible(s) visé(s), Personnas concernée(s) : Code(use·ur) → Développeu·se·r, Designeu(se·r) | Low-code → Freelance et développeur Front-End d'agences | No-code → Madame et Monsieur tout le monde>
+responsible: <Liste des cible(s) visé(s), Personnas concernée(s) : 
+- Code(use·ur) → Développeu·se·r, Designeu(se·r)
+- Low-code → Freelance et développeur Front-End d'agences
+- No-code → Madame et Monsieur tout le monde>
 lifecycle: <Phase de "conception" concernée à définir parmi : Analyse des besoins | Installation | Conception & Design | Intégration & Développement | Contenu & médias | Tests & validation | Mise en ligne | Maintenance | Fin de vie>
 priority_implementation: <Priorité de mise en œuvre à définir sur l'échelle suivante : Faible 👍 | Moyen 👍👍 | Fort 👍👍👍>
 environmental_impact: <Niveau de l'impact écologique  à définir sur l'échelle suivante : Faible 🌱 | Moyen 🌱🌱 | Fort 🌱🌱🌱>
