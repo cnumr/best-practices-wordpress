@@ -1,31 +1,40 @@
 ---
-title: <NUM de la fiche sur deux digits>. <NOM de la fiche>
-path: /fiches/<NUM de la fiche sur deux digits>-<NOM de la fiche>
-people: <Noms des rédacteurs>
-scope: <Famille de la fiche>
-state_validation: <Status le création de la fiche>
-responsible: <Liste des cible(s) visé(s), Personnas concernée(s)>
-lifecycle: <Phase de "conception" concernée>
-priority_implementation: <Priorité de mise en œuvre>
-environmental_impact: <Niveau de l'impact écologique>
-saved_resources: <liste des ressources économisées>
+title: <Numéro de la bonne pratique sur deux digits>. <Nom de la bonne pratique sous le fomat verbe à l'infinif + l'action à mener>
+path: /fiches/<Numéro de la bonne pratqiue sur deux digits>-<nom de la bonne pratique>
+people: <Nom(s) de(s) rédacteur(s) de la bonne pratique>
+scope: <Famille de la bonne pratique à définir parmi : Cache | Documents | Fonctionnalités | Front-Office | Hébergement | Images | Sécurité | Stockage | Thèmes | Vidéos/Audio>
+state_validation: <Status de création de la bonne pratique à définir parmi : 1 - TO DO | 2 - DOING | 3 - TO VALIDATE | 4 - DONE 🚀>
+responsible: <Liste des cible(s) visé(s), Personnas concernée(s) : Code(use·ur) → Développeu·se·r, Designeu(se·r) | Low-code → Freelance et développeur Front-End d'agences | No-code → Madame et Monsieur tout le monde>
+lifecycle: <Phase de "conception" concernée à définir parmi : Analyse des besoins | Installation | Conception & Design | Intégration & Développement | Contenu & médias | Tests & validation | Mise en ligne | Maintenance | Fin de vie>
+priority_implementation: <Priorité de mise en œuvre à définir sur l'échelle suivante : Faible 👍 | Moyen 👍👍 | Fort 👍👍👍>
+environmental_impact: <Niveau de l'impact écologique  à définir sur l'échelle suivante : Faible 🌱 | Moyen 🌱🌱 | Fort 🌱🌱🌱>
+saved_resources: <Liste des ressources économisées à définir parmi : Processeur | Mémoire vive | Stockage | Réseau | Requêtes>
+toIndex: <true ou false>
 ---
 
 ## Sujet
 
-Description de l'information du la fiche
+Quel est le sujet, la problématique de cette bonne pratique ?
 
 ## GreenIT vous conseille
 
-Indications GreenIT
+Quelles solutions pouvons-nous apporter ? 
+Il est possible de différencier les solutions et d'indiquer pour chaque son impact environnemental comme suit :
+  
+### Solution no-code 🌱
+
+### Solution code pas-à-pas 🌱🌱🌱
+Si sorte de tutoriel
+
+### Solution code 🌱🌱🌱
 
 ## Exemple
 
-Exemple s'il y en a
+Exemple s'il y en a. Les exemples peuvent aussi être insérés directement dans les différentes solutions proposées.
 
 ## Principe de validation
 
-| Le nombre ... | est inférieur ou égal à |
+| Le nombre | est inférieur ou égal à |
 | ------------- | :---------------------: |
 | de ...        |            0            |
 
