@@ -8,7 +8,12 @@ responsible: <Liste des cible(s) visé(s), Personnas concernée(s) : Code(use·u
 lifecycle: <Phase de "conception" concernée à définir parmi : Analyse des besoins | Installation | Conception & Design | Intégration & Développement | Contenu & médias | Tests & validation | Mise en ligne | Maintenance | Fin de vie>
 priority_implementation: <Priorité de mise en œuvre à définir sur l'échelle suivante : Faible 👍 | Moyen 👍👍 | Fort 👍👍👍>
 environmental_impact: <Niveau de l'impact écologique  à définir sur l'échelle suivante : Faible 🌱 | Moyen 🌱🌱 | Fort 🌱🌱🌱>
-saved_resources: <Liste des ressources économisées à définir parmi : Processeur | Mémoire vive | Stockage | Réseau | Requêtes>
+saved_resources: <Liste des ressources économisées à définir parmi : 
+- Processeur
+- Mémoire vive
+- Stockage
+- Réseau
+- Requêtes>
 toIndex: <true ou false>
 ---
 
