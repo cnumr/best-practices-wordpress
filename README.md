@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://collectif.greenit.fr/">
+    <img alt="CNUMR" src="./assets/logo-cnumr.png" width="160" />
+  </a>
+</p>
+
 # Les bonnes pratiques d'écoconception pour WordPress 
 
 **Accéder au [site](referentiel-web.greenit.eco)**
@@ -95,10 +101,4 @@ Nous remercions chaleureusement l'ensemble des contributrices et contributeurs q
 ## Licence
 
 L'ensemble du référentiel : titre, fiche, règle de test, seuil de conformité et taxonomie des bonnes pratiques pour WordPress sont publiés [sous licence Creative Commons BY-NC-ND](LICENCE.md). Cela signifie que vous pouvez l'utiliser librement pour des utilisations non commerciales, à la condition de maintenir la paternité du contenu, via un lien vers https://collectif.greenit.fr/ et https://www.ecoconceptionweb.com/. 
-
-<p align="center">
-  <a href="https://collectif.greenit.fr/">
-    <img alt="CNUMR" src="./assets/logo-cnumr.png" width="160" />
-  </a>
-</p>
 
