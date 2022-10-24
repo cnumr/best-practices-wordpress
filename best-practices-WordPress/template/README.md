@@ -1,8 +1,6 @@
 # Prise en main du template
 
-## Template de bonne pratique
-
-Nous vous mettons à disposition le template [suivant](./TEMPLATE.md).
+Nous vous mettons à disposition le [template](./TEMPLATE.md).
 
 Il est découpé en deux blocs, le premier est encadré par des `---` :
 1. Dans cette première partie, vous trouverez les métadatas utiles pour générer convenablement le site (cf. [frontmatter](https://frontmatter.codes)).
