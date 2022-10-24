@@ -2,7 +2,7 @@
   <a href="https://collectif.greenit.fr/">
     <img alt="CNUMR" src="./assets/logo-cnumr.png" width="160" />
   </a> 
-    <img alt="Association Green IT" src="./assets/logo-asso.png" width="160" />
+    <img alt="Association Green IT" src="./assets/logo-asso.png" width="200" />
 </p>
 
 
