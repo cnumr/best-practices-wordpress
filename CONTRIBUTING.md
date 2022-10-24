@@ -107,9 +107,7 @@ Pour ce faire, on crée une branche dans laquelle on fait toutes ces modificatio
 Ainsi le validateur regarde le contenu de la branche, il valide que les modifications sont valides, qu'elles correspondent aux normes par exemple.
 
 - S'il n'est pas satisfait, il commente la PR et vous demande de faire des modifications. Vous faites les modifications demandées, puis nouveau `commit`+`push` et vous lui redemandez de regarder, en commentant la PR déjà ouverte.
-- S'il est satisfait, il va réaliser lui-même la fusion de cette branche dans la `branch` **main**.
-
-Voilà rapidement un aperçu du travail en équipe avec Git et GitHub.
+- S'il est satisfait, il va réaliser lui-même la fusion de cette branche dans la `branch` **develop**.
 
 ### Branches du repo
 
