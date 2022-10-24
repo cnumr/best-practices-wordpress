@@ -1,8 +1,11 @@
 <p align="center">
   <a href="https://collectif.greenit.fr/">
     <img alt="CNUMR" src="./assets/logo-cnumr.png" width="160" />
-  </a>
+  </a> 
+    <img alt="Association Green IT" src="./assets/logo-asso.png" width="160" />
 </p>
+
+
 
 # Les bonnes pratiques d'écoconception pour WordPress 
 
