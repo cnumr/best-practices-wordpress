@@ -3,7 +3,6 @@ title: <Numéro de la bonne pratique sur deux digits>. <Nom de la bonne pratique
 path: /fiches/<Numéro de la bonne pratqiue sur deux digits>-<nom de la bonne pratique>
 people: <Nom(s) de(s) rédacteur(s) de la bonne pratique>
 scope: <Famille de la bonne pratique à définir parmi : Cache | Documents | Fonctionnalités | Front-office | Hébergement | Images | Sécurité | Stockage | Thèmes | Vidéos/Audios>
-state_validation: <Status de création de la bonne pratique à définir parmi : 1 - TO DO | 2 - DOING | 3 - TO VALIDATE | 4 - DONE 🚀>
 responsible: <Liste des cible(s) visé(s), Personnas concernée(s) : 
 - Code(use·ur) → Développeu·se·r, Designeu(se·r)
 - Low-code → Freelance et développeur Front-End d'agences
