@@ -1,5 +1,5 @@
 ---
-title: <Numéro de la bonne pratique sur deux digits>. <Nom de la bonne pratique sous le fomat verbe à l'infinif + l'action à mener>
+title: WP_0.00_titre.<Nom de la bonne pratique sous le fomat verbe à l'infinif + l'action à mener>
 path: /fiches/<nom-de-la-bonne-pratique-en-minuscule>
 people: <Nom(s) de(s) rédacteur(s) de la bonne pratique>
 scope: <Famille de la bonne pratique à définir parmi : Cache | Documents | Fonctionnalités | Front-office | Hébergement | Images | Sécurité | Stockage | Thèmes | Vidéos/Audios>
