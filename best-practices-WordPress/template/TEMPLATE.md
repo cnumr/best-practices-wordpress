@@ -1,6 +1,6 @@
 ---
 title: <Numéro de la bonne pratique sur deux digits>. <Nom de la bonne pratique sous le fomat verbe à l'infinif + l'action à mener>
-path: /fiches/<Numéro de la bonne pratqiue sur deux digits>-<nom de la bonne pratique>
+path: /fiches/<nom-de-la-bonne-pratique-en-minuscule>
 people: <Nom(s) de(s) rédacteur(s) de la bonne pratique>
 scope: <Famille de la bonne pratique à définir parmi : Cache | Documents | Fonctionnalités | Front-office | Hébergement | Images | Sécurité | Stockage | Thèmes | Vidéos/Audios>
 responsible: <Liste des cible(s) visé(s), Personnas concernée(s) : 
