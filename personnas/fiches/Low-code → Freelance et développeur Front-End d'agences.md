@@ -16,7 +16,7 @@ toIndex: true
 
 ### Catégorisation :
 
-> **LOW-CODE** → Il a des connaissances de base en HTML et CSS, il utilise un peu de code PHP en rustine ou en liant des plugins qu'il utilise Utilisant un thème joli (ou qu'il rendra joli) et répondant a ses besoins ou aux besoins de son client (voire embarquant plus que les besoins identifiés) et des "centaines" de plugins et souvent un constructeur de pages.
+> **LOW-CODE** → Il a des connaissances de base en HTML et CSS, il utilise un peu de code PHP en rustine ou en liant des extensions qu'il utilise Utilisant un thème joli (ou qu'il rendra joli) et répondant a ses besoins ou aux besoins de son client (voire embarquant plus que les besoins identifiés) et des "centaines" d'extensions et souvent un constructeur de pages.
 
 ### Comment on l'attrape
 

@@ -16,7 +16,7 @@ toIndex: true
 ### Catégorisation :
 
 > **NO-CODE** → pas un développeur, qui n'est même pas technique et qui n'a aucune connaissance des bonnes pratiques de base.  
-> Utilisant un thème joli et répondant a ses besoins (voire embarquant plus que ces besoins) et des "milliers" de plugins pour tout et n'importe quoi, un constructeur de page.
+> Utilisant un thème joli et répondant a ses besoins (voire embarquant plus que ces besoins) et des "milliers" d'extensions pour tout et n'importe quoi, un constructeur de page.
 
 ### Comment l'attraper :
 

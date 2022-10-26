@@ -15,7 +15,7 @@ toIndex: true
 
 ## Catégorisation :
 
-> **DESIGNEU(SE·R)** → Iel a des connaissances de base en HTML et CSS, utilisant un thème qu'iel rendra joli et répondant a ses besoins ou aux besoins de son client (voire embarquant plus que les besoins identifiés) et des "centaines" de plugins et souvent un constructeur de pages.
+> **DESIGNEU(SE·R)** → Iel a des connaissances de base en HTML et CSS, utilisant un thème qu'iel rendra joli et répondant a ses besoins ou aux besoins de son client (voire embarquant plus que les besoins identifiés) et des "centaines" d'extensions et souvent un constructeur de pages.
 
 ### Comment on l'attrape
 
