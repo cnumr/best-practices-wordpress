@@ -24,4 +24,4 @@ toIndex: false
 - Template : Ensemble de fichier (php) qui mets en relations les éléments pour afficher le thème
 - Thème : Ensemble qui défini le graphisme du site
 - WordPress
-- [WordPress.org](http://wordpress.org/) / [WorPress.com](http://worpress.com/)
+- [WordPress.org](https://fr.wordpress.org/) / [WorPress.com](https://worpress.com/)
