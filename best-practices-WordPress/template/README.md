@@ -1,6 +1,6 @@
 # Prise en main du template
 
-Nous vous mettons à disposition le [template](./WP_0.00_Titre de la bonne pratique.md).
+Nous vous mettons à disposition le [template](WP_0.00_Titre%20de%20la%20bonne%20pratique.md).
 
 ## Le titre
 
