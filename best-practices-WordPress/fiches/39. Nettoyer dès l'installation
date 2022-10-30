@@ -1,0 +1,40 @@
+---
+title: 39. Nettoyer dès l'installation
+path: /fiches/nettoyer-des-l-installation
+people: Florine
+scope: Fonctionnalités
+responsible: 
+- Code(use·ur) → Développeu·se·r, Designeu(se·r)
+- Low-code → Freelance et développeur Front-End d'agences
+- No-code → Madame et Monsieur tout le monde
+lifecycle: Installation
+priority_implementation: Fort 👍👍👍
+environmental_impact: Moyen 🌱🌱
+saved_resources:
+- Stockage
+- Réseau
+- Requêtes
+toIndex: true
+---
+
+## Sujet
+
+Par défaut, WordPress comprend déjà un certain nombre de fonctionnalités, de thèmes et d'extensions qui vous seront inutiles et que vous avez définis comme non essentiels qui pèsent leur poids.
+
+## GreenIT vous conseille
+Pour éviter cette surcharge de base, dés l'installation en [[local]] ou en ligne, nous vous invitons à faire un premier nettoyage de votre WordPress en désactivant ou supprimant, quand c'est possible, les éléments non désirés.
+
+## Exemples
+
+Si vous ne comptez pas utiliser la fonctionnalité commentaire pour votre blog, vous pouvez supprimer l'extension Akismet Anti-Spam et désactiver l'utilisation des commentaires.
+
+
+## Principe de validation
+
+| Le nombre | est inférieur ou égal à |
+| ------------- | :---------------------: |
+| de fonctionnalités, thèmes et extensions, par défaut inutiles, désactivables et/ou supprimables      |            0            |
+
+## Sources
+- https://yesyouweb.com/retirer-commentaires-site-wordpress/
+- https://kinsta.com/fr/base-de-connaissances/desactiver-emojis-wordpress/
