@@ -1,13 +1,13 @@
 # Prise en main du template
 
-Nous vous mettons à disposition le [template](./WP_0.00_Titre de la bonne pratique.md).
+Nous vous mettons à disposition le [template](WP_0.00_Titre%20de%20la%20bonne%20pratique.md).
 
 ## Le titre
 
 **Le titre d'une bonne pratique se construit sous le format suivant WP_<numero de cycle>.<numéro de la bonne pratique>_<Titre de la bonne pratique>.**
 - Le premier chiffre correspond au moment du cycle de vie d'un WordPress où votre bonne pratique s'inscrit.
-  1. Analyse des besoins
-  2. Installation
+ 1. Analyse des besoins
+ 2. Installation
   3. Conception & Design
   4. Intégration & Développement
   5. Contenu & médias
