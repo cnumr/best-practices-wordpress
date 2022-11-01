@@ -38,7 +38,7 @@ Petites légendes des émoticons utilisées :
 
 Nous commençons par le seul format [[vectoriel]] de cette liste, c'est-à-dire, qu'il a pour principal avantage de ne jamais subir de [[pixellisation]] lors d'agrandissement comme les caractères de police qui à toute taille, restent un dessin précis et lisible contrairement à une image [[matricielle|matricielle ou bitmap]]. Ce format est souvent utilisé pour les logotypes, les icônes et les illustrations vectorielles. **Pour utiliser ce format, il faut que le format de création de l'image soit totalement vectoriel**, c'est-à-dire, créer avec des logiciels comme Inkscape, Affinity Designer, Illustrator, etc.
 
-==À utiliser si votre image est vectorielle et si vous avez besoin d'une image flexible en matière de taille ou si vous avez besoin d'animer votre image via du code (`CSS3`, `SMIL` ou `JS`).==
+À utiliser si votre image est vectorielle et si vous avez besoin d'une image flexible en matière de taille ou si vous avez besoin d'animer votre image via du code (`CSS3`, `SMIL` ou `JS`).
 
 > ⚠️ Il existe plusieurs méthodes pour intégrer un `.svg` dont la méthode qui permet sa manipulation/animation. L'intégration en tant qu'élément du [[dom|DOM]] `<svg>` provoquera, en fonction de la complexité de votre SVG, une augmentation de la taille du DOM.
 
@@ -51,7 +51,7 @@ C'est un format de compression (avec ou sans perte) d'images [[matricielle|matri
 
 Le WebP est en moyenne 26% plus légère qu’une image PNG, et jusqu’à 34% plus légère qu’une image JPEG. Adopté par Google Chrome, Microsoft Edge et Mozilla Firefox fin 2018, puis par tous les navigateurs chromium comme Opera, Vivaldi, Brave, il est supporté depuis 2020 par Safari d’Apple. Il supporte 97% des usages (https://caniuse.com/webp).
 
-==À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour courvrir tous les usages/navigateurs==
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour courvrir tous les usages/navigateurs
 
 ### 🚫 Le HEIF (High Efficiency Image File Format) 🚫
 
@@ -61,19 +61,19 @@ C'est un format de compression (avec ou sans perte) d'images [[matricielle|matri
 
 C'est un format de compression (avec ou sans perte) d'images [[matricielle|matricielles]] développé par le consortium Alliance for Open Media en Open Source en réponse au HEIF, finalisé en 2019 proposant un gain de 50% par rapport au JPG cependant, il demande plus de ressources (CPU) pour être décodé. Il n'est supporté que par 73% des usages (https://caniuse.com/?search=avif).
 
-==Format encore jeune, à utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, avec en complément d'un format WebP pour couvrir davantage d'usages/navigateurs==
+Format encore jeune, à utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, avec en complément d'un format WebP pour couvrir davantage d'usages/navigateurs
 
 ### ❓ Le JPG/JPEG (Joint Photographic Experts Group) ❓
 
 C'est un format de compression d'images [[matricielle|matricielles]] qui repose sur la suppression des couleurs non visibles pour réduire le poids du fichier. Dans des logiciels tels que : Photoshop, Gimp, Affinity Photo, et autres, vous pouvez contrôler le taux de compression pour obtenir le meilleur ratio entre qualité d'affichage et poids. Cependant, si vous la compression est trop importante, vous perdrez des informations de couleurs visibles. **Ce format fonctionne le mieux avec des photographies.**
 
-==À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs==
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
 
 ### ❓ Le PNG (Portable Network Graphics) ❓
 
 C'est un format de compression d'images [[matricielle|matricielles]] crée comme alternative du GIF qui été à l'époque sous brevet, **format parfait pour les images comportant un texte qui doit rester lisible comme des graphiques, par exemple.**
 
-==À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs==
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
 
 ### 🚫 Le GIF (Graphics Interchange Format) 🚫
 
@@ -84,7 +84,7 @@ C'est un très vieux format de compression d'images [[matricielle|matricielles]]
 ## GreenIT vous conseille
 
 De bien identifier la nature de votre image et son contexte d'utilisation pour choisir le format le plus adapté.
-==Il n'y a pas de bon format, pas de format unique, mais un meilleur format par usage !==
+Il n'y a pas de bon format, pas de format unique, mais un meilleur format par usage !
 
 **Pour le SVG :**
 Par défaut, WordPress n'autorise pas l'upload de `.svg` pour des raisons de sécurité (possibilité d'injection lors de l'upload) cependant l'ajout d'une extension comme [SVG Support](https://fr.wordpress.org/plugins/svg-support/), active l'upload de SVG en toute sécurité.
@@ -95,7 +95,7 @@ Par défaut, WordPress n'autorise pas l'upload de `.svg` pour des raisons de sé
 ### Solution no code 🌱🌱🌱
 
 **Pour le SVG :**
-Nous vous recommandons de travailler vos images en [[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'un [[extension|plug-in]] est nécessaire pour la prise en compte de ce format par WordPress et de manière sécurisée.
+Nous vous recommandons de travailler vos images en [[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'un [[extension]] est nécessaire pour la prise en compte de ce format par WordPress et de manière sécurisée.
 
 **Pour le WebP :**
 Nous vous recommandons de travailler vos images en [[local]], évitant le transfert de données non essentielles et utilisation importante du [[cpu|CPU]] de votre serveur, avec des logiciels tels que Gimp, Affinity Photo ou Photoshop. À défaut, des [[extension|extensions]] proposent de convertir vos images automatiquement (-🌱).
@@ -121,7 +121,7 @@ Nous l'avons retravaillé comme il suit :
 
 <p align="center">
 
-![format-choice.svg](medias_28/format-choice.svg)
+![format-choice.svg](./medias_28/format-choice.svg)
 
 </p>
 <p align="center">
