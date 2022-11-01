@@ -7,7 +7,9 @@ Card.FICHES = 'fiches'
 Card.LEXIQUE = 'lexique'
 
 function trimWikiLinks(str) {
-  return str.replace(/[]/, '')
+  const regex = /\[\[(?:[^|\]]*\|)?([^\]]+)\]\]/gm
+  const subst = `$1`
+  return str.replace(regex, subst)
 }
 
 function MetaItem({ metas, meta, fontSize = 'normal' }) {
@@ -64,7 +66,9 @@ function Card({ markdownRemark, type = Card.PERSONNAS }) {
               dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
             />
           ) : (
-            <p className="markdown-excerpt">{markdownRemark.excerpt}</p>
+            <p className="markdown-excerpt">
+              {trimWikiLinks(markdownRemark.excerpt)}
+            </p>
           )}
           {type === Card.FICHES && (
             <div>
