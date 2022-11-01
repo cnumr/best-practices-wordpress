@@ -33,7 +33,10 @@ export default function Home({ data }) {
 export const query = graphql`
   {
     personnas: allFile(
-      filter: { sourceInstanceName: { eq: "personnas" } }
+      filter: {
+        sourceInstanceName: { eq: "personnas" }
+        childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+      }
       sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
     ) {
       nodes {
