@@ -44,7 +44,7 @@ Sachant que votre site va finalement n'utiliser que des versions de tailles réd
 
 ### Solution no-code 🌱
 
-Voici un plug-in pour créer des vignettes (`post-thumbnails`) et régénérer les images pour qu'elles soient disponibles dans WordPress : https://wordpress.org/plugins/regenerate-thumbnails-advanced/
+Voici un plug-in pour créer des vignettes (`post-thumbnails`) et régénérer les images pour qu'elles soient disponibles dans WordPress : https://fr.wordpress.org/plugins/regenerate-thumbnails-advanced/
 
 ### Solution code 🌱🌱🌱
 
@@ -75,7 +75,7 @@ function mysite_custom_image_sizes($sizes)
 }
 ```
 
-Utilisez ce plugin pour regénéner les vignettes suite à leur ajout dans la configuration : https://wordpress.org/plugins/regenerate-thumbnails/
+Utilisez ce plugin pour regénéner les vignettes suite à leur ajout dans la configuration : https://fr.wordpress.org/plugins/regenerate-thumbnails/
 
 ## Principe de validation
 

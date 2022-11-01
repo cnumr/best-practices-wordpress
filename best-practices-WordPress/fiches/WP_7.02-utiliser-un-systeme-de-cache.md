@@ -28,7 +28,7 @@ Le cache existe à différents niveaux. Il existe un cache sur votre navigateur 
 
 La création d'un cache sur WordPress peut être réalisée via l'utilisation d'une [[extension]] spécifique apportant de nombreuses possibilités.
 
-Il existe de nombreuses extensions d'optimisation et de cache, chacune ayant des fonctions particulières (<https://wordpress.org/plugins/tags/cache/>). Selon l'hébergeur, la version de WordPress installée, elles n'auront pas les mêmes effets. Ainsi il n'est pas possible de vous proposer une en particulier, et il est recommandé d'en tester des différentes afin d'optimiser le résultat.
+Il existe de nombreuses extensions d'optimisation et de cache, chacune ayant des fonctions particulières (<https://fr.wordpress.org/plugins/tags/cache/>). Selon l'hébergeur, la version de WordPress installée, elles n'auront pas les mêmes effets. Ainsi il n'est pas possible de vous proposer une en particulier, et il est recommandé d'en tester des différentes afin d'optimiser le résultat.
 
 ### Solution code 🌱🌱🌱
 
