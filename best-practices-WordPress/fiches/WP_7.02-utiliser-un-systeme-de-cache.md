@@ -1,5 +1,5 @@
 ---
-title: WP_7.02_Utiliser un système de cache
+title: 7.02 Utiliser un système de cache
 people: Franklin L.
 scope: Cache
 responsible:

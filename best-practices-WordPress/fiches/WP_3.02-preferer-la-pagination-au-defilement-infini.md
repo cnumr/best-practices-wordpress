@@ -1,5 +1,5 @@
 ---
-title: WP_3.02_Préférer la pagination au défilement infini
+title: 3.02 Préférer la pagination au défilement infini
 people: Dominique N.
 scope: Front-Office
 responsible:

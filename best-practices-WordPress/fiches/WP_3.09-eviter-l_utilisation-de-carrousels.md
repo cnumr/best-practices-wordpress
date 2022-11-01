@@ -1,5 +1,5 @@
 ---
-title: WP_3.09_Éviter l'utilisation de carrousels
+title: 3.09 Éviter l'utilisation de carrousels
 people: Yann K.
 scope: Images
 responsible:

@@ -1,5 +1,5 @@
 ---
-title: WP_3.07_Concevoir vos sites en Mobile First
+title: 3.07 Concevoir vos sites en Mobile First
 people: Renaud H. Yann Gautreau
 scope: Thèmes
 responsible:

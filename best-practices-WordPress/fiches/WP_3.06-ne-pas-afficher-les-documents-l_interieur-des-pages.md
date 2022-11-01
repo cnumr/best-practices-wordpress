@@ -1,5 +1,5 @@
 ---
-title: WP_3.06_Ne pas afficher les documents à l'intérieur des pages
+title: 3.06 Ne pas afficher les documents à l'intérieur des pages
 people: Yann G.
 scope: Documents
 responsible:

@@ -1,5 +1,5 @@
 ---
-title: WP_4.06_Privilégier le chargement différé des images (lazy loading)
+title: 4.06 Privilégier le chargement différé des images (lazy loading)
 people: Dominique N. & Catherine G.
 scope: Images
 responsible:

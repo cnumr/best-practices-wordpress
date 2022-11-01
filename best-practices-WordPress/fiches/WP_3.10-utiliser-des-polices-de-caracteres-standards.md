@@ -1,5 +1,5 @@
 ---
-title: WP_3.10_Utiliser des polices de caractères standards
+title: 3.10 Utiliser des polices de caractères standards
 people: Dominique N. & Renaud H.
 scope: Thèmes
 responsible:

@@ -1,5 +1,5 @@
 ---
-title: WP_3.05_Limiter le nombre d'extensions
+title: 3.05 Limiter le nombre d'extensions
 people: Yann K.
 scope: Fonctionnalités
 responsible:

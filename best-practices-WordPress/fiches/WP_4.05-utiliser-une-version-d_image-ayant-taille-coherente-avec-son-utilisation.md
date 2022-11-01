@@ -1,5 +1,5 @@
 ---
-title: WP_4.05_Utiliser une version d'image ayant taille cohérente avec son utilisation
+title: 4.05 Utiliser une version d'image ayant taille cohérente avec son utilisation
 people: Renaud H.
 scope: Images
 responsible:

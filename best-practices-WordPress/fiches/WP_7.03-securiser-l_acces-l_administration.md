@@ -1,5 +1,5 @@
 ---
-title: WP_7.03_Sécuriser l'accès à l'administration
+title: 7.03 Sécuriser l'accès à l'administration
 people: Dominique N.
 scope: Sécurité
 responsible:

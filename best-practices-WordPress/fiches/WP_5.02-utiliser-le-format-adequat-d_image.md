@@ -1,5 +1,5 @@
 ---
-title: WP_5.02_Utiliser le format adéquat d'image
+title: 5.02 Utiliser le format adéquat d'image
 people: Renaud H. & Florine S.
 scope: Images
 responsible:

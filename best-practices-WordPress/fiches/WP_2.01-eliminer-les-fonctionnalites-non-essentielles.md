@@ -1,5 +1,5 @@
 ---
-title: WP_2.01_Éliminer les fonctionnalités non essentielles
+title: 2.01 Éliminer les fonctionnalités non essentielles
 people: Renaud H.
 scope: Fonctionnalités
 responsible:

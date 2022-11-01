@@ -1,5 +1,5 @@
 ---
-title: WP_1.04_Sécuriser les formulaires en ligne
+title: 1.04 Sécuriser les formulaires en ligne
 people: Dominique N.
 scope: Fonctionnalités
 responsible:

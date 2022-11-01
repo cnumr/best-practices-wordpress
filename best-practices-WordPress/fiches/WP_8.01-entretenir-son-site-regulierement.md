@@ -1,5 +1,5 @@
 ---
-title: WP_8.01_Entretenir son site régulièrement
+title: 8.01 Entretenir son site régulièrement
 people: Catherine G. / Franklin L.
 scope: Front-office
 responsible:

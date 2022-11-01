@@ -1,5 +1,5 @@
 ---
-title: WP_4.07_Limiter le poids des fichiers CSS
+title: 4.07 Limiter le poids des fichiers CSS
 people: Yann Gautreau.
 scope: Thèmes
 responsible:

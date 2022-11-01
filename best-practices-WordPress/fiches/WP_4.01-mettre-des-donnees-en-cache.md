@@ -1,5 +1,5 @@
 ---
-title: WP_4.01_Mettre des données en cache
+title: 4.01 Mettre des données en cache
 people: Dominique N.
 scope: Cache
 responsible:
