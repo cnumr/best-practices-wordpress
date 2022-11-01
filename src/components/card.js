@@ -6,6 +6,12 @@ Card.PERSONNAS = 'personnas'
 Card.FICHES = 'fiches'
 Card.LEXIQUE = 'lexique'
 
+function trimWikiLinks(str) {
+  const regex = /\[\[(?:[^|\]]*\|)?([^\]]+)\]\]/gm
+  const subst = `$1`
+  return str.replace(regex, subst)
+}
+
 function MetaItem({ metas, meta, fontSize = 'normal' }) {
   if (Array.isArray(metas[meta])) {
     return (
@@ -60,7 +66,9 @@ function Card({ markdownRemark, type = Card.PERSONNAS }) {
               dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
             />
           ) : (
-            <p>{markdownRemark.excerpt}</p>
+            <p className="markdown-excerpt">
+              {trimWikiLinks(markdownRemark.excerpt)}
+            </p>
           )}
           {type === Card.FICHES && (
             <div>

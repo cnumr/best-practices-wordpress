@@ -1,3 +1,4 @@
+require(`dotenv`).config()
 /**
  * Configure your Gatsby site with this file.
  *
@@ -14,7 +15,7 @@ module.exports = {
     navigation: [
       {
         url: `/fiches`,
-        label: `Fiches`,
+        label: `Bonnes pratiques`,
         title: `Voir les fiches`,
       },
       {
@@ -30,7 +31,7 @@ module.exports = {
       {
         url: `/recherche`,
         label: `Rechercher`,
-        title: `Rechercher une fiche`,
+        title: `Rechercher une Bonne pratique`,
       },
     ],
   },
