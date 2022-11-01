@@ -57,7 +57,6 @@ add_action( 'init', 'custom_wp_remove_global_css' );`
 
 **Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source citée.
 
-## Exemples
 
 Si vous ne comptez pas utiliser la fonctionnalité commentaire pour votre blog, vous pouvez supprimer l'extension Akismet Anti-Spam et désactiver l'utilisation des commentaires.
 
