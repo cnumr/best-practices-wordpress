@@ -60,5 +60,5 @@ Si vous ne veillez pas à la sécurité (Voir la fiche "Sécuriser les formulair
 
 ## Sources
 
-[Le RGESN rejoint le RGAA et le RGPD pour un numérique responsable !](https://www.24joursdeweb.fr/2021/le-rgesn-rejoint-le-rgaa-et-le-rgpd-pour-un-numerique-responsable/)
-[Le guide d'un numérique plus responsable - Bela Loto Hiffler](https://librairie.ademe.fr/consommer-autrement/4197-le-guide-d-un-numerique-plus-responsable-9791029714191.html)
+- [Le RGESN rejoint le RGAA et le RGPD pour un numérique responsable !](https://www.24joursdeweb.fr/2021/le-rgesn-rejoint-le-rgaa-et-le-rgpd-pour-un-numerique-responsable/)
+- [Le guide d'un numérique plus responsable - Bela Loto Hiffler](https://librairie.ademe.fr/consommer-autrement/4197-le-guide-d-un-numerique-plus-responsable-9791029714191.html)
