@@ -55,7 +55,7 @@ add_action( 'init', 'custom_wp_remove_global_css' );`
 
 **Pour désactiver les commentaires de tout le site en [[front-office|front]]**, créez votre thème enfant et surchargez les fichiers page.php et single.php pour ne plus appeler la fonction `comments_template()`;
 
-**Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source cité.
+**Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source citée.
 
 ## Exemples
 
