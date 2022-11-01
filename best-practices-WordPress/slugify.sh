@@ -292,7 +292,7 @@ function slugify(){
 
   # replace accents
   if [ ${REPLACE_ACCENT_CHARS} -eq 1 ]; then
-    name=$(echo "${name}" | iconv -f utf8 -t ascii//IGNORE)
+    name=$(echo "${name}" | iconv -f utf8 -t ascii//TRANSLIT)
   fi
 
   if [ ${DEBUG} -eq 1 ]; then
