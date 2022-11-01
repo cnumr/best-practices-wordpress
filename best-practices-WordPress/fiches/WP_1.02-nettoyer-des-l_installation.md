@@ -49,7 +49,13 @@ Pour éviter cette surcharge initiale, dès l'installation en [[local]] ou en li
 **Nettoyer la structure des dégradés**
 Ajoutez ce code dans le fichier functions.php de votre thème enfant :
 
-`function custom_wp_remove_global_css() { remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' ); remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' ); } add_action( 'init', 'custom_wp_remove_global_css' );`
+```php
+  function custom_wp_remove_global_css() {
+    remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+    remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+  }
+  add_action( 'init', 'custom_wp_remove_global_css' );
+```
 
 ### Solution code 🌱
 

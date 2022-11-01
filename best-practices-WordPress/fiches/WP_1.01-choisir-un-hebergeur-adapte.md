@@ -1,5 +1,5 @@
 ---
-title: WP_1.01_Choisir un hébergeur adapté
+title: 1.01 Choisir un hébergeur adapté
 people: Catherine G.
 scope: Hébergement
 responsible:
