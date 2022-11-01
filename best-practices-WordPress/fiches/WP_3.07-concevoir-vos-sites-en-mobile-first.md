@@ -19,7 +19,7 @@ toIndex: true
 
 ## Sujet
 
-**Le "Mobile First" est une stratégie de conception qui, due à la surface d'affichage réduite et l'utilisation en mobilité, se focalise sur l'essentiel (du contenu) et sur la rapidité d'affichage (la performance).** Ces design de sites seront ensuite déclinés sur [[desktop|Responsive]].
+**Le "Mobile First" est une stratégie de conception qui, due à la surface d'affichage réduite et l'utilisation en mobilité, se focalise sur l'essentiel (du contenu) et sur la rapidité d'affichage (la performance).** Ces design de sites seront ensuite déclinés sur [[desktop]]. On parle de [[responsive-design|responsive design]].
 
 Ainsi un site pensé "Mobile First" est, de base, optimisé, sans contenus superflus, ayant une navigation claire et adaptée et avec des [[assets]] (illustrations, pictogrammes, polices, photographies, etc.) adaptés, plus légers et surtout utilisés pour ajouter une réelle plus-value pour l'utilisateur et non pour "remplir l'espace blanc" nécessaire à la bonne respiration du design. Que serait une musique, un discours et un design sans pause pour reprendre son souffle ?
 Techniquement, ces sites utiliseront une bande passante réduite.
