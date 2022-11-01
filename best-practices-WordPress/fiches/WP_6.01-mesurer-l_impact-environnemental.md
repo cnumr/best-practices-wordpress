@@ -1,5 +1,5 @@
 ---
-title: WP_6.01_Mesurer l'impact environnemental
+title: 6.01 Mesurer l'impact environnemental
 people: Yann Gautreau
 scope: Test
 responsible:

@@ -1,5 +1,5 @@
 ---
-title: WP_3.03_Limiter l'utilisation des vidéos
+title: 3.03 Limiter l'utilisation des vidéos
 people: Dominique N.
 scope: Vidéos/Audio
 responsible:

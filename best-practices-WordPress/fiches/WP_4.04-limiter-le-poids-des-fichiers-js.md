@@ -1,5 +1,5 @@
 ---
-title: WP_4.04_Limiter le poids des fichiers JS
+title: 4.04 Limiter le poids des fichiers JS
 people: Yann K.
 scope: Thèmes
 responsible:

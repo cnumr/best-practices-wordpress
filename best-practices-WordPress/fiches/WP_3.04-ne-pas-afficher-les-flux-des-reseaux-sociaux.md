@@ -1,5 +1,5 @@
 ---
-title: WP_3.04_Ne pas afficher les flux des réseaux sociaux
+title: 3.04 Ne pas afficher les flux des réseaux sociaux
 people: Dominique N.
 scope: Fonctionnalités
 responsible:

@@ -1,5 +1,5 @@
 ---
-title: WP_4.03_Limiter le nombre de révisions
+title: 4.03 Limiter le nombre de révisions
 people: Dominique N.
 scope: Stockage
 responsible:

@@ -1,6 +1,6 @@
 ---
-title: WP_3.08_Choisir son thème
-people: Dominique N. Yann Gautreau
+title: 3.08 Choisir son thème
+people: Dominique N. & Yann G.
 scope: Thème
 responsible:
   - Low-code → Freelance et développeur Front-End d'agences

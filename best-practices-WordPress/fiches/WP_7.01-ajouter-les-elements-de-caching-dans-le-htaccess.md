@@ -1,5 +1,5 @@
 ---
-title: WP_7.01_Ajouter les éléments de caching dans le .htaccess
+title: 7.01 Ajouter les éléments de caching dans le .htaccess
 people: Dominique N.
 scope: Cache
 responsible:

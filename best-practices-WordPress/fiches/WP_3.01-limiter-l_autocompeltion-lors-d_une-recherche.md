@@ -1,5 +1,5 @@
 ---
-title: WP_3.01_Limiter l'autocomplétion lors d'une recherche
+title: 3.01 Limiter l'autocomplétion lors d'une recherche
 people: Renaud H.
 scope: Front-office
 responsible:

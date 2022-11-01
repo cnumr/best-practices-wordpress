@@ -1,5 +1,5 @@
 ---
-title: WP_5.01_Compresser les médias
+title: 5.01 Compresser les médias
 people: Yann K.
 scope: Images
 responsible:

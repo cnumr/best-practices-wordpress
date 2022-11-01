@@ -1,5 +1,5 @@
 ---
-title: WP_1.05_Choisir entre WordPress.org et WordPress.com
+title: 1.05 Choisir entre WordPress.org et WordPress.com
 people: Florine Sueur
 scope: Fonctionnalités
 responsible:

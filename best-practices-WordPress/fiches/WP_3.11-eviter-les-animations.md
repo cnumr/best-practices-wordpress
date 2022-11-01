@@ -1,5 +1,5 @@
 ---
-title: WP_3.11_Eviter les animations
+title: 3.11 Eviter les animations
 people: Yann Gautreau
 scope: Front-office
 responsible:

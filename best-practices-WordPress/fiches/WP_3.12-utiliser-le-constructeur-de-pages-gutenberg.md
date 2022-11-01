@@ -1,5 +1,5 @@
 ---
-title: WP_3.12_Utiliser le constructeur de pages Gutenberg
+title: 3.12 Utiliser le constructeur de pages Gutenberg
 people: Yann G.
 scope: Fonctionnalités
 responsible:

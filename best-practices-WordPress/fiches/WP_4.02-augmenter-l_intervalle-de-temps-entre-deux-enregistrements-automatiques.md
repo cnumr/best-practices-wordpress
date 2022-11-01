@@ -1,5 +1,5 @@
 ---
-title: WP_4.02_Augmenter l'intervalle de temps entre deux enregistrements automatiques
+title: 4.02 Augmenter l'intervalle de temps entre deux enregistrements automatiques
 people: Dominique N.
 scope: Stockage
 responsible:
