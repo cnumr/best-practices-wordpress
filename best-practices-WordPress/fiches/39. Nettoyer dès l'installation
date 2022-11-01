@@ -19,7 +19,10 @@ toIndex: true
 
 ## Sujet
 
-Par défaut, WordPress comprend déjà un certain nombre de fonctionnalités, de thèmes et d'extensions qui vous seront inutiles et que vous avez définis comme non essentiels qui pèsent leur poids.
+Par défaut, WordPress comprend déjà un certain nombre de fonctionnalités (gestion des pages, des articles et de leurs catégories, des commentaires, des médias et des utilisateurs). Lors de l'installation, celui-ci embarque également son thème du moment avec son constructeur de pages, et deux extensions.
+
+Tout cela nécessite un grand nombre de fichiers qui pèse environ 67Mo (en version 6.0.3) sur l'hébergement.
+Certaines fonctionnalités peuvent être inutiles ou avoir été définies comme non essentielles dans votre analyse préalable.
 
 ## GreenIT vous conseille
 Pour éviter cette surcharge de base, dés l'installation en [[local]] ou en ligne, nous vous invitons à faire un premier nettoyage de votre WordPress en désactivant ou supprimant, quand c'est possible, les éléments non désirés.
