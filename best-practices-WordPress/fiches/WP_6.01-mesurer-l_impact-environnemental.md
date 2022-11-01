@@ -60,4 +60,4 @@ Extension GreenIT Analysis : Disponible sur [Chrome](https://chrome.google.com/w
 | Le nombre                                                                                               | est inférieur ou égal à |
 | ------------------------------------------------------------------------------------------------------- | :---------------------: |
 | de [[parcours utilisateur]] sur votre site non testé avec un outil d'écoconception                      |            0            |
-| de [[parcours utilisateur]] sur votre site non évalué à l'aide du référentiel d'écoconception Wordpress |            0            |
+| de [[parcours utilisateur]] sur votre site non évalué à l'aide du référentiel d'écoconception WordPress |            0            |

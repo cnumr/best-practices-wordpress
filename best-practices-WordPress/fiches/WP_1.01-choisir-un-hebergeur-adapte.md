@@ -22,7 +22,7 @@ toIndex: true
 
 Bien choisir sa solution d'hébergement est essentielle pour plusieurs raisons :
 
-- **Pour la sécurité de votre site** Plusieurs hébergeurs proposent des offres d'hébergements avec Wordpress déjà installé ou installable en un clic et des mises à jour automatiques. Pour éviter les mauvaises surprises lors du déploiement de votre site ou suite à une mise à jour automatique, assurez-vous que l'installation est aux normes de sécurité (aucun dossier n'utilise l'identifiant administrateur par exemple), que vous avez bien accès aux fichiers sources et à la base de données, que le thème sélectionné est bien compatible avec les versions des différents logiciels utilisés que ce soit WordPress ou PHPMyadmin pour la gestion de votre base de données MySQL, etc.
+- **Pour la sécurité de votre site** Plusieurs hébergeurs proposent des offres d'hébergements avec WordPress déjà installé ou installable en un clic et des mises à jour automatiques. Pour éviter les mauvaises surprises lors du déploiement de votre site ou suite à une mise à jour automatique, assurez-vous que l'installation est aux normes de sécurité (aucun dossier n'utilise l'identifiant administrateur par exemple), que vous avez bien accès aux fichiers sources et à la base de données, que le thème sélectionné est bien compatible avec les versions des différents logiciels utilisés que ce soit WordPress ou phpMyAdmin pour la gestion de votre base de données MySQL, etc.
 
 - **Pour la souveraineté des données hébergées qu'elles soient d'ordre commercial ou privé** Vérifiez toujours les conditions de vente ainsi que les conditions d'utilisation des services que vous utilisez et informez vos visiteurs si certaines de leurs données sont collectées.
 

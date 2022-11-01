@@ -87,7 +87,7 @@ De bien identifier la nature de votre image et son contexte d'utilisation pour c
 ==Il n'y a pas de bon format, pas de format unique, mais un meilleur format par usage !==
 
 **Pour le SVG :**
-Par défaut, Wordpress n'autorise pas l'upload de `.svg` pour des raisons de sécurité (possibilité d'injection lors de l'upload) cependant l'ajout d'une extension comme [SVG Support](https://fr.wordpress.org/plugins/svg-support/), active l'upload de SVG en toute sécurité.
+Par défaut, WordPress n'autorise pas l'upload de `.svg` pour des raisons de sécurité (possibilité d'injection lors de l'upload) cependant l'ajout d'une extension comme [SVG Support](https://fr.wordpress.org/plugins/svg-support/), active l'upload de SVG en toute sécurité.
 
 **Pour le WebP :**
 À partir de WordPress 5.8, vous pourrez utiliser le format d’image WebP de la même manière que les formats JPEG, PNG et GIF en téléversant les images dans la bibliothèque de média. WordPress ne prend pas en charge la conversion automatique des images au format WebP.
@@ -95,7 +95,7 @@ Par défaut, Wordpress n'autorise pas l'upload de `.svg` pour des raisons de sé
 ### Solution no code 🌱🌱🌱
 
 **Pour le SVG :**
-Nous vous recommandons de travailler vos images en [[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'un [[extension|plug-in]] est nécessaire pour la prise en compte de ce format par Wordpress et de manière sécurisée.
+Nous vous recommandons de travailler vos images en [[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'un [[extension|plug-in]] est nécessaire pour la prise en compte de ce format par WordPress et de manière sécurisée.
 
 **Pour le WebP :**
 Nous vous recommandons de travailler vos images en [[local]], évitant le transfert de données non essentielles et utilisation importante du [[cpu|CPU]] de votre serveur, avec des logiciels tels que Gimp, Affinity Photo ou Photoshop. À défaut, des [[extension|extensions]] proposent de convertir vos images automatiquement (-🌱).

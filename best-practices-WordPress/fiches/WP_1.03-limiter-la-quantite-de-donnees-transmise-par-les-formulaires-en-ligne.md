@@ -1,6 +1,5 @@
 ---
-title: WP_1.03
-_Limiter la quantité de données transmise par les formulaires en ligne
+title: WP_1.03_Limiter la quantité de données transmise par les formulaires en ligne
 people: Catherine G. & Dominique N.
 scope: Fonctionnalités
 responsible:
@@ -11,8 +10,7 @@ environmental_impact: Moyen 🌱🌱
 saved_resources:
   - Stockage
   - Réseau
-path: /fiches/WP_1.03
--limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne
+path: /fiches/WP_1.03-limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne
 toIndex: true
 ---
 
