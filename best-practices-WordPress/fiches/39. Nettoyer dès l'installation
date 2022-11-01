@@ -25,7 +25,7 @@ Tout cela nécessite un grand nombre de fichiers qui pèse environ 67Mo (en vers
 Certaines fonctionnalités peuvent être inutiles ou avoir été définies comme non essentielles dans votre analyse préalable.
 
 ## GreenIT vous conseille
-Pour éviter cette surcharge initiale, dés l'installation en [[local]] ou en ligne, nous vous invitons à faire un premier nettoyage de votre WordPress en désactivant ou supprimant, quand c'est possible, les éléments non désirés.
+Pour éviter cette surcharge initiale, dès l'installation en [[local]] ou en ligne, nous vous invitons à faire un premier nettoyage de votre WordPress en désactivant ou supprimant, quand c'est possible, les éléments non désirés.
  - Dans les actualités et les pages, il existe un premier article d'exemple et une page d'exemple, que vous pouvez supprimer définitivement ;
  - L'extension Hello Dolly peut être supprimée, elle n'apporte aucune fonctionnalité essentielle.
  - Si vous n'avez pas l'utilité des commentaires sur votre site, désactivez-les et supprimez l'extension Akismet Anti-spam ;
