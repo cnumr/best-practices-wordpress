@@ -51,8 +51,9 @@ Cette donnée transitoire pourra être remplacée lorsqu'un nouvel article sera 
 
 **Sauvegarder une donnée transitoire**
 
-`set_transient( $transient, $value, $expiration );`
-
+```php
+set_transient( $transient, $value, $expiration );
+```
 
 **Récupérer une donnée transitoire**
 
@@ -64,7 +65,9 @@ if ( false === ( $valeur = get_transient($transient) ) ) {
 
 **Supprimer une donnée transitoire**
 
-`delete_transient( $transient );`
+```php
+delete_transient( $transient );
+```
 
 ## Principe de validation
 
