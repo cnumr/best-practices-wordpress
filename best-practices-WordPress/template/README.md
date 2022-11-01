@@ -1,66 +1,79 @@
-# Comment créer une fiche
+# Prise en main du template
 
-## Template de fiche
+Nous vous mettons à disposition le [template](WP_0.00_titre-de-la-bonne-pratique.md).
 
-Utiliser le template présent [ici](./TEMPLATE.md).
+## Le titre
 
-Il est découpé en deux blocs, le premier est encadré par des `---`.
+**Le titre (title) d'une bonne pratique se construit sous le format suivant <numero de cycle>.<numéro de la bonne pratique> <Titre de la bonne pratique>.**
 
-Dans cette première partie, vous trouverez les métadas qui peuvent servir à utiliser les fichiers markdown pour génrérer des sites (cf. [frontmatter](https://frontmatter.codes)).
+- Le premier chiffre correspond au moment du cycle de vie d'un WordPress où votre bonne pratique s'inscrit.
 
-Dans la deuxième partie se trouve le contenu de la fiche elle-même, au format `cnumr / best-practices` que vous trouverez [ici](https://github.com/cnumr/best-practices).
+1.  Analyse des besoins
+2.  Installation
+3.  Conception & Design
+4.  Intégration & Développement
+5.  Contenu & médias
+6.  Tests & validation
+7.  Mise en ligne
+8.  Maintenance
+9.  Fin de vie
 
-## Medias utilisé(s) dans la fiche
+- Le second correspond au numéro de la bonne pratique, à savoir à la suite de son groupe.
 
-Les médias doivent être regroupés par fiche dans un dossier au format suivant `medias_<numero de la fiche>`
+  Exemple : 3.08 Préférer faire des sites roses est bien une pratique correspondant au cycle de vie Conception & Design et est la huitième fiche de ce groupe.
 
-## Ajouter la fiche à la liste des fiches
+  - Le fichier : WP_3.08_preferer-faire-des-sites-roses
+  - Le `tilte` : 3.08 Préférer faire des sites roses
+  - Le `path` : /fiches/WP_3.08_preferer-faire-des-sites-roses
 
-Lorsque vous créez/éditez une fiche, il faut mettre à jour [la page les listants](../README.md). Il faut y reporter les métadatas de la fiche.
+## Le corps
 
-## Métadatas de la fiche
+Il est découpé en deux blocs, le premier est encadré par des `---` :
 
-- `title`: \<NUM de la fiche sur deux digits>. \<NOM de la fiche>
-- `path`: /fiches/\<NUM de la fiche sur deux digits>-<NOM de la fiche>
-- `people`: \<Noms des rédacteurs>
-- `scope`: \<Famille de la fiche>
-  - Cache
-  - Documents
-  - Fonctionnalités
-  - Front-Office
-  - Hébergement
-  - Images
-  - Sécurité
-  - Stockage
-  - Thèmes
-  - Vidéos/Audio
-- `state_validation`: \<Status le création de la fiche>
-  - 1 - TO DO
-  - 2 - DOING
-  - 3 - TO VALIDATE
-  - 4 - DONE 🚀
-- `responsible`: \<Liste des cible(s) visé(s), Personnas concernée(s)>
-  - Code(use·ur) → Développeu·se·r
-  - Designeu(se·r)
-  - Low-code → Freelance et développeur Front-End d'agences
-  - No-code → Madame et Monsieur tout le monde
-- `lifecycle`: \<Phase de "conception" concernée>
-  - 1 - En amont
-  - 2 - Conception / Design
-  - 3 - Développement
-  - 4 - Mise en ligne
-  - 5 - Maintenance
-- `priority_implementation`: \<Priorité de mise en œuvre>
-  - Faible 👍
-  - Moyen 👍👍
-  - Fort 👍👍👍
-- `environmental_impact`: \<Niveau de l'impact écologique>
-  - Faible 🌱
-  - Moyen 🌱🌱
-  - Fort 🌱🌱🌱
-- `saved_resources`: \<liste des ressources économisées>
-  - Processeur
-  - Mémoire vive
-  - Stockage
-  - Réseau
-  - Requêtes
+1. Dans cette première partie, vous trouverez les métadatas utiles pour générer convenablement le site (cf. [frontmatter](https://frontmatter.codes)).
+2. Dans la deuxième partie se trouve le contenu de la bonne pratique elle-même.
+
+> ⚠️ Attention si vous souhaitez utiliser des images, audios ou vidéos, il est nécessaire de tous les regrouper par bonne pratique dans le dossier `medias_<numero de la bonne pratique>` que vous aurez créé dans le dossier `fiches`.
+
+## Explication de certaines métadatas
+
+### Le cycle de vie
+
+Le cycle de vie d'un service numérique regroupe les étapes par lesquelles ce service passe au cours du temps.
+Nous l'avons défini comme suit :
+
+- Analyse des besoins
+- Installation
+- Conception & Design
+- Intégration & Développement
+- Contenu & médias
+- Tests & validation
+- Mise en ligne
+- Maintenance
+- Fin de vie
+
+### La priorité d'implémentation
+
+Nous estimons la priorité de mettre en oeuvre une bonne pratique via ce système :
+
+- Faible 👍
+- Moyen 👍👍
+- Fort 👍👍👍
+
+### L'impact environnemental
+
+Nous évaluons l'impact de chaque bonne pratique, voire de chaque solution proposée avec le système suivant :
+
+- Faible 🌱
+- Moyen 🌱🌱
+- Fort 🌱🌱🌱
+
+### Les ressources sauvegardées
+
+Pour une meilleure compréhension, de la localisation de l'impact ou des impacts environnementaux :
+
+- Processeur
+- Mémoire vive
+- Stockage
+- Réseau
+- Requêtes
