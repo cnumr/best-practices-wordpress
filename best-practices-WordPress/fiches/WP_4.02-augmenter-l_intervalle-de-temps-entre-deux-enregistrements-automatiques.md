@@ -23,7 +23,7 @@ WordPress enregistre automatiquement les modifications de brouillons, d'articles
 ## GreenIT vous conseille
 
 Nous vous proposons deux alternatives pour réduire le nombre d'appels serveur et réduire l'impact sur le stockage.
-Cette bonne pratique est à appliquer en complément de la fiche [Limiter le nombre de révisions](./15.%20Limiter%20le%20nombre%20de%20r%C3%A9visions.md) qui participe aussi à l'automatisation d'une partie de l'entretien de votre site [Entretenir son site régulièrement](./01.%20Entretenir%20son%20site%20régulièrement.md).
+Cette bonne pratique est à appliquer en complément de la fiche [Limiter le nombre de révisions](./WP_4.03-limiter-le-nombre-de-revisions) qui participe aussi à l'automatisation d'une partie de l'entretien de votre site [Entretenir son site régulièrement](./WP_8.01-entretenir-son-site-regulierement).
 
 ### Solution no-code 🌱
 
@@ -34,14 +34,14 @@ Nous vous conseillons de travailler vos textes via un traitement de texte en [[l
 Vous pouvez aussi augmenter cet intervalle de sauvegarde pour limiter le nombre de révisions générées.
 Placer cette ligne dans le fichier de configuration `wp-config.php`, via un [[ftp|serveur FTP]] :
 
-```
+```php
 // Ici l'intervalle entre deux sauvegardes est de X secondes
 define('AUTOSAVE_INTERVAL', X);
 ```
 
 #### Exemple
 
-```
+```php
 // Ici l'intervalle entre deux sauvegardes est de 360 secondes
 define('AUTOSAVE_INTERVAL', 360);
 ```
