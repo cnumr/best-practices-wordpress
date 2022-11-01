@@ -9,43 +9,46 @@ const plugin = ({ markdownAST }, options = {}) => {
   const slugifyTitle = title => `/${slugify(title, { lower: true })}`
 
   visit(markdownAST, 'paragraph', node => {
-    const wikiLink = /!?\[\[([a-zA-Z-'À-ÿ|# ]+)\]\]/
+    const wikiLink = /!?\[\[([a-zA-Z-'À-ÿ|# ]+)\]\]/g
+    const stringifyNode = toString(node)
+    const list = stringifyNode.match(wikiLink)
 
-    if (toString(node).match(wikiLink)) {
+    if (list && list.length > 0) {
       let url = ''
+      let html = stringifyNode
 
-      let title = toString(node)
-        .match(wikiLink)[0]
-        .replace(/!?\[|\]/g, '')
+      list.forEach(link => {
+        let title = link.replace(/!?\[|\]/g, '')
 
-      if (title.match(/\|/)) {
-        ;[url, title] = title.split('|')
-        url = slugifyTitle(url)
-      } else {
-        slugifyTitle(title)
-      }
+        if (title.match(/\|/)) {
+          ;[url, title] = title.split('|')
+          url = slugifyTitle(url)
+        } else {
+          url = slugifyTitle(title)
+        }
 
-      const filePath = `${sourceFolder}/${title}.md`
+        const filePath = `${sourceFolder}/${url}.md`
 
-      if (fs.existsSync(filePath)) {
-        const content = fs
-          .readFileSync(filePath, 'utf8')
-          .replace(/^---[\s\S]+?---/, '')
+        if (fs.existsSync(filePath)) {
+          const content = fs
+            .readFileSync(filePath, 'utf8')
+            .replace(/^---[\s\S]+?---/, '')
 
-        const tooltipLink = `
-        <a class="tooltip" href="${url}" title="">${title}
-        <span class="bottom">
-        <span>${content}</span>
-        <i></i>
-        </span>
-        </a>
-        `
-        const html = toString(node).replace(wikiLink, tooltipLink)
+          const tooltipLink = `
+            <a class="tooltip" href="/lexique${url}" title="">${title}
+            <span class="bottom">
+            <span>${content}</span>
+            <i></i>
+            </span>
+            </a>
+            `
+          html = html.replace(link, tooltipLink)
+        }
+      })
 
-        node.type = 'html'
-        node.children = undefined
-        node.value = html
-      }
+      node.type = 'html'
+      node.children = undefined
+      node.value = html
     }
   })
 
