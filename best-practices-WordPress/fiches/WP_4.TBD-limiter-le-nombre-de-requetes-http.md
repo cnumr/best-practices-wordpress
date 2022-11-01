@@ -1,5 +1,5 @@
 ---
-title: WP_4.04_Limiter le nombre de requêtes HTTP
+title: WP_4.TBD_Limiter le nombre de requêtes HTTP
 people: TBD
 scope: Thèmes
 responsible:
@@ -11,7 +11,7 @@ environmental_impact: Moyen 🌱🌱
 saved_resources:
   - Réseau
   - Requêtes
-path: /fiches/WP_4.04-limiter-le-nombre-de-requetes-http
+path: /fiches/WP_4.TBD-limiter-le-nombre-de-requetes-http
 toIndex: false
 ---
 

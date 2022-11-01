@@ -10,8 +10,7 @@ environmental_impact: Moyen 🌱🌱
 saved_resources:
   - Stockage
   - Réseau
-path: /fiches/WP_1.03
--limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne
+path: /fiches/WP_1.03-limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne
 toIndex: true
 ---
 
