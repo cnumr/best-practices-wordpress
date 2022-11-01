@@ -8,7 +8,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const _fiches = await graphql(`
     {
       allFile(
-        filter: { sourceInstanceName: { eq: "fiches" } }
+        filter: {
+          sourceInstanceName: { eq: "fiches" }
+          childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+        }
         sort: {
           fields: childrenMarkdownRemark___frontmatter___title
           order: ASC
@@ -64,6 +67,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         filter: {
           extension: { eq: "md" }
           sourceInstanceName: { eq: "personnas" }
+          childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
         }
         sort: {
           fields: childrenMarkdownRemark___frontmatter___title

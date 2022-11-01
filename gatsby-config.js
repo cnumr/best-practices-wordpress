@@ -58,7 +58,7 @@ module.exports = {
         // required.
         query: `
           {
-            allMarkdownRemark {
+            allMarkdownRemark (filter: {frontmatter: {toIndex: {eq: true}}}) {
               nodes {
                 id
                 frontmatter {

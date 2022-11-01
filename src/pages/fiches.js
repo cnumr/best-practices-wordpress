@@ -47,7 +47,10 @@ export default function Home({ data }) {
 export const query = graphql`
   {
     fichesWP: allFile(
-      filter: { sourceInstanceName: { eq: "fiches" } }
+      filter: {
+        sourceInstanceName: { eq: "fiches" }
+        childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+      }
       sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
     ) {
       nodes {
