@@ -43,7 +43,19 @@ Pour éviter cette surcharge initiale, dés l'installation en [[local]] ou en li
  
 ### Solution code pas-à-pas 🌱
 **Nettoyer la structure des dégradés**
-Ajoutez ce code dans le fichier functions.php de votre thème enfant : 
+Ajoutez ce code dans le fichier functions.php de votre thème enfant :
+
+`function custom_wp_remove_global_css() {
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+}
+add_action( 'init', 'custom_wp_remove_global_css' );`
+
+### Solution code 🌱
+
+**Pour désactiver les commentaires de tout le site en [[front-office|front]]**, créez votre thème enfant et surchargez les fichiers page.php et single.php pour ne plus appeler la fonction `comments_template()`;
+
+**Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source cité.
 
 ## Exemples
 
