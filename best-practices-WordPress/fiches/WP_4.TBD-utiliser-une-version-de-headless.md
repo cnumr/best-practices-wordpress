@@ -1,5 +1,5 @@
 ---
-title: WP_4.01_Utiliser une version de headless (sans tête)
+title: WP_4.TBD_Utiliser une version de headless (sans tête)
 people: TBD
 scope: Front-Office
 responsible:
@@ -13,7 +13,7 @@ saved_resources:
   - Processeur
   - Réseau
   - Requêtes
-path: /fiches/WP_4.01-utiliser-une-version-de-headless
+path: /fiches/WP_4.TBD-utiliser-une-version-de-headless
 toIndex: false
 ---
 

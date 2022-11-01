@@ -1,6 +1,5 @@
 ---
 title: WP_1.02_Nettoyer dès l'installation
-path: /WP_1.02-nettoyer-ds-l_installation
 people: Florine & Dominique
 scope: Fonctionnalités
 responsible:
@@ -14,6 +13,7 @@ saved_resources:
   - Stockage
   - Réseau
   - Requêtes
+path: /WP_1.02-nettoyer-des-l_installation
 toIndex: true
 ---
 

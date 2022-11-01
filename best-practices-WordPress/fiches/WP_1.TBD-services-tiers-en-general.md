@@ -1,5 +1,5 @@
 ---
-title: WP_1.02_Services tiers en général
+title: WP_1.TBD_Services tiers en général
 people: Yann K.
 scope: Fonctionnalités
 responsible:
@@ -9,7 +9,7 @@ priority_implementation: TBD
 environmental_impact: TBD
 saved_resources:
   - TBD
-path: /fiches/WP_1.02-services-tiers-en-general
+path: /fiches/WP_1.TBD-services-tiers-en-general
 toIndex: false
 ---
 
