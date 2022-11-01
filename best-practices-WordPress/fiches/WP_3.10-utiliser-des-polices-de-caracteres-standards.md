@@ -19,9 +19,9 @@ toIndex: true
 
 ## Sujet
 
-Afin de donner un style personnalisé à son site, un des leviers est d'utiliser des polices de caractères spécifiques en les déclarant dans les feuilles de styles ou les styles inline (`css`) comme : `font-family: "Gill Sans Extrabold", Arial, sans-serif;`.
+Afin de donner un style personnalisé à son site, un des leviers est d'utiliser des polices de caractères spécifiques en les déclarant dans les feuilles de styles ou les styles inline (`CSS`) comme : `font-family: "Gill Sans Extrabold", Arial, sans-serif;`.
 
-Pour que la "Gill Sans Extrabold", si nous poursuivons notre exemple plus haut, s'affiche correctement pour l'utilisateur, il faut qu'elle soit installée sur le terminal (ordinateur, tablette ou mobile) de l'utilisateur ou téléchargée automatiquement lors de l'affichage du site via un import `html` ou `css`, si la police n'est pas disponible le navigateur utilisera l'Arial et sinon la police `sans-serif` par défaut de votre navigateur sera affichée (polices [fallbacks](https://www.w3schools.com/cssref/css_fonts_fallbacks.asp)).
+Pour que la "Gill Sans Extrabold", si nous poursuivons notre exemple plus haut, s'affiche correctement pour l'utilisateur, il faut qu'elle soit installée sur le terminal (ordinateur, tablette ou mobile) de l'utilisateur ou téléchargée automatiquement lors de l'affichage du site via un import `HTML` ou `CSS`, si la police n'est pas disponible le navigateur utilisera l'Arial et sinon la police `sans-serif` par défaut de votre navigateur sera affichée (polices [fallbacks](https://www.w3schools.com/cssref/css_fonts_fallbacks.asp)).
 
 Pour résumé, il est possible :
 
@@ -39,15 +39,15 @@ Nous vous déconseillons l'installation d'[[extension]] pour l'ajout de typograp
 
 ### Solution code 🌱🌱🌱
 
-Via l'éditeur de `css`, vous pouvez modifier les polices de caractères utilisées d'un thème comme par exemple :
+Via l'éditeur de `CSS`, vous pouvez modifier les polices de caractères utilisées d'un thème comme par exemple :
 `body { font-family: Arial, Helvetica, sans-serif; }`
 
-Si vous avez réellement besoin d'une police de caractères spécifiques, nous vous invitons à inclure dans votre thème un dossier `font` avec le fichier de la police à installer. Avec l'ajout en `css`, par exemple :
+Si vous avez réellement besoin d'une police de caractères spécifiques, nous vous invitons à inclure dans votre thème un dossier `font` avec le fichier de la police à installer. Avec l'ajout en `CSS`, par exemple :
 `@font-face { font-family: ‘Lato'; src: url( “fonts/Lato.woff”) format(‘woff’); font-weight: normal; font-style: normal; }`
 
 > ⚠️ Il existe différents formats de police (Woff2, woff, ttf, otf, etc). "Les développeurs des principaux navigateurs se sont mis d'accord sur l'utilisation du format Web Open Font Format (woff) comme standard".
 
-> ⚠️ Une font, police de caractères, typographie, existe en plusieurs graisses (light, regular, italic, bold, black, etc). Nous vous recommandons d'utiliser `<b>` ou `<strong>`, `<i>` ou `<em>` et les propriétés `css` qui en découle pour éviter le requêtage, le poids et le téléchargement de fichiers supplémentaires. S'il est d'une nécessité absolue d'avoir les fichiers à minima deux graisses d'une police alors, nous vous recommandons l'utilisation d'une police variable.
+> ⚠️ Une font, police de caractères, typographie, existe en plusieurs graisses (light, regular, italic, bold, black, etc). Nous vous recommandons d'utiliser `<b>` ou `<strong>`, `<i>` ou `<em>` et les propriétés `CSS` qui en découle pour éviter le requêtage, le poids et le téléchargement de fichiers supplémentaires. S'il est d'une nécessité absolue d'avoir les fichiers à minima deux graisses d'une police alors, nous vous recommandons l'utilisation d'une police variable.
 
 ## Principe de validation
 
