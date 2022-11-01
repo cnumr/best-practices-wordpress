@@ -23,7 +23,7 @@ Par ailleurs, les règles de qualité web indiquent qu'un contenu vidéo ou audi
 
 ## GreenIT vous conseille
 
-1.  Lors de la création de vos vidéos, limitez leur poids ([Compresser les médias](./compresser-les-médias.md))
+1.  Lors de la création de vos vidéos, limitez leur poids ([Compresser les médias](/WP_5.01-compresser-les-medias))
 2.  Afin de limiter le flux des vidéos, n'incluez des vidéos que lorsque cela est nécessaire, c'est-à-dire, quand une vidéo est une plus-value pour le contenu et/ou pour la compréhension de l'utilisateur
 3.  N'utilisez pas de vidéos en fond ou tout simplement comme élément décoratif (voire point 2)
 4.  Préférez ne charger la vidéo que lorsque le visiteur en fait la demande
