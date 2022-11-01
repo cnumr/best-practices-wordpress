@@ -49,7 +49,6 @@ export const ficheQuery = graphql`
         people
         priority_implementation
         saved_resources
-        state_validation
         responsible
       }
     }

@@ -16,8 +16,8 @@ export default function Home({ data }) {
           <ul className="noliststyle flex flex-row gap-4">
             <li className="font-black">Navigation: </li>
             <li>
-              <a href="#fiches" title="Aller aux fiches">
-                Fiches
+              <a href="#bp" title="Aller aux fiches">
+                Bonnes Pratiques
               </a>
             </li>
             <li>|</li>
@@ -29,7 +29,7 @@ export default function Home({ data }) {
           </ul>
         </nav>
         <hr />
-        <h2 id="fiches">Fiches</h2>
+        <h2 id="bp">Bonnes Pratiques</h2>
         <ul className="wp-grid">
           {data.fichesWP.nodes.map((fiche, index) => {
             if (fiche.childMarkdownRemark?.frontmatter.path)
