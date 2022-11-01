@@ -1,5 +1,5 @@
 ---
-title: WP_4.09_Mettre des données en cache
+title: WP_4.01_Mettre des données en cache
 people: Dominique N.
 scope: Cache
 responsible:
@@ -9,7 +9,7 @@ priority_implementation: Moyen 👍👍
 environmental_impact: Moyen 🌱🌱
 saved_resources:
   - Requêtes
-path: /fiches/WP_4.09-mettre-des-donnees-en-cache
+path: /fiches/WP_4.01-mettre-des-donnees-en-cache
 toIndex: true
 ---
 

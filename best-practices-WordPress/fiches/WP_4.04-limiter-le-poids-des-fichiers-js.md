@@ -1,5 +1,5 @@
 ---
-title: WP_4.08_Limiter le poids des fichiers JS
+title: WP_4.04_Limiter le poids des fichiers JS
 people: Yann K.
 scope: Thèmes
 responsible:
@@ -11,7 +11,7 @@ environmental_impact: Faible 🌱
 saved_resources:
   - Réseau
   - Requêtes
-path: /fiches/WP_4.08-limiter-le-poids-des-fichiers-js
+path: /fiches/WP_4.04-limiter-le-poids-des-fichiers-js
 toIndex: true
 ---
 

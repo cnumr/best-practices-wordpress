@@ -1,6 +1,6 @@
 ---
-title: WP_1.06_Nettoyer dès l'installation
-path: /fiches/nettoyer-des-l-installation
+title: WP_1.02_Nettoyer dès l'installation
+path: /WP_1.02-nettoyer-ds-l_installation
 people: Florine & Dominique
 scope: Fonctionnalités
 responsible:
