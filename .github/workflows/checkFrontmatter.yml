@@ -1,0 +1,28 @@
+name: Frontmatter JSON Schema Validator
+# https://minompi.medium.com/how-to-test-github-actions-locally-5a6dad8da367
+# https://github.com/marketplace/actions/frontmatter-json-schema-validator
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  lexique-frontmatter-json-schema-validator:
+    name: Frontmatter JSON Schema Validator On Lexique
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Frontmatter JSON Schema Validator
+        uses: mheap/frontmatter-json-schema-action@main
+        with:
+          paths: './lexique/*.md'
+          schema: '{"type":"object","properties":{"title":{"type":"string"},"path":{"type":"string"},"toIndex":{"type":"boolean"}},"required":["title","path","toIndex"],"additionalProperties":false}'
+  fiche-frontmatter-json-schema-validator:
+    name: Frontmatter JSON Schema Validator On Fiches
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Frontmatter JSON Schema Validator
+        uses: mheap/frontmatter-json-schema-action@main
+        with:
+          paths: './best-practices-WordPress/fiches/*.md'
+          schema: '{"type":"object","properties":{"title":{"type":"string"},"people":{"type":"string"},"scope":{"type":"string"},"responsible":{"type":"array"},"lifecycle":{"type":"string"},"priority_implementation":{"type":"string"},"environmental_impact":{"type":"string"},"saved_resources":{"type":"array"},"path":{"type":"string"},"toIndex":{"type":"boolean"}},"required":["title","people","responsible","lifecycle","priority_implementation","environmental_impact","saved_resources","path","toIndex"],"additionalProperties":false}'
