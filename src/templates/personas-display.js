@@ -3,7 +3,7 @@ import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-export default function PersonnasDisplay({
+export default function PersonasDisplay({
   data, // this prop will be injected by the GraphQL query below.
   pageContext,
   location,
@@ -24,7 +24,7 @@ export default function PersonnasDisplay({
         <MarkdownDisplay
           data={data}
           pageContext={pageContext}
-          type="personnas"
+          type="personas"
         />
         <InternalNav
           className="mt-8"
@@ -37,7 +37,7 @@ export default function PersonnasDisplay({
   )
 }
 
-export const personnasQuery = graphql`
+export const personasQuery = graphql`
   query (
     $remarkID: String!
     $id: String!

@@ -22,7 +22,7 @@ function Recherche({ location }) {
       <Seo
         title="Recherche"
         location={location}
-        description="Rechercher des personnas ou des Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
+        description="Rechercher des personas ou des fiches de fonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
       />
       <main>
         <h1>Recherche de fiches & personnnas</h1>

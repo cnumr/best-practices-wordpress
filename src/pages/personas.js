@@ -7,20 +7,20 @@ export default function Home({ data, location }) {
   return (
     <Layout>
       <Seo
-        title="Personnas"
+        title="Personas"
         location={location}
-        description="Les Personnas pour rendre WordPress plus respectueux de l'environnement."
+        description="Les personas pour rendre WordPress plus respectueux de l'environnement."
       />
       <main>
-        <h1>Personnas</h1>
+        <h1>Personas</h1>
         <ul className="wp-grid">
-          {data.personnas.nodes.map((personna, index) => {
-            if (personna.childMarkdownRemark?.frontmatter.path)
+          {data.personas.nodes.map((persona, index) => {
+            if (persona.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
                   key={index}
-                  type={Card.PERSONNAS}
-                  markdownRemark={personna.childMarkdownRemark}
+                  type={Card.PERSONAS}
+                  markdownRemark={persona.childMarkdownRemark}
                 />
               )
             else return null
@@ -33,9 +33,9 @@ export default function Home({ data, location }) {
 
 export const query = graphql`
   {
-    personnas: allFile(
+    personas: allFile(
       filter: {
-        sourceInstanceName: { eq: "personnas" }
+        sourceInstanceName: { eq: "personas" }
         childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
       }
       sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
