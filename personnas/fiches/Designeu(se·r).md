@@ -11,7 +11,7 @@ toIndex: true
 - Vous avez devez concevoir un site web, un site e-commerce pour votre entreprise ou pour un de vos client et vous ou ce dernier avez conscience que l'impact du numérique n'est pas nul (4% de la production de GES mondial) ;
 - Vous devez concevoir vite, mais sans pour autant concevoir mal, un site qui aura un fort impact, car lors du développement, les choix que vous aurez pris ne pourront pas être réduits (ou à la marge) ;
 - Vous avez besoins de ses informations rapidement et qu'elles soient applicables sans vous écartez de votre devis ;
-- Vous voulez connaitre tous les points à checker, de la conception des wireframes, lors de la phase de maquetage du site et pour finir lors de la livraison des assets aux développeurs ;
+- Vous voulez connaitre tous les points à checker, de la conception des wireframes, lors de la phase de maquettage du site, à la livraison des assets aux développeurs ;
 
 ## Vous vous retrouvez dans ces affirmations :
 
