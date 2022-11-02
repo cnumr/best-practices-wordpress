@@ -19,7 +19,7 @@ toIndex: true
 
 ### Si c'est le cas :
 
-Tant mieux, vous êtes au bon endroit, chaque fiche vous indique et vous explique une problématique et comment la résoudre avec une solution qui vous est adaptée.
+Tant mieux vous êtes au bon endroit. Chaque fiche vous indique et vous explique une problématique et comment la résoudre avec une solution qui vous est adaptée.
 
 ### Si ce n'est pas le cas :
 
