@@ -15,7 +15,7 @@ toIndex: true
 
 ## Sujet
 
-WordPress propose une fonction très intéressante qu'il est bon d'avoir en tête lorsqu'on développe une fonctionnalité spécifique qui nécessite d'afficher des données en [[front-office|front]] : ==Les Transients ou données transitoires== !
+WordPress propose une fonction très intéressante qu'il est bon d'avoir en tête lorsqu'on développe une fonctionnalité spécifique qui nécessite d'afficher des données en [[front-office|front]] : **Les Transients ou données transitoires !**
 
 Un transient est une [[api|API]] qui permet de mettre des données en [[cache]].
 Cette fonctionnalité permettra de mettre en cache les données qui sont réutilisées afin de limiter le nombre de [[requete|requêtes]] permettant une optimisation de la rapidité de chargement du site qui sera aussi bénéfique pour son [[seo|SEO]].
@@ -26,6 +26,7 @@ Concrétement au chargement d'une page, WordPress vérifie si un transient exist
 - Si c'est le cas, il va directement afficher la donnée.
 
 **Tout n'est pas à mettre en cache !**
+
 Pour un maximum de gain, préférez utiliser cette méthode :
 
 - pour des contenus complexes à générer
@@ -50,23 +51,23 @@ Cette donnée transitoire pourra être remplacée lorsqu'un nouvel article sera 
 
 **Sauvegarder une donnée transitoire**
 
-`set_transient( $transient, $value, $expiration );`
-
----
+```php
+set_transient( $transient, $value, $expiration );
+```
 
 **Récupérer une donnée transitoire**
 
-```
+```php
 if ( false === ( $valeur = get_transient($transient) ) ) {
   echo $valeur;
 }
 ```
 
----
-
 **Supprimer une donnée transitoire**
 
-`delete_transient( $transient );`
+```php
+delete_transient( $transient );
+```
 
 ## Principe de validation
 
@@ -75,5 +76,4 @@ if ( false === ( $valeur = get_transient($transient) ) ) {
 | de requêtes évitées |           70%           |
 
 ## Source
-
-<https://developer.wordpress.org/apis/handbook/transients/>
+-<https://developer.wordpress.org/apis/handbook/transients/>

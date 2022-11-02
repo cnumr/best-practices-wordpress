@@ -36,5 +36,3 @@ Afin d'optimiser au mieux le poids des fichiers JavaScript, il est conseillé de
 | Le nombre                           | est inférieur ou égal à |
 | ----------------------------------- | :---------------------: |
 | de fichiers JavaScript non minifiés |            0            |
-
-Source s'il y en a

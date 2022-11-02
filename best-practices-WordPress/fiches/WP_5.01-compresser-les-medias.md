@@ -23,7 +23,7 @@ Les images constituent donc l'un des leviers les plus importants pour réduire l
 
 WordPress propose nativement des fonctionnalités permettant d'afficher le format le plus adapté à l'utilisateur final du site mais certains thèmes ne les intègrent pas. Si ce n'est pas le cas, ou en cas de doute, utilisez les images les plus adaptées (redimensionnement et/ou qualité) à leur affichage avant de les téléverser.
 
-En complément de ces optimisations, il faudra veiller à utiliser le format d'image adéquat (cf. Fiche 28. Utiliser le format adéquat d'image).
+En complément de ces optimisations, il faudra veiller à utiliser le format [d'image adéquat](./WP_5.02-utiliser-le-format-adequat-d_image.md).
 
 ## GreenIT vous conseille
 

@@ -39,17 +39,18 @@ Sur ce site, vous pouvez télécharger directement le logiciel open source WordP
 ### Récapitulatif
 
 Pour plus de compréhension, voici un tableau comparatif :
-| | WordPress.com | WordPress.org |
-|:--- | :--- | :---|
-|Installation | En un clic | En un clic (selon votre hébergeur) ou manuelle |
-|Personnalisation du design | Forfait Pro | Contrôle total |
-|Ajout d'extensions/fonctionnalités | Forfait Pro | Accès à l'ensemble des extensions et les extensions développées par vos soins |
-|Système de monétisation | Restrictions | Contrôle total |
-|Optimisation du SEO | Restrictions | Contrôle total |
-|Sécurité & maintenance | Automatiques | Automatiques avec des extensions |
-|Accès au code source | Automattic Inc. | Vous |
-|Accès et appartenance des données | Automattic Inc. | Vous |
-|Conditions générales de vente | oui | non |
+
+|                                    | WordPress.com   | WordPress.org                                                                 |
+| :--------------------------------- | :-------------- | :---------------------------------------------------------------------------- |
+| Installation                       | En un clic      | En un clic (selon votre hébergeur) ou manuelle                                |
+| Personnalisation du design         | Forfait Pro     | Contrôle total                                                                |
+| Ajout d'extensions/fonctionnalités | Forfait Pro     | Accès à l'ensemble des extensions et les extensions développées par vos soins |
+| Système de monétisation            | Restrictions    | Contrôle total                                                                |
+| Optimisation du SEO                | Restrictions    | Contrôle total                                                                |
+| Sécurité & maintenance             | Automatiques    | Automatiques avec des extensions                                              |
+| Accès au code source               | Automattic Inc. | Vous                                                                          |
+| Accès et appartenance des données  | Automattic Inc. | Vous                                                                          |
+| Conditions générales de vente      | oui             | non                                                                           |
 
 ## GreenIT vous conseille
 
@@ -58,7 +59,7 @@ Pour plus de compréhension, voici un tableau comparatif :
 Nous pensons que vous l'aurez compris, que l'on utilise WordPress.com ou directement le logiciel open source WordPress sur son hébergeur :
 
 - du code et des fichiers et médias (vidéos, images, audios, etc.) sont stockés dans un datacenter
-- des [[requête|requêtes]] sont faites à des serveurs
+- des [[requete|requêtes]] sont faites à des serveurs
 - les [[terminal|terminaux]] des utilisateurs doivent suivre et afficher des sites toujours de plus en plus obèses
 
 Vous le verrez tout au long de ces bonnes pratiques, il est plus facile d'agir quand nous sommes libres d'accéder, de désactiver et supprimer des fonctionnalités non essentielles, de mettre en [[cache]] les éléments durables, de choisir et modifier le thème qui correspond à notre besoin et aux conseils d'écoconception, etc.

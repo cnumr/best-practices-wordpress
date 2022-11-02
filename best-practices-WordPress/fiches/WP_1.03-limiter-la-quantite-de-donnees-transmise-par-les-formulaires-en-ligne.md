@@ -31,7 +31,7 @@ Cela permet d'aller vers un numérique plus responsable, et sert l'écoconceptio
 
 #### Stocker les données dans votre base de données
 
-Si vous ne veillez pas à la sécurité (Voir la fiche "Sécuriser les formulaires en ligne.md") et/ou au tri des données traitées, le poids de la base de données pourra grossir vite : plus la base est lourde, plus le serveur de stockage demande de ressources et de maintenance.
+Si vous ne veillez pas à la sécurité (Voir la fiche "[Sécuriser les formulaires en ligne](./WP_1.04-securiser-les-formulaires-en-ligne.md)") et/ou au tri des données traitées, le poids de la base de données pourra grossir vite : plus la base est lourde, plus le serveur de stockage demande de ressources et de maintenance.
 
 #### Transmettre les données par email
 

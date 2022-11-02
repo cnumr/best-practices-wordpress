@@ -25,7 +25,7 @@ Les [[extension|extensions]] ont contribué au succès du [[cms|CMS]], mais souv
 
 Elles génèrent régulièrement des :
 
-- augmentations du nombre de [[requête|requêtes]]
+- augmentations du nombre de [[requete|requêtes]]
 - augmentations du poids de pages
 - augmentations du temps de traitement des requêtes internes
 

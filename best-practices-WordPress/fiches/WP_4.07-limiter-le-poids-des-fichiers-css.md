@@ -23,7 +23,7 @@ Le poids numérique des fichiers CSS est en constante augmentation depuis 10 ans
 
 ### Solution no-code 🌱
 
-Nous vous invitons à vous référer à la bonne pratique : [Utiliser un système de cache](/fiches/12-utiliser-un-systeme-de-cache). La plupart des [[extension|extensions]] de cache propose à minima la minification du CSS.
+Nous vous invitons à vous référer à la bonne pratique : [Utiliser un système de cache](./WP_7.02-utiliser-un-systeme-de-cache.md). La plupart des [[extension|extensions]] de cache propose à minima la minification du CSS.
 
 ### Solution code 🌱🌱🌱
 
@@ -37,7 +37,7 @@ Nous vous recommandons de :
 - Privilégier l'intégration de vos fichiers CSS via la balise `<link>`, en tenant compte de la hiérarchisation des chargements des styles par le navigateur (pour un même sélécteur, c'est la dernière règle CSS déclarée qui est prise en compte par le navigateur)
 - Minifier les fichiers CSS
 - Éviter d'utiliser les propriétés coûteuses en ressources (`position : fixed`, `border-radius`, `box-shadow`, `text-shadow`, `opacity`, `transform`, `filter`)
-- Adopter une approche mobile-first (économie de style et de ressources) et ajoutons les styles à mesure que le support s’agrandit (Voir la fiche [Concevoir en Mobile First](/fiches/20-concevoir-en-mobile-firt)).
+- Adopter une approche mobile-first (économie de style et de ressources) et ajoutons les styles à mesure que le support s’agrandit (Voir la fiche [Concevoir en Mobile First](./WP_3.07-concevoir-vos-sites-en-mobile-first.md)).
 
 ## Principe de validation
 

@@ -31,14 +31,17 @@ Limiter au maximum l'utilisation des carrousels en privilégiant du contenu stat
 Dans le cas contraire :
 
 - Mettre en place un contrôle simple et complet du composant (arrêt, écran suivant/précédent)
-- Préférez un chargement progressif des images présentes dans les différents écrans _([Privilégier le chargement paresseux des images](/fiches/26-privilegier-le-chargement-paresseux-des-images-lazy-loading))_
-- Préférez les animations impliquant une utilisation des ressources processeurs _([Éviter les animations](/fiches/29-eviter-les-animations))_
+- Préférez un chargement progressif des images présentes dans les différents écrans ([Privilégier le chargement différé des images](./WP_4.06-privilegier-le-chargement-differe-des-images-lazy-loading.md))
+- Préférez les animations impliquant une utilisation des ressources processeurs ([Éviter les animations](./WP_3.11-eviter-les-animations.md))
 - Limiter le nombre d'écrans présent dans le carrousel.
 
 ## Exemple
 
 Les balises `<img />` possède un attribut HTML `loading` qui permet nativement un chargement progressif des images.
-`<img src="mon_image.webp" alt="" loading="lazy" />`
+
+```html
+<img src="mon_image.webp" alt="" loading="lazy" />
+```
 
 Les animations de certains attributs CSS implique un repaint/reflow des navigateurs qui demande des ressources machines, pour limiter cela préférez les animations des carrousels par la propriété CSS `transform`.
 

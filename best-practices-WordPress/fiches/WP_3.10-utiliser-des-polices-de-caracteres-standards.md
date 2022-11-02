@@ -40,10 +40,23 @@ Nous vous déconseillons l'installation d'[[extension]] pour l'ajout de typograp
 ### Solution code 🌱🌱🌱
 
 Via l'éditeur de `CSS`, vous pouvez modifier les polices de caractères utilisées d'un thème comme par exemple :
-`body { font-family: Arial, Helvetica, sans-serif; }`
+
+```css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+```
 
 Si vous avez réellement besoin d'une police de caractères spécifiques, nous vous invitons à inclure dans votre thème un dossier `font` avec le fichier de la police à installer. Avec l'ajout en `CSS`, par exemple :
-`@font-face { font-family: ‘Lato'; src: url( “fonts/Lato.woff”) format(‘woff’); font-weight: normal; font-style: normal; }`
+
+```css
+@font-face{
+  font-family: ‘Lato';
+  src: url( “fonts/Lato.woff”) format(‘woff’);
+  font-weight: normal;
+  font-style: normal;
+}
+```
 
 > ⚠️ Il existe différents formats de police (Woff2, woff, ttf, otf, etc). "Les développeurs des principaux navigateurs se sont mis d'accord sur l'utilisation du format Web Open Font Format (woff) comme standard".
 

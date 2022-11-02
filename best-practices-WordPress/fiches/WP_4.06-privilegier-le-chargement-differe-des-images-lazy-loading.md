@@ -30,9 +30,10 @@ Il existe plusieurs [[extension|extensions]] WordPress permettant d'appliquer ce
 ### Solution code 🌱🌱🌱
 
 Cependant, il est encore plus efficace d'utiliser la technique de lazy load de manière native en ajoutant l'attribut `loading=lazy` aux images et aux iframes que vous souhaitez charger progressivement.
-
-`<img src="image.jpg" loading="lazy" />`
-`<iframe src="video-player.html" title="..." loading="lazy"></iframe>`
+ ```html
+<img src="image.jpg" loading="lazy" />
+<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+```
 
 Nota: si vous utilisez la fonction WP [get_the_post_thumbnail](https://developer.wordpress.org/reference/functions/get_the_post_thumbnail/), la balise image obtenue contiendra l'attribut `loading="lazy"` par défaut (<https://caniuse.com/?search=loading>).
 
@@ -42,4 +43,4 @@ Le lazy loading natif a l'avantage d'améliorer les performances globales de vot
 
 | Le nombre                                                  | est inférieur ou égal à |
 | ---------------------------------------------------------- | :---------------------: |
-| d'images chargées au-dessous de la [[ligne de flottaison]] |            0            |
+| d'images chargées au-dessous de la ligne de flottaison |            0            |

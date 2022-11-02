@@ -19,7 +19,7 @@ toIndex: true
 
 ## Sujet
 
-La fiche [12. Utiliser un système Cache](./12.%20Utiliser%20un%20syst%C3%A8me%20Cache.md) nous parle de l'importance du [[cache]] et de sa mise en place via des [[extension|extensions]] WordPress.
+La fiche [Utiliser un système Cache](./WP_7.02-utiliser-un-systeme-de-cache.md) nous parle de l'importance du [[cache]] et de sa mise en place via des [[extension|extensions]] WordPress.
 
 ## GreenIT vous conseille
 
@@ -31,7 +31,7 @@ Nous allons directement indiquer au serveur Apache les paramétrages de [[compre
 
 Prenons pour exemple l'image du logo qui se trouve sur chaque page du site. Si nous ne mettons pas en place de cache, le navigateur la transférera depuis notre serveur à chaque affichage d'une nouvelle page.
 
-Maintenant, compressons notre image (gzip), elle est déjà plus rapide à charger (bien sûr, nous partons du principe qu'elle est bien dimensionnée, et au bon format. cf fiches #[22. Utiliser une version d'image ayant taille cohérente avec son utilisation](./22.utiliser-une-version-d-image-ayant-taille-cohérente-avec-son-utilisation.md) & #[23. Le poids des images](./23.%20Le%20poids%20des%20images.md)).
+Maintenant, compressons notre image (gzip), elle est déjà plus rapide à charger (bien sûr, nous partons du principe qu'elle est bien dimensionnée, et au bon format. cf fiches [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_5.02-utiliser-le-format-adequat-d_image.md), [Utiliser le format adéquat d'image](./WP_5.02-utiliser-le-format-adequat-d_image.md) et [Compresser les médias](./WP_5.01-compresser-les-medias.md).
 
 Ensuite, indiquons que nous souhaitons qu'elle soit mise en cache pendant 1 an.
 Lors de sa première visite, le logo est transféré pour l'afficher dans le navigateur. Le visiteur change de page, le navigateur regarde si l'image existe déjà dans ses fichiers mis en cache : oui, alors il ne va pas la chercher sur le serveur.

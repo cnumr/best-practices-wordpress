@@ -1,8 +1,9 @@
-# Contribuer au référentiel d'écoconception WordPress 
+# Contribuer au référentiel d'écoconception WordPress
 
 ## Qui peut être contributrice ou contributeur ?
 
 Toute personne qui le souhaite dans le but d'améliorer la version actuelle en proposant :
+
 - la suppression de BP (bonnes pratiques) obsolètes, non applicables ou sans effet ;
 - la modification de BP existantes pour correction ou amélioration ;
 - l'ajout de nouvelles BP issues du terrain ;
@@ -12,7 +13,7 @@ Toute personne qui le souhaite dans le but d'améliorer la version actuelle en p
 - toute idée pour l'amélioration de ce référentiel ;
 - toute idée pour l'amélioration du site ;
 - toute idée pour l'amélioration du flux de travail ;
- en respectant les quelques règles et instructions de ce document ou en apportant son avis, expertise, expérience sur les propositions en cours dans [discussion](https://github.com/cnumr/fiches-wordpress-greenit/discussions).
+  en respectant les quelques règles et instructions de ce document ou en apportant son avis, expertise, expérience sur les propositions en cours dans [discussion](https://github.com/cnumr/fiches-wordpress-greenit/discussions).
 
 ## Règles de bienséance
 
@@ -23,6 +24,7 @@ Toute personne qui le souhaite dans le but d'améliorer la version actuelle en p
 ## L'équipe de pilotage
 
 L'équipe de pilotage est constituée de :
+
 - Heluin Renaud
 - Dominique Nicolle
 - Yann Gautreau
@@ -30,54 +32,60 @@ L'équipe de pilotage est constituée de :
 - Florine Sueur
 
 Les fonctions de cette équipe sont :
+
 - de s'assurer que les règles et instructions instaurées soient respectées ;
 - en cas de désaccord, de trancher une décision par consensus ;
 - de résoudre les discussions et d'initier la suite du processus par consensus ;
-- de valider les `Pull Request` pour intégration au référentiel et au site par consensus *(via le `merge` de la `PR` -> `develop`)* ;
+- de valider les `Pull Request` pour intégration au référentiel et au site par consensus _(via le `merge` de la `PR` -> `develop`)_ ;
 - **d'aider tout contributeur en difficulté sur Github**.
 
 ## Comment contribuer ?
 
 Pour une meilleure organisation, nous avons établi un workflow identique pour les propositions au niveau :
+
 - des bonnes pratiques
 - des définitions du lexique
 
 Nous vous proposons une courte vidéo, encore brouillonne, des manipulations décrite ci-dessous : [https://youtu.be/BPOWY_QCc2g](https://youtu.be/BPOWY_QCc2g)
 
-### 1.   Tout commence par une discussion !
+### 1. Tout commence par une discussion !
 
 Dans l'onglet [discussion](https://github.com/cnumr/fiches-wordpress-greenit/discussions), n'hésitez pas à regarder les discussions déjà ouvertes avant d'en créer une nouvelle, peut-être qu'une autre personne a eu la même idée que vous.
 
 La nouvelle discussion doit :
+
 - avoir un titre explicite,
-- être catégorisée (BP, définitions, site, etc.), 
-- taggée en fonction d'un ajout, d'une modification ou d'une suppression. 
+- être catégorisée (BP, définitions, site, etc.),
+- taggée en fonction d'un ajout, d'une modification ou d'une suppression.
 
 Chaque contributrice et contributeur est libre de participer à la discussion et d'indiquer son accord via l'utilisation de "la flèche vers le haut" ou son désaccord, argumenté par un commentaire, avec un pouce vers le bas.
 
 Une proposition avec plusieurs avis positifs fera l'objet d'une étude par l'équipe de pilotage qui prendra une décision par consensus, par commentaire ou réunion si nécessaire, sur les suites à donner.
 
 Trois possibilités :
+
 - la proposition doit être retravaillée, affinée
 - la proposition est définitivement rejetée avec justification
 - la proposition est validée
 
 Une fois qu'une décision a été émise, un membre de l'équipe de pilotage clôt la discussion `answered` et crée une `issue` attachée à la discussion :
+
 - en indiquant une liste de tâches à effectuer,
-- en la taguant, 
+- en la taguant,
 - en l'associant à la version du référentiel et board project,
 - en l'assignant au contributeur ou à une personne de la discussion volontaire pour traiter le sujet ou à un membre de l'équipe de pilotage en charge de ce sujet.
 
-### 2.  De l'issue à la Pull Request
+### 2. De l'issue à la Pull Request
 
 Dans l'onglet [Issues](https://github.com/cnumr/fiches-wordpress-greenit/issues), nous vous invitons à trier pour retrouver plus facilement celles qui vous incombent.
 
 Dans celle-ci, nous vous invitons à créer une branche (`create a branch`) en la nommant : `feat/` + nom de l'issue. Sur cette branche, vous pouvez faire vos ajouts, modifications ou suppressions en fonction du sujet de l'issue.
 
-**Pour tout ajout ou modification de BP, veuillez respecter le [template](/best-practices-WordPress/template/README.md).**
+**Pour tout ajout ou modification de BP, veuillez respecter le [template](./best-practices-WordPress/template/README.md).**
 
-Lors de la rédaction de votre BP, nous vous recommandons d'utiliser le lexique déjà en place ou de l'augmenter en fonction de vos besoins. 
-- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition sans .md|label à afficher]]` (ex: [[extension|plug-in]] plug-in sera affiché et pointera vers le fichier du lexique extension.md).
+Lors de la rédaction de votre BP, nous vous recommandons d'utiliser le lexique déjà en place ou de l'augmenter en fonction de vos besoins.
+
+- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition sans .md|label à afficher]]` (ex: [[a|b]] b sera affiché et pointera vers le fichier du lexique a.md).
 - Pour surligner une notion importante, utilisez cette écriture : `==Phrase à surligner==`.
 
 Une fois que vous êtes satisfait de votre proposition et que vous avez coché les tâches, il est nécessaire de faire une `Pull Request` vers `develop` associée à l'issue. Une `Pull Request` peut-être `review` par tous les participants qui souhaitent soumettre des corrections au niveau de l'orthographe, de la syntaxe, de compréhension, de vulgarisation, etc.
@@ -87,6 +95,7 @@ Une fois que vous êtes satisfait de votre proposition et que vous avez coché l
 ## Comment contribuer avec Git directement ?
 
 Pour ceux qui ne sont pas à l'aise avec Git, voici un petit tour d'horizon où vous trouverez des notions et des mots du patois Git.
+
 > Ceux qui connaissent GIT par cœur n'apprendront rien dans cette partie et peuvent aller directement à la proposition de worflow.
 
 Git est un système de **versionning de code**, c'est-à-dire que comme Word ou autre, on a un historique des modifications du code. Le code chez nous étant le contenu des fiches.

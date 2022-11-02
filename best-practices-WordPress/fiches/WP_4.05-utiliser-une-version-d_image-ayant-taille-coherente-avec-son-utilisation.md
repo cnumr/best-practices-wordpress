@@ -25,7 +25,7 @@ Les images sont un des éléments les plus lourds des sites web. Une mauvaise co
 
 Lors de l'ajout d'une image dans l'interface d'une page, il faut se poser plusieurs questions, abordées sur d'autres fiches de ce guide :
 
-- Le type d'image (JPG, PNG, SVG, etc. voir [28. Type d'images à utiliser suivant le contexte d'utilisation](/best-practices-WordPress/fiches/28.%20Type%20d'images%20%C3%A0%20utiliser%20suivant%20le%20contexte%20d'utilisation.md) )
+- Le type d'image (JPG, PNG, SVG, etc. voir [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md))
 - La compression possible ou le nombre de couleurs embarquées
 - La transparence ou non
 - Et ici, la taille de l'image.
@@ -44,7 +44,7 @@ Sachant que votre site va finalement n'utiliser que des versions de tailles réd
 
 ### Solution no-code 🌱
 
-Voici un plug-in pour créer des vignettes (`post-thumbnails`) et régénérer les images pour qu'elles soient disponibles dans WordPress : https://fr.wordpress.org/plugins/regenerate-thumbnails-advanced/
+Voici une [[extension]] pour créer des [[vignette|vignettes]] (`post-thumbnails`) et régénérer les images pour qu'elles soient disponibles dans WordPress : https://fr.wordpress.org/plugins/regenerate-thumbnails-advanced/
 
 ### Solution code 🌱🌱🌱
 
@@ -75,7 +75,7 @@ function mysite_custom_image_sizes($sizes)
 }
 ```
 
-Utilisez ce plugin pour regénéner les vignettes suite à leur ajout dans la configuration : https://fr.wordpress.org/plugins/regenerate-thumbnails/
+Utilisez cette extension pour regénéner les vignettes suite à leur ajout dans la configuration : https://fr.wordpress.org/plugins/regenerate-thumbnails/
 
 ## Principe de validation
 
