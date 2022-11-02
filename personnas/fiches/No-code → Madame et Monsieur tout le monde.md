@@ -8,7 +8,7 @@ toIndex: true
 
 ## Profil :
 
-- Vous avez envie de réaliser un site web ou une boutique en ligne et vous avez conscience que l'impact du numérique n'est pas null (4% de la production de GES mondial) ;
+- Vous avez envie de réaliser un site web ou une boutique en ligne et vous avez conscience que l'impact du numérique n'est pas nul (4% de la production de GES mondial) ;
 - Vous avez besoin d'informations, mais vous n'êtes développeur ou en tout cas pas un expert du developpement web. Vous avez donc besoin d'informations adaptées et compréhensibles.
 
 ### Vous vous retrouvez dans ces affirmations :
