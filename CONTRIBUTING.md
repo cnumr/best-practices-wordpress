@@ -85,7 +85,7 @@ Dans celle-ci, nous vous invitons à créer une branche (`create a branch`) en l
 
 Lors de la rédaction de votre BP, nous vous recommandons d'utiliser le lexique déjà en place ou de l'augmenter en fonction de vos besoins.
 
-- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition sans .md|label à afficher]]` (ex: [[extension|plug-in]] plug-in sera affiché et pointera vers le fichier du lexique extension.md).
+- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition sans .md|label à afficher]]` (ex: [[a|b]] b sera affiché et pointera vers le fichier du lexique a.md).
 - Pour surligner une notion importante, utilisez cette écriture : `==Phrase à surligner==`.
 
 Une fois que vous êtes satisfait de votre proposition et que vous avez coché les tâches, il est nécessaire de faire une `Pull Request` vers `develop` associée à l'issue. Une `Pull Request` peut-être `review` par tous les participants qui souhaitent soumettre des corrections au niveau de l'orthographe, de la syntaxe, de compréhension, de vulgarisation, etc.
