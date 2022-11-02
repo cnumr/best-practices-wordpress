@@ -48,7 +48,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         : fiches[index + 1].childMarkdownRemark?.id
     if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
         component: templatePath,
         context: {
           id: node.id,
@@ -105,7 +105,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         : personnas[index + 1].childMarkdownRemark?.id
     if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
         component: templatePath,
         context: {
           id: node.id,
@@ -162,7 +162,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         : lexique[index + 1].childMarkdownRemark?.id
     if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
         component: templatePath,
         context: {
           id: node.id,

@@ -49,7 +49,7 @@ function Card({ markdownRemark, type = Card.PERSONNAS }) {
   return (
     <li className="box interactive">
       <Link
-        to={`${markdownRemark.frontmatter.path}`}
+        to={`${markdownRemark.frontmatter.path}.md`}
         className="flex flex-col h-full divide-y-2"
         title={`Voir la fiche : ${markdownRemark.frontmatter.title}`}
       >
