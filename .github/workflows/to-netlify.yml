@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v3
       # 3. https://github.com/actions/setup-node#usage
       - name: Setup node and build Gatsby
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           cache: 'npm'
