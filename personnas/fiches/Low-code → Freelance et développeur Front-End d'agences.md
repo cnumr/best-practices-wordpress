@@ -11,7 +11,7 @@ toIndex: true
 - Vous devez délivrez vite, mais sans pour autant délivrez mal et livrer un site ayant un fort impact ;
 - Vous avez besoin des bonnes informations rapidement et qu'elles soient applicables sans vous écartez de votre devis ;
 - Vous voulez connaitre tous les points à checker, de la conception à la livraison ;
-- Vous n'êtes pourtant pas un développeur, vous avez donc besoin d'informations adaptées et compréhensible.
+- Vous n'êtes pourtant pas un développeur, vous avez donc besoin d'informations adaptées et compréhensibles.
 
 ### Vous vous retrouvez dans ces affirmations :
 
