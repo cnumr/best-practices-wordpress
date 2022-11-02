@@ -3,7 +3,7 @@ title: 0.00 <Titre de la bonne pratique sous le fomat verbe à l'infinif + l'act
 path: /fiches/WP_0.00_<nom-de-la-bonne-pratique-en-minuscule-et-sans-espace>
 people: <Nom(s) de(s) rédacteur(s) de la bonne pratique>
 scope: <Famille de la bonne pratique à définir parmi : Cache | Documents | Fonctionnalités | Front-office | Hébergement | Images | Sécurité | Stockage | Thèmes | Vidéos/Audios>
-responsible: <Liste des cible(s) visé(s), Personnas concernée(s) :
+responsible: <Liste des cible(s) visé(s), Personas concernée(s) :
 - Code(use·ur) → Développeu·se·r, Designeu(se·r)
 - Low-code → Freelance et développeur Front-End d'agences
 - No-code → Madame et Monsieur tout le monde>
