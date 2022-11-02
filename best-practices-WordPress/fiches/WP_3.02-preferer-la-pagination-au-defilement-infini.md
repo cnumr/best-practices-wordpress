@@ -38,8 +38,8 @@ Dans votre thème vous pouvez afficher la pagination via la fonction
 
 ```php
 the_posts_pagination( array(
-'prev_text' => __( 'Previous Page', 'textdomain' ),
-'next_text' => __( 'Next Page', 'textdomain' ),
+  'prev_text' => __( 'Previous Page', 'textdomain' ),
+  'next_text' => __( 'Next Page', 'textdomain' ),
 ) );
 ```
 

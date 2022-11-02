@@ -23,7 +23,7 @@ toIndex: true
 
 Plusieurs formats d'images sont possibles sur le web : le SVG, le JPG/JPEG, le PNG, le GIF et le WebP, le HEIF et le AVIF.
 
-Chaque format a un impact sur l'optimisation d'affichage et sur le poids final de l'image, qui est dû à leurs possibilités de compression. Si vous avez lu la bonne pratique : [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation), vous savez que les médias en général et que les images en particulier (sur une page web, 50 % du poids total de la page) sont un des éléments les plus lourds des sites web engendrant un surcoût environnemental parfois non nécessaire et coûteux, en stockage, réseau et bande passante pour des sociétés comme Google (Youtube), Netflix et Apple qui cherchent et proposent des formats de compression toujours plus optimisés.
+Chaque format a un impact sur l'optimisation d'affichage et sur le poids final de l'image, qui est dû à leurs possibilités de compression. Si vous avez lu la bonne pratique : [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md), vous savez que les médias en général et que les images en particulier (sur une page web, 50 % du poids total de la page) sont un des éléments les plus lourds des sites web engendrant un surcoût environnemental parfois non nécessaire et coûteux, en stockage, réseau et bande passante pour des sociétés comme Google (Youtube), Netflix et Apple qui cherchent et proposent des formats de compression toujours plus optimisés.
 
 Le monde des extensions de formats est vivant et complexe, pour plus de clarté nous ne rentrerons pas dans les détails techniques.
 
@@ -114,10 +114,11 @@ Nous avions sélectionné une image pour illustrer cette BP (ci-dessous).
 
 Le fichier de création est sûrement vectoriel cependant il a été utilisé en `.jpg`.
 Nous l'avons retravaillé comme il suit :
-| Format | Poids | Inconvenant |
-|:--- | :-----| :---- |
-|Fichier d'origine en `.jpg`| 999 ko | Fond blanc |
-|Fichier revectorisé sous Illustrator puis exporter en `.svg` | 137 ko |
+
+| Format                                                       | Poids  | Inconvenant |
+| :----------------------------------------------------------- | :----- | :---------- |
+| Fichier d'origine en `.jpg`                                  | 999 ko | Fond blanc  |
+| Fichier revectorisé sous Illustrator puis exporter en `.svg` | 137 ko |             |
 
 <p align="center">
 

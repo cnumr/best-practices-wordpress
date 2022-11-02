@@ -25,7 +25,7 @@ Les images sont un des éléments les plus lourds des sites web. Une mauvaise co
 
 Lors de l'ajout d'une image dans l'interface d'une page, il faut se poser plusieurs questions, abordées sur d'autres fiches de ce guide :
 
-- Le type d'image (JPG, PNG, SVG, etc. voir [Utiliser une version d'image ayant taille cohérente avec son utilisation](/WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation))
+- Le type d'image (JPG, PNG, SVG, etc. voir [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md))
 - La compression possible ou le nombre de couleurs embarquées
 - La transparence ou non
 - Et ici, la taille de l'image.

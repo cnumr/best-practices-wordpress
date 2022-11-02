@@ -15,9 +15,9 @@ toIndex: true
 
 ## Sujet
 
-WordPress enregistre des révisions pour chaque mise à jour des contenus. Vous pouvez les limiter aux 10 dernières modifications afin de limiter le poids de la base de données et automatiser une partie de l'entretien de votre site [Entretenir son site régulièrement](./WP_8.01-entretenir-son-site-regulierement).
+WordPress enregistre des révisions pour chaque mise à jour des contenus. Vous pouvez les limiter aux 10 dernières modifications afin de limiter le poids de la base de données et automatiser une partie de l'entretien de votre site [Entretenir son site régulièrement](./WP_8.01-entretenir-son-site-regulierement.md).
 
-Cette bonne pratique est à appliquer en complément de la fiche [Augmenter l'intervale de temps entre deux sauvegardes automatiques](./WP_4.02-augmenter-l_intervalle-de-temps-entre-deux-enregistrements-automatiques)
+Cette bonne pratique est à appliquer en complément de la fiche [Augmenter l'intervale de temps entre deux sauvegardes automatiques](./WP_4.02-augmenter-l_intervalle-de-temps-entre-deux-enregistrements-automatiques.md)
 
 ## GreenIT vous conseille
 
@@ -30,11 +30,13 @@ define('WP_POST_REVISIONS', X);
 ## Exemple :
 
 Pour enregistrer seulement les 10 dernières révisions :
+
 ```php
 define('WP_POST_REVISIONS', 10);
 ```
 
 Pour supprimer l'enregistrement des révisions :
+
 ```php
 define('WP_POST_REVISIONS', false);
 ```

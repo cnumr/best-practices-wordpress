@@ -22,11 +22,11 @@ toIndex: true
 
 ## Sujet
 
-Mesurer l'impact environnemental d'un site en développement ou déjà mis en ligne va permettre d'ajuster au mieux les composants de votre projet et permettre de faire des choix afin d'alléger l'impact de votre projet. Cette mesure doit se faire sur l'ensemble d'un [[parcours utilisateur]]. Cette mesure va prendre en compte le poids et la complexité des composants de la page : HTML, CSS, JavaScript, chargement des bibliothèques externes (typographie, cartographie, etc.) et aussi mesurer les requêtes serveurs.
+Mesurer l'impact environnemental d'un site en développement ou déjà mis en ligne va permettre d'ajuster au mieux les composants de votre projet et permettre de faire des choix afin d'alléger l'impact de votre projet. Cette mesure doit se faire sur l'ensemble d'un [[parcours-utilisateur]]. Cette mesure va prendre en compte le poids et la complexité des composants de la page : HTML, CSS, JavaScript, chargement des bibliothèques externes (typographie, cartographie, etc.) et aussi mesurer les requêtes serveurs.
 
 ## GreenIT vous conseille
 
-Posez-vous des limites par page et pour chaque [[parcours utilisateur]].
+Posez-vous des limites par page et pour chaque [[parcours-utilisateur]].
 
 - Une limite de poids : quel est le poids maximum que ma page ne doit pas atteindre ?
 - Une limite de temps : en fonction de son terminal et du réseau, quelle est la durée acceptable pour que l’utilisateur atteigne son objectif ?
@@ -42,7 +42,7 @@ Extension GreenIT Analysis : Disponible sur [Chrome](https://chrome.google.com/w
 1. Installer cette extension sur vos navigateurs de test, ils sont accessibles via les outils d'inspecteur de code.
 2. Vider votre cache navigateur (afin de simuler une première visite) et cliquer sur "Lancer l'analyse".
    L'extension va attribuer une note de A à G à votre page. De A jusqu'a C le résultat est honorable, de D à G votre site est perfectible. Tirer les conclusions de la note obtenue : le poids des images et leurs nécessités, est-ce que votre page à une vidéo, chargez-vous beaucoup de typographies ou de bibliothèques externes, avez-vous beaucoup d'extensions, avez-vous des animations, etc.
-   
+
 > ❗L'extension vous permet également d'enregistrer l'empreinte d'un [[parcours utilisateur]] complet. Pour ce faire cliquer sur "Sauver l'analyse" et effectuer le parcours de votre utilisateur (de la page catalogue jusqu'à la page validée votre commande par exemple).
 
 [Kastor](https://kastor.green/) : Site permettant d'évaluer son site selon le [GR491](https://gr491.isit-europe.org/).
@@ -58,7 +58,7 @@ Extension GreenIT Analysis : Disponible sur [Chrome](https://chrome.google.com/w
 
 ## Principe de validation
 
-| Le nombre                                                                                               | est inférieur ou égal à |
-| ------------------------------------------------------------------------------------------------------- | :---------------------: |
+| Le nombre                                                                                           | est inférieur ou égal à |
+| --------------------------------------------------------------------------------------------------- | :---------------------: |
 | de parcours utilisateur sur votre site non testé avec un outil d'écoconception                      |            0            |
 | de parcours utilisateur sur votre site non évalué à l'aide du référentiel d'écoconception WordPress |            0            |

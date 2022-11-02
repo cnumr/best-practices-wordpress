@@ -23,7 +23,7 @@ WordPress enregistre automatiquement les modifications de brouillons, d'articles
 ## GreenIT vous conseille
 
 Nous vous proposons deux alternatives pour réduire le nombre d'appels serveur et réduire l'impact sur le stockage.
-Cette bonne pratique est à appliquer en complément de la fiche [Limiter le nombre de révisions](./WP_4.03-limiter-le-nombre-de-revisions) qui participe aussi à l'automatisation d'une partie de l'entretien de votre site [Entretenir son site régulièrement](./WP_8.01-entretenir-son-site-regulierement).
+Cette bonne pratique est à appliquer en complément de la fiche [Limiter le nombre de révisions](./WP_4.03-limiter-le-nombre-de-revisions.md) qui participe aussi à l'automatisation d'une partie de l'entretien de votre site [Entretenir son site régulièrement](./WP_8.01-entretenir-son-site-regulierement.md).
 
 ### Solution no-code 🌱
 
