@@ -16,7 +16,7 @@ toIndex: true
 
 ## Sujet
 
-En supplément de la [sécurité globale de votre installation WordPress](#TODO) et pour reprendre les indications de la fiche [Limiter la quantité de données transmise par les formulaires en ligne](./WP_1.03-limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne), il est indispensable de limiter le poids de votre base de données et/ou de limiter le nombre d'emails envoyés depuis vos formulaires en ligne.
+En supplément de la [sécurité globale de votre installation WordPress](#TODO) et pour reprendre les indications de la fiche [Limiter la quantité de données transmise par les formulaires en ligne](./WP_1.03-limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne.md), il est indispensable de limiter le poids de votre base de données et/ou de limiter le nombre d'emails envoyés depuis vos formulaires en ligne.
 Que vous ayez choisi de stocker les données des formulaires dans votre base de données ou de les transmettre par email, les formulaires doivent être sécurisés afin de ne pas permettre aux robots d'envoyer des spams via les formulaires présents sur votre site.
 
 Il existe plusieurs méthodes pour sécuriser les formulaires en lignes : le captcha ou le pot de miel (HoneyPot)
