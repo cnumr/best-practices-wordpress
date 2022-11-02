@@ -17,8 +17,6 @@ function Seo({ description, lang, meta, title, location }) {
     graphql`
       query {
         site {
-          host
-          port
           siteMetadata {
             title
             description
