@@ -11,10 +11,11 @@ export default function FichesDisplay({
   // console.log('pageContext', pageContext)
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { previous, next } = data
-  const { frontmatter } = markdownRemark
+  const { frontmatter, excerpt } = markdownRemark
+  console.log(frontmatter)
   return (
     <Layout>
-      <Seo title={frontmatter.title} description={frontmatter.excerpt} />
+      <Seo title={frontmatter.title} description={excerpt} />
       <article className="blog-post-container">
         <MarkdownDisplay data={data} pageContext={pageContext} type="fiches" />
         <InternalNav

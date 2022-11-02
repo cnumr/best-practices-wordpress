@@ -11,10 +11,10 @@ export default function PersonnasDisplay({
   // console.log('pageContext', pageContext)
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { previous, next } = data
-  const { frontmatter } = markdownRemark
+  const { frontmatter, excerpt } = markdownRemark
   return (
     <Layout>
-      <Seo title={frontmatter.title} description={frontmatter.excerpt} />
+      <Seo title={frontmatter.title} description={excerpt} />
       <div className="blog-post-container">
         <MarkdownDisplay
           data={data}
