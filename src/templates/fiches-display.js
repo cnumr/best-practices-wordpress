@@ -6,16 +6,20 @@ import { graphql } from 'gatsby'
 export default function FichesDisplay({
   data, // this prop will be injected by the GraphQL query below.
   pageContext,
+  location,
 }) {
   // console.log('data', data)
   // console.log('pageContext', pageContext)
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { previous, next } = data
   const { frontmatter, excerpt } = markdownRemark
-  console.log(frontmatter)
   return (
     <Layout>
-      <Seo title={frontmatter.title} description={excerpt} />
+      <Seo
+        title={frontmatter.title}
+        location={location}
+        description={excerpt}
+      />
       <article className="blog-post-container">
         <MarkdownDisplay data={data} pageContext={pageContext} type="fiches" />
         <InternalNav

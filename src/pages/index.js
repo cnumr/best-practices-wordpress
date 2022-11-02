@@ -3,11 +3,12 @@ import { Card, Layout, Seo } from '../components'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-export default function Home({ data }) {
+export default function Home({ data, location }) {
   return (
     <Layout>
       <Seo
         title="Accueil"
+        location={location}
         description="Fiches et Personnas pour rendre WordPress plus respectueux de l'environnement."
       />
       <main className="">

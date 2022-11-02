@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 export default function PersonnasDisplay({
   data, // this prop will be injected by the GraphQL query below.
   pageContext,
+  location,
 }) {
   // console.log('data', data)
   // console.log('pageContext', pageContext)
@@ -14,7 +15,11 @@ export default function PersonnasDisplay({
   const { frontmatter, excerpt } = markdownRemark
   return (
     <Layout>
-      <Seo title={frontmatter.title} description={excerpt} />
+      <Seo
+        title={frontmatter.title}
+        location={location}
+        description={excerpt}
+      />
       <div className="blog-post-container">
         <MarkdownDisplay
           data={data}
