@@ -5,20 +5,26 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
 
-function Seo({ description, lang, meta, title }) {
+import { graphql, useStaticQuery } from 'gatsby'
+
+import { Helmet } from 'react-helmet'
+import PropTypes from 'prop-types'
+
+function Seo({ description, lang, meta, title, location }) {
+  console.log(location)
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
+          host
+          port
           siteMetadata {
             title
             description
             author
+            seoImage
           }
         }
       }
@@ -26,8 +32,13 @@ function Seo({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = `${location.origin}${site.siteMetadata?.seoImage}`
   const defaultTitle = site.siteMetadata?.title
 
+  // <link rel="canonical" href={url} />
+  {
+    /* <meta property="og:url" content={url} /> */
+  }
   return (
     <Helmet
       htmlAttributes={{
@@ -39,6 +50,14 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `og:url`,
+          content: location.href,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
         },
         {
           property: `og:title`,
@@ -69,7 +88,10 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="image_src" href={metaImage} />
+      <link rel="canonical" href={location.href} />
+    </Helmet>
   )
 }
 

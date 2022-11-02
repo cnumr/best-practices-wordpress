@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 import { graphql } from 'gatsby'
 
-export default function Home({ data }) {
+export default function Home({ data, location }) {
   const [fichesWP, setFichesWP] = useState(data.fichesWP.nodes)
 
   const setBackToAllFiches = () => {
@@ -13,6 +13,7 @@ export default function Home({ data }) {
     <Layout>
       <Seo
         title="Fiches"
+        location={location}
         description="Les Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
       />
       <main>
