@@ -81,7 +81,7 @@ Dans l'onglet [Issues](https://github.com/cnumr/fiches-wordpress-greenit/issues)
 
 Dans celle-ci, nous vous invitons à créer une branche (`create a branch`) en la nommant : `feat/` + nom de l'issue. Sur cette branche, vous pouvez faire vos ajouts, modifications ou suppressions en fonction du sujet de l'issue.
 
-**Pour tout ajout ou modification de BP, veuillez respecter le [template](./best-practices-WordPress/template/README.md).**
+**Pour tout ajout ou modification de BP, veuillez respecter le [template](./CONTRIBUTING/fiches/README.md).**
 
 Lors de la rédaction de votre BP, nous vous recommandons d'utiliser le lexique déjà en place ou de l'augmenter en fonction de vos besoins.
 
