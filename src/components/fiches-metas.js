@@ -14,7 +14,7 @@ function Item({ frontmatter, item }) {
             if (item === 'responsible') {
               return (
                 <li key={index} className="my-0">
-                  <Link to={`/personnas/${intItem}.md`}>➡︎ {intItem}</Link>
+                  <Link to={`/personas/${intItem}.md`}>➡︎ {intItem}</Link>
                 </li>
               )
             }
