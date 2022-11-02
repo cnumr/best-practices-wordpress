@@ -95,7 +95,7 @@ Par défaut, WordPress n'autorise pas l'upload de `.svg` pour des raisons de sé
 ### Solution no code 🌱🌱🌱
 
 **Pour le SVG :**
-Nous vous recommandons de travailler vos images en [[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'un [[extension]] est nécessaire pour la prise en compte de ce format par WordPress et de manière sécurisée.
+Nous vous recommandons de travailler vos images en [[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'une [[extension]] est nécessaire pour la prise en compte de ce format par WordPress et de manière sécurisée.
 
 **Pour le WebP :**
 Nous vous recommandons de travailler vos images en [[local]], évitant le transfert de données non essentielles et utilisation importante du [[cpu|CPU]] de votre serveur, avec des logiciels tels que Gimp, Affinity Photo ou Photoshop. À défaut, des [[extension|extensions]] proposent de convertir vos images automatiquement (-🌱).
