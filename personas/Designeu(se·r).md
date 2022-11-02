@@ -1,6 +1,6 @@
 ---
 title: Designeu(se·r)
-path: /personnas/Designeu(se·r)
+path: /personas/Designeu(se·r)
 toIndex: true
 ---
 
