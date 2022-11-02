@@ -43,6 +43,6 @@ Ne vous inquiétez pas, il y aura une solution pour chaque profil. Il y en a une
 
 - Liste d'hébergeurs préconisé, adaptés a ses besoins et ses moyens, qui peuvent offrir des génération de version statique du site
 - On publie un livre **Éco-conception avec WordPress : les n bonnes pratiques**
-  [Guide des 'n' bonnes pratiques pour WordPress & Personnas](/Guide%20des%20'n'%20bonnes%20pratiques%20pour%20WordPress%20&%20Personnas/Guide%20des%20'n'%20bonnes%20pratiques%20pour%20WordPress%20&%20Personnas.md)
+  [Guide des 'n' bonnes pratiques pour WordPress & Personas](/Guide%20des%20'n'%20bonnes%20pratiques%20pour%20WordPress%20&%20Personas/Guide%20des%20'n'%20bonnes%20pratiques%20pour%20WordPress%20&%20Personas.md)
 - Plugin d'évaluation de score éco-index (avec affichage sur les pages et dans le back-office du score), de warnings et avec checklist des points à mettre en place
   -->
