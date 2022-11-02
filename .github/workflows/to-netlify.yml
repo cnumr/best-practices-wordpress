@@ -4,7 +4,7 @@ on:
   # 1. Trigger the workflow push on main branch
   push:
     branches:
-      - site-gatsby-generator
+      - main-site-gatsby
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
