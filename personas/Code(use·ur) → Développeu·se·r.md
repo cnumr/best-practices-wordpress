@@ -1,6 +1,6 @@
 ---
 title: Code(use·ur) → Développeu·se·r
-path: /personnas/Code(use·ur) → Développeu·se·r
+path: /personas/Code(use·ur) → Développeu·se·r
 toIndex: true
 ---
 

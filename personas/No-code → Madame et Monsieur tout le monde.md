@@ -1,6 +1,6 @@
 ---
 title: No-code → Madame et Monsieur tout le monde
-path: /personnas/No-code → Madame et Monsieur tout le monde
+path: /personas/No-code → Madame et Monsieur tout le monde
 toIndex: true
 ---
 
