@@ -13,7 +13,6 @@ import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 
 function Seo({ description, lang, meta, title, location }) {
-  console.log(location)
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -35,10 +34,6 @@ function Seo({ description, lang, meta, title, location }) {
   const metaImage = `${location.origin}${site.siteMetadata?.seoImage}`
   const defaultTitle = site.siteMetadata?.title
 
-  // <link rel="canonical" href={url} />
-  {
-    /* <meta property="og:url" content={url} /> */
-  }
   return (
     <Helmet
       htmlAttributes={{
@@ -46,6 +41,10 @@ function Seo({ description, lang, meta, title, location }) {
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
+      link={[
+        { rel: `image_src`, href: metaImage },
+        { rel: `canonical`, href: location?.href },
+      ]}
       meta={[
         {
           name: `description`,
@@ -88,10 +87,7 @@ function Seo({ description, lang, meta, title, location }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-      <link rel="image_src" href={metaImage} />
-      <link rel="canonical" href={location.href} />
-    </Helmet>
+    />
   )
 }
 
@@ -104,6 +100,7 @@ Seo.defaultProps = {
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
+  location: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
