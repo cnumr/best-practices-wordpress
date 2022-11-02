@@ -43,7 +43,7 @@ Ne vous inquiétez pas, il y aura une solution pour chaque profil. Il y en a une
 
 - On publie un livre **Éco-conception avec WordPress : les n bonnes pratiques**
   - On adapte le discours à un niveau technique avec code
-  - Guide des bonnes pratiques pour WordPress & Personnas
+  - Guide des bonnes pratiques pour WordPress & Personas
 - ~~Les mêmes que pour "Madame et Monsieur tout le monde"~~
 - On lui explique comment faire des sites statiques, utiliser WordPress en tant que `CMS Headless`
 - Plugin d'évaluation de score éco-index (avec affichage sur les pages et dans le back-office du score), de warnings et avec checklist des points à mettre en place
