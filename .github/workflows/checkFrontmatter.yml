@@ -2,8 +2,11 @@ name: Frontmatter JSON Schema Validator
 # https://minompi.medium.com/how-to-test-github-actions-locally-5a6dad8da367
 # https://github.com/marketplace/actions/frontmatter-json-schema-validator
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - develop
+  #pull_request:
+  #types: [opened, reopened, synchronize]
 
 jobs:
   lexique-frontmatter-json-schema-validator:
