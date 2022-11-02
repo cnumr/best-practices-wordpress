@@ -3,11 +3,12 @@ import { Card, Layout, Seo } from '../components'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-function Lexique({ data }) {
+function Lexique({ data, location }) {
   return (
     <Layout>
       <Seo
         title="Lexique"
+        location={location}
         description="Les termes utilisés pour rendre WordPress plus respectueux de l'environnement."
       />
       <main>

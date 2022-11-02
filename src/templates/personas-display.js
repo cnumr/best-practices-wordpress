@@ -3,7 +3,7 @@ import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-export default function FichesDisplay({
+export default function PersonasDisplay({
   data, // this prop will be injected by the GraphQL query below.
   pageContext,
   location,
@@ -20,20 +20,24 @@ export default function FichesDisplay({
         location={location}
         description={excerpt}
       />
-      <article className="blog-post-container">
-        <MarkdownDisplay data={data} pageContext={pageContext} type="fiches" />
+      <div className="blog-post-container">
+        <MarkdownDisplay
+          data={data}
+          pageContext={pageContext}
+          type="personas"
+        />
         <InternalNav
           className="mt-8"
           pageContext={pageContext}
           next={next}
           previous={previous}
         />
-      </article>
+      </div>
     </Layout>
   )
 }
 
-export const ficheQuery = graphql`
+export const personasQuery = graphql`
   query (
     $remarkID: String!
     $id: String!
@@ -45,16 +49,8 @@ export const ficheQuery = graphql`
       rawMarkdownBody
       excerpt
       timeToRead
-      tableOfContents
       frontmatter {
         title
-        lifecycle
-        environmental_impact
-        scope
-        people
-        priority_implementation
-        saved_resources
-        responsible
       }
     }
     file(id: { eq: $id }) {

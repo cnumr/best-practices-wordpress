@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import classNames from 'classnames'
 
-Card.PERSONNAS = 'personnas'
+Card.PERSONAS = 'personas'
 Card.FICHES = 'fiches'
 Card.LEXIQUE = 'lexique'
 
@@ -45,11 +45,11 @@ function MetaItem({ metas, meta, fontSize = 'normal' }) {
     )
 }
 
-function Card({ markdownRemark, type = Card.PERSONNAS }) {
+function Card({ markdownRemark, type = Card.PERSONAS }) {
   return (
     <li className="box interactive">
       <Link
-        to={`${markdownRemark.frontmatter.path}`}
+        to={`${markdownRemark.frontmatter.path}.md`}
         className="flex flex-col h-full divide-y-2"
         title={`Voir la fiche : ${markdownRemark.frontmatter.title}`}
       >

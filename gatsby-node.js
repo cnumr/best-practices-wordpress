@@ -48,7 +48,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         : fiches[index + 1].childMarkdownRemark?.id
     if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
         component: templatePath,
         context: {
           id: node.id,
@@ -61,12 +61,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Presonnas
-  const _personnas = await graphql(`
+  const _personas = await graphql(`
     {
       allFile(
         filter: {
           extension: { eq: "md" }
-          sourceInstanceName: { eq: "personnas" }
+          sourceInstanceName: { eq: "personas" }
           childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
         }
         sort: {
@@ -88,29 +88,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  if (_personnas.errors) {
+  if (_personas.errors) {
     reporter.panicOnBuild(
       `GraphQL could not query pages. Create pages aborted.`
     )
     return
   }
-  const personnas = _personnas.data.allFile.nodes
-  personnas.forEach((node, index) => {
-    const templatePath = path.resolve(`./src/templates/personnas-display.js`)
+  const personas = _personas.data.allFile.nodes
+  personas.forEach((node, index) => {
+    const templatePath = path.resolve(`./src/templates/personas-display.js`)
     const previousPostId =
-      index === 0 ? null : personnas[index - 1].childMarkdownRemark?.id
+      index === 0 ? null : personas[index - 1].childMarkdownRemark?.id
     const nextPostId =
-      index === personnas.length - 1
+      index === personas.length - 1
         ? null
-        : personnas[index + 1].childMarkdownRemark?.id
+        : personas[index + 1].childMarkdownRemark?.id
     if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
         component: templatePath,
         context: {
           id: node.id,
           remarkID: node.childMarkdownRemark.id,
-          type: 'personnas',
+          type: 'personas',
           previousPostId,
           nextPostId,
         },
@@ -153,7 +153,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
   const lexique = _lexique.data.allFile.nodes
   lexique.forEach((node, index) => {
-    const templatePath = path.resolve(`./src/templates/personnas-display.js`)
+    const templatePath = path.resolve(`./src/templates/personas-display.js`)
     const previousPostId =
       index === 0 ? null : lexique[index - 1].childMarkdownRemark?.id
     const nextPostId =
@@ -162,7 +162,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         : lexique[index + 1].childMarkdownRemark?.id
     if (node.childMarkdownRemark?.frontmatter.path)
       createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}`,
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
         component: templatePath,
         context: {
           id: node.id,

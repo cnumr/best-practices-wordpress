@@ -12,6 +12,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     repoURL: `https://github.com/cnumr/fiches-wordpress-greenit`,
+    seoImage: `/logo-cnumr.png`,
     navigation: [
       {
         url: `/fiches`,
@@ -19,9 +20,9 @@ module.exports = {
         title: `Voir les fiches`,
       },
       {
-        url: `/personnas`,
-        label: `Personnas`,
-        title: `Voir les Personnas`,
+        url: `/personas`,
+        label: `Personas`,
+        title: `Voir les Personas`,
       },
       {
         url: `/lexique`,
@@ -92,7 +93,7 @@ module.exports = {
         normalizer: ({ data }) =>
           data.allMarkdownRemark.nodes.map(node => ({
             id: node.id,
-            path: node.frontmatter.path,
+            path: `${node.frontmatter.path}.md`,
             title: node.frontmatter.title,
             body: node.rawMarkdownBody,
           })),
@@ -103,14 +104,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `fiches`,
-        path: `${__dirname}/best-practices-WordPress/fiches`,
+        path: `${__dirname}/fiches`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `personnas`,
-        path: `${__dirname}/personnas/fiches`,
+        name: `personas`,
+        path: `${__dirname}/personas`,
       },
     },
     {

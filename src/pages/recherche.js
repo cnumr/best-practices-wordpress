@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 import { useFlexSearch } from 'react-use-flexsearch'
 
-function Recherche() {
+function Recherche({ location }) {
   const data = useStaticQuery(graphql`
     {
       localSearchFiches {
@@ -21,7 +21,8 @@ function Recherche() {
     <Layout>
       <Seo
         title="Recherche"
-        description="Rechercher des personnas ou des Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
+        location={location}
+        description="Rechercher des personas ou des fiches de fonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
       />
       <main>
         <h1>Recherche de fiches & personnnas</h1>

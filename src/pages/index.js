@@ -3,12 +3,13 @@ import { Card, Layout, Seo } from '../components'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-export default function Home({ data }) {
+export default function Home({ data, location }) {
   return (
     <Layout>
       <Seo
         title="Accueil"
-        description="Fiches et Personnas pour rendre WordPress plus respectueux de l'environnement."
+        location={location}
+        description="Fiches et personas pour rendre WordPress plus respectueux de l'environnement."
       />
       <main className="">
         <h1>{data.site.siteMetadata.title}</h1>
@@ -22,8 +23,8 @@ export default function Home({ data }) {
             </li>
             <li>|</li>
             <li>
-              <a href="#personnas" title="Aller aux Personnas">
-                Personnas
+              <a href="#personas" title="Aller aux Personas">
+                Personas
               </a>
             </li>
           </ul>
@@ -43,15 +44,15 @@ export default function Home({ data }) {
             else return null
           })}
         </ul>
-        <h2 id="personnas">Personnas</h2>
+        <h2 id="personas">Personas</h2>
         <ul className="wp-grid">
-          {data.personnas.nodes.map((personna, index) => {
-            if (personna.childMarkdownRemark?.frontmatter.path)
+          {data.personas.nodes.map((persona, index) => {
+            if (persona.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
                   key={index}
-                  type={Card.PERSONNAS}
-                  markdownRemark={personna.childMarkdownRemark}
+                  type={Card.PERSONAS}
+                  markdownRemark={persona.childMarkdownRemark}
                 />
               )
             else return <div>No persona</div>
@@ -80,9 +81,9 @@ export const query = graphql`
         ...FileFragment
       }
     }
-    personnas: allFile(
+    personas: allFile(
       filter: {
-        sourceInstanceName: { eq: "personnas" }
+        sourceInstanceName: { eq: "personas" }
         childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
       }
       sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
