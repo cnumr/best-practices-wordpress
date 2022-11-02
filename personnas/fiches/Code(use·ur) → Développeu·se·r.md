@@ -8,7 +8,7 @@ toIndex: true
 
 ## Profil :
 
-- Vous avez devez réaliser un site web, un site e-commerce pour votre entreprise ou pour un de vos client et vous ou ce dernier avez conscience que l'impact du numérique n'est pas null (4% de la production de GES mondial) ;
+- Vous avez devez réaliser un site web, un site e-commerce pour votre entreprise ou pour un de vos client et vous ou ce dernier avez conscience que l'impact du numérique n'est pas nul (4% de la production de GES mondial) ;
 - Vous devez délivrer vite, mais sans pour autant délivrer mal, un site ayant un fort impact ;
 - Vous avez besoin des bonnes informations rapidement et qu'elles soient applicables sans vous écartez de votre devis ;
 - Vous voulez connaitre tous les points à checker, de l'installation à la livraison ;
