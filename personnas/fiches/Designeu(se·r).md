@@ -8,7 +8,7 @@ toIndex: true
 
 ## Profil :
 
-- Vous avez devez concevoir un site web, un site e-commerce pour votre entreprise ou pour un de vos client et vous ou ce dernier avez conscience que l'impact du numérique n'est pas null (4% de la production de GES mondial) ;
+- Vous avez devez concevoir un site web, un site e-commerce pour votre entreprise ou pour un de vos client et vous ou ce dernier avez conscience que l'impact du numérique n'est pas nul (4% de la production de GES mondial) ;
 - Vous devez délivrez vite, mais sans pour autant délivrez mal et concevoir un site qui aura un fort impact, car lors du développement, les choix pris en amont, lors de votre phase en pourront pas être réduit (ou à la marge) ;
 - Vous avez besoins de ses informations rapidement et qu'elles soient applicables sans vous écartez de votre devis ;
 - Vous voulez connaitre tous les points à checker, de la conception des wireframes, lors de la phase de maquetage du site et pour finir lors de la livraison des assets aux développeurs ;
