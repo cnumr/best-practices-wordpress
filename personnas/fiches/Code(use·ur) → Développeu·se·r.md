@@ -24,7 +24,7 @@ Tant mieux, vous êtes au bon endroit, chaque fiche vous indique et vous expliqu
 
 ### Si ce n'est pas le cas :
 
-Ne vous inquétez pas, il y aura une solution pour chaque profil. Il y en a une pour tout le monde!
+Ne vous inquiétez pas, il y aura une solution pour chaque profil. Il y en a une pour tout le monde !
 
 **Consultez les autres profils :**
 
