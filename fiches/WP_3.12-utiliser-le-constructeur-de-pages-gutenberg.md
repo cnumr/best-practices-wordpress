@@ -42,4 +42,4 @@ WordPress vous permet de développer vos propres blocs Gutenberg personnalisés 
 ## Source
 
 - https://fr.wordpress.org/gutenberg/
-- https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+- [https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/ (EN)](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/)

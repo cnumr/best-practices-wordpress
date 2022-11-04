@@ -49,4 +49,4 @@ Préférer l'utilisation de Gutenberg, éditeur par défaut de WordPress, plutô
 
 - [Les plugins ralentissent WordPress : mythe ou réalité](https://www.ex2.com/tutoriels/les-plugins-ralentissent-wordpress-mythe-ou-realite/)
 - [On a testé 10 Plugins de sliders pour WordPress, voici le meilleur](https://wpmarmite.com/slider-wordpress/)
-- [What’s the Fastest WordPress Page Builder? Performance Comparison](https://gobarrelroll.com/wordpress-page-builder-performance-comparison/)
+- [What’s the Fastest WordPress Page Builder? Performance Comparison (EN)](https://gobarrelroll.com/wordpress-page-builder-performance-comparison/)

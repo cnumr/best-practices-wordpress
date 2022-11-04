@@ -76,4 +76,4 @@ delete_transient( $transient );
 | de requêtes évitées |           70%           |
 
 ## Source
--<https://developer.wordpress.org/apis/handbook/transients/>
+- [https://developer.wordpress.org/apis/handbook/transients/ (EN)](https://developer.wordpress.org/apis/handbook/transients/)
