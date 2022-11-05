@@ -18,7 +18,7 @@ toIndex: true
 
 ## Sujet
 
-Selon [HTTP Archive](https://httparchive.org/reports/page-weight), en octobre 2022, les images représentent en moyenne 43% du poids total d'une page Web.
+Selon [HTTP Archive (EN)](https://httparchive.org/reports/page-weight), en octobre 2022, les images représentent en moyenne 43% du poids total d'une page Web.
 Les images constituent donc l'un des leviers les plus importants pour réduire le poids des pages, afficher des images sans traitement préalable aura des conséquences désastreuses sur les performances de votre site.
 
 WordPress propose nativement des fonctionnalités permettant d'afficher le format le plus adapté à l'utilisateur final du site mais certains thèmes ne les intègrent pas. Si ce n'est pas le cas, ou en cas de doute, utilisez les images les plus adaptées (redimensionnement et/ou qualité) à leur affichage avant de les téléverser.
@@ -28,7 +28,7 @@ En complément de ces optimisations, il faudra veiller à utiliser le format [d'
 ## GreenIT vous conseille
 
 - Le logiciel ImageOptim, JPEGMini, OptiPNG
-- Les sites [squoosh.app](https://squoosh.app), [TinyPNG](https://tinypng.com/)
+- Les sites [squoosh.app (EN)](https://squoosh.app), [TinyPNG (EN)](https://tinypng.com/)
 - Les extensions Imagify, EWWW Image Optimizer, Smush
 
 ### Solution no code 🌱🌱

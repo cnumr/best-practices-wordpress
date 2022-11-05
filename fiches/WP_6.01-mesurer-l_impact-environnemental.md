@@ -35,9 +35,9 @@ Posez-vous des limites par page et pour chaque [[parcours-utilisateur]].
 
 _Actuellement, il n'existe pas d'outil spécifique à WordPress._
 
-[Performance Budget](https://www.performancebudget.io) : Site permettant le budget possible allouable aux différents éléments qui composent un site comme le JavaScript, le CSS, etc.
+[Performance Budget (EN)](https://www.performancebudget.io) : Site permettant le budget possible allouable aux différents éléments qui composent un site comme le JavaScript, le CSS, etc.
 
-Extension GreenIT Analysis : Disponible sur [Chrome](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad?hl=fr) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/greenit-analysis/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search), l'extension regroupe les fonctionnalités de [EcoIndex.fr](http://www.ecoindex.fr/) (empreinte et performance environnementale) et de [ecometer.org](http://ecometer.org/) (évaluation de bonnes pratiques).
+Extension GreenIT Analysis : Disponible sur [Chrome](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad?hl=fr) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/greenit-analysis/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search), l'extension regroupe les fonctionnalités de [EcoIndex.fr](http://www.ecoindex.fr/) (empreinte et performance environnementale) et de [ecometer.org (EN)](http://ecometer.org/) (évaluation de bonnes pratiques).
 
 1. Installer cette extension sur vos navigateurs de test, ils sont accessibles via les outils d'inspecteur de code.
 2. Vider votre cache navigateur (afin de simuler une première visite) et cliquer sur "Lancer l'analyse".
@@ -45,7 +45,7 @@ Extension GreenIT Analysis : Disponible sur [Chrome](https://chrome.google.com/w
 
 > ❗L'extension vous permet également d'enregistrer l'empreinte d'un [[parcours utilisateur]] complet. Pour ce faire cliquer sur "Sauver l'analyse" et effectuer le parcours de votre utilisateur (de la page catalogue jusqu'à la page validée votre commande par exemple).
 
-[Kastor](https://kastor.green/) : Site permettant d'évaluer son site selon le [GR491](https://gr491.isit-europe.org/).
+[Kastor (EN et FR)](https://kastor.green/) : Site permettant d'évaluer son site selon le [GR491](https://gr491.isit-europe.org/).
 
 **Alléger le poids et la complexité de ses pages est avant tout une question d'équilibre et de choix.**
 
