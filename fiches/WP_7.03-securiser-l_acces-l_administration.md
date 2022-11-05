@@ -69,4 +69,4 @@ En effet, plusieurs extensions, éprouvées et sûres, vous permettent de réali
 
 ## Sources
 
-1. Note 1 : <https://www.wordfence.com/blog/2021/01/the-wordfence-2020-wordpress-threat-report/>(EN), Résumé <https://www.blogdumoderateur.com/wordpress-attaques-menaces-securite/> (FR)
+1. Note 1 : [The Wordfence 2020 WordPress Threat Report (EN)](https://www.wordfence.com/blog/2021/01/the-wordfence-2020-wordpress-threat-report/), [Résumé (FR)](https://www.blogdumoderateur.com/wordpress-attaques-menaces-securite/)

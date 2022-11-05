@@ -53,10 +53,10 @@ Les animations de certains attributs CSS implique un repaint/reflow des navigate
 
 ## Sources
 
-1. Note 1 : <https://erikrunyon.com/2013/07/carousel-interaction-stats/>
+1. Note 1 : [Carousel Interaction Stats - June 2013 Update (EN)](https://erikrunyon.com/2013/07/carousel-interaction-stats/)
 
-2. Note 2 : <https://wp-rocket.me/blog/why-you-shouldnt-use-a-slider-on-wordpress-and-other-performance-bad-practices/>
+2. Note 2 : [Why You Shouldn’t Use a Slider on WordPress (And Other Performance Bad Practices) (EN) ](https://wp-rocket.me/blog/why-you-shouldnt-use-a-slider-on-wordpress-and-other-performance-bad-practices/)
 
-3. Note 3 : <https://checklists.opquast.com/fr/assurance-qualite-web/les-animations-sons-et-clignotements-peuvent-etre-mis-en-pause>
+3. Note 3 : [OPQUAST : Règle n° 121 - Les animations, sons et clignotements peuvent être mis en pause.](https://checklists.opquast.com/fr/assurance-qualite-web/les-animations-sons-et-clignotements-peuvent-etre-mis-en-pause)
 
-4. Note 4 : <https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-4-12>
+4. Note 4 : [RGAA : Critère 4.12 - La consultation de chaque média non temporel est-elle contrôlable par le clavier et tout dispositif de pointage ?](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-4-12)

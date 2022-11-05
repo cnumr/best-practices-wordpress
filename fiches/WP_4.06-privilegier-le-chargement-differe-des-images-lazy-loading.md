@@ -35,7 +35,7 @@ Cependant, il est encore plus efficace d'utiliser la technique de lazy load de m
 <iframe src="video-player.html" title="..." loading="lazy"></iframe>
 ```
 
-Nota: si vous utilisez la fonction WP [get_the_post_thumbnail](https://developer.wordpress.org/reference/functions/get_the_post_thumbnail/), la balise image obtenue contiendra l'attribut `loading="lazy"` par défaut (<https://caniuse.com/?search=loading>).
+Nota: si vous utilisez la fonction WP [get_the_post_thumbnail (EN)](https://developer.wordpress.org/reference/functions/get_the_post_thumbnail/), la balise image obtenue contiendra l'attribut `loading="lazy"` par défaut ([https://caniuse.com/?search=loading(EN)](https://caniuse.com/?search=loading)).
 
 Le lazy loading natif a l'avantage d'améliorer les performances globales de votre site, car il ne repose pas sur du code JavaScript en ligne ou des scripts externes.
 

@@ -27,8 +27,6 @@ L'équipe de pilotage est constituée de :
 
 - Heluin Renaud
 - Dominique Nicolle
-- Yann Gautreau
-- Yann Kozon
 - Florine Sueur
 
 Les fonctions de cette équipe sont :
