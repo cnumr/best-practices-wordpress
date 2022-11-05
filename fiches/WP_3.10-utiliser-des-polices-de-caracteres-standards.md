@@ -21,7 +21,7 @@ toIndex: true
 
 Afin de donner un style personnalisé à son site, un des leviers est d'utiliser des polices de caractères spécifiques en les déclarant dans les feuilles de styles ou les styles inline (`CSS`) comme : `font-family: "Gill Sans Extrabold", Arial, sans-serif;`.
 
-Pour que la "Gill Sans Extrabold", si nous poursuivons notre exemple plus haut, s'affiche correctement pour l'utilisateur, il faut qu'elle soit installée sur le terminal (ordinateur, tablette ou mobile) de l'utilisateur ou téléchargée automatiquement lors de l'affichage du site via un import `HTML` ou `CSS`, si la police n'est pas disponible le navigateur utilisera l'Arial et sinon la police `sans-serif` par défaut de votre navigateur sera affichée (polices [fallbacks](https://www.w3schools.com/cssref/css_fonts_fallbacks.asp)).
+Pour que la "Gill Sans Extrabold", si nous poursuivons notre exemple plus haut, s'affiche correctement pour l'utilisateur, il faut qu'elle soit installée sur le terminal (ordinateur, tablette ou mobile) de l'utilisateur ou téléchargée automatiquement lors de l'affichage du site via un import `HTML` ou `CSS`, si la police n'est pas disponible le navigateur utilisera l'Arial et sinon la police `sans-serif` par défaut de votre navigateur sera affichée (polices [fallbacks (EN)](https://www.w3schools.com/cssref/css_fonts_fallbacks.asp)).
 
 Pour résumé, il est possible :
 
@@ -31,7 +31,7 @@ Pour résumé, il est possible :
 
 ## GreenIT vous conseille
 
-**La solution la plus sobre et écologique est la dernière de la liste, à savoir les polices web-safe, limitant ainsi les requêtes et les téléchargements inutiles.** Cependant, la liste des polices disponible partout est [limitée](https://www.w3schools.com/cssref/css_websafe_fonts.as). Vous trouverez quelques exemples d'utilisation sur [https://kinsta.com/fr/blog/polices-caracteres-web-safe](https://kinsta.com/fr/blog/polices-caracteres-web-safe).
+**La solution la plus sobre et écologique est la dernière de la liste, à savoir les polices web-safe, limitant ainsi les requêtes et les téléchargements inutiles.** Cependant, la liste des polices disponible partout est [limitée (EN)](https://www.w3schools.com/cssref/css_websafe_fonts.asp). Vous trouverez quelques exemples d'utilisation sur [https://kinsta.com/fr/blog/polices-caracteres-web-safe](https://kinsta.com/fr/blog/polices-caracteres-web-safe).
 
 ### Solution no-code 🌱🌱🌱
 
