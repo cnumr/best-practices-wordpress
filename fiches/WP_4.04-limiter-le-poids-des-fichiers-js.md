@@ -17,7 +17,7 @@ toIndex: true
 
 ## Sujet
 
-Selon [HTTP Archive](https://httparchive.org/reports/page-weight), d'octobre 2022, le JavaScript représente environ 22% du poids d'une page Web.
+Selon [HTTP Archive (EN)](https://httparchive.org/reports/page-weight), d'octobre 2022, le JavaScript représente environ 22% du poids d'une page Web.
 En 5 ans, son poids a augmenté de plus de 43%, limiter son poids et son utilisation est devenu un levier pour réduire l'impact environnemental des sites.
 
 ## GreenIT vous conseille

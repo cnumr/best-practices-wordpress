@@ -79,7 +79,7 @@ C'est un format de compression d'images [[matricielle|matricielles]] crée comme
 
 C'est un très vieux format de compression d'images [[matricielle|matricielles]] datant de la fin des années 80. Il autorise la transparence et permet d'afficher une séquence d'images similaire à des vidéos (GIF animé). **Le GIF est un format lourd, préférez l'utilisation de PNG, WebP, MP4, WebM ou autres codecs vidéos adaptés au web.**
 
-> 💡 Vous connaissez surement le site https://giphy.com/ ! Les animations, dont le style graphique correspond à celui d'un GIF, sont en `.webp` et `.mp4`. Sur [Twitter](https://twitter.com/), les "GIFs" sont en `.mp4`.
+> 💡 Vous connaissez surement le site [Giphy (EN)](https://giphy.com/) ! Les animations, dont le style graphique correspond à celui d'un GIF, sont en `.webp` et `.mp4`. Sur [Twitter](https://twitter.com/), les "GIFs" sont en `.mp4`.
 
 ## GreenIT vous conseille
 
@@ -126,7 +126,7 @@ Nous l'avons retravaillé comme il suit :
 
 </p>
 <p align="center">
-<a href="https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61" target="_blank">Fig.1 - JPG vs PNG vs GIF vs SVG</a>
+<a href="https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61" target="_blank">Fig.1 - JPG vs PNG vs GIF vs SVG (EN)</a>
 </p>
 
 ### Photographie
@@ -153,4 +153,4 @@ _Source de l'exemple : https://www.pexels.com/fr-fr/photo/nature-troncs-foret-ar
 
 ## Sources :
 
-- https://make.wordpress.org/core/2022/03/28/enabling-webp-by-default/
+- [Enabling WebP by default (EN)](https://make.wordpress.org/core/2022/03/28/enabling-webp-by-default/)
