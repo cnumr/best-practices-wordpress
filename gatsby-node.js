@@ -173,6 +173,63 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
   })
+
+  // Pages
+  const _pages = await graphql(`
+    {
+      allFile(
+        filter: {
+          extension: { eq: "md" }
+          sourceInstanceName: { eq: "pages" }
+          childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+        }
+        sort: {
+          fields: childrenMarkdownRemark___frontmatter___title
+          order: ASC
+        }
+      ) {
+        nodes {
+          id
+          childMarkdownRemark {
+            id
+            frontmatter {
+              title
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (_pages.errors) {
+    reporter.panicOnBuild(
+      `GraphQL could not query pages. Create pages aborted.`
+    )
+    return
+  }
+  const pages = _pages.data.allFile.nodes
+  pages.forEach((node, index) => {
+    const templatePath = path.resolve(`./src/templates/pages-display.js`)
+    const previousPostId =
+      index === 0 ? null : pages[index - 1].childMarkdownRemark?.id
+    const nextPostId =
+      index === pages.length - 1
+        ? null
+        : pages[index + 1].childMarkdownRemark?.id
+    if (node.childMarkdownRemark?.frontmatter.path)
+      createPage({
+        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
+        component: templatePath,
+        context: {
+          id: node.id,
+          remarkID: node.childMarkdownRemark.id,
+          type: 'pages',
+          previousPostId,
+          nextPostId,
+        },
+      })
+  })
 }
 
 // exports.onCreateNode = ({ node, actions, getNode }) => {

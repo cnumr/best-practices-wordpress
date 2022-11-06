@@ -12,8 +12,8 @@ export default function Home({ data, location }) {
         description="Fiches et personas pour rendre WordPress plus respectueux de l'environnement."
       />
       <main className="">
-        <h1>{data.site.siteMetadata.title}</h1>
-        <nav>
+        {/* <h1>{data.site.siteMetadata.title}</h1> */}
+        {/* <nav>
           <ul className="noliststyle flex flex-row gap-4">
             <li className="font-black">Navigation: </li>
             <li>
@@ -57,7 +57,7 @@ export default function Home({ data, location }) {
               )
             else return <div>No persona</div>
           })}
-        </ul>
+        </ul> */}
       </main>
     </Layout>
   )

@@ -18,7 +18,7 @@ function Licence({ size = 'base' }) {
         'text-base': size !== 'sm',
       })}
     >
-      sous licence CC BY-NC-ND 4.0 <FaCreativeCommons /> <FaCreativeCommonsBy />{' '}
+      Sous licence CC BY-NC-ND 4.0 <FaCreativeCommons /> <FaCreativeCommonsBy />{' '}
       <FaCreativeCommonsNc /> <FaCreativeCommonsNd />
     </a>
   )

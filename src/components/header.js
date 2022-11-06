@@ -1,51 +1,50 @@
 import { BsGithub } from 'react-icons/bs'
-import Licence from './licence'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 import classNames from 'classnames'
+import { SearchBar } from '../components'
 
-const Header = ({ siteTitle, className, repoURL, navigation }) => {
-  const [menuState, setMenuState] = React.useState(`invisible md:visible`)
+const Header = ({ className, repoURL, navigation }) => {
+  const [menuState, setMenuState] = React.useState(`invisible lg:visible`)
   function toggleMenu() {
-    if (menuState === `invisible md:visible`) {
-      setMenuState(`w-full h-screen`)
+    if (menuState === `invisible lg:visible`) {
+      setMenuState(`w-full h-screen min-h-full`)
     } else {
-      setMenuState(`invisible md:visible`)
+      setMenuState(`invisible lg:visible`)
     }
   }
   return (
     <header
       className={classNames(
-        'min-h-[80px] px-4 lg:px-0 flex sticky z-20 top-0 bg-stone-100 shadow-lg',
+        'min-h-[80px] px-4 lg:px-0 flex sticky z-20 top-0 bg-zinc-100 border-b-2 border-stone-200',
         className
       )}
     >
       <div className="w-full mx-auto lg:max-w-5xl flex flex-row justify-between items-center">
         <div className="flex items-center gap-4">
-          <Link to="/" className="font-semibold" title="Retour à l'accueil">
-            <StaticImage
-              alt="Logo CNUMR"
-              src={`../assets/logo-cnumr.png`}
-              class={`w-[80px] -m-3`}
-            />
-          </Link>
           <div>
-            <Link to="/" className="font-semibold" title="Retour à l'accueil">
-              {siteTitle}
+            <Link
+              to="/"
+              className="leading-tight no-underline text-inherit"
+              title="Retour à l'accueil"
+            >
+              <span className="tracking-tight">
+                Les bonnes pratiques d'écoconception
+              </span>
+              <br />
+              <span className="font-bold text-xl text-zinc-900">WordPress</span>
             </Link>
-            <Licence size="sm" />
           </div>
         </div>
         <nav>
           <ul
             className={classNames(
               menuState,
-              `fixed top-0 right-0 px-10 py-16 bg-gray-800 z-50 md:bg-transparent md:relative flex flex-col md:flex-row gap-4 md:m-0 md:p-0 md:items-center`
+              `fixed top-0 right-0 px-10 py-16 bg-primary-500 z-50 lg:bg-transparent lg:relative flex flex-col lg:flex-row gap-4 lg:m-0 lg:p-0 lg:items-center`
             )}
           >
-            <li className="md:hidden z-90 fixed top-5 right-5">
+            <li className="lg:hidden z-90 fixed top-5 right-5">
               <button
                 className="text-right text-white text-4xl"
                 onClick={() => toggleMenu()}
@@ -59,7 +58,7 @@ const Header = ({ siteTitle, className, repoURL, navigation }) => {
                   <Link
                     to={item.url}
                     title={item.title}
-                    className={`text-white md:text-inherit text-xl md:text-base`}
+                    className={`text-white lg:text-inherit text-xl lg:text-base no-underline text-inherit font-medium`}
                   >
                     {item.label}
                   </Link>
@@ -67,9 +66,26 @@ const Header = ({ siteTitle, className, repoURL, navigation }) => {
               )
             })}
             <li className="!m-0">
+              <SearchBar />
+            </li>
+            <li
+              className={`!m-0 border border-primary-600 lg:border-zinc-200 lg:h-7`}
+            ></li>
+            <li className="!m-0">
+              <a
+                href={`${repoURL}/blob/main/CONTRIBUTING.md`}
+                className={`text-white lg:text-inherit text-xl lg:text-base no-underline text-inherit font-medium`}
+                target="_blank"
+                rel="noreferrer"
+                title="Voir la méthode de contribution sur le GitHub du CNUMR"
+              >
+                Contribuez !
+              </a>
+            </li>
+            <li className="!m-0">
               <a
                 href={repoURL}
-                className={`text-white md:text-inherit text-xl md:text-base`}
+                className={`text-white lg:text-inherit text-xl lg:text-base no-underline text-inherit font-medium`}
                 target="_blank"
                 rel="noreferrer"
                 title="Voir le repository GitHub de CNUMR"
@@ -78,9 +94,9 @@ const Header = ({ siteTitle, className, repoURL, navigation }) => {
               </a>
             </li>
           </ul>
-          <div className="flex items-center md:hidden relative">
+          <div className="flex items-center lg:hidden relative">
             <button
-              className="text-4xl font-bold opacity-70 hover:opacity-100 duration-300"
+              className="text-3xl text-zinc-900"
               onClick={() => toggleMenu()}
             >
               &#9776;

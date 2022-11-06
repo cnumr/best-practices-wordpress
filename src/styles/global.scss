@@ -5,18 +5,23 @@
 
 /* base styles */
 @layer base {
+  :root {
+    --color-primary: 147, 39%;
+    --color-secondary: 312, 25%;
+  }
+
   html {
-    @apply scroll-pt-24; // fix for anchor
+    @apply bg-zinc-100 font-sans text-stone-800 scroll-pt-24;
   }
   h1,
   h2,
   h3,
   h4 {
-    @apply font-semibold text-primary mt-2 mb-8;
+    @apply font-semibold font-mono text-primary-500 mt-2 mb-8;
   }
   p,
   li {
-    @apply text-gray-600 mb-3 leading-8;
+    @apply mb-3 leading-8;
   }
   h1 {
     @apply text-5xl;
@@ -30,9 +35,9 @@
   h4 {
     @apply text-2xl;
   }
-  a {
-    @apply font-medium hover:text-primary;
-  }
+  // a {
+  //   @apply text-secondary-500 hover:text-secondary-600 underline;
+  // }
   blockquote {
     @apply border-l-4 border-l-teal-300 pl-4 py-2 text-base rounded bg-teal-50 shadow mb-2 pb-[0.1rem];
   }
@@ -54,6 +59,7 @@
 
 /* components styles */
 @layer components {
+
   main li {
     @apply list-disc ml-8;
   }
@@ -78,14 +84,28 @@
   .wp-grid {
     @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
   }
-  .btn {
-    @apply bg-primary px-2 py-1 border text-white uppercase cursor-pointer;
-  }
   input {
     @apply px-1;
   }
   .markdown-excerpt {
     @apply leading-5;
+  }
+
+
+  /** Badge **/
+  .badge{
+    @apply px-2 py-1 rounded-xl text-xs text-white font-medium font-mono;
+  }
+
+  /** Button **/
+  button:disabled{
+    @apply cursor-not-allowed opacity-50
+  }
+  .small-primary-btn{
+    @apply bg-primary-500 hover:bg-primary-600 text-white cursor-pointer px-2 py-0 rounded-md text-sm;
+  }
+  .btn{
+    @apply text-white cursor-pointer px-2 py-0 rounded-md;
   }
 }
 
