@@ -1,9 +1,9 @@
 name: 'Gatsby Build and publish to GitHub Pages'
 
-on:
-  push:
-    branches:
-      - main-site-gatsby
+# on:
+#   push:
+#     branches:
+#       - main-site-gatsby
 # https://github.com/JamesIves/github-pages-deploy-action/issues/5
 # https://stackoverflow.com/questions/67550727/push-event-doesnt-trigger-workflow-on-push-paths-github-actions
 jobs:
