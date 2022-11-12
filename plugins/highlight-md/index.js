@@ -5,7 +5,6 @@ const visit = require('unist-util-visit')
 // https://github.com/syntax-tree/mdast#html
 
 module.exports = ({ markdownAST }, pluginOptions) => {
-  console.log('pluginOptions', pluginOptions)
   const className = pluginOptions.className || 'mark-default'
   visit(markdownAST, 'paragraph', node => {
     const highlight = /==(.*)==/g
