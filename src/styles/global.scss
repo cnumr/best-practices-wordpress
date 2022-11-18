@@ -17,23 +17,23 @@
   h2,
   h3,
   h4 {
-    @apply font-semibold font-mono text-primary-500 mt-2 mb-8;
+    @apply font-semibold font-mono text-primary-600 mt-2 mb-8;
   }
   p,
   li {
     @apply mb-3 leading-8;
   }
   h1 {
-    @apply text-5xl;
-  }
-  h2 {
     @apply text-4xl;
   }
-  h3 {
+  h2 {
     @apply text-2xl;
   }
+  h3 {
+    @apply text-xl;
+  }
   h4 {
-    @apply text-2xl;
+    @apply text-xl;
   }
   // a {
   //   @apply text-secondary-500 hover:text-secondary-600 underline;

@@ -8,7 +8,7 @@ export default function FichesDisplay({
   pageContext,
   location,
 }) {
-  // console.log('data', data)
+  console.log('data', data)
   // console.log('pageContext', pageContext)
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { previous, next } = data
@@ -46,6 +46,9 @@ export const ficheQuery = graphql`
       excerpt
       timeToRead
       tableOfContents
+      fields {
+        gitUpdateTime
+      }
       frontmatter {
         title
         lifecycle

@@ -18,8 +18,6 @@ function SearchBar() {
   const [showResults, setShowResults] = useState(false)
   const results = useFlexSearch(query, index, store)
 
-  console.log('results :>> ', results)
-
   return (
     <>
       <Formik
