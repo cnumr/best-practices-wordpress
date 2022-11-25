@@ -31,7 +31,7 @@ jobs:
         run: npm install --prefer-offline --no-audit
 
       - name: Run build task
-        run: gatsby build --prefix-paths
+        run: npm run build --prefix-paths
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.2.11
