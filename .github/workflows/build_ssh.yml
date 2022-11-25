@@ -2,10 +2,10 @@ name: 'Build and deploy'
 on:
   push:
     branches:
-      - ${{BRANCH_TO_SSH_DEPLOY}}
+      - ${{secrets.BRANCH_TO_SSH_DEPLOY}}
   pull_request:
     branches:
-      - ${{BRANCH_TO_SSH_DEPLOY}}
+      - ${{secrets.BRANCH_TO_SSH_DEPLOY}}
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.2.11
         if: |
-          github.ref == 'refs/heads/${{BRANCH_TO_SSH_DEPLOY}}' && github.event.repository.fork == false && env.DEPLOY_SSH != ''
+          github.ref == 'refs/heads/${{secrets.BRANCH_TO_SSH_DEPLOY}}' && github.event.repository.fork == false && env.DEPLOY_SSH != ''
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: '-rltgoDzvO --delete'
