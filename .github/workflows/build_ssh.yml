@@ -28,10 +28,10 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install npm dependencies
-        run: npm install --prefer-offline --no-audit
+        run: npm ci
 
       - name: Run build task
-        run: PREFIX_PATHS=true npm run build --prefix-paths
+        run: PREFIX_PATHS=true npm run build
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.2.11
