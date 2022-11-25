@@ -37,7 +37,7 @@ module.exports = {
       },
     ],
   },
-  pathPrefix: '/best-practices-wordpress',
+  pathPrefix: '/wp',
   plugins: [
     {
       resolve: 'gatsby-plugin-local-search',
