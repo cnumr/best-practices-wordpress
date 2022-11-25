@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install npm dependencies
-        run: npm ci
+        run: npm install --prefer-offline --no-audit
 
       - name: Run build task
         run: gatsby build --prefix-paths
