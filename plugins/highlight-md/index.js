@@ -1,22 +1,29 @@
 const visit = require('unist-util-visit')
-const toString = require('mdast-util-to-string')
 
-const plugin = ({ markdownAST }) => {
+// https://github.com/johno/egghead-lessons/blob/master/remark-plugin/index.js
+// https://www.gatsbyjs.com/tutorial/remark-plugin-tutorial/#understanding-the-abstract-syntax-tree
+// https://github.com/syntax-tree/mdast#html
+
+module.exports = ({ markdownAST }, pluginOptions) => {
+  const className = pluginOptions.className || 'mark-default'
   visit(markdownAST, 'paragraph', node => {
     const highlight = /==(.*)==/g
+    const { children, type, position } = node
 
-    if (toString(node).match(highlight)) {
-      const html = toString(node).replace(
-        highlight,
-        `<mark className="">$1</mark>`
-      )
-      node.type = 'html'
-      node.children = undefined
-      node.value = `<p>${html}</p>`
+    if (children) {
+      children.map(tree => {
+        visit(tree, 'text', element => {
+          if (element.value.match(highlight)) {
+            element.value = element.value.replace(
+              highlight,
+              `<mark className="${className}">$1</mark>`
+            )
+            element.type = 'html'
+          }
+        })
+      })
     }
   })
 
   return markdownAST
 }
-
-module.exports = plugin
