@@ -12,7 +12,7 @@ module.exports = {
     siteUrl: siteURL,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    repoURL: `https://github.com/cnumr/fiches-wordpress-greenit`,
+    repoURL: `https://github.com/cnumr/best-practices-wordpress`,
     seoImage: `/logo-cnumr.png`,
     navigation: [
       {
@@ -32,7 +32,7 @@ module.exports = {
       // },
     ],
   },
-  pathPrefix: '/fiches-wordpress-greenit',
+  pathPrefix: '/best-practices-wordpress',
   plugins: [
     {
       resolve: 'gatsby-plugin-local-search',

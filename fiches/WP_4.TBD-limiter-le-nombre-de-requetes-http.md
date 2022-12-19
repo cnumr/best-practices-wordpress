@@ -31,4 +31,4 @@ Pour afficher des petits drapeaux pour le choix d'une langue, l'utilisation d'un
 
 | Le nombre d'appel de ressources | est inférieur ou égal à |
 | ------------------------------- | :---------------------: |
-| par page                        |           20            |
+| par page                        |           40            |
