@@ -17,27 +17,27 @@
   h2,
   h3,
   h4 {
-    @apply font-semibold font-mono text-primary-600 mt-2 mb-8;
+    @apply mb-6 mt-8 font-medium;
   }
   p,
   li {
-    @apply mb-3 leading-8;
+    @apply leading-6 mb-6;
   }
   h1 {
-    @apply text-4xl;
+    @apply text-5xl mb-10 mt-10 font-mono font-bold;
   }
   h2 {
-    @apply text-2xl;
+    @apply text-3xl font-semibold text-primary-500;
   }
   h3 {
-    @apply text-xl;
+    @apply text-2xl text-primary-400;
   }
   h4 {
     @apply text-xl;
   }
-  // a {
-  //   @apply text-secondary-500 hover:text-secondary-600 underline;
-  // }
+  a {
+    @apply text-secondary-300 hover:text-secondary-500 font-bold;
+  }
   blockquote {
     @apply border-l-4 border-l-teal-300 pl-4 py-2 text-base rounded bg-teal-50 shadow mb-2 pb-[0.1rem];
   }
@@ -90,14 +90,9 @@
   .markdown-excerpt {
     @apply leading-5;
   }
-
-
-  /** Badge **/
   .badge{
     @apply px-2 py-1 rounded-xl text-xs text-white font-medium font-mono;
   }
-
-  /** Button **/
   button:disabled{
     @apply cursor-not-allowed opacity-50
   }
@@ -107,14 +102,13 @@
   .btn{
     @apply text-white cursor-pointer px-2 py-0 rounded-md;
   }
-}
+  .tooltip {
+    @apply relative inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
+    // .bottom {
+    //   @apply min-w-300;
+    // }
+  }
 
-/* Tooltip */
-.tooltip {
-  display: inline-block;
-  position: relative;
-  border-bottom: 1px dotted #666;
-  text-align: left;
 }
 
 .tooltip .bottom {

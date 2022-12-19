@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { execSync } = require('child_process')
+// const date = require('date-and-time')
 // const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -240,11 +241,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const gitUpdateTime = execSync(
       `git log -1 --pretty=format:%aI -- .${node.frontmatter.path}.md`
     ).toString()
-    createNodeField({
-      node,
-      name: 'gitUpdateTime',
-      value: gitUpdateTime,
-    })
+    createNodeField(
+      {
+        node,
+        name: 'gitUpdateTime',
+        value: gitUpdateTime,
+      },
+      {
+        node,
+        name: 'gitUpdateTime',
+        value: gitUpdateTime,
+      }
+    )
     // const value = createFilePath({ node, getNode })
     // createNodeField({
     //   name: `slug`,
