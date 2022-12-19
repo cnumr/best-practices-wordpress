@@ -118,13 +118,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/pages`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [

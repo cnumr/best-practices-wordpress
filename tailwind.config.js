@@ -43,10 +43,32 @@ module.exports = {
         xiketic: '#171219',
       },
       fontFamily: {
-        title: ['Impact', 'Arial Black', 'sans-serif'],
-        body: ['Trebuchet MS', 'Arial', 'Helvetica', 'sans-serif'],
+        body: [
+          'RedHatDisplay',
+          'Arial',
+          'Helvetica',
+          'Liberation Sans',
+          'FreeSans',
+          'sans-serif',
+        ],
+      },
+      fontSize: {
+        sm: ['var(--fs-sm)', { lineHeight: '1.25rem' }],
+        base: ['var(--fs-base)', { lineHeight: '1.5rem' }],
+        lg: ['var(--fs-lg)', { lineHeight: '1.75rem' }],
+        xl: ['var(--fs-xl)', { lineHeight: '1.75rem' }],
+        '2xl': ['var(--fs-2xl)', { lineHeight: '2rem' }],
+        '3xl': ['var(--fs-3xl)', { lineHeight: '2.25rem' }],
+        '4xl': ['var(--fs-4xl)', { lineHeight: '2.5rem' }],
       },
     },
   },
   plugins: [require('@tailwindcss/forms')],
+  purge: {
+    enabled: true,
+    content: [
+      './src/**/*.{js,jsx,ts,tsx,mdx}',
+      './plugins/**/*.{js,jsx,ts,tsx,mdx}',
+    ],
+  },
 }
