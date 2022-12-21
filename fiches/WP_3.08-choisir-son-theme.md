@@ -1,7 +1,7 @@
 ---
 title: 3.08 Choisir son thème
 people: Dominique N. & Yann G.
-scope: Thème
+scope: Thèmes
 responsible:
   - Low-code → Freelance et développeur Front-End d'agences
   - No-code → Madame et Monsieur tout le monde
