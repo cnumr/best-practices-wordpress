@@ -17,7 +17,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
+          node-version: 'lts/16'
 
       - name: 'Cache Node dependencies'
         uses: actions/cache@v3
