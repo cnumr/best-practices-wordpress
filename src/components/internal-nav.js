@@ -28,9 +28,9 @@ function InternalNav({ pageContext, previous, next, className }) {
             'text-center': next && previous,
           })}
         >
-          <Link to="/" rel="home">
+          {/* <Link to="/" rel="home">
             Accueil
-          </Link>
+          </Link> */}
         </li>
         {next && (
           <li className="text-center md:text-right">

@@ -1,7 +1,7 @@
 ---
 title: Code(use·ur) → Développeu·se·r
 path: /personas/Code(use·ur) → Développeu·se·r
-toIndex: true
+toIndex: false
 ---
 
 # Code(use·ur) → Développeu·se·r

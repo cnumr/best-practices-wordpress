@@ -5,33 +5,57 @@
 
 /* base styles */
 @layer base {
+  :root {
+    /*Color*/
+    --color-primary: 147, 39%;
+    --color-secondary: 312, 25%;
+
+    /*Font Size : https://www.fluid-type-scale.com/*/
+    --fs-sm: clamp(0.85rem, -0.09vw + 0.87rem, 0.8rem);
+    --fs-base: clamp(1rem, 0vw + 1rem, 1rem);
+    --fs-lg: clamp(1.18rem, 0.14vw + 1.14rem, 1.25rem);
+    --fs-xl: clamp(1.38rem, 0.33vw + 1.3rem, 1.56rem);
+    --fs-2xl: clamp(1.62rem, 0.6vw + 1.47rem, 1.95rem);
+    --fs-3xl: clamp(1.91rem, 0.97vw + 1.66rem, 2.44rem);
+    --fs-4xl: clamp(2.24rem, 1.48vw + 1.87rem, 3.05rem);
+  }
+
+  @font-face {
+    font-family: 'RedHatDisplay';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url(/fonts/RedHatDisplay-VariableFont_wght.woff2) format('woff2');
+  }
+
   html {
-    @apply scroll-pt-24; // fix for anchor
+    @apply bg-zinc-100 font-body text-stone-800 text-base scroll-pt-24;
   }
   h1,
   h2,
   h3,
   h4 {
-    @apply font-semibold text-primary mt-2 mb-8;
+    @apply mb-6 mt-8 font-medium;
   }
   p,
   li {
-    @apply text-gray-600 mb-3 leading-8;
+    @apply leading-6 mb-6;
   }
   h1 {
-    @apply text-5xl;
+    @apply text-4xl font-bold mb-10 mt-10;
   }
   h2 {
-    @apply text-4xl;
+    @apply text-2xl font-bold;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-xl font-bold;
   }
   h4 {
-    @apply text-2xl;
+    @apply text-lg;
   }
   a {
-    @apply font-medium hover:text-primary;
+    @apply font-bold underline;
   }
   blockquote {
     @apply border-l-4 border-l-teal-300 pl-4 py-2 text-base rounded bg-teal-50 shadow mb-2 pb-[0.1rem];
@@ -87,14 +111,24 @@
   .markdown-excerpt {
     @apply leading-5;
   }
-}
-
-/* Tooltip */
-.tooltip {
-  display: inline-block;
-  position: relative;
-  border-bottom: 1px dotted #666;
-  text-align: left;
+  .badge {
+    @apply px-2 py-1 rounded-xl text-xs text-white font-medium font-mono;
+  }
+  button:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+  .small-primary-btn {
+    @apply bg-primary-500 hover:bg-primary-600 text-white cursor-pointer px-2 py-0 rounded-md text-sm;
+  }
+  .btn {
+    @apply text-white cursor-pointer px-2 py-0 rounded-md;
+  }
+  .tooltip {
+    @apply relative inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
+    // .bottom {
+    //   @apply min-w-300;
+    // }
+  }
 }
 
 .tooltip .bottom {

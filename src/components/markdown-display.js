@@ -3,17 +3,19 @@ import React from 'react'
 
 function MarkdownDisplay({ type = 'personna', data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, tableOfContents, html } = markdownRemark
+  const { frontmatter, tableOfContents, html, fields } = markdownRemark
   return (
-    <section className="blog-post">
+    <section>
       <h1>
-        <span className="capitalize">{pageContext.type}</span> -{' '}
-        {frontmatter.title}
+        <span className="badge bg-primary-600 mr-2 text-2xl">
+          BP {frontmatter.title.slice(0, 4)}
+        </span>
+        <span>{frontmatter.title.slice(5)}</span>
       </h1>
-      <div>
-        <strong>Durée de lecture: </strong>
-        {markdownRemark.timeToRead}m.
-      </div>
+
+      <i>
+        Mise à jour le {new Date(fields.gitUpdateTime).toLocaleDateString('fr')}
+      </i>
       {type === 'fiches' && (
         <FichesMetasDisplay
           frontmatter={frontmatter}

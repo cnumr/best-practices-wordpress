@@ -1,8 +1,9 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { execSync } = require('child_process')
+// const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createNodeField } = actions
 
   // Fiches WP
   const _fiches = await graphql(`
@@ -175,19 +176,33 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
+  if (node.internal.type === `MarkdownRemark`) {
+    const gitUpdateTime = execSync(
+      `git log -1 --pretty=format:%aI -- .${node.frontmatter.path}.md`
+    ).toString()
+    createNodeField(
+      {
+        node,
+        name: 'gitUpdateTime',
+        value: gitUpdateTime,
+      },
+      {
+        node,
+        name: 'gitUpdateTime',
+        value: gitUpdateTime,
+      }
+    )
+    // const value = createFilePath({ node, getNode })
+    // createNodeField({
+    //   name: `slug`,
+    //   node,
+    //   value,
+    // })
+  }
+}
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions

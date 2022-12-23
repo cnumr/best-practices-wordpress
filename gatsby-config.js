@@ -8,7 +8,7 @@ const siteURL = process.env.SITE_URL || 'http://localhost:8000'
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'CNUMR WordPress Best Practices',
+    title: "Les bonnes pratiques d'écoconception pour WordPress",
     siteUrl: siteURL,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
@@ -21,23 +21,18 @@ module.exports = {
       {
         url: `/fiches`,
         label: `Bonnes pratiques`,
-        title: `Voir les fiches`,
-      },
-      {
-        url: `/personas`,
-        label: `Personas`,
-        title: `Voir les Personas`,
+        title: `Voir les bonnes pratiques d'écoconception pour WordPress`,
       },
       {
         url: `/lexique`,
         label: `Lexique`,
         title: `Lexique des termes utilisés`,
       },
-      {
-        url: `/recherche`,
-        label: `Rechercher`,
-        title: `Rechercher une Bonne pratique`,
-      },
+      // {
+      //   url: `/recherche`,
+      //   label: `Rechercher`,
+      //   title: `Rechercher une Bonne pratique`,
+      // },
     ],
   },
   pathPrefix: '/wp',
@@ -123,6 +118,13 @@ module.exports = {
       options: {
         name: `lexique`,
         path: `${__dirname}/lexique`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/pages`,
       },
     },
     {
