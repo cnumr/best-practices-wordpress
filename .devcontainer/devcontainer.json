@@ -1,0 +1,71 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+  "name": "Gatsby (Node 16)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-16",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": ". .devcontainer/install.sh",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "GraphQL.vscode-graphql-syntax",
+        "oderwat.indent-rainbow",
+        "esbenp.prettier-vscode",
+        "amatiasq.sort-imports",
+        "bradlc.vscode-tailwindcss",
+        "vscode-icons-team.vscode-icons",
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-rename-tag",
+        "dsznajder.es7-react-js-snippets",
+        "mutantdino.resourcemonitor",
+        "yzhang.markdown-all-in-one",
+        "adam-bender.commit-message-editor",
+        "mhutchie.git-graph"
+      ]
+    }
+  },
+
+  "settings": {
+    "tailwindCSS.rootFontSize": 16,
+    "terminal.integrated.profiles.linux": {
+      "zsh": {
+        "path": "/usr/bin/zsh"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  },
+
+  "mounts": [
+    // node_modules de Gastby
+    "source=bp-wp-gatsby-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    // .cache de Gatsby
+    "source=bp-wp-gatsby-cache,target=${containerWorkspaceFolder}/.cache,type=volume",
+    // public, output de Gatsby
+    "source=bp-wp-gatsby-public,target=${containerWorkspaceFolder}/public,type=volume",
+    // gatsbi .env file
+    "source=${localWorkspaceFolder}/.env,target=${containerWorkspaceFolder}/.env,type=bind"
+    // "source=${localWorkspaceFolder}/.vscode/settings.json,target=/home/root/.vscode-server/data/Machine/settings.json,type=bind"
+  ],
+
+  "remoteEnv": {
+    // Gatsby
+    "ENABLE_GATSBY_REFRESH_ENDPOINT": "true"
+  }
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}

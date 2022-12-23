@@ -1,4 +1,4 @@
-import { Card, Layout, SearchButtons, Seo } from '../components'
+import { Card, FiltersBar, Layout, Seo } from '../components'
 import React, { useState } from 'react'
 
 import { graphql } from 'gatsby'
@@ -18,14 +18,24 @@ export default function Home({ data, location }) {
       />
       <main>
         <h1>Fiches</h1>
-        <SearchButtons
+        <FiltersBar
           fullList={data.fichesWP.nodes}
-          propertyToMatch="childMarkdownRemark.frontmatter.scope"
+          propertiesToMatch={[
+            { label: 'Scope', meta: 'childMarkdownRemark.frontmatter.scope' },
+            {
+              label: 'Environmental Impact',
+              meta: 'childMarkdownRemark.frontmatter.environmental_impact',
+            },
+            {
+              label: 'Priority Implementation',
+              meta: 'childMarkdownRemark.frontmatter.priority_implementation',
+            },
+          ]}
           setList={setFichesWP}
           setBackToAllItems={setBackToAllFiches}
           allItemsLabel="Toutes les fiches"
           itemsNotSetLabel="TBD"
-          className="my-8 flex flex-row flex-wrap justify-between gap-5"
+          className="my-8 flex flex-row flex-wrap justify-start gap-5"
         />
         <ul className="wp-grid">
           {fichesWP.map((fiche, index) => {

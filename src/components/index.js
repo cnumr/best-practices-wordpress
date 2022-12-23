@@ -1,5 +1,6 @@
 import Card from './card'
 import FichesMetasDisplay from './fiches-metas'
+import FiltersBar from './filters-bar'
 import Header from './header'
 import InternalNav from './internal-nav'
 import Layout from './layout'
@@ -18,4 +19,5 @@ export {
   MarkdownDisplay,
   SearchBar,
   SearchButtons,
+  FiltersBar,
 }
