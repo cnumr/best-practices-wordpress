@@ -12,7 +12,10 @@ module.exports = {
     siteUrl: siteURL,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    repoURL: `https://github.com/cnumr/best-practices-wordpress`,
+    repo: {
+      repoURL: `https://github.com/cnumr/best-practices-wordpress`,
+      mainBanch: `main`,
+    },
     seoImage: `/logo-cnumr.png`,
     navigation: [
       {

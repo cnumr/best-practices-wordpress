@@ -19,7 +19,9 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
-          repoURL
+          repo {
+            repoURL
+          }
           navigation {
             label
             title
@@ -36,7 +38,7 @@ const Layout = ({ children }) => {
         id="top"
         className=""
         siteTitle={data.site.siteMetadata?.title || `Title`}
-        repoURL={data.site.siteMetadata?.repoURL}
+        repoURL={data.site.siteMetadata?.repo?.repoURL}
         navigation={data.site.siteMetadata?.navigation}
       />
       <main className="mx-auto px-4 lg:px-0 lg:max-w-5xl my-8 min-h-[400px]">

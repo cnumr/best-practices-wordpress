@@ -1,4 +1,5 @@
 import Card from './card'
+import ContributeCTA from './contributeCTA'
 import FichesMetasDisplay from './fiches-metas'
 import FiltersBar from './filters-bar'
 import Header from './header'
@@ -18,4 +19,5 @@ export {
   MarkdownDisplay,
   SearchButtons,
   FiltersBar,
+  ContributeCTA,
 }
