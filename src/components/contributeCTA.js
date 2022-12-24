@@ -25,11 +25,14 @@ function ContributeCTA({ sourceInstanceName, relativePath }) {
   let type = ''
   switch (sourceInstanceName) {
     case 'fiches':
-      type = 'fiche'
+      type = 'la fiche'
+      break
+    case 'lexique':
+      type = 'la fiche lexique'
       break
 
     default:
-      type = 'personna'
+      type = 'la personna'
       break
   }
   return (
@@ -39,14 +42,14 @@ function ContributeCTA({ sourceInstanceName, relativePath }) {
         WordPress plus éco-responsable ?
       </div>
       <p className="font-semibold m-0">
-        Venez sur le repo pour lancer une discussion sur cette {type}.
+        Venez sur le repo pour lancer une discussion sur {type}.
       </p>
       <a
         href={`${repoURL}/blob/${mainBanch}/${sourceInstanceName}/${relativePath}`}
         target={`_blank`}
         className={`btn hover:px-5 p-3 flex gap-2 items-center !text-white`}
       >
-        Voir la {type} <FiGithub />
+        Voir {type} <FiGithub />
       </a>
     </div>
   )
