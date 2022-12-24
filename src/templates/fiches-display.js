@@ -14,7 +14,7 @@ export default function FichesDisplay({
   pageContext,
   location,
 }) {
-  console.log('data', data)
+  // console.log('data', data)
   // console.log('pageContext', pageContext)
   const {
     fiche,
@@ -52,6 +52,9 @@ export const ficheQuery = graphql`
     fiche: file(id: { eq: $id }) {
       relativePath
       sourceInstanceName
+      fields {
+        gitUpdateTime
+      }
       markdownRemark: childMarkdownRemark {
         html
         rawMarkdownBody

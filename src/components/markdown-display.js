@@ -2,8 +2,8 @@ import FichesMetasDisplay from './fiches-metas'
 import React from 'react'
 
 function MarkdownDisplay({ type = 'personna', data, pageContext }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, tableOfContents, html, fields } = markdownRemark
+  const { markdownRemark, fields } = data // data.markdownRemark holds your post data
+  const { frontmatter, tableOfContents, html } = markdownRemark
   return (
     <section>
       <h1>
@@ -14,7 +14,8 @@ function MarkdownDisplay({ type = 'personna', data, pageContext }) {
       </h1>
 
       <i>
-        Mise à jour le {new Date(fields.gitUpdateTime).toLocaleDateString('fr')}
+        Mise à jour le{' '}
+        {new Date(fields?.gitUpdateTime).toLocaleDateString('fr')}
       </i>
       {type === 'fiches' && (
         <FichesMetasDisplay
