@@ -32,7 +32,7 @@ function ContributeCTA({ sourceInstanceName, relativePath }) {
       break
 
     default:
-      type = 'la personna'
+      type = 'la persona'
       break
   }
   return (
