@@ -22,6 +22,7 @@ function Seo({ description, lang, meta, title, location }) {
             description
             author
             seoImage
+            favicon
           }
         }
       }
@@ -31,6 +32,7 @@ function Seo({ description, lang, meta, title, location }) {
   const metaDescription = description || site.siteMetadata.description
   const metaImage = `${location.origin}${site.siteMetadata?.seoImage}`
   const defaultTitle = site.siteMetadata?.title
+  const favicon = site.siteMetadata?.favicon
 
   return (
     <Helmet
@@ -41,6 +43,7 @@ function Seo({ description, lang, meta, title, location }) {
       titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
       link={[
         { rel: `image_src`, href: metaImage },
+        { rel: `icon`, href: favicon },
         { rel: `canonical`, href: location?.href },
       ]}
       meta={[

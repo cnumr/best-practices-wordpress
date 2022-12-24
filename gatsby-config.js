@@ -16,7 +16,9 @@ module.exports = {
       repoURL: `https://github.com/cnumr/best-practices-wordpress`,
       mainBanch: `main`,
     },
+    // in ./static folder
     seoImage: `/logo-cnumr.png`,
+    favicon: `/icone-intro.svg`,
     navigation: [
       {
         url: `/fiches`,
