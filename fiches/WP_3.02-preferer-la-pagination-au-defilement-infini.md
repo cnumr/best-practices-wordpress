@@ -30,7 +30,7 @@ Cet effet de style va générer le contenu pour l'afficher au fur et à mesure. 
 ### Solution no-code 🌱🌱
 
 Mettez en place une pagination classique avec un système de filtre performant, le visiteur trouvera plus facilement le contenu qui l'intéresse et les robots d'indexation aussi.
-Par défaut sur la page "archive blog", WordPress intégre la pagination. Vous pouvez régler le nombre de posts à afficher sur une page via l'onglet réglages sous-menu lecture, label. Les pages du site doivent afficher au plus => NEANT (10 par défaut).
+Par défaut sur la page "archive blog", WordPress intégre la pagination. Vous pouvez régler le nombre de posts à afficher sur une page via l'onglet réglages sous-menu lecture, label. Les pages du site doivent afficher au plus => 6 (10 par défaut).
 
 ### Solution code 🌱🌱
 
