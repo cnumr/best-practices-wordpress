@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
 
       <a
         href="#top"
-        className="invisible lg:visible fixed bottom-4 right-4 rounded-full w-[1rem] p-4 bg-primary hover:bg-primary-500 hover:text-white font-bold text-2xl"
+        className="invisible lg:visible fixed bottom-4 right-4 rounded-full w-[3rem] h-[3rem] bg-primary hover:bg-primary-500 hover:text-white font-bold text-2xl flex items-center justify-center font-mono"
       >
         ↑
       </a>
