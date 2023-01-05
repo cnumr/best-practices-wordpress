@@ -19,6 +19,8 @@ module.exports = {
     // in ./static folder
     seoImage: `/logo-cnumr.png`,
     favicon: `/icone-intro.svg`,
+    shareFB: `/asso-greenit-share-fb.png`,
+    shareTW: `/asso-greenit-share-tw.png`,
     navigation: [
       {
         url: `/fiches`,
