@@ -89,34 +89,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  if (_personas.errors) {
-    reporter.panicOnBuild(
-      `GraphQL could not query pages. Create pages aborted.`
-    )
-    return
-  }
-  const personas = _personas.data.allFile.nodes
-  personas.forEach((node, index) => {
-    const templatePath = path.resolve(`./src/templates/personas-display.js`)
-    const previousPostId =
-      index === 0 ? null : personas[index - 1].childMarkdownRemark?.id
-    const nextPostId =
-      index === personas.length - 1
-        ? null
-        : personas[index + 1].childMarkdownRemark?.id
-    if (node.childMarkdownRemark?.frontmatter.path)
-      createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
-        component: templatePath,
-        context: {
-          id: node.id,
-          remarkID: node.childMarkdownRemark.id,
-          type: 'personas',
-          previousPostId,
-          nextPostId,
-        },
-      })
-  })
+  // if (_personas.errors) {
+  //   reporter.panicOnBuild(
+  //     `GraphQL could not query pages. Create pages aborted.`
+  //   )
+  //   return
+  // }
+  // const personas = _personas.data.allFile.nodes
+  // personas.forEach((node, index) => {
+  //   const templatePath = path.resolve(`./src/templates/personas-display.js`)
+  //   const previousPostId =
+  //     index === 0 ? null : personas[index - 1].childMarkdownRemark?.id
+  //   const nextPostId =
+  //     index === personas.length - 1
+  //       ? null
+  //       : personas[index + 1].childMarkdownRemark?.id
+  //   if (node.childMarkdownRemark?.frontmatter.path)
+  //     createPage({
+  //       path: `${node.childMarkdownRemark.frontmatter.path}.md`,
+  //       component: templatePath,
+  //       context: {
+  //         id: node.id,
+  //         remarkID: node.childMarkdownRemark.id,
+  //         type: 'personas',
+  //         previousPostId,
+  //         nextPostId,
+  //       },
+  //     })
+  // })
 
   // Lexique
   const _lexique = await graphql(`
