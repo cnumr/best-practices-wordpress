@@ -55,7 +55,7 @@ function FichesMetasDisplay({ frontmatter, className, tableOfContents }) {
         <Item frontmatter={frontmatter} item="people" />
         <Item frontmatter={frontmatter} item="priority_implementation" />
         <Item frontmatter={frontmatter} item="saved_resources" />
-        <Item frontmatter={frontmatter} item="state_validation" />
+        {/* <Item frontmatter={frontmatter} item="state_validation" /> */}
         {/* <Item frontmatter={frontmatter} item="responsible" /> */}
       </ul>
       <div className="box">
