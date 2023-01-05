@@ -38,7 +38,7 @@ function SearchBar() {
               />
               <button
                 type="submit"
-                className="small-primary-btn broder-white border"
+                className="small-primary-btn border-white border"
                 title="Rechercher"
                 disabled={!dirty}
               >
