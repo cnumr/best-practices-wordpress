@@ -83,15 +83,15 @@
     @apply list-none ml-0;
   }
   .box {
-    @apply rounded-md bg-slate-100 p-4 flex flex-col gap-1 border-2;
+    @apply rounded-md bg-primary p-2 md:p-4 flex flex-col gap-1 border-2 border-primary-500;
   }
   .box.interactive {
     @apply hover:bg-stone-50 hover:shadow-lg;
   }
   table {
-    @apply w-full border-2 rounded-md shadow-lg;
+    @apply w-full border-2 border-primary-500 rounded-md shadow-lg;
     thead {
-      @apply bg-slate-100;
+      @apply bg-primary border-b-2 border-b-primary-500;
     }
     td {
       @apply p-4;
@@ -99,6 +99,9 @@
   }
   .wp-grid {
     @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
+  }
+  .wp-list {
+    @apply noliststyle flex flex-col gap-2;
   }
   .btn {
     @apply bg-primary-600 px-2 py-1 border rounded hover:drop-shadow-lg duration-100 text-white uppercase cursor-pointer;
@@ -129,6 +132,9 @@
     // }
   }
   .markdown-content {
+    &* {
+      @apply whitespace-pre-wrap;
+    }
     blockquote {
       @apply border-l-4 border-l-primary-500 p-4 text-base rounded bg-primary shadow mb-2;
       p {
@@ -145,6 +151,11 @@
     a:not(.tooltip) {
       @apply underline;
     }
+    :not(pre) > code[class*='language-'],
+    code[class*='language-'],
+    pre[class*='language-'] {
+      @apply bg-white;
+    }
   }
 }
 
@@ -157,8 +168,8 @@
   padding: 20px;
   color: #666666;
   background-color: #eeeeee;
-  font-weight: normal;
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 1rem;
   border-radius: 8px;
   position: absolute;
   z-index: 99999999;

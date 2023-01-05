@@ -1,3 +1,4 @@
+import Card from './card'
 import FichesMetasDisplay from './fiches-metas'
 import React from 'react'
 
@@ -6,8 +7,8 @@ function MarkdownDisplay({ type = 'personna', data, pageContext }) {
   const { frontmatter, tableOfContents, html } = markdownRemark
   return (
     <section>
-      {type === 'fiches' ? (
-        <h1 className="flex items-center">
+      {type === Card.FICHES ? (
+        <h1 className="flex flex-col md:flex-row items-center">
           <span className="badge bg-primary-500 mr-2 text-2xl whitespace-nowrap">
             BP {frontmatter.title.slice(0, 4)}
           </span>
@@ -21,7 +22,7 @@ function MarkdownDisplay({ type = 'personna', data, pageContext }) {
         Mise à jour le{' '}
         {new Date(fields?.gitUpdateTime).toLocaleDateString('fr')}
       </span>
-      {type === 'fiches' && (
+      {type === Card.FICHES && (
         <FichesMetasDisplay
           frontmatter={frontmatter}
           tableOfContents={tableOfContents}

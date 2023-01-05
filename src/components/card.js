@@ -1,3 +1,5 @@
+import { Layout, MetaItem } from './index'
+
 import { Link } from 'gatsby'
 import React from 'react'
 import classNames from 'classnames'
@@ -5,89 +7,75 @@ import classNames from 'classnames'
 Card.PERSONAS = 'personas'
 Card.FICHES = 'fiches'
 Card.LEXIQUE = 'lexique'
+Card.VERTICAL_LAYOUT = 'vertical'
+Card.HORIZONTAL_LAYOUT = 'horizontal'
 
 function trimWikiLinks(str) {
   const regex = /\[\[(?:[^|\]]*\|)?([^\]]+)\]\]/gm
   const subst = `$1`
+  if (str === undefined) return null
   return str.replace(regex, subst)
 }
 
-function MetaItem({ metas, meta, fontSize = 'normal' }) {
-  if (Array.isArray(metas[meta])) {
-    return (
-      <li
-        className={classNames('my-0', {
-          'text-xs': fontSize === 'xs',
-        })}
-      >
-        <strong className="capitalize">{meta.replace('_', ' ')}: </strong>{' '}
-        <ul className="ml-4 my-0">
-          {metas[meta].map((item, index) => {
-            return (
-              <li key={index} className="my-0 max-h-5 p-0 leading-4">
-                → {item}
-              </li>
-            )
-          })}
-        </ul>
-      </li>
-    )
-  } else
-    return (
-      <li
-        className={classNames('my-0 max-h-5', {
-          'text-xs': fontSize === 'xs',
-        })}
-      >
-        <strong className="capitalize">{meta.replace('_', ' ')}: </strong>{' '}
-        {metas[meta] || 'TBD'}
-      </li>
-    )
-}
-
-function Card({ markdownRemark, type = Card.PERSONAS }) {
+function Card({
+  markdownRemark,
+  type = Card.PERSONAS,
+  display = Card.VERTICAL_LAYOUT,
+}) {
   return (
     <li className="box interactive">
       <Link
         to={`${markdownRemark.frontmatter.path}.md`}
-        className="flex flex-col h-full divide-y-2"
+        className={classNames('flex ', {
+          'flex-row h-full items-center justify-between gap-2':
+            display === Card.HORIZONTAL_LAYOUT,
+          'flex-col h-full divide-y-2 divide-primary-500':
+            display === Card.VERTICAL_LAYOUT,
+        })}
         title={`Voir la fiche : ${markdownRemark.frontmatter.title}`}
       >
-        {type === Card.FICHES && (
-          <ul className="mb-4">
-            <MetaItem metas={markdownRemark.frontmatter} meta="scope" />
-          </ul>
-        )}
         <div className="flex flex-col justify-between h-full">
-          <h3>{markdownRemark.frontmatter.title}</h3>
+          {type === Card.FICHES ? (
+            <h3 className="flex flex-col md:flex-row md:items-center">
+              <span>
+                <span className="badge bg-primary-500 mr-2 text-xl whitespace-nowrap">
+                  BP {markdownRemark.frontmatter.title.slice(0, 4)}
+                </span>
+              </span>
+              <span>{markdownRemark.frontmatter.title.slice(5)}</span>
+            </h3>
+          ) : (
+            <h3>{markdownRemark.frontmatter.title}</h3>
+          )}
           {type === Card.LEXIQUE ? (
             <div
               className="markdown-content"
               dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
             />
           ) : (
-            <p className="markdown-excerpt">
-              {trimWikiLinks(markdownRemark.excerpt)}
-            </p>
-          )}
-          {type === Card.FICHES && (
-            <div>
-              <hr />
-              <ul className="mt-4">
-                <MetaItem
-                  metas={markdownRemark.frontmatter}
-                  meta="environmental_impact"
-                  fontSize="xs"
-                />
-                <MetaItem
-                  metas={markdownRemark.frontmatter}
-                  meta="priority_implementation"
-                  fontSize="xs"
-                />
-              </ul>
-            </div>
+            <></>
+            // <p className="markdown-excerpt">
+            //   {trimWikiLinks(markdownRemark.excerpt)}
+            // </p>
           )}
         </div>
+        {type === Card.FICHES && (
+          <ul className="pt-4 flex flex-col gap-4">
+            <MetaItem frontmatter={markdownRemark.frontmatter} meta="scope" />
+            <MetaItem
+              frontmatter={markdownRemark.frontmatter}
+              meta="environmental_impact"
+              fontSize="xs"
+              displayTitle
+            />
+            <MetaItem
+              frontmatter={markdownRemark.frontmatter}
+              meta="priority_implementation"
+              fontSize="xs"
+              displayTitle
+            />
+          </ul>
+        )}
       </Link>
     </li>
   )

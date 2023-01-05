@@ -6,6 +6,7 @@ import Header from './header'
 import InternalNav from './internal-nav'
 import Layout from './layout'
 import MarkdownDisplay from './markdown-display'
+import MetaItem from './meta-item'
 import SearchBar from './search-bar'
 import SearchButtons from './search-buttons'
 import Seo from './seo'
@@ -22,4 +23,5 @@ export {
   SearchButtons,
   FiltersBar,
   ContributeCTA,
+  MetaItem,
 }

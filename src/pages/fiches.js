@@ -37,7 +37,7 @@ export default function Home({ data, location }) {
           itemsNotSetLabel="TBD"
           className="my-8 flex flex-row flex-wrap justify-start gap-5"
         />
-        <ul className="wp-grid">
+        <ul className="wp-list">
           {fichesWP.map((fiche, index) => {
             if (fiche.childMarkdownRemark?.frontmatter.path)
               return (
@@ -45,6 +45,7 @@ export default function Home({ data, location }) {
                   key={index}
                   markdownRemark={fiche.childMarkdownRemark}
                   type={Card.FICHES}
+                  display={Card.HORIZONTAL_LAYOUT}
                 />
               )
             else return null
