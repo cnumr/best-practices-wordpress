@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"group": "none",
+			"problemMatcher": [],
+			"label": "🌟 npm: install",
+			"detail": "install dependencies from package"
+		},
+		{
+			"type": "npm",
+			"script": "develop",
+			"problemMatcher": [],
+			"label": "🚀 npm: develop",
+			"detail": "gatsby develop"
+		},
+		{
+			"type": "npm",
+			"script": "serve",
+			"problemMatcher": [],
+			"label": "💁 npm: serve",
+			"detail": "gatsby serve"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "🛠️ gatsby build"
+		}
+	]
+}

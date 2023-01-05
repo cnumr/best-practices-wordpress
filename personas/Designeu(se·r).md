@@ -1,7 +1,7 @@
 ---
 title: Designeu(se·r)
 path: /personas/Designeu(se·r)
-toIndex: false
+toIndex: true
 ---
 
 # Designeu(se·r)

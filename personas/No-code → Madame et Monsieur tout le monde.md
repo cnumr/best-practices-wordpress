@@ -1,7 +1,7 @@
 ---
 title: No-code → Madame et Monsieur tout le monde
 path: /personas/No-code → Madame et Monsieur tout le monde
-toIndex: false
+toIndex: true
 ---
 
 # No-code → Madame et Monsieur tout le monde

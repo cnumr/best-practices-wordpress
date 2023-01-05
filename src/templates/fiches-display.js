@@ -1,4 +1,10 @@
-import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
+import {
+  ContributeCTA,
+  InternalNav,
+  Layout,
+  MarkdownDisplay,
+  Seo,
+} from '../components'
 
 import React from 'react'
 import { graphql } from 'gatsby'
@@ -8,11 +14,15 @@ export default function FichesDisplay({
   pageContext,
   location,
 }) {
-  console.log('data', data)
+  // console.log('data', data)
   // console.log('pageContext', pageContext)
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { previous, next } = data
-  const { frontmatter, excerpt } = markdownRemark
+  const {
+    fiche,
+    fiche: { sourceInstanceName, relativePath },
+    previous,
+    next,
+  } = data // data.markdownRemark holds your post data
+  const { frontmatter, excerpt } = fiche.markdownRemark
   return (
     <Layout>
       <Seo
@@ -21,7 +31,11 @@ export default function FichesDisplay({
         description={excerpt}
       />
       <article className="blog-post-container">
-        <MarkdownDisplay data={data} pageContext={pageContext} type="fiches" />
+        <MarkdownDisplay data={fiche} pageContext={pageContext} type="fiches" />
+        <ContributeCTA
+          relativePath={relativePath}
+          sourceInstanceName={sourceInstanceName}
+        />
         <InternalNav
           className="mt-8"
           pageContext={pageContext}
@@ -34,34 +48,30 @@ export default function FichesDisplay({
 }
 
 export const ficheQuery = graphql`
-  query (
-    $remarkID: String!
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
-    markdownRemark(id: { eq: $remarkID }) {
-      html
-      rawMarkdownBody
-      excerpt
-      timeToRead
-      tableOfContents
+  query ($id: String!, $previousPostId: String, $nextPostId: String) {
+    fiche: file(id: { eq: $id }) {
+      relativePath
+      sourceInstanceName
       fields {
         gitUpdateTime
       }
-      frontmatter {
-        title
-        lifecycle
-        environmental_impact
-        scope
-        people
-        priority_implementation
-        saved_resources
-        responsible
+      markdownRemark: childMarkdownRemark {
+        html
+        rawMarkdownBody
+        excerpt
+        timeToRead
+        tableOfContents
+        frontmatter {
+          title
+          lifecycle
+          environmental_impact
+          scope
+          people
+          priority_implementation
+          saved_resources
+          responsible
+        }
       }
-    }
-    file(id: { eq: $id }) {
-      id
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       frontmatter {
