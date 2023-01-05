@@ -33,7 +33,7 @@ export default function Home({ data, location }) {
           ]}
           setList={setFichesWP}
           setBackToAllItems={setBackToAllFiches}
-          allItemsLabel="Toutes les fiches"
+          allItemsLabel="Toutes les fiches (RAZ)"
           itemsNotSetLabel="TBD"
           className="my-8 flex flex-row flex-wrap justify-start gap-5"
         />
