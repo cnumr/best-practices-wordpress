@@ -2,8 +2,8 @@ import { BsGithub } from 'react-icons/bs'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import classNames from 'classnames'
 import { SearchBar } from '../components'
+import classNames from 'classnames'
 
 const Header = ({ className, repoURL, navigation }) => {
   const [menuState, setMenuState] = React.useState(`invisible lg:visible`)
@@ -26,14 +26,14 @@ const Header = ({ className, repoURL, navigation }) => {
           <div>
             <Link
               to="/"
-              className="leading-tight no-underline text-inherit"
+              className="no-underline text-inherit"
               title="Retour à l'accueil"
             >
-              <span className="tracking-tight">
-                Les bonnes pratiques d'écoconception
-              </span>
+              <span>Les bonnes pratiques d'écoconception</span>
               <br />
-              <span className="font-bold text-xl text-zinc-900">WordPress</span>
+              <span className="font-bold text-xl leading-none text-zinc-900">
+                WordPress
+              </span>
             </Link>
           </div>
         </div>
