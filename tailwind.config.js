@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          DEFAULT: 'hsl(var(--color-primary), calc(36% + 50%))',
           100: 'hsl(var(--color-primary), calc(36% + 20%))',
           200: 'hsl(var(--color-primary), calc(36% + 15%))',
           300: 'hsl(var(--color-primary), calc(36% + 10%))',
@@ -33,6 +34,7 @@ module.exports = {
           800: 'hsl(var(--color-secondary), calc(34% - 15%))',
           900: 'hsl(var(--color-secondary), calc(34% - 20%))',
         },
+        'base-0': '#292929',
         accent: '#37CDBE',
         neutral: '#3D4451',
         'base-100': '#FFFFFF',
@@ -53,13 +55,13 @@ module.exports = {
         ],
       },
       fontSize: {
-        sm: ['var(--fs-sm)', { lineHeight: '1.25rem' }],
-        base: ['var(--fs-base)', { lineHeight: '1.5rem' }],
-        lg: ['var(--fs-lg)', { lineHeight: '1.75rem' }],
-        xl: ['var(--fs-xl)', { lineHeight: '1.75rem' }],
-        '2xl': ['var(--fs-2xl)', { lineHeight: '2rem' }],
-        '3xl': ['var(--fs-3xl)', { lineHeight: '2.25rem' }],
-        '4xl': ['var(--fs-4xl)', { lineHeight: '2.5rem' }],
+        sm: ['var(--fs-sm)', { lineHeight: '1.5rem' }],
+        base: ['var(--fs-base)', { lineHeight: '1.688rem' }],
+        lg: ['var(--fs-lg)', { lineHeight: '2rem' }],
+        xl: ['var(--fs-xl)', { lineHeight: '2.313rem' }],
+        '2xl': ['var(--fs-2xl)', { lineHeight: '2.75rem' }],
+        '3xl': ['var(--fs-3xl)', { lineHeight: '3.25rem' }],
+        '4xl': ['var(--fs-4xl)', { lineHeight: '3.813rem' }],
       },
     },
   },

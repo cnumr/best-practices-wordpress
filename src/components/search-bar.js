@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from 'formik'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import React, { useState } from 'react'
+
 import { FaSearch } from 'react-icons/fa'
 import { useFlexSearch } from 'react-use-flexsearch'
 
@@ -37,7 +38,7 @@ function SearchBar() {
               />
               <button
                 type="submit"
-                className="small-primary-btn broder-white border"
+                className="small-primary-btn border-white border"
                 title="Rechercher"
                 disabled={!dirty}
               >
@@ -50,8 +51,9 @@ function SearchBar() {
                 <ul className="relative text-white lg:text-inherit">
                   {results.length > 0 ? (
                     <>
-                      {results.map(result => (
+                      {results.map((result, index) => (
                         <Link
+                          key={index}
                           to={result.path}
                           className="no-underline text-inherit font-medium"
                         >

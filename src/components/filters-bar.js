@@ -62,10 +62,10 @@ const FiltersBar = ({
   // Create button
   const getButton = (label, type, num) => {
     return (
-      <li key={label} className="list-none whitespace-nowrap ml-0 leading-none">
+      <li key={label} className="list-none whitespace-nowrap m-0 leading-none">
         <button
-          className={`cursor-pointer transition hover:underline ${
-            label === selectedFilter ? 'underline' : ''
+          className={`cursor-pointer badge text-sm transition hover:underline text-black ${
+            label === selectedFilter ? 'bg-primary-500 !text-white' : ''
           }`}
           onClick={() => filterList(label, type)}
         >{`${label} ${num ? `(${num})` : ``}`}</button>
@@ -94,8 +94,10 @@ const FiltersBar = ({
         )}
         {propertiesToMatch.map((item, index) => {
           return (
-            <li key={index} className="flex list-none gap-4 ml-0">
-              <span className="leading-none font-bold">{item.label}:</span>
+            <li key={index} className="flex list-none gap-4 m-0">
+              <span className="leading-none font-bold badge bg-transparent text-black text-sm p-1 mt-[5px] ml-1 inline-block">
+                {item.label}:
+              </span>
               <ul className="flex gap-2 flex-wrap items-start">
                 {getFilterButtons(multiplesTypes[item.label])}
               </ul>

@@ -1,7 +1,7 @@
 ---
 title: Low-code → Freelance et développeur Front-End d'agences
 path: /personas/Low-code → Freelance et développeur Front-End d'agences
-toIndex: false
+toIndex: true
 ---
 
 # Low-code → Freelance et développeur Front-End d'agences

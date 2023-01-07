@@ -22,6 +22,9 @@ function Seo({ description, lang, meta, title, location }) {
             description
             author
             seoImage
+            shareFB
+            shareTW
+            favicon
           }
         }
       }
@@ -30,7 +33,10 @@ function Seo({ description, lang, meta, title, location }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage = `${location.origin}${site.siteMetadata?.seoImage}`
+  const shareFB = `${location.origin}${site.siteMetadata?.shareFB}`
+  const shareTW = `${location.origin}${site.siteMetadata?.shareTW}`
   const defaultTitle = site.siteMetadata?.title
+  const favicon = site.siteMetadata?.favicon
 
   return (
     <Helmet
@@ -40,7 +46,8 @@ function Seo({ description, lang, meta, title, location }) {
       title={title}
       titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
       link={[
-        { rel: `image_src`, href: metaImage },
+        { rel: `image_src`, href: shareFB },
+        { rel: `icon`, href: favicon },
         { rel: `canonical`, href: location?.href },
       ]}
       meta={[
@@ -53,8 +60,20 @@ function Seo({ description, lang, meta, title, location }) {
           content: location.href,
         },
         {
-          name: `twitter:image`,
-          content: metaImage,
+          name: `og:site_name`,
+          content: defaultTitle,
+        },
+        {
+          name: `og:image`,
+          content: shareFB,
+        },
+        {
+          name: `og:image:width`,
+          content: `1200px`,
+        },
+        {
+          name: `og:image:height`,
+          content: `1200px`,
         },
         {
           property: `og:title`,
@@ -70,7 +89,7 @@ function Seo({ description, lang, meta, title, location }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -83,6 +102,10 @@ function Seo({ description, lang, meta, title, location }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: shareTW,
         },
       ].concat(meta)}
     />
