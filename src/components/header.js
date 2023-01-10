@@ -17,7 +17,7 @@ const Header = ({ className, repoURL, navigation }) => {
   return (
     <header
       className={classNames(
-        'min-h-[80px] px-4 lg:px-0 flex sticky z-20 top-0 bg-zinc-100 border-b-2 border-stone-200',
+        'min-h-[80px] px-4 lg:px-0 flex sticky z-20 top-0 border-b-2 border-neutral-light bg-neutral-DEFAUT',
         className
       )}
     >
@@ -26,14 +26,14 @@ const Header = ({ className, repoURL, navigation }) => {
           <div>
             <Link
               to="/"
-              className="no-underline text-inherit"
+              className="no-underline text-inherit text-white"
               title="Retour à l'accueil"
             >
-              <span>Les bonnes pratiques d'écoconception</span>
-              <br />
-              <span className="font-bold text-xl leading-none text-zinc-900">
-                WordPress
+              <span className="font-normal">
+                Les bonnes pratiques d'écoconception
               </span>
+              <br />
+              <span className="font-bold text-xl leading-none">WordPress</span>
             </Link>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Header = ({ className, repoURL, navigation }) => {
           <ul
             className={classNames(
               menuState,
-              `fixed top-0 right-0 px-10 py-16 bg-primary-500 z-50 lg:bg-transparent lg:relative flex flex-col lg:flex-row gap-4 lg:m-0 lg:p-0 lg:items-center`
+              `fixed top-0 right-0 px-10 py-16 bg-primary z-50 lg:bg-transparent lg:relative flex flex-col lg:flex-row gap-4 lg:m-0 lg:p-0 lg:items-center`
             )}
           >
             <li className="lg:hidden z-90 fixed top-5 right-5">
@@ -58,7 +58,7 @@ const Header = ({ className, repoURL, navigation }) => {
                   <Link
                     to={item.url}
                     title={item.title}
-                    className={`text-white lg:text-inherit text-xl lg:text-base no-underline text-inherit font-medium`}
+                    className={`text-white text-xl lg:text-base no-underline text-inherit font-medium`}
                   >
                     {item.label}
                   </Link>
@@ -69,12 +69,12 @@ const Header = ({ className, repoURL, navigation }) => {
               <SearchBar />
             </li>
             <li
-              className={`!m-0 border border-primary-600 lg:border-zinc-200 lg:h-7`}
+              className={`!m-0 border border-primary-focus lg:border-zinc-200 lg:h-7`}
             ></li>
             <li className="!m-0">
               <a
                 href={`${repoURL}/blob/main/CONTRIBUTING.md`}
-                className={`text-white lg:text-inherit text-xl lg:text-base no-underline text-inherit font-medium`}
+                className={`text-white text-xl lg:text-base no-underline text-inherit font-medium`}
                 target="_blank"
                 rel="noreferrer"
                 title="Voir la méthode de contribution sur le GitHub du CNUMR"
@@ -85,7 +85,7 @@ const Header = ({ className, repoURL, navigation }) => {
             <li className="!m-0">
               <a
                 href={repoURL}
-                className={`text-white lg:text-inherit text-xl lg:text-base no-underline text-inherit font-medium`}
+                className={`text-white text-xl lg:text-base no-underline text-inherit font-medium`}
                 target="_blank"
                 rel="noreferrer"
                 title="Voir le repository GitHub de CNUMR"
@@ -96,7 +96,7 @@ const Header = ({ className, repoURL, navigation }) => {
           </ul>
           <div className="flex items-center lg:hidden relative">
             <button
-              className="text-3xl text-zinc-900"
+              className="text-3xl text-white"
               onClick={() => toggleMenu()}
             >
               &#9776;
