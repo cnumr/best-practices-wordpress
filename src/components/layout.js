@@ -44,26 +44,33 @@ const Layout = ({ children }) => {
       <main className="mx-auto px-4 lg:px-0 lg:max-w-5xl my-8 min-h-[400px]">
         {children}
       </main>
-      <footer className="mx-auto px-4 pb-4 lg:px-0 lg:max-w-5xl">
-        © {new Date().getFullYear()} &middot; Built with
-        {` `}
-        <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com">
-          Gatsby
-        </a>{' '}
-        {` `} by{' '}
-        <a target="_blank" rel="noreferrer" href="https://www.greenit.fr">
-          CNUMR
-        </a>{' '}
-        -{' '}
-        <Link to="/pages/mentions-legales" title="Voir les mentions légales">
-          Mentions légales
-        </Link>
-        <Licence />
+      <footer className="mx-auto px-4 pb-4 lg:px-0 lg:max-w-5xl border-t-2 border-neutral-light pt-4 flex flex-col items-center gap-5 md:flex-row md:justify-between">
+        <div>
+          © {new Date().getFullYear()} &middot;
+          {` `}
+          Association Green IT
+          {` `}&middot;{' '}
+          <Link
+            to="/pages/mentions-legales"
+            title="Accéder aux mentions légales"
+          >
+            Mentions légales
+          </Link>
+          <Licence />
+        </div>
+        <div>
+          <a target="_blank" rel="noreferrer" href="https://www.greenit.fr/">
+            <img
+              src="/logo-asso-green-it.png"
+              alt="Logo association Green It"
+            />
+          </a>
+        </div>
       </footer>
 
       <a
         href="#top"
-        className="invisible lg:visible fixed bottom-4 right-4 rounded-full w-[3rem] h-[3rem] bg-primary hover:bg-primary-500 hover:text-white font-bold text-2xl flex items-center justify-center font-mono"
+        className="invisible lg:visible fixed bottom-4 right-4 rounded-full w-[3rem] h-[3rem] bg-primary-light hover:bg-primary hover:text-white font-bold text-2xl flex items-center justify-center font-mono"
       >
         ↑
       </a>
