@@ -62,13 +62,24 @@ const FiltersBar = ({
   // Create button
   const getButton = (label, type, num) => {
     return (
-      <li key={label} className="list-none whitespace-nowrap m-0 leading-none">
+      <li
+        key={label}
+        className="list-none whitespace-nowrap m-0 leading-none mb-4"
+      >
         <button
-          className={`cursor-pointer badge text-sm transition hover:underline text-black ${
+          className={`cursor-pointer badge text-sm transition hover:bg-primary-transparent text-neutral-DEFAUT ${
             label === selectedFilter ? 'bg-primary !text-white' : ''
           }`}
           onClick={() => filterList(label, type)}
-        >{`${label} ${num ? `(${num})` : ``}`}</button>
+        >
+          {label}
+          {` `}
+          {num ? (
+            <span className="font-normal opacity-80">{`(${num})`}</span>
+          ) : (
+            ``
+          )}
+        </button>
       </li>
     )
   }
@@ -95,10 +106,10 @@ const FiltersBar = ({
         {propertiesToMatch.map((item, index) => {
           return (
             <li key={index} className="flex list-none gap-4 m-0">
-              <span className="leading-none font-bold badge bg-transparent text-black text-sm p-1 mt-[5px] ml-1 inline-block">
-                {item.label}:
+              <span className="leading-none font-bold text-neutral-DEFAULT text-lg p-1 mt-[5px] ml-1 inline-block">
+                {item.label}
               </span>
-              <ul className="flex gap-2 flex-wrap items-start">
+              <ul className="flex gap-2 flex-wrap items-start mb-2">
                 {getFilterButtons(multiplesTypes[item.label])}
               </ul>
             </li>
