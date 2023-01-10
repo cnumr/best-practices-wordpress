@@ -80,12 +80,12 @@
 @layer components {
 
   /**** BOX ****/
-  // .box {
-  //   @apply rounded-lg bg-primary-transparent p-2 md:p-4 flex flex-col gap-1 border-2 border-primary;
-  // }
-  // .box.interactive {
-  //   @apply hover:bg-neutral-transparent hover:shadow-lg;
-  // }
+  .box {
+    @apply rounded-lg bg-primary-transparent p-2 md:p-4 flex flex-col gap-1 border-2 border-primary;
+  }
+  .box.interactive {
+    @apply hover:bg-neutral-transparent hover:shadow-lg;
+  }
 
  /**** TABLE ****/
   table {

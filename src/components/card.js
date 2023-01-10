@@ -26,7 +26,7 @@ function Card({
     <li className="box interactive">
       <Link
         to={`${markdownRemark.frontmatter.path}.md`}
-        className={classNames('flex ', {
+        className={classNames('flex no-underline', {
           'flex-row h-full items-center justify-between gap-2':
             display === Card.HORIZONTAL_LAYOUT,
           'flex-col h-full divide-y-2 divide-primary':
