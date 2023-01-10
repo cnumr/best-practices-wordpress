@@ -1,8 +1,8 @@
 import { Layout, Seo } from '../components'
+import { Link, graphql } from 'gatsby'
 
 import { FiGithub } from 'react-icons/fi'
 import React from 'react'
-import { graphql } from 'gatsby'
 
 function ActorsList({ actors }) {
   return (
@@ -86,9 +86,9 @@ export default function Home({ data, location }) {
           sur des outils existants et peuplant le web de manière conséquente.
         </p>
         <div className="text-center mt-12 mb-16">
-          <a href="/fiches" className="btn btn-outline">
+          <Link to="/lexique" className="btn btn-outline">
             Découvrez les bonnes pratiques
-          </a>
+          </Link>
         </div>
         <p>
           Nous avons conçu ces bonnes pratiques pour qu'elles soient autant
@@ -99,7 +99,7 @@ export default function Home({ data, location }) {
           </span>
           . Ainsi sur certaines bonnes pratiques, vous trouverez différents
           niveaux de solutions proposés en fonction de votre appétence pour le
-          design et le code ainsi qu'un <a href="/lexique">lexique</a>.
+          design et le code ainsi qu'un <Link to="/lexique">lexique</Link>.
         </p>
         <h2>Le contenu</h2>
         <p>
