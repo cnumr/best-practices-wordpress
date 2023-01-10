@@ -17,7 +17,7 @@ export default function Home({ data, location }) {
         description="Les Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
       />
       <main>
-        <h1>Fiches</h1>
+        <h1>Bonnes pratiques</h1>
         <FiltersBar
           fullList={data.fichesWP.nodes}
           propertiesToMatch={[
