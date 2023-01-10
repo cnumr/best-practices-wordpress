@@ -7,8 +7,10 @@
 @layer base {
   :root {
     /*Color*/
-    --color-primary: 147, 39%;
-    --color-secondary: 312, 25%;
+    --neutral: 0 0%;
+    --neutral-saturation: 16%;
+    --green: 143 96%;
+    --green-saturation: 25%;
 
     /*Font Size : https://www.fluid-type-scale.com/*/
     --fs-sm: clamp(0.85rem, -0.09vw + 0.87rem, 0.8rem);
@@ -30,23 +32,23 @@
   }
 
   html {
-    @apply bg-zinc-100 font-body text-base-0 text-base scroll-pt-24;
+    @apply bg-zinc-100 font-base text-neutral-DEFAUT text-base scroll-pt-24;
   }
   h1,
   h2,
   h3,
   h4 {
-    @apply mb-6 mt-8 font-medium text-primary-500;
+    @apply mb-6 mt-8 font-medium;
   }
   p,
-  li {
-    @apply leading-6 mb-6;
+  ul {
+    @apply mb-6;
   }
   h1 {
     @apply text-4xl font-bold mb-10 mt-10;
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold text-primary;
   }
   h3 {
     @apply text-xl font-bold;
@@ -55,7 +57,7 @@
     @apply text-lg;
   }
   a {
-    @apply font-bold;
+    @apply font-bold underline;
   }
 
   // prismjs
@@ -76,57 +78,85 @@
 
 /* components styles */
 @layer components {
-  main li {
-    @apply list-disc ml-8;
-  }
-  main .noliststyle li {
-    @apply list-none ml-0;
-  }
-  .box {
-    @apply rounded-md bg-primary p-2 md:p-4 flex flex-col gap-1 border-2 border-primary-500;
-  }
-  .box.interactive {
-    @apply hover:bg-stone-50 hover:shadow-lg;
-  }
+
+  /**** BOX ****/
+  // .box {
+  //   @apply rounded-lg bg-primary-transparent p-2 md:p-4 flex flex-col gap-1 border-2 border-primary;
+  // }
+  // .box.interactive {
+  //   @apply hover:bg-neutral-transparent hover:shadow-lg;
+  // }
+
+ /**** TABLE ****/
   table {
-    @apply w-full border-2 border-primary-500 rounded-md shadow-lg;
+    @apply w-full border-2 border-primary rounded-md shadow-lg;
     thead {
-      @apply bg-primary border-b-2 border-b-primary-500;
+      @apply bg-primary border-b-2 border-b-primary;
     }
     td {
       @apply p-4;
     }
   }
+
+  /**** GRID ****/
   .wp-grid {
     @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
   }
   .wp-list {
     @apply noliststyle flex flex-col gap-2;
   }
-  .btn {
-    @apply bg-primary-600 px-2 py-1 border rounded hover:drop-shadow-lg duration-100 text-white uppercase cursor-pointer;
+
+/**** LIST ****/
+.content ul, .markdown-content ul {
+  @apply list-none;
+}
+.content li, .markdown-content li {
+  @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-primary before:mr-2;
+  ul {
+    @apply ml-8;
+    li {
+      @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-transparent before:border-2 before:border-primary before:mr-2;
+    }
   }
+}
+
+main .noliststyle li {
+  @apply list-none ml-0;
+}
+
+
   input {
     @apply px-1;
   }
   .markdown-excerpt {
     @apply leading-5;
   }
-  .badge,
-  .badge.small {
-    @apply px-2 py-1 rounded-xl text-xs text-white font-medium font-mono;
+
+  /**** BADGE ****/
+  .badge {
+    @apply px-2 py-1 border-2 rounded-xl text-xs text-white font-bold whitespace-nowrap uppercase;
+  }
+
+
+  /**** BUTTON ****/
+  .btn {
+    @apply cursor-pointer normal-case p-3 px-4 rounded-lg no-underline hover:drop-shadow-lg duration-100;
+  }
+  .btn-bg {
+    @apply bg-primary hover:bg-primary-focus text-primary-content;
+  }
+  .btn-outline {
+    @apply border-primary border-2 bg-primary-transparent text-primary hover:bg-primary hover:text-white;
   }
   .small-primary-btn {
-    @apply bg-primary-500 hover:bg-primary-500 text-white cursor-pointer px-2 py-0 rounded-md text-sm;
+    @apply bg-primary hover:bg-primary text-white cursor-pointer px-2 py-0 rounded-md text-sm;
     &:disabled {
       @apply cursor-not-allowed opacity-50;
     }
   }
-  .btn {
-    @apply text-white cursor-pointer px-2 py-0 rounded-md;
-  }
+
   .tooltip {
-    @apply relative inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
+    @apply relative inline-block no-underline border-b  border-stone-800 border-dashed text-current font-normal;
     // .bottom {
     //   @apply min-w-300;
     // }
@@ -135,19 +165,13 @@
     &* {
       @apply whitespace-pre-wrap;
     }
-    blockquote {
-      @apply border-l-4 border-l-primary-500 p-4 text-base rounded bg-primary shadow mb-2;
-      p {
-        @apply my-0 text-base;
-      }
-    }
-    li {
-      @apply leading-3 mb-2;
-    }
-    li,
-    li p {
-      @apply text-base mb-2;
-    }
+    // blockquote {
+    //   @apply border-l-4 border-l-primary p-4 text-base rounded bg-primary shadow mb-2;
+    //   p {
+    //     @apply my-0 text-base;
+    //   }
+    // }
+
     a:not(.tooltip) {
       @apply underline;
     }

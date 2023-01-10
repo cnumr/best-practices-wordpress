@@ -36,7 +36,7 @@ function ContributeCTA({ sourceInstanceName, relativePath }) {
       break
   }
   return (
-    <div className="my-8 p-8 border-2 border-primary-500 rounded-md shadow-lg flex flex-col items-center gap-4">
+    <div className="my-8 p-8 border-2 border-primary rounded-md shadow-lg flex flex-col items-center gap-4">
       <div className="text-lg font-extrabold text-center">
         Vous avez repérez une coquille ou vous souhaitez contribuer à rendre
         WordPress plus éco-responsable ?
@@ -47,7 +47,7 @@ function ContributeCTA({ sourceInstanceName, relativePath }) {
       <a
         href={`${repoURL}/blob/${mainBanch}/${sourceInstanceName}/${relativePath}`}
         target={`_blank`}
-        className={`btn hover:px-5 p-3 flex gap-2 items-center !text-white`}
+        className={`btn btn-outline hover:px-5 p-3 flex gap-2 items-center`}
       >
         Voir {type} <FiGithub />
       </a>

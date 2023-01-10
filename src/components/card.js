@@ -29,7 +29,7 @@ function Card({
         className={classNames('flex ', {
           'flex-row h-full items-center justify-between gap-2':
             display === Card.HORIZONTAL_LAYOUT,
-          'flex-col h-full divide-y-2 divide-primary-500':
+          'flex-col h-full divide-y-2 divide-primary':
             display === Card.VERTICAL_LAYOUT,
         })}
         title={`Voir la fiche : ${markdownRemark.frontmatter.title}`}
@@ -38,7 +38,7 @@ function Card({
           {type === Card.FICHES ? (
             <h3 className="flex flex-col md:flex-row md:items-center">
               <span>
-                <span className="badge bg-primary-500 mr-2 text-xl whitespace-nowrap">
+                <span className="badge bg-primary mr-2 text-xl whitespace-nowrap">
                   BP {markdownRemark.frontmatter.title.slice(0, 4)}
                 </span>
               </span>

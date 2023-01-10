@@ -65,7 +65,7 @@ const FiltersBar = ({
       <li key={label} className="list-none whitespace-nowrap m-0 leading-none">
         <button
           className={`cursor-pointer badge text-sm transition hover:underline text-black ${
-            label === selectedFilter ? 'bg-primary-500 !text-white' : ''
+            label === selectedFilter ? 'bg-primary !text-white' : ''
           }`}
           onClick={() => filterList(label, type)}
         >{`${label} ${num ? `(${num})` : ``}`}</button>

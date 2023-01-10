@@ -40,7 +40,7 @@ function FichesMetasDisplay({ frontmatter, className, tableOfContents }) {
         <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
       </div> */}
       </div>
-      <details className="open:rounded-lg p-4 open:ring-2 open:ring-primary-500 open:bg-primary">
+      <details className="open:rounded-lg p-4 open:ring-2 open:ring-primary open:bg-primary">
         <summary className="font-black cursor-pointer">Sommaire</summary>
         <p dangerouslySetInnerHTML={{ __html: tableOfContents }} />
       </details>

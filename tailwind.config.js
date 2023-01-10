@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+// prettier-ignore
 module.exports = {
   content: {
     relative: true,
@@ -11,33 +12,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        neutral: {
+          DEFAUT: 'hsl(var(--neutral) var(--neutral-saturation))',
+          focus: 'hsl(var(--neutral) calc(var(--neutral-saturation) - 10%))',
+          dark: 'hsl(var(--neutral) 0%)',
+          light: 'hsla(var(--neutral) calc(var(--neutral-saturation) + 77% ))',
+          transparent: 'hsla(var(--neutral) var(--neutral-saturation) / 0.1)',
+          content: 'white',
+        },
         primary: {
-          DEFAULT: 'hsl(var(--color-primary), calc(36% + 50%))',
-          100: 'hsl(var(--color-primary), calc(36% + 20%))',
-          200: 'hsl(var(--color-primary), calc(36% + 15%))',
-          300: 'hsl(var(--color-primary), calc(36% + 10%))',
-          400: 'hsl(var(--color-primary), calc(36% + 5%))',
-          500: 'hsl(var(--color-primary), 36%)',
-          600: 'hsl(var(--color-primary), calc(36% - 5%))',
-          700: 'hsl(var(--color-primary), calc(36% - 10%))',
-          800: 'hsl(var(--color-primary), calc(36% - 15%))',
-          900: 'hsl(var(--color-primary), calc(36% - 20%))',
+          DEFAULT: 'hsl(var(--green) var(--green-saturation))',
+          focus: 'hsl(var(--green) calc(var(--green-saturation) - 5%))',
+          dark: 'hsl(var(--green) calc(var(--green-saturation) - 10%))',
+          light: 'hsla(var(--green) calc(var(--green-saturation) + 55% ))',
+          transparent: 'hsla(var(--green) var(--green-saturation) / 0.1)',
+          content: 'white',
         },
-        secondary: {
-          100: 'hsl(var(--color-secondary), calc(34% + 20%))',
-          200: 'hsl(var(--color-secondary), calc(34% + 15%))',
-          300: 'hsl(var(--color-secondary), calc(34% + 10%))',
-          400: 'hsl(var(--color-secondary), calc(34% + 5%))',
-          500: 'hsl(var(--color-secondary), 34%)',
-          600: 'hsl(var(--color-secondary), calc(34% - 5%))',
-          700: 'hsl(var(--color-secondary), calc(34% - 10%))',
-          800: 'hsl(var(--color-secondary), calc(34% - 15%))',
-          900: 'hsl(var(--color-secondary), calc(34% - 20%))',
-        },
-        'base-0': '#292929',
         accent: '#37CDBE',
-        neutral: '#3D4451',
-        'base-100': '#FFFFFF',
         info: '#3ABFF8',
         success: '#36D399',
         warning: '#FBBD23',
@@ -45,7 +36,7 @@ module.exports = {
         xiketic: '#171219',
       },
       fontFamily: {
-        body: [
+        base: [
           'RedHatDisplay',
           'Arial',
           'Helvetica',
@@ -66,11 +57,11 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms')],
-  purge: {
-    enabled: true,
-    content: [
-      './src/**/*.{js,jsx,ts,tsx,mdx}',
-      './plugins/**/*.{js,jsx,ts,tsx,mdx}',
-    ],
-  },
+  // purge: {
+  //   enabled: true,
+  //   content: [
+  //     './src/**/*.{js,jsx,ts,tsx,mdx}',
+  //     './plugins/**/*.{js,jsx,ts,tsx,mdx}',
+  //   ],
+  // },
 }
