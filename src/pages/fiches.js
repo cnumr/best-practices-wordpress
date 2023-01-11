@@ -30,6 +30,10 @@ export default function Home({ data, location }) {
               label: 'Priority Implementation',
               meta: 'childMarkdownRemark.frontmatter.priority_implementation',
             },
+            {
+              label: 'Lifecycle',
+              meta: 'childMarkdownRemark.frontmatter.lifecycle',
+            },
           ]}
           setList={setFichesWP}
           setBackToAllItems={setBackToAllFiches}
