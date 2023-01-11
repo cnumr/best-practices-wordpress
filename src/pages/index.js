@@ -86,7 +86,7 @@ export default function Home({ data, location }) {
           sur des outils existants et peuplant le web de manière conséquente.
         </p>
         <div className="text-center mt-12 mb-16">
-          <Link to="/lexique" className="btn btn-outline">
+          <Link to="/fiches" className="btn btn-outline">
             Découvrez les bonnes pratiques
           </Link>
         </div>
