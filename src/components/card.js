@@ -23,7 +23,7 @@ function Card({
   display = Card.VERTICAL_LAYOUT,
 }) {
   return (
-    <li className="box interactive">
+    <li className="box interactive py-2 md:py-6">
       <Link
         to={`${markdownRemark.frontmatter.path}.md`}
         className={classNames('flex no-underline', {
@@ -36,7 +36,7 @@ function Card({
       >
         <div className="flex flex-col justify-between h-full">
           {type === Card.FICHES ? (
-            <h3 className="flex flex-col md:flex-row md:items-center">
+            <h3 className="flex flex-col md:flex-row md:items-center mt-0">
               <span>
                 <span className="badge bg-primary mr-2 text-xl whitespace-nowrap">
                   BP {markdownRemark.frontmatter.title.slice(0, 4)}
@@ -45,7 +45,7 @@ function Card({
               <span>{markdownRemark.frontmatter.title.slice(5)}</span>
             </h3>
           ) : (
-            <h3>{markdownRemark.frontmatter.title}</h3>
+            <h3 className="mt-0">{markdownRemark.frontmatter.title}</h3>
           )}
           {type === Card.LEXIQUE ? (
             <div
@@ -54,13 +54,20 @@ function Card({
             />
           ) : (
             <></>
-            // <p className="markdown-excerpt">
-            //   {trimWikiLinks(markdownRemark.excerpt)}
-            // </p>
           )}
         </div>
         {type === Card.FICHES && (
-          <ul className="pt-4 flex flex-col gap-4">
+          <ul
+            className={classNames(
+              'mb-0 flex flex-col',
+              {
+                'gap-2 md:gap-4 pt-4': display === Card.VERTICAL_LAYOUT,
+              },
+              {
+                'gap-2': display === Card.HORIZONTAL_LAYOUT,
+              }
+            )}
+          >
             <MetaItem frontmatter={markdownRemark.frontmatter} meta="scope" />
             <MetaItem
               frontmatter={markdownRemark.frontmatter}

@@ -129,7 +129,7 @@ const FiltersBar = ({
 
   return (
     <nav className={classNames(className)}>
-      <ul className="flex flex-col gap-2 ">
+      <ul className="flex flex-col gap-2 w-full">
         {getButton(
           multiplesTypes[allItemsLabel].values,
           multiplesTypes[allItemsLabel].type,
@@ -151,7 +151,7 @@ const FiltersBar = ({
         <select
           id="filterSelect"
           onChange={e => filterSelect(e)}
-          className="lg:hidden"
+          className="lg:hidden w-full"
         >
           <option
             value={JSON.stringify({

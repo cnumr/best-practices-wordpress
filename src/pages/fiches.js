@@ -39,7 +39,7 @@ export default function Home({ data, location }) {
           setBackToAllItems={setBackToAllFiches}
           allItemsLabel="Toutes les fiches (RAZ)"
           itemsNotSetLabel="TBD"
-          className="my-8 flex flex-row flex-wrap justify-start gap-5"
+          className="my-2 lg:my-8 flex flex-row flex-wrap justify-start gap-5"
         />
         <ul className="wp-list">
           {fichesWP.map((fiche, index) => {
@@ -49,7 +49,7 @@ export default function Home({ data, location }) {
                   key={index}
                   markdownRemark={fiche.childMarkdownRemark}
                   type={Card.FICHES}
-                  display={Card.HORIZONTAL_LAYOUT}
+                  display={Card.VERTICAL_LAYOUT}
                 />
               )
             else return null
