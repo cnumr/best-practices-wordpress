@@ -47,8 +47,8 @@ const FiltersBar = ({
 
   // filter method
   const filterList = (type, propertyToMatch) => {
-    console.log(type, propertyToMatch)
-    setSelectedFilter(type)
+    // console.log(type, propertyToMatch)
+    setSelectedFilter(propertyToMatch + type)
     if (type === allItemsLabel) {
       setBackToAllItems()
     } else {
@@ -59,17 +59,30 @@ const FiltersBar = ({
     }
   }
 
+  // select method
+
+  const filterSelect = event => {
+    const obj = JSON.parse(event.target.value)
+    filterList(obj.type, obj.propertiesToMatch)
+  }
+
   // Create button
-  const getButton = (label, type, num) => {
+  const getButton = (label, type, num, className) => {
     return (
       <li
         key={label}
-        className="list-none whitespace-nowrap m-0 leading-none mb-4"
+        className={classNames(
+          className,
+          'list-none whitespace-nowrap m-0 leading-none mb-4'
+        )}
       >
         <button
-          className={`cursor-pointer badge text-sm transition hover:bg-primary-transparent text-neutral-DEFAUT ${
-            label === selectedFilter ? 'bg-primary !text-white' : ''
-          }`}
+          className={classNames(
+            `cursor-pointer badge text-sm transition hover:bg-primary-transparent text-neutral-DEFAUT`,
+            {
+              'bg-primary !text-white': type + label === selectedFilter,
+            }
+          )}
           onClick={() => filterList(label, type)}
         >
           {label}
@@ -85,27 +98,47 @@ const FiltersBar = ({
   }
   // Create button series from propertiesToMatch
   const getFilterButtons = object => {
-    const ouput = []
+    const output = []
     _.forEach(object.values, function (value, key) {
-      ouput.push(getButton(key, object.type, value))
+      output.push(getButton(key, object.type, value))
     })
-    return _.sortBy(ouput, [
+    return _.sortBy(output, [
       function (o) {
         return o.position
       },
     ])
   }
 
+  // Create OptionGroupes
+  const getOptions = object => {
+    const output = []
+    _.forEach(object.values, function (value, key) {
+      const val = { type: key, propertiesToMatch: object.type }
+      output.push(
+        <option
+          key={key}
+          // value={object.type}
+          value={JSON.stringify(val)}
+          label={`${key} (${value})`}
+          selected={selectedFilter === object.type + key || null}
+        />
+      )
+    })
+    return output
+  }
+
   return (
     <nav className={classNames(className)}>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-2 ">
         {getButton(
           multiplesTypes[allItemsLabel].values,
-          multiplesTypes[allItemsLabel].type
+          multiplesTypes[allItemsLabel].type,
+          null,
+          'hidden lg:inline-block'
         )}
         {propertiesToMatch.map((item, index) => {
           return (
-            <li key={index} className="flex list-none gap-4 m-0">
+            <li key={index} className="lg:flex hidden list-none gap-4 m-0">
               <span className="leading-none font-bold text-neutral-DEFAULT text-lg p-1 mt-[5px] ml-1 inline-block">
                 {item.label}
               </span>
@@ -115,6 +148,27 @@ const FiltersBar = ({
             </li>
           )
         })}
+        <select
+          id="filterSelect"
+          onChange={e => filterSelect(e)}
+          className="lg:hidden"
+        >
+          <option
+            value={JSON.stringify({
+              propertiesToMatch: multiplesTypes[allItemsLabel].type,
+              type: multiplesTypes[allItemsLabel].values,
+            })}
+          >
+            {multiplesTypes[allItemsLabel].values}
+          </option>
+          {propertiesToMatch.map((item, key) => {
+            return (
+              <optgroup key={key} label={item.label}>
+                {getOptions(multiplesTypes[item.label])}
+              </optgroup>
+            )
+          })}
+        </select>
       </ul>
     </nav>
   )
