@@ -32,7 +32,7 @@ const FiltersBar = ({
       position: position,
       type: element.meta,
     }
-    fullList.map(item => {
+    _.sortBy(fullList, element.meta).map(item => {
       const output = _.get(item, element.meta)
       // ordering
       if (multiplesTypes[element.label].values[output]) {
