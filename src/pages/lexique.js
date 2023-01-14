@@ -13,8 +13,8 @@ function Lexique({ data, location }) {
       />
       <main>
         <h1>Lexique</h1>
-        <ul className="wp-grid">
-          {data.lexiqueEntries.nodes.map((entry, index) => {
+        <ul>
+          {/* {data.lexiqueEntries.nodes.map((entry, index) => {
             if (entry.childMarkdownRemark?.frontmatter.path)
               return (
                 <Card
@@ -22,6 +22,23 @@ function Lexique({ data, location }) {
                   type={Card.LEXIQUE}
                   markdownRemark={entry.childMarkdownRemark}
                 />
+              )
+            else return null
+          })} */}
+          {data.lexiqueEntries.nodes.map((entry, index) => {
+            if (entry.childMarkdownRemark?.frontmatter.path)
+              return (
+                <li className="box pb-0 mb-6 border-neutral-transparent">
+                  <h2 className="text-neutral-DEFAUT mt-0 mb-4">
+                    {entry.childMarkdownRemark?.frontmatter.title}
+                  </h2>
+                  <div
+                    className="markdown-content"
+                    dangerouslySetInnerHTML={{
+                      __html: entry.childMarkdownRemark?.html,
+                    }}
+                  />
+                </li>
               )
             else return null
           })}
@@ -41,7 +58,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "lexique" }
         childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
       }
-      sort: { fields: childrenMarkdownRemark___frontmatter___title, order: ASC }
+      sort: { fields: name, order: ASC }
     ) {
       nodes {
         id

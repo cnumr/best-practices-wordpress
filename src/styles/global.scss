@@ -81,7 +81,7 @@
 
   /**** BOX ****/
   .box {
-    @apply rounded-lg bg-primary-transparent p-2 md:p-4 flex flex-col gap-1 border-2 border-primary;
+    @apply rounded-lg p-2 md:p-4 border-2 border-primary;
   }
   .box.interactive {
     @apply hover:bg-neutral-transparent hover:shadow-lg;
