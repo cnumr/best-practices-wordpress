@@ -11,22 +11,21 @@ export default function Home({ data, location }) {
         location={location}
         description="Les personas pour rendre WordPress plus respectueux de l'environnement."
       />
-      <main>
-        <h1>Personas</h1>
-        <ul className="wp-grid">
-          {data.personas.nodes.map((persona, index) => {
-            if (persona.childMarkdownRemark?.frontmatter.path)
-              return (
-                <Card
-                  key={index}
-                  type={Card.PERSONAS}
-                  markdownRemark={persona.childMarkdownRemark}
-                />
-              )
-            else return null
-          })}
-        </ul>
-      </main>
+
+      <h1>Personas</h1>
+      <ul className="wp-grid">
+        {data.personas.nodes.map((persona, index) => {
+          if (persona.childMarkdownRemark?.frontmatter.path)
+            return (
+              <Card
+                key={index}
+                type={Card.PERSONAS}
+                markdownRemark={persona.childMarkdownRemark}
+              />
+            )
+          else return null
+        })}
+      </ul>
     </Layout>
   )
 }

@@ -50,7 +50,7 @@ export default function Home({ data, location }) {
         location={location}
         description="Fiches pour rendre WordPress plus respectueux de l'environnement."
       />
-      <main className="content">
+      <div className="content">
         <h1>👋 Bienvenue sur le référentiel d'éconception WordPress</h1>
         <p className="font-bold">
           WordPress alimente plus d'un tier du web, 43% en octobre 2022 !
@@ -204,7 +204,7 @@ export default function Home({ data, location }) {
             </a>
           </i>
         </p>
-      </main>
+      </div>
     </Layout>
   )
 }
