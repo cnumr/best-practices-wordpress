@@ -6,34 +6,38 @@ function MarkdownDisplay({ type = 'personna', data, pageContext }) {
   const { markdownRemark, fields } = data // data.markdownRemark holds your post data
   const { frontmatter, tableOfContents, html } = markdownRemark
   return (
-    <section>
+    <article className="lg:grid lg:gap-4 lg:grid-cols-[1fr_5fr]">
       {type === Card.FICHES ? (
-        <h1 className="flex flex-col md:flex-row items-center">
-          <span className="badge bg-primary mr-2 text-2xl whitespace-nowrap">
-            BP {frontmatter.title.slice(0, 4)}
-          </span>
-          <span>{frontmatter.title.slice(5)}</span>
-        </h1>
+        <>
+          <i>
+            Mise à jour le{' '}
+            {new Date(fields?.gitUpdateTime).toLocaleDateString('fr')}
+          </i>
+          <h1 className="lg:col-span-2 flex flex-col lg:flex-row items-center lg:items-start">
+            <span className="badge bg-primary mr-2 text-xl lg:mt-[0.3rem]">
+              BP {frontmatter.title.slice(0, 4)}
+            </span>
+            <span>{frontmatter.title.slice(5)}</span>
+          </h1>
+        </>
       ) : (
         <h1>{frontmatter.title}</h1>
       )}
 
-      <span className="text-primary font-bold">
-        Mise à jour le{' '}
-        {new Date(fields?.gitUpdateTime).toLocaleDateString('fr')}
-      </span>
       {type === Card.FICHES && (
-        <FichesMetasDisplay
-          frontmatter={frontmatter}
-          tableOfContents={tableOfContents}
-          className="my-8"
-        />
+        <aside>
+          <FichesMetasDisplay
+            frontmatter={frontmatter}
+            tableOfContents={tableOfContents}
+            className=""
+          />
+        </aside>
       )}
       <div
         className="markdown-content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </section>
+    </article>
   )
 }
 

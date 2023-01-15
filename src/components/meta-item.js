@@ -14,12 +14,13 @@ function MetaItem({
       <li
         className={classNames('mt-0 mb-2', {
           'text-xs': fontSize === 'xs',
+          'text-sm': fontSize === 'sm',
         })}
       >
         {displayTitle === true && (
-          <strong className="capitalize">{meta.replace('_', ' ')}: </strong>
+          <strong className="capitalize">{meta.replace('_', ' ')} : </strong>
         )}
-        <ul className="ml-4 my-0">
+        <ul className="mb-0">
           {toDisplay.map((item, index) => {
             return (
               <li
@@ -38,10 +39,11 @@ function MetaItem({
       <li
         className={classNames('mt-0 mb-2 max-h-5 whitespace-nowrap', {
           'text-xs': fontSize === 'xs',
+          'text-sm': fontSize === 'sm',
         })}
       >
         {displayTitle === true && (
-          <strong className="capitalize">{meta.replace('_', ' ')}: </strong>
+          <strong className="capitalize">{meta.replace('_', ' ')} : </strong>
         )}
         {toDisplay || 'TBD'}
       </li>
