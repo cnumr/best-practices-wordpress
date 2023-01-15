@@ -44,7 +44,7 @@ function Card({
         {type === Card.FICHES ? (
           <section className="md:grid md:grid-cols-[2fr_1fr] md:grid-rows-2 md:gap-2 mt-0 text-neutral-DEFAUT text-lg font-bold mb-0">
             <h2 className="md:col-span-1 md:row-span-2 flex flex-row items-start text-neutral-DEFAUT text-lg font-bold m-0">
-              <span className="badge bg-primary border-primary mr-2 mt-[2px] whitespace-nowrap">
+              <span className="badge bg-primary border-primary mr-2 whitespace-nowrap">
                 BP {markdownRemark.frontmatter.title.slice(0, 4)}
               </span>
               <span>{markdownRemark.frontmatter.title.slice(5)}</span>

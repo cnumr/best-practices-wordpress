@@ -20,6 +20,10 @@
     --fs-2xl: clamp(1.62rem, 0.6vw + 1.47rem, 1.95rem);
     --fs-3xl: clamp(1.91rem, 0.97vw + 1.66rem, 2.44rem);
     --fs-4xl: clamp(2.24rem, 1.48vw + 1.87rem, 3.05rem);
+
+    /*Line height*/
+    --lh-2xl: clamp(2.3rem, 1.5499999999999996rem + 1.8750000000000007vw, 2.75rem);
+    --lh-4xl: clamp(2.5rem, 0.31166666666666654rem + 5.470833333333334vw, 3.813rem);
   }
 
   @font-face {
