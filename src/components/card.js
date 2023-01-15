@@ -22,8 +22,15 @@ function Card({
   type = Card.PERSONAS,
   display = Card.VERTICAL_LAYOUT,
 }) {
+  function cleanImpact(meta) {
+    return markdownRemark.frontmatter[`${meta}`].replace(
+      /Fort|Moyen|Faible/gi,
+      ' '
+    )
+  }
+
   return (
-    <li className="box interactive py-2 md:py-6">
+    <li className="box interactive border-neutral-transparent py-2 md:py-6 mb-4">
       <Link
         to={`${markdownRemark.frontmatter.path}.md`}
         className={classNames('flex no-underline', {
@@ -34,29 +41,55 @@ function Card({
         })}
         title={`Voir la fiche : ${markdownRemark.frontmatter.title}`}
       >
-        <div className="flex flex-col justify-between h-full">
-          {type === Card.FICHES ? (
-            <h3 className="flex flex-col md:flex-row md:items-center mt-0">
-              <span>
-                <span className="badge bg-primary mr-2 text-xl whitespace-nowrap">
-                  BP {markdownRemark.frontmatter.title.slice(0, 4)}
-                </span>
+        {type === Card.FICHES ? (
+          <section className="md:grid md:grid-cols-[2fr_1fr] md:grid-rows-2 md:gap-2 mt-0 text-neutral-DEFAUT text-lg font-bold mb-0">
+            <h2 className="md:col-span-1 md:row-span-2 flex flex-row items-start text-neutral-DEFAUT text-lg font-bold m-0">
+              <span className="badge bg-primary border-primary mr-2 mt-[2px] whitespace-nowrap">
+                BP {markdownRemark.frontmatter.title.slice(0, 4)}
               </span>
               <span>{markdownRemark.frontmatter.title.slice(5)}</span>
-            </h3>
-          ) : (
-            <h3 className="mt-0">{markdownRemark.frontmatter.title}</h3>
-          )}
-          {type === Card.LEXIQUE ? (
+            </h2>
+            <div className="flex flex-row items-center justify-end">
+              <span
+                aria-label={`Priorité d'implementation : ${
+                  markdownRemark.frontmatter[`priority_implementation`]
+                }`}
+                role="img"
+              >
+                {cleanImpact('priority_implementation')}
+              </span>{' '}
+              |
+              <span
+                aria-label={`Impact environnemental : ${
+                  markdownRemark.frontmatter[`environmental_impact`]
+                }`}
+                role="img"
+              >
+                {cleanImpact('environmental_impact')}
+              </span>
+            </div>
+            <div className="flex flex-row items-center justify-end mt-2 gap-2 md:mt-0 md:gap-4">
+              <span className="badge border-primary text-neutral-DEFAUT text-xs">
+                {markdownRemark.frontmatter.lifecycle}
+              </span>
+              <span className="badge border-primary text-neutral-DEFAUT text-xs">
+                {markdownRemark.frontmatter.scope}
+              </span>
+            </div>
+          </section>
+        ) : (
+          <h3 className="mt-0">{markdownRemark.frontmatter.title}</h3>
+        )}
+        {/* {type === Card.LEXIQUE ? (
             <div
               className="markdown-content"
               dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
             />
           ) : (
             <></>
-          )}
-        </div>
-        {type === Card.FICHES && (
+          )} */}
+
+        {/* {type === Card.FICHES && (
           <ul
             className={classNames(
               'mb-0 flex flex-col',
@@ -82,7 +115,7 @@ function Card({
               displayTitle
             />
           </ul>
-        )}
+        )} */}
       </Link>
     </li>
   )

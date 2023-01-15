@@ -13,6 +13,7 @@ const FiltersBar = ({
   className,
 }) => {
   const [selectedFilter, setSelectedFilter] = useState(allItemsLabel)
+  const [openFilters, setOpenFilters] = useState(false)
 
   //   construct dataset
   const multiplesTypes = {}
@@ -88,7 +89,7 @@ const FiltersBar = ({
           {label}
           {` `}
           {num ? (
-            <span className="font-normal opacity-80">{`(${num})`}</span>
+            <span className="font-normal opacity-80 text-xs">{`${num}`}</span>
           ) : (
             ``
           )}
@@ -128,49 +129,69 @@ const FiltersBar = ({
   }
 
   return (
-    <nav className={classNames(className)}>
-      <ul className="flex flex-col gap-2 w-full">
-        {getButton(
-          multiplesTypes[allItemsLabel].values,
-          multiplesTypes[allItemsLabel].type,
-          null,
-          'hidden lg:inline-block'
-        )}
-        {propertiesToMatch.map((item, index) => {
-          return (
-            <li key={index} className="lg:flex hidden list-none gap-4 m-0">
-              <span className="leading-none font-bold text-neutral-DEFAULT text-lg p-1 mt-[5px] ml-1 inline-block">
-                {item.label}
-              </span>
-              <ul className="flex gap-2 flex-wrap items-start mb-2">
-                {getFilterButtons(multiplesTypes[item.label])}
-              </ul>
-            </li>
-          )
-        })}
-        <select
-          id="filterSelect"
-          onChange={e => filterSelect(e)}
-          className="lg:hidden w-full"
-        >
-          <option
-            value={JSON.stringify({
-              propertiesToMatch: multiplesTypes[allItemsLabel].type,
-              type: multiplesTypes[allItemsLabel].values,
-            })}
+    <>
+      <button
+        className={`hidden lg:inline-block btn font-bold text-primary`}
+        onClick={() => setOpenFilters(!openFilters)}
+      >
+        {`${openFilters ? 'Masquer' : 'Afficher'} les filtres `}
+        <span>{openFilters ? '↑' : '↓'}</span>
+      </button>
+      <nav
+        className={classNames(className)}
+        aria-label="Filtres des bonnes pratiques"
+      >
+        <ul className="flex flex-col gap-2 w-full">
+          {openFilters && (
+            <>
+              {getButton(
+                multiplesTypes[allItemsLabel].values,
+                multiplesTypes[allItemsLabel].type,
+                null,
+                'hidden lg:inline-block'
+              )}
+              {propertiesToMatch.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="lg:flex hidden list-none gap-4 m-0"
+                  >
+                    <span className="leading-none font-bold text-neutral-DEFAULT text-lg p-1 mt-[5px] ml-1 inline-block">
+                      {item.label}
+                    </span>
+                    <ul className="flex gap-2 flex-wrap items-start mb-2">
+                      {getFilterButtons(multiplesTypes[item.label])}
+                    </ul>
+                  </li>
+                )
+              })}
+            </>
+          )}
+          <select
+            id="filterSelect"
+            onChange={e => filterSelect(e)}
+            className="lg:hidden w-full"
+            aria-label="Sélectionner un filtre"
           >
-            {multiplesTypes[allItemsLabel].values}
-          </option>
-          {propertiesToMatch.map((item, key) => {
-            return (
-              <optgroup key={key} label={item.label}>
-                {getOptions(multiplesTypes[item.label])}
-              </optgroup>
-            )
-          })}
-        </select>
-      </ul>
-    </nav>
+            <option
+              value={JSON.stringify({
+                propertiesToMatch: multiplesTypes[allItemsLabel].type,
+                type: multiplesTypes[allItemsLabel].values,
+              })}
+            >
+              {multiplesTypes[allItemsLabel].values}
+            </option>
+            {propertiesToMatch.map((item, key) => {
+              return (
+                <optgroup key={key} label={item.label}>
+                  {getOptions(multiplesTypes[item.label])}
+                </optgroup>
+              )
+            })}
+          </select>
+        </ul>
+      </nav>
+    </>
   )
 }
 
