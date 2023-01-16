@@ -4,7 +4,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 function Lexique({ data, location }) {
-  console.log('data.lexiqueEntries.nodes :>> ', data.lexiqueEntries.nodes)
+  // console.log('data.lexiqueEntries.nodes :>> ', data.lexiqueEntries.nodes)
 
   const byGroup = data.lexiqueEntries.nodes.reduce((r, a) => {
     r[a.name.slice(0, 1)] = [...(r[a.name.slice(0, 1)] || []), a]
@@ -39,7 +39,7 @@ function Lexique({ data, location }) {
       </ul>
       <ul>
         {Object.entries(byGroup).map((entry, index) => {
-          console.log('entry[0] :>> ', entry[0])
+          // console.log('entry[0] :>> ', entry[0])
           return (
             <li key={`lexique-${index}-${entry[0]}`}>
               <ul id={`${entry[0]}`}>
