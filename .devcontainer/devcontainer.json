@@ -16,6 +16,9 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": ". .devcontainer/install.sh",
 
+  // https://www.kenmuse.com/blog/avoiding-dubious-ownership-in-dev-containers/
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+
   // Configure tool-specific properties.
   "customizations": {
     // Configure properties specific to VS Code.
