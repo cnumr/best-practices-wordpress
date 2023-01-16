@@ -36,7 +36,7 @@ function MetaItem({
   } else
     return (
       <li
-        className={classNames('mt-0 mb-2 max-h-5 whitespace-nowrap', {
+        className={classNames('mt-0 mb-2 last:mb-0 max-h-5 whitespace-nowrap', {
           'text-xs': fontSize === 'xs',
         })}
       >
