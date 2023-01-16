@@ -4,7 +4,10 @@ import classNames from 'classnames'
 
 function InternalNav({ pageContext, previous, next, className }) {
   return (
-    <nav className={classNames('blog-post-nav border-t-2 pt-4', className)}>
+    <nav
+      className={classNames('blog-post-nav border-t-2 pt-4', className)}
+      aria-label="Naviagtion entre les bonnes pratiques"
+    >
       <ul
         className={classNames('grid noliststyle', {
           'grid-cols-3': previous && next,

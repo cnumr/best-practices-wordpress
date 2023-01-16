@@ -24,31 +24,30 @@ function Recherche({ location }) {
         location={location}
         description="Rechercher des personas ou des fiches de fonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
       />
-      <main>
-        <h1>Recherche de fiches & personnnas</h1>
-        <Formik
-          initialValues={{ query: '' }}
-          onSubmit={(values, { setSubmitting }) => {
-            setQuery(values.query)
-            setSubmitting(false)
-          }}
-        >
-          <Form className="flex gap-2 mb-8">
-            <Field name="query" className="ring-1" />
-            <button type="submit" className="btn">
-              Rechercher
-            </button>
-          </Form>
-        </Formik>
-        {results.length > 0 && <h2>Résultats:</h2>}
-        <ul>
-          {results.map(result => (
-            <li key={result.id}>
-              <Link to={result.path}>{result.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </main>
+
+      <h1>Recherche de fiches & personnnas</h1>
+      <Formik
+        initialValues={{ query: '' }}
+        onSubmit={(values, { setSubmitting }) => {
+          setQuery(values.query)
+          setSubmitting(false)
+        }}
+      >
+        <Form className="flex gap-2 mb-8">
+          <Field name="query" className="ring-1" />
+          <button type="submit" className="btn">
+            Rechercher
+          </button>
+        </Form>
+      </Formik>
+      {results.length > 0 && <h2>Résultats:</h2>}
+      <ul>
+        {results.map(result => (
+          <li key={result.id}>
+            <Link to={result.path}>{result.title}</Link>
+          </li>
+        ))}
+      </ul>
     </Layout>
   )
 }

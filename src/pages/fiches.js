@@ -16,46 +16,45 @@ export default function Home({ data, location }) {
         location={location}
         description="Les Fiches de Bonnes pratiques pour rendre WordPress plus respectueux de l'environnement."
       />
-      <main>
-        <h1>Bonnes pratiques</h1>
-        <FiltersBar
-          fullList={data.fichesWP.nodes}
-          propertiesToMatch={[
-            { label: 'Scope', meta: 'childMarkdownRemark.frontmatter.scope' },
-            {
-              label: 'Environmental Impact',
-              meta: 'childMarkdownRemark.frontmatter.environmental_impact',
-            },
-            {
-              label: 'Priority Implementation',
-              meta: 'childMarkdownRemark.frontmatter.priority_implementation',
-            },
-            {
-              label: 'Lifecycle',
-              meta: 'childMarkdownRemark.frontmatter.lifecycle',
-            },
-          ]}
-          setList={setFichesWP}
-          setBackToAllItems={setBackToAllFiches}
-          allItemsLabel="Toutes les fiches (RAZ)"
-          itemsNotSetLabel="TBD"
-          className="my-2 lg:my-8 flex flex-row flex-wrap justify-start gap-5"
-        />
-        <ul className="wp-list">
-          {fichesWP.map((fiche, index) => {
-            if (fiche.childMarkdownRemark?.frontmatter.path)
-              return (
-                <Card
-                  key={index}
-                  markdownRemark={fiche.childMarkdownRemark}
-                  type={Card.FICHES}
-                  display={Card.VERTICAL_LAYOUT}
-                />
-              )
-            else return null
-          })}
-        </ul>
-      </main>
+
+      <h1>Bonnes pratiques</h1>
+      <FiltersBar
+        fullList={data.fichesWP.nodes}
+        propertiesToMatch={[
+          {
+            label: 'Lifecycle',
+            meta: 'childMarkdownRemark.frontmatter.lifecycle',
+          },
+          { label: 'Scope', meta: 'childMarkdownRemark.frontmatter.scope' },
+          {
+            label: 'Environmental Impact',
+            meta: 'childMarkdownRemark.frontmatter.environmental_impact',
+          },
+          {
+            label: 'Priority Implementation',
+            meta: 'childMarkdownRemark.frontmatter.priority_implementation',
+          },
+        ]}
+        setList={setFichesWP}
+        setBackToAllItems={setBackToAllFiches}
+        allItemsLabel="Toutes les fiches (RAZ)"
+        itemsNotSetLabel="TBD"
+        className="my-2 lg:my-8 flex flex-row flex-wrap justify-start gap-5"
+      />
+      <ul className="wp-list">
+        {fichesWP.map((fiche, index) => {
+          if (fiche.childMarkdownRemark?.frontmatter.path)
+            return (
+              <Card
+                key={index}
+                markdownRemark={fiche.childMarkdownRemark}
+                type={Card.FICHES}
+                display={Card.VERTICAL_LAYOUT}
+              />
+            )
+          else return null
+        })}
+      </ul>
     </Layout>
   )
 }

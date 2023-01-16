@@ -30,19 +30,18 @@ export default function FichesDisplay({
         location={location}
         description={excerpt}
       />
-      <article className="blog-post-container">
-        <MarkdownDisplay data={fiche} pageContext={pageContext} type="fiches" />
-        <ContributeCTA
-          relativePath={relativePath}
-          sourceInstanceName={sourceInstanceName}
-        />
-        <InternalNav
-          className="mt-8"
-          pageContext={pageContext}
-          next={next}
-          previous={previous}
-        />
-      </article>
+
+      <MarkdownDisplay data={fiche} pageContext={pageContext} type="fiches" />
+      <ContributeCTA
+        relativePath={relativePath}
+        sourceInstanceName={sourceInstanceName}
+      />
+      <InternalNav
+        className="mt-8"
+        pageContext={pageContext}
+        next={next}
+        previous={previous}
+      />
     </Layout>
   )
 }

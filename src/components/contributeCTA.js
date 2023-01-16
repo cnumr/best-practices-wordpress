@@ -36,7 +36,7 @@ function ContributeCTA({ sourceInstanceName, relativePath }) {
       break
   }
   return (
-    <div className="my-8 p-8 border-2 border-primary rounded-md shadow-lg flex flex-col items-center gap-4">
+    <div className="box mt-20 mb-8 p-8 shadow-lg flex flex-col items-center gap-4">
       <div className="text-lg font-extrabold text-center">
         Vous avez repérez une coquille ou vous souhaitez contribuer à rendre
         WordPress plus éco-responsable ?

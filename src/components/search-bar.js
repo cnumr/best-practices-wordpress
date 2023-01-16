@@ -35,11 +35,13 @@ function SearchBar() {
               <Field
                 name="query"
                 className="rounded-md border-b-2 broder-neutral-light"
+                aria-label="Champ de recherche"
               />
               <button
                 type="submit"
                 className="small-primary-btn"
                 title="Rechercher"
+                aria-label="Search"
                 disabled={!dirty}
               >
                 <FaSearch />

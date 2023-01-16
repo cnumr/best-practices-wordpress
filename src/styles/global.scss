@@ -20,6 +20,10 @@
     --fs-2xl: clamp(1.62rem, 0.6vw + 1.47rem, 1.95rem);
     --fs-3xl: clamp(1.91rem, 0.97vw + 1.66rem, 2.44rem);
     --fs-4xl: clamp(2.24rem, 1.48vw + 1.87rem, 3.05rem);
+
+    /*Line height*/
+    --lh-2xl: clamp(2.3rem, 1.5499999999999996rem + 1.8750000000000007vw, 2.75rem);
+    --lh-4xl: clamp(2.5rem, 0.31166666666666654rem + 5.470833333333334vw, 3.813rem);
   }
 
   @font-face {
@@ -32,7 +36,9 @@
   }
 
   html {
-    @apply bg-zinc-100 font-base text-neutral-DEFAUT text-base scroll-pt-24;
+    @apply bg-zinc-100 font-base text-neutral-DEFAUT text-base scroll-pt-24 scroll-smooth;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
   h1,
   h2,
@@ -81,21 +87,32 @@
 
   /**** BOX ****/
   .box {
-    @apply rounded-lg bg-primary-transparent p-2 md:p-4 flex flex-col gap-1 border-2 border-primary;
+    @apply rounded-lg p-2 md:p-4 border-2 border-primary;
   }
   .box.interactive {
-    @apply hover:bg-neutral-transparent hover:shadow-lg;
+    @apply hover:bg-neutral-transparent hover:shadow-lg hover:border-primary;
   }
 
  /**** TABLE ****/
   table {
-    @apply w-full border-2 border-primary rounded-md shadow-lg;
+    @apply w-full table-fixed rounded-lg border-2 border-primary font-medium break-words;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     thead {
-      @apply bg-primary border-b-2 border-b-primary;
+      @apply bg-primary-transparent text-primary text-center;
+    }
+    th{
+      @apply p-2 border-2 border-primary
     }
     td {
-      @apply p-4;
+      @apply p-2 border-2 border-primary;
     }
+    tr:nth-child(even){
+      @apply bg-neutral-transparent;
+    }
+    // tr td:last-of-type {
+    //   @apply font-bold;
+    // }
   }
 
   /**** GRID ****/
@@ -106,36 +123,37 @@
     @apply noliststyle flex flex-col gap-2;
   }
 
-/**** LIST ****/
-.content ul, .markdown-content ul {
-  @apply list-none;
-}
-.content li, .markdown-content li {
-  @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-primary before:mr-2;
-  ul {
-    @apply ml-8;
-    li {
-      @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-transparent before:border-2 before:border-primary before:mr-2;
+  /**** LIST ****/
+  .content ul, .markdown-content ul {
+    @apply list-none break-words;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  .content li, .markdown-content li {
+    @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-primary before:mr-2;
+    ul {
+      @apply ml-8;
+      li {
+        @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-transparent before:border-2 before:border-primary before:mr-2;
+      }
     }
   }
-}
-
-main .noliststyle li {
-  @apply list-none ml-0;
-}
-
-
-  input {
-    @apply px-1;
-  }
-  .markdown-excerpt {
-    @apply leading-5;
+  main .noliststyle li {
+    @apply list-none ml-0;
   }
 
-  /**** BADGE ****/
-  .badge {
-    @apply px-2 py-1 border-2 rounded-xl text-xs text-white font-bold whitespace-nowrap uppercase;
-  }
+  /**** FORM ****/
+    input {
+      @apply px-1;
+    }
+    .markdown-excerpt {
+      @apply leading-5;
+    }
+
+    /**** BADGE ****/
+    .badge {
+      @apply px-2 py-1 border-2 rounded-xl text-xs text-white font-bold whitespace-nowrap uppercase;
+    }
 
 
   /**** BUTTON ****/
@@ -155,33 +173,50 @@ main .noliststyle li {
     }
   }
 
+  /**** TOOLTIP ****/
   .tooltip {
-    @apply relative inline-block no-underline border-b  border-stone-800 border-dashed text-current font-normal;
-    // .bottom {
-    //   @apply min-w-300;
-    // }
+    @apply relative inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
   }
+
+    /**** CONTENT ****/
   .markdown-content {
     &* {
       @apply whitespace-pre-wrap;
     }
-    // blockquote {
-    //   @apply border-l-4 border-l-primary p-4 text-base rounded bg-primary shadow mb-2;
-    //   p {
-    //     @apply my-0 text-base;
-    //   }
+
+    /**** BLOCKQUOTE ****/
+    blockquote {
+      @apply rounded-lg p-2 md:p-4 border-2 border-primary bg-primary-transparent;
+      p {
+        @apply my-0 text-base;
+      }
+    }
+
+    /**** CODE ****/
+    // :not(pre) > code[class*='language-'],
+    // code[class*='language-'],
+    // pre[class*='language-'] {
+    //   @apply bg-neutral-DEFAUT;
     // }
 
     a:not(.tooltip) {
       @apply underline;
     }
-    :not(pre) > code[class*='language-'],
-    code[class*='language-'],
-    pre[class*='language-'] {
-      @apply bg-white;
-    }
+  }
+
+  /**** SUMMARY ARTICLE ****/
+  .summary-article ul, .summary-article ul ul, .summary-article p{
+    @apply mb-0;
+  }
+  .summary-article ul ul{
+    @apply pl-2;
+  }
+  .summary-article a{
+    @apply hover:text-primary font-normal;
   }
 }
+
+
 
 .tooltip .bottom {
   min-width: 300px;

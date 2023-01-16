@@ -37,7 +37,7 @@ const Header = ({ className, repoURL, navigation }) => {
             </Link>
           </div>
         </div>
-        <nav>
+        <nav aria-label="Navigation principale">
           <ul
             className={classNames(
               menuState,
