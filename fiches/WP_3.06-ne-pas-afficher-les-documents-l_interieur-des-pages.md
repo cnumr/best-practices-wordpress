@@ -16,16 +16,16 @@ toIndex: true
 
 ## Sujet
 
-Lorsqu'un utilisateur affiche une page web permettant de visualiser un document (quel que soit son type : PDF, doc, xls, etc.), le chargement peut être non voulu. **Le téléchargement d'un document doit-être une décision volontaire et non imposée.**
-Si l'utilisateur ne consent pas, c'est-à-dire qu'il n'a nullement l'intention de lire ou d'utiliser le document, ce téléchargement imposé représente un poids numérique, donc environnemental inutile qui sera renouvelé à chaque ouverture de la page puisque le document sera de nouveau chargé.
+Lorsqu'un utilisateur affiche une page web permettant de visualiser un document (quel que soit son type : PDF, doc, xls, etc.), le chargement peut être non voulu. **Le téléchargement d'un document doit être une décision volontaire et non imposée.**
+Si l'utilisateur n'y consent pas, c'est-à-dire qu'il n'a nullement l'intention de lire ou d'utiliser le document, ce téléchargement imposé représente un poids numérique (donc environnemental) inutile qui sera renouvelé à chaque ouverture de la page puisque le document sera de nouveau chargé.
 
-Un autre point non négligeable est l'incapacité pour certains navigateurs à prendre en charge cet affichage directement dans la page. En effet pour compenser cela, il faudra ajouter le système de lecture directement dans votre site, et donc alourdir encore les ressources demandées par la page.
+Un autre point non négligeable est l'incapacité pour certains navigateurs à prendre en charge cet affichage directement dans la page. En effet pour compenser cela, il faudra ajouter le système de lecture directement dans votre site, et donc alourdir encore les ressources demandées par la page. Sans compte l'impact négatif pour des utilisateurs en connectivité limitée ou s'appuyant sur des outils supplémentaires tels que des lecteurs d'écran.
 
 ## GreenIT vous conseille
 
-- Proposez vos documents via un lien de téléchargements (bloc fichier dans l'éditeur Gutenberg)
+- Proposer vos documents via un lien de téléchargement (bloc fichier dans l'éditeur Gutenberg)
 - Optimiser et compresser vos documents PDF à télécharger (compresser vos documents avec des outils lors de l'export de ce dernier)
-- Notifier le poids du document à côté du lien de téléchargement, ainsi que son extension
+- Notifier le poids du document à côté du lien de téléchargement, ainsi que son extension (et la langue de son contenu si elle différe de celle de la page)
 - Proposer un résumé du document à télécharger afin d'éviter les téléchargements inutiles
 - Pour les documents volumineux, proposer deux versions en téléchargement (une légère et une intégrale).
 

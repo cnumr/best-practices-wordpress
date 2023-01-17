@@ -19,12 +19,12 @@ toIndex: true
 
 ==Les vidéos en ligne représentent 60 % du flux mondial de données et sont responsables de près de 1 % des émissions mondiales de gaz à effet de serre <sup>(1)</sup>.==
 
-Par ailleurs, les règles de qualité web indiquent qu'un contenu vidéo ou audio doit être accompagné de sa transcription textuelle. Il est également recommandé de laisser le visiteur du site activer la lecture des contenus multimédias, s'il le souhaite.
+Par ailleurs, les règles de qualité web indiquent qu'un contenu vidéo ou audio doit être accompagné de sa transcription textuelle. Il est également recommandé de laisser le visiteur du site activer la lecture des contenus multimédias, s'il le souhaite (notamment pour des raisons d'accessibilité mais aussi de performance).
 
 ## GreenIT vous conseille
 
 1.  Lors de la création de vos vidéos, limitez leur poids ([Compresser les médias](./WP_5.01-compresser-les-medias.md))
-2.  Afin de limiter le flux des vidéos, n'incluez des vidéos que lorsque cela est nécessaire, c'est-à-dire, quand une vidéo est une plus-value pour le contenu et/ou pour la compréhension de l'utilisateur
+2.  Afin de limiter le flux des vidéos, n'incluez des vidéos que lorsque cela est nécessaire, c'est-à-dire, quand une vidéo représente une plus-value pour le contenu et/ou pour la compréhension de l'utilisateur
 3.  N'utilisez pas de vidéos en fond ou tout simplement comme élément décoratif (voire point 2)
 4.  Préférez ne charger la vidéo que lorsque le visiteur en fait la demande
 5.  N'activez pas la lecture automatique des vidéos
@@ -47,3 +47,5 @@ Pour ne charger la vidéo que quand l'utilisateur en fait la demande, il existe 
 
 1. Note 1 : La face cachée du numérique (page 16) : <https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf>
 2. Note 2 : <https://woofrance.fr/plugins-lazy-load-gratuits-wordpress-rapide/>
+3. Intégrer un service tiers : est-ce dangereux pour la vie privée de vos visiteurs, quel impact pour l’environnement ? Le cas Youtube (Greenspector) : https://greenspector.com/fr/service-tiers-youtube/
+4. Comment réduire en 5 minutes le poids d'une vidéo tout en gardant une bonne qualité : https://theshiftproject.org/guide-reduire-poids-video-5-minutes/ 

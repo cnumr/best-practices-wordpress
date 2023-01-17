@@ -18,7 +18,7 @@ toIndex: true
 ## Sujet
 
 La question des constructeurs de pages est au cœur de l'intégration de votre contenu, voire même de la construction de votre thème. Avant le développement de votre projet, vous devez réfléchir à la stratégie d'édition de contenu. Par défaut, WordPress fonctionne avec l'éditeur Gutenberg.
-Un constructeur de pages additionnel (par ex. Elementor, Divi, GeneratePress etc.) va "enrichir" les possibilités de mise en page, mais il va surtout **alourdir** de manière très conséquente le poids des pages en surchargeant le CSS et **complexifier** la structure HTML de votre page. En adoptant le ["Mobil first"](./WP_3.07-concevoir-vos-sites-en-mobile-first.md), les mises en pages complexes et animées proposées par Elementor sembleront beaucoup moins utiles et attrayantes dégradant l'expérience utilisateur.
+Un constructeur de pages additionnel (par ex. Elementor, Divi, GeneratePress etc.) va "enrichir" les possibilités de mise en page, mais il va surtout **alourdir** de manière très conséquente le poids des pages en surchargeant le CSS et **complexifier** la structure HTML de votre page. En adoptant le ["Mobil first"](./WP_3.07-concevoir-vos-sites-en-mobile-first.md), les mises en pages complexes et animées proposées par Elementor sembleront beaucoup moins utiles et attrayantes, allant jusqu'à dégrader l'expérience utilisateur.
 
 ## GreenIT vous conseille
 

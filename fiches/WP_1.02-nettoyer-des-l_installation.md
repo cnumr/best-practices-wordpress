@@ -31,14 +31,14 @@ Pour éviter cette surcharge initiale, dès l'installation en [[local]] ou en li
 - Dans les actualités et les pages, il existe un premier article d'exemple et une page d'exemple, que vous pouvez supprimer définitivement ;
 - L'extension Hello Dolly peut être supprimée, elle n'apporte aucune fonctionnalité essentielle.
 - Si vous n'avez pas l'utilité des commentaires sur votre site, désactivez-les et supprimez l'extension Akismet Anti-spam ;
-- WordPress permet de lire les emoticons (ex : :), ;), :D, etc.) pour les afficher émojis pour les visiteurs, si vous n'en avez pas l'utilité, désactivez cette fonctionnalité.
-- Gutemberg anticipe l'affichage de son système de dégradé en [[front-office|front]], si votre charte graphique n'en prévoit pas, vous pouvez nettoyer la structure HTML de ces éléments superflus.
+- WordPress permet de lire les emoticons (ex : :), ;), :D, etc.) pour les afficher sous forme d'émojis pour les visiteurs. Si vous n'en avez pas l'utilité, désactivez cette fonctionnalité.
+- Gutemberg anticipe l'affichage de son système de dégradé en [[front-office|front]]. Si votre charte graphique n'en prévoit pas, vous pouvez nettoyer la structure HTML de ces éléments superflus.
 
 ### Solution no-code 🌱🌱
 
 **Pour désactiver les commentaires pour des contenus spécifiques**, rendez-vous dans la zone "Discussion" du contenu, puis décochez la case "Autoriser les commentaires"
 
-**Pour désactiver les commentaires de tout le site en [[front-office|front]]**, rendez-vous dans "Réglages > Commentaires > Réglages de publication par défaut", commencez par décocher les cases précochées, aussi décochez la case "Afficer les avatars". Ensuite, il existe des extensions qui permettent de désactiver complètement les commentaires. Ainsi, la fonctionnalité n'apparaitra ni pour les visiteurs ni dans l'administration.
+**Pour désactiver les commentaires de tout le site en [[front-office|front]]**, rendez-vous dans "Réglages > Commentaires > Réglages de publication par défaut", commencez par décocher les cases précochées, aussi décochez la case "Afficher les avatars". Ensuite, il existe des extensions qui permettent de désactiver complètement les commentaires. Ainsi, la fonctionnalité n'apparaîtra ni pour les visiteurs ni dans l'administration.
 
 **Pour désactiver complètement la fonctionnalité commentaire**, utilisez une extension dédiée (vérifiez que ce paramétrage n'est pas disponible dans une autre extension déjà présente).
 
@@ -61,7 +61,7 @@ Ajoutez ce code dans le fichier functions.php de votre thème enfant :
 
 **Pour désactiver les commentaires de tout le site en [[front-office|front]]**, créez votre thème enfant et surchargez les fichiers page.php et single.php pour ne plus appeler la fonction `comments_template()`;
 
-**Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source citée.
+**Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source cité en bas de cette page.
 
 ## Principe de validation
 

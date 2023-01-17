@@ -16,15 +16,15 @@ toIndex: true
 
 ## Sujet
 
-Il est répandu de trouver un formulaire de contact, sur une page dédiée ou sur toutes les pages (dans le pied de page) d'un site. Cela peut-être au bénéfice de votre organisation, mais souvent au détriment de l'utilisateur et/ou de la législation (RGPD).
+Il est répandu de trouver un formulaire de contact, sur une page dédiée ou sur toutes les pages (dans le pied de page) d'un site. Cela peut être au bénéfice de votre organisation, mais souvent au détriment de l'utilisateur et/ou de la législation (RGPD).
 
-Comme pour toute fonctionnalité ajoutée à votre site, il est essentiel de s'interroger sur la finalité de votre formulaire et de l'utilité des données collectées. S'il s'avère qu'aucune alternative ne soit satisfaisante (numéro de téléphone ou adresse email directe par exemple) et que la mise en place de formulaires ne puisse être évitée, il faudra être vigilant à n'imposer aucun champ superflu à vos utilisateurs.
-Lors de la réflexion autour de ce(s) formulaire(s), il faudra aussi décider si vous stockez les données dans votre base de données, si vous les envoyez par email, ou les deux.
+Comme pour toute fonctionnalité ajoutée à votre site, il est essentiel de s'interroger sur la finalité de votre formulaire et de l'utilité des données collectées. S'il s'avère qu'aucune alternative ne soit satisfaisante (numéro de téléphone ou adresse email directe par exemple) et que la mise en place de formulaires ne puisse être évitée, soyez vigilant à n'imposer aucun champ superflu à vos utilisateurs.
+Lors de la réflexion autour de ce(s) formulaire(s), il faut aussi décider si vous stockez les données dans votre base de données, si vous les envoyez par email, ou les deux.
 
 ### Données personnelles et réglementation
 
-Le RGPD (règlement général sur la protection des données), créé en avril 2016, puis effectif en mai 2018, défini un cadre de protection et de transparence concernant l'utilisation des données personnelles.
-Ce règlement impose, entre autres, qu'aucune donnée demandée ne soit inutile, ou en tout cas, de prouver sa nécessité lors d'un contrôle. Vous devez dans ce cadre, demander le consentement éclairé à vos utilisateurs des données qu'ils vous transmettent.
+Le RGPD (règlement général sur la protection des données), créé en avril 2016, puis effectif en mai 2018, définit un cadre de protection et de transparence concernant l'utilisation des données personnelles.
+Ce règlement impose, entre autres, qu'aucune donnée demandée ne soit inutile, ou en tout cas, de prouver sa nécessité lors d'un contrôle. Vous devez dans ce cadre, demander le consentement éclairé à vos utilisateurs concernant les données qu'ils vous transmettent.
 Cela permet d'aller vers un numérique plus responsable, et sert l'écoconception en limitant le poids des formulaires, du stockage des données et l'empreinte de leurs fonctionnements.
 
 ### Ecoconception

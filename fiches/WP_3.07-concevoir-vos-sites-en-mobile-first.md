@@ -19,9 +19,9 @@ toIndex: true
 
 ## Sujet
 
-**Le "Mobile First" est une stratégie de conception qui, due à la surface d'affichage réduite et l'utilisation en mobilité, se focalise sur l'essentiel (du contenu) et sur la rapidité d'affichage (la performance).** Ces design de sites seront ensuite déclinés sur [[desktop]]. On parle de [[responsive-design|responsive design]].
+**Le "Mobile First" est une stratégie de conception qui, due à la surface d'affichage réduite et l'utilisation en mobilité, se focalise sur l'essentiel (du contenu) et sur la rapidité d'affichage (la performance).** Le design du site sera ensuite décliné sur [[desktop]]. Il s'agit là d'une approche possible du [[responsive-design|responsive design]].
 
-Ainsi un site pensé "Mobile First" est, de base, optimisé, sans contenus superflus, ayant une navigation claire et adaptée et avec des [[assets]] (illustrations, pictogrammes, polices, photographies, etc.) adaptés, plus légers et surtout utilisés pour ajouter une réelle plus-value pour l'utilisateur et non pour "remplir l'espace blanc" nécessaire à la bonne respiration du design. Que serait une musique, un discours et un design sans pause pour reprendre son souffle ?
+Ainsi, un site pensé "Mobile First" est, de base, optimisé, sans contenus superflus, ayant une navigation claire et adaptée et avec des [[assets]] (illustrations, pictogrammes, polices, photographies, etc.) adaptés, plus légers et surtout utilisés pour ajouter une réelle plus-value pour l'utilisateur et non pour "remplir l'espace blanc" nécessaire à la bonne respiration du design. Que serait une musique, un discours et un design sans pause pour reprendre son souffle ?
 Techniquement, ces sites utiliseront une bande passante réduite.
 
 **Les sites conçus en Mobile First, auront de ce fait un impact écologique plus réduit comme ils sont, de base, légers, optimisés et répondant à l'essentiel !**
@@ -34,8 +34,8 @@ Cela questionne dès le début les donneurs d'ordres et les force à se focalise
 
 ## GreenIT vous conseille
 
-- Sensibilisez vos clients à ce sujet ;
-- Débutez votre phase design en ne créant que des [[artboards]] de taille mobile ;
+- Sensibiliser vos clients à ce sujet ;
+- Débuter votre phase design en ne créant que des [[artboards]] au format mobile ;
 - Si vous utilisez du papier, pour vos sessions de réflexion, découpez vos A4 en 3 bandes verticales.
 
 **L'objectif étant de se restreindre à l'espace disponible et de le garder restreint le plus longtemps possible.**

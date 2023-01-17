@@ -25,7 +25,8 @@ Il attend sa réponse, puis télécharge la ressource dès qu'elle est disponibl
 
 ## Exemple
 
-Pour afficher des petits drapeaux pour le choix d'une langue, l'utilisation d'une spritesheet CSS permet de les regrouper dans une seule image de plus grande taille. Ce procédé réduit le nombre de requêtes HTTP.
+Pour afficher des petits drapeaux pour le choix d'une langue, l'utilisation d'une spritesheet CSS permet de les regrouper dans une seule image de plus grande taille. Ce procédé réduit le nombre de requêtes HTTP.    
+De même certaines images au format SVG peuvent être intégrées directement dans le HTML.
 
 ## Principe de validation
 

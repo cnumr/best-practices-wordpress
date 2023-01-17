@@ -23,12 +23,12 @@ toIndex: true
 ### Fonctionnalités essentielles
 
 **Ce sujet est récurrent parce qu'il est le facteur clé d'un site écoconçu !**
-Si vous avez cela en tête à chaque étape de la réalisation de votre site, votre thème sera aussi choisi parce qu'il ne propose pas plus que ce dont vous avez besoin. S'il propose des fonctionnalités supplémentaires, désactivez/supprimer les extensions en trop.
+Si vous avez la sobriété numérique en tête à chaque étape de la réalisation de votre site, votre thème sera aussi choisi parce qu'il ne propose pas plus que ce dont vous avez besoin. S'il propose des fonctionnalités supplémentaires, désactivez/supprimer les extensions en trop.
 
 ### Accessibilité web
 
 L'accessibilité web consiste à prendre en compte l'ensemble des utilisateurs.
-Votre site doit pouvoir être accessible par tous les visiteurs, quels que soient leur(s) handicap(s), leur âge (ex. : baisse de la vue), leur niveau de vie (ex. : utilisation d'anciens smartphones) et leur débit internet dépendant de la zone géographique (ex : la Creuse).
+Votre site doit pouvoir être accessible par tous les visiteurs, quels que soient leur(s) handicap(s), leur âge (ex. : baisse de la vue), leur niveau de vie (ex. : utilisation d'anciens smartphones), leur terminal (smartphone ancien) et leur débit internet dépendant de la zone géographique (ex : la Creuse).
 
 ### Légèreté = Rapidité
 
