@@ -62,14 +62,18 @@ module.exports = {
         // required.
         query: `
           {
-            allMarkdownRemark (filter: {frontmatter: {toIndex: {eq: true}}}) {
+            allFile(
+              filter: {childMarkdownRemark: {frontmatter: {toIndex: {eq: true}}}, sourceInstanceName: {in: ["fiches", "lexique", "pages"]}}
+            ) {
               nodes {
                 id
-                frontmatter {
-                  path
-                  title
+                childMarkdownRemark {
+                  frontmatter {
+                    path
+                    title
+                  }
+                  rawMarkdownBody
                 }
-                rawMarkdownBody
               }
             }
           }
@@ -94,11 +98,11 @@ module.exports = {
         // containing properties to index. The objects must contain the `ref`
         // field above (default: 'id'). This is required.
         normalizer: ({ data }) =>
-          data.allMarkdownRemark.nodes.map(node => ({
+          data.allFile.nodes.map(node => ({
             id: node.id,
-            path: `${node.frontmatter.path}.md`,
-            title: node.frontmatter.title,
-            body: node.rawMarkdownBody,
+            path: `${node.childMarkdownRemark.frontmatter.path}.md`,
+            title: node.childMarkdownRemark.frontmatter.title,
+            body: node.childMarkdownRemark.rawMarkdownBody,
           })),
       },
     },
