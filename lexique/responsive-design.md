@@ -4,4 +4,6 @@ path: /lexique/responsive-design
 toIndex: true
 ---
 
-En français design réactif ou adapté ou réceptif, ce type de design permet de modifier la mise en page d'un site pour que le contenu s'adapte à toutes les résolutions (smartphone, tablette, ordinateur de bureau, TV, etc.).
+Un site web réactif (RWD, de l’anglais responsive web design : conception de sites web réactifs) est un site web dont la conception vise, grâce à différents principes et techniques, à offrir une consultation confortable sur des écrans de tailles très différentes. L'utilisateur peut ainsi consulter le même site web à travers une large gamme d'appareils (moniteurs d'ordinateur, smartphone, tablettes, télévision…) avec le même confort visuel et sans avoir recours au défilement horizontal ou au zoom avant/arrière sur les appareils tactiles notamment, manipulations qui peuvent parfois dégrader l'expérience utilisateur, tant en lecture qu'en navigation. Un site web réactif est un exemple de plasticité des interfaces.
+
+source : [Wikipedia](https://fr.wikipedia.org/wiki/Site_web_r%C3%A9actif)
