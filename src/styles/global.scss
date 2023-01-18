@@ -183,7 +183,7 @@
 
   /**** TOOLTIP ****/
   .tooltip {
-    @apply relative inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
+    @apply relative cursor-pointer inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
   }
 
   /**** CONTENT ****/
