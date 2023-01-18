@@ -13,8 +13,8 @@ function MarkdownDisplay({ type = 'personna', data, pageContext }) {
             Mise à jour le{' '}
             {new Date(fields?.gitUpdateTime).toLocaleDateString('fr')}
           </i>
-          <h1 className="lg:col-span-2 flex flex-col lg:flex-row items-center lg:items-start">
-            <span className="badge bg-primary mb-4 lg:mr-2 text-xl lg:mt-[0.3rem] lg:mb-0">
+          <h1 className="lg:col-span-2 flex flex-col lg:flex-row items-start gap-2 lg:gap-0 lg:items-center">
+            <span className="badge bg-primary lg:mr-2 text-xl ">
               BP {frontmatter.title.slice(0, 4)}
             </span>
             <span>{frontmatter.title.slice(5)}</span>
