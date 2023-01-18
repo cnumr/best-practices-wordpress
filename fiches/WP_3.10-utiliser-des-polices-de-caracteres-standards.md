@@ -27,7 +27,7 @@ Pour résumé, il est possible :
 
 - d'utiliser des polices de caractères déployées sur internet, mais sur des CDN\* comme Google Font ou Adobe Font par exemple. Votre utilisateur va devoir les télécharger automatiquement lors de la navigation (polices web). Certaines polices web sont disponibles pour une utilisation hébergée comme sur Google Font.
 - de mettre à disposition lors du chargement du site vos polices de caractères que l'utilisateur va télécharger automatiquement en naviguant sur votre site (polices hébergées localement)
-- d'utiliser des polices de caractères installées, par défaut, sur le plus grand nombre de terminaux (polices intégrées ou Web safe)
+- d'utiliser des polices de caractères installées, par défaut, sur le plus grand nombre de [[terminaux]] (polices intégrées ou Web safe)
 
 ## GreenIT vous conseille
 
@@ -74,5 +74,5 @@ Si vous avez réellement besoin d'une police de caractères spécifiques, nous v
 - https://www.w3schools.com/cssref/css_fonts_fallbacks.asp
 - https://google-webfonts-helper.herokuapp.com/fonts
 - https://www.w3schools.com/cssref/css_websafe_fonts.asp
-- https://kinsta.com/fr/blog/comment-changer-polices-wordpress/#:~:text=Si%20votre%20th%C3%A8me%20n'inclut,le%20CSS%20dans%20la%20case
-- https://fr.wikipedia.org/wiki/Typographie_sur_le_Web#:~:text=Les%20formats%20de%20fontes%20les,Open%20Font%20Format%20comme%20standard.
+- https://kinsta.com/fr/blog/comment-changer-polices-wordpress/
+- https://fr.wikipedia.org/wiki/Typographie_sur_le_Web/
