@@ -120,13 +120,10 @@ Nous l'avons retravaillé comme il suit :
 | Fichier d'origine en `.jpg`                                  | 999 ko | Fond blanc  |
 | Fichier revectorisé sous Illustrator puis exporter en `.svg` | 137 ko |             |
 
-<p align="center">
+![format-choice.svg](./medias_5-02/image2.png)
 
-![format-choice.svg](./medias_28/format-choice.svg)
-
-</p>
 <p align="center">
-<a href="https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61" target="_blank">Fig.1 - JPG vs PNG vs GIF vs SVG (EN)</a>
+<a href="https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61" target="_blank">Fig.1 - JPG vs PNG vs GIF vs SVG (source EN)</a>
 </p>
 
 ### Photographie
