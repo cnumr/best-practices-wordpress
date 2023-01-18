@@ -22,7 +22,7 @@ toIndex: true
 
 ## Sujet
 
-![Exemple avec Google](./medias_02/pict1.png)
+![Exemple avec Google](./medias_3-01/pict1.png)
 
 La suggestion de réponse au moment de la saisie dans un champ de recherche (ou de toute liste) est pratique, mais a un réel impact réseau ainsi que sur les processeurs du serveur comme sur celui de la machine utilisée par le visiteur du site.
 
