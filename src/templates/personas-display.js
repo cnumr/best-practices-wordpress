@@ -17,12 +17,12 @@ export default function PersonasDisplay({
   // console.log('data', data)
   // console.log('pageContext', pageContext)
   const {
-    personna,
-    personna: { sourceInstanceName, relativePath },
+    personna_or_lexique,
+    personna_or_lexique: { sourceInstanceName, relativePath },
     previous,
     next,
   } = data // data.markdownRemark holds your post data
-  const { frontmatter, excerpt } = personna.markdownRemark
+  const { frontmatter, excerpt } = personna_or_lexique.markdownRemark
   return (
     <Layout>
       <Seo
@@ -32,9 +32,9 @@ export default function PersonasDisplay({
       />
       <div className="blog-post-container">
         <MarkdownDisplay
-          data={personna}
+          data={personna_or_lexique}
           pageContext={pageContext}
-          type="personas"
+          type={pageContext.type}
         />
         <ContributeCTA
           relativePath={relativePath}
@@ -67,7 +67,7 @@ export const personasQuery = graphql`
         title
       }
     }
-    personna: file(id: { eq: $id }) {
+    personna_or_lexique: file(id: { eq: $id }) {
       relativePath
       sourceInstanceName
       fields {

@@ -61,33 +61,33 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
   })
 
-  // Presonnas
-  const _personas = await graphql(`
-    {
-      allFile(
-        filter: {
-          extension: { eq: "md" }
-          sourceInstanceName: { eq: "personas" }
-          childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
-        }
-        sort: {
-          fields: childrenMarkdownRemark___frontmatter___title
-          order: ASC
-        }
-      ) {
-        nodes {
-          id
-          childMarkdownRemark {
-            id
-            frontmatter {
-              title
-              path
-            }
-          }
-        }
-      }
-    }
-  `)
+  // Persona
+  // const _personas = await graphql(`
+  //   {
+  //     allFile(
+  //       filter: {
+  //         extension: { eq: "md" }
+  //         sourceInstanceName: { eq: "personas" }
+  //         childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+  //       }
+  //       sort: {
+  //         fields: childrenMarkdownRemark___frontmatter___title
+  //         order: ASC
+  //       }
+  //     ) {
+  //       nodes {
+  //         id
+  //         childMarkdownRemark {
+  //           id
+  //           frontmatter {
+  //             title
+  //             path
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   // if (_personas.errors) {
   //   reporter.panicOnBuild(
