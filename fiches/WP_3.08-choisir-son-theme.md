@@ -28,7 +28,7 @@ Si vous avez la sobriété numérique en tête à chaque étape de la réalisati
 ### Accessibilité web
 
 L'accessibilité web consiste à prendre en compte l'ensemble des utilisateurs.
-Votre site doit pouvoir être accessible par tous les visiteurs, quels que soient leur(s) handicap(s), leur âge (ex. : baisse de la vue), leur niveau de vie (ex. : utilisation d'anciens smartphones), leur terminal (smartphone ancien) et leur débit internet dépendant de la zone géographique (ex : la Creuse).
+Votre site doit pouvoir être accessible par tous les visiteurs, quels que soient leur(s) handicap(s), leur âge (ex. : baisse de la vue), leur niveau de vie (ex. : utilisation d'anciens smartphones) et leur débit internet dépendant de la zone géographique (ex : la Creuse).
 
 ### Légèreté = Rapidité
 

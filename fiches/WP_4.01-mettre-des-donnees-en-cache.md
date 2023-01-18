@@ -1,5 +1,5 @@
 ---
-title: 4.01 Utiliser les Transients
+title: 4.01 Mettre des données en cache
 people: Dominique N.
 scope: Cache
 responsible:
