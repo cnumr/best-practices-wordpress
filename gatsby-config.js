@@ -32,11 +32,13 @@ module.exports = {
         label: `Lexique`,
         title: `Lexique des termes utilisés`,
       },
-      // {
-      //   url: `/recherche`,
-      //   label: `Rechercher`,
-      //   title: `Rechercher une Bonne pratique`,
-      // },
+    ],
+    secondaryNavigation: [
+      {
+        url: `/mentions-legales`,
+        label: `Mentions légales`,
+        title: `Les Mentions légales du site.`,
+      },
     ],
   },
   pathPrefix: '/wp',

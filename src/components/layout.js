@@ -27,6 +27,11 @@ const Layout = ({ children }) => {
             title
             url
           }
+          secondaryNavigation {
+            label
+            title
+            url
+          }
         }
       }
     }
@@ -46,16 +51,19 @@ const Layout = ({ children }) => {
       </main>
       <footer className="mx-auto px-4 pb-4 lg:px-0 lg:max-w-5xl border-t-2 border-neutral-light pt-4 flex flex-col items-center gap-5 md:flex-row md:justify-between">
         <div>
-          © {new Date().getFullYear()} &middot;
-          {` `}
-          Association Green IT
-          {` `}&middot;{' '}
-          <Link
-            to="/pages/mentions-legales"
-            title="Accéder aux mentions légales"
-          >
-            Mentions légales
-          </Link>
+          <div className="flex flex-row gap-1">
+            <span>© {new Date().getFullYear()}</span>
+            <span>&middot;</span>
+            <span>Association Green IT</span>
+            <span>&middot;</span>
+            {data.site.siteMetadata?.secondaryNavigation.map((link, key) => {
+              return (
+                <Link to={link.url} title={link.title}>
+                  {link.label}
+                </Link>
+              )
+            })}
+          </div>
           <Licence />
         </div>
         <div>
