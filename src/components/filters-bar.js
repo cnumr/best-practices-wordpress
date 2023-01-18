@@ -79,7 +79,7 @@ const FiltersBar = ({
       >
         <button
           className={classNames(
-            `cursor-pointer badge text-sm transition hover:bg-primary-transparent text-neutral-DEFAUT`,
+            `cursor-pointer badge text-sm transition hover:bg-primary-transparent text-neutral`,
             {
               'bg-primary !text-white': type + label === selectedFilter,
             }

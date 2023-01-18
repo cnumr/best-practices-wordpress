@@ -17,7 +17,7 @@ const Header = ({ className, repoURL, navigation }) => {
   return (
     <header
       className={classNames(
-        'min-h-[80px] px-4 lg:px-0 flex sticky z-20 top-0 border-b-2 border-neutral-light bg-neutral-DEFAUT',
+        'min-h-[80px] px-4 lg:px-0 flex sticky z-20 top-0 border-b-2 border-neutral-light bg-neutral',
         className
       )}
     >

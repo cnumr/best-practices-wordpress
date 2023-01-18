@@ -42,8 +42,8 @@ function Card({
         title={`Voir la fiche : ${markdownRemark.frontmatter.title}`}
       >
         {type === Card.FICHES ? (
-          <section className="md:grid md:grid-cols-[2fr_1fr] md:grid-rows-2 md:gap-2 mt-0 text-neutral-DEFAUT text-lg font-bold mb-0">
-            <h2 className="md:col-span-1 md:row-span-2 flex flex-row items-start text-neutral-DEFAUT text-lg font-bold m-0">
+          <section className="md:grid md:grid-cols-[2fr_1fr] md:grid-rows-2 md:gap-2 mt-0 text-neutral text-lg font-bold mb-0">
+            <h2 className="md:col-span-1 md:row-span-2 flex flex-row items-start text-neutral text-lg font-bold m-0">
               <span className="badge bg-primary border-primary mr-2 whitespace-nowrap">
                 BP {markdownRemark.frontmatter.title.slice(0, 4)}
               </span>
@@ -73,13 +73,13 @@ function Card({
             <div className="flex flex-row items-center justify-end mt-2 gap-2 md:mt-0 md:gap-4">
               <span
                 title={`Lifecycle`}
-                className="badge border-primary text-neutral-DEFAUT text-xs"
+                className="badge border-primary text-neutral text-xs"
               >
                 {markdownRemark.frontmatter.lifecycle}
               </span>
               <span
                 title={`Scope`}
-                className="badge border-primary text-neutral-DEFAUT text-xs"
+                className="badge border-primary text-neutral text-xs"
               >
                 {markdownRemark.frontmatter.scope}
               </span>

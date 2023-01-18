@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       colors: {
         neutral: {
-          DEFAUT: 'hsl(var(--neutral) var(--neutral-saturation))',
+          DEFAULT: 'hsl(var(--neutral) var(--neutral-saturation))',
           focus: 'hsl(var(--neutral) calc(var(--neutral-saturation) - 10%))',
           dark: 'hsl(var(--neutral) 0%)',
           light: 'hsla(var(--neutral) calc(var(--neutral-saturation) + 77% ))',

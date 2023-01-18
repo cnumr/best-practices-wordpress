@@ -44,7 +44,7 @@
   }
 
   html {
-    @apply bg-zinc-100 font-base text-neutral-DEFAUT text-base scroll-pt-24 scroll-smooth;
+    @apply bg-zinc-100 font-base text-neutral text-base scroll-pt-24 scroll-smooth;
     -webkit-hyphens: auto;
     hyphens: auto;
   }
@@ -210,7 +210,7 @@
     // :not(pre) > code[class*='language-'],
     // code[class*='language-'],
     // pre[class*='language-'] {
-    //   @apply bg-neutral-DEFAUT;
+    //   @apply bg-neutral;
     // }
 
     a:not(.tooltip) {

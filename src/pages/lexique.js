@@ -29,7 +29,7 @@ function Lexique({ data, location }) {
             >
               <a
                 href={`#${entry}`}
-                className="badge text-sm transition hover:bg-primary-transparent text-neutral-DEFAUT no-underline"
+                className="badge text-sm transition hover:bg-primary-transparent text-neutral no-underline"
               >
                 {entry}
               </a>
@@ -50,7 +50,7 @@ function Lexique({ data, location }) {
                         className="box pb-0 mb-6 border-neutral-transparent"
                         key={`${index}-${childMarkdownRemark?.frontmatter.path}`}
                       >
-                        <h2 className="text-neutral-DEFAUT mt-0 mb-4">
+                        <h2 className="text-neutral mt-0 mb-4">
                           {childMarkdownRemark?.frontmatter.title}
                         </h2>
                         <div
