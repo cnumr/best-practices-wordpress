@@ -41,7 +41,7 @@ Le paramètre à insérer est :
 Nous avons testé différentes extensions.
 Les meilleurs résultats nous ont permis de gagner 1 niveau et de réduire drastiquement les erreurs signalées dans l'outil GreenIT Analysis disponible sur [Firefox](https://addons.mozilla.org/fr/firefox/addon/greenit-analysis/) et [Chrome](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad?hl=fr).
 
-![image.png](medias_12/64d7dafb-6ad4-4706-9b6a-5e6507959189_image.png)
+![image.png](medias_7-02/64d7dafb-6ad4-4706-9b6a-5e6507959189_image.png)
 
 ## Principe de validation
 
