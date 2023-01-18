@@ -22,8 +22,16 @@
     --fs-4xl: clamp(2.24rem, 1.48vw + 1.87rem, 3.05rem);
 
     /*Line height*/
-    --lh-2xl: clamp(2.3rem, 1.5499999999999996rem + 1.8750000000000007vw, 2.75rem);
-    --lh-4xl: clamp(2.5rem, 0.31166666666666654rem + 5.470833333333334vw, 3.813rem);
+    --lh-2xl: clamp(
+      2.3rem,
+      1.5499999999999996rem + 1.8750000000000007vw,
+      2.75rem
+    );
+    --lh-4xl: clamp(
+      2.5rem,
+      0.31166666666666654rem + 5.470833333333334vw,
+      3.813rem
+    );
   }
 
   @font-face {
@@ -84,7 +92,6 @@
 
 /* components styles */
 @layer components {
-
   /**** BOX ****/
   .box {
     @apply rounded-lg p-2 md:p-4 border-2 border-primary;
@@ -93,21 +100,21 @@
     @apply hover:bg-neutral-transparent hover:shadow-lg hover:border-primary;
   }
 
- /**** TABLE ****/
+  /**** TABLE ****/
   table {
-    @apply w-full table-fixed rounded-lg border-2 border-primary font-medium break-words;
+    @apply w-full my-2 table-fixed rounded-lg border-2 border-primary font-medium break-words;
     -webkit-hyphens: auto;
     hyphens: auto;
     thead {
       @apply bg-primary-transparent text-primary text-center;
     }
-    th{
-      @apply p-2 border-2 border-primary
+    th {
+      @apply p-2 border-2 border-primary;
     }
     td {
       @apply p-2 border-2 border-primary;
     }
-    tr:nth-child(even){
+    tr:nth-child(even) {
       @apply bg-neutral-transparent;
     }
     // tr td:last-of-type {
@@ -124,12 +131,14 @@
   }
 
   /**** LIST ****/
-  .content ul, .markdown-content ul {
+  .content ul,
+  .markdown-content ul {
     @apply list-none break-words;
     -webkit-hyphens: auto;
     hyphens: auto;
   }
-  .content li, .markdown-content li {
+  .content li,
+  .markdown-content li {
     @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-primary before:mr-2;
     ul {
       @apply ml-8;
@@ -143,18 +152,17 @@
   }
 
   /**** FORM ****/
-    input {
-      @apply px-1;
-    }
-    .markdown-excerpt {
-      @apply leading-5;
-    }
+  input {
+    @apply px-1;
+  }
+  .markdown-excerpt {
+    @apply leading-5;
+  }
 
-    /**** BADGE ****/
-    .badge {
-      @apply px-2 py-1 border-2 rounded-xl text-xs text-white font-bold whitespace-nowrap uppercase;
-    }
-
+  /**** BADGE ****/
+  .badge {
+    @apply px-2 py-1 border-2 rounded-xl text-xs text-white font-bold whitespace-nowrap uppercase;
+  }
 
   /**** BUTTON ****/
   .btn {
@@ -178,7 +186,7 @@
     @apply relative inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
   }
 
-    /**** CONTENT ****/
+  /**** CONTENT ****/
   .markdown-content {
     &* {
       @apply whitespace-pre-wrap;
@@ -186,13 +194,19 @@
 
     /**** BLOCKQUOTE ****/
     blockquote {
-      @apply rounded-lg p-2 md:p-4 border-2 border-primary bg-primary-transparent;
+      @apply rounded-lg my-2 p-2 md:p-4 border-2 border-primary bg-primary-transparent;
       p {
         @apply my-0 text-base;
       }
     }
 
     /**** CODE ****/
+    pre[class*='language-'] code {
+      span {
+        // Pour gérer certains retour à la ligne qui font déborder la page
+        @apply whitespace-normal;
+      }
+    }
     // :not(pre) > code[class*='language-'],
     // code[class*='language-'],
     // pre[class*='language-'] {
@@ -205,18 +219,18 @@
   }
 
   /**** SUMMARY ARTICLE ****/
-  .summary-article ul, .summary-article ul ul, .summary-article p{
+  .summary-article ul,
+  .summary-article ul ul,
+  .summary-article p {
     @apply mb-0;
   }
-  .summary-article ul ul{
+  .summary-article ul ul {
     @apply pl-2;
   }
-  .summary-article a{
+  .summary-article a {
     @apply hover:text-primary font-normal;
   }
 }
-
-
 
 .tooltip .bottom {
   min-width: 300px;
