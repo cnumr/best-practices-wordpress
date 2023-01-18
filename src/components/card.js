@@ -49,18 +49,20 @@ function Card({
               </span>
               <span>{markdownRemark.frontmatter.title.slice(5)}</span>
             </h2>
-            <div className="flex flex-row items-center justify-end">
+            <div className="flex flex-row items-center justify-end gap-2">
               <span
-                aria-label={`Priorité d'implementation : ${
+                title={`Priority Implementation`}
+                aria-label={`Priority Implementation : ${
                   markdownRemark.frontmatter[`priority_implementation`]
                 }`}
                 role="img"
               >
                 {cleanImpact('priority_implementation')}
-              </span>{' '}
-              |
+              </span>
+              <span>|</span>
               <span
-                aria-label={`Impact environnemental : ${
+                title={`Environmental Impact`}
+                aria-label={`Environmental Impact : ${
                   markdownRemark.frontmatter[`environmental_impact`]
                 }`}
                 role="img"
@@ -69,10 +71,16 @@ function Card({
               </span>
             </div>
             <div className="flex flex-row items-center justify-end mt-2 gap-2 md:mt-0 md:gap-4">
-              <span className="badge border-primary text-neutral-DEFAUT text-xs">
+              <span
+                title={`Lifecycle`}
+                className="badge border-primary text-neutral-DEFAUT text-xs"
+              >
                 {markdownRemark.frontmatter.lifecycle}
               </span>
-              <span className="badge border-primary text-neutral-DEFAUT text-xs">
+              <span
+                title={`Scope`}
+                className="badge border-primary text-neutral-DEFAUT text-xs"
+              >
                 {markdownRemark.frontmatter.scope}
               </span>
             </div>
