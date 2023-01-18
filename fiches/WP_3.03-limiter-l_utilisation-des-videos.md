@@ -17,7 +17,7 @@ toIndex: true
 
 ## Sujet
 
-==Les vidéos en ligne représentent 60 % du flux mondial de données et sont responsables de près de 1 % des émissions mondiales de gaz à effet de serre <sup>(1)</sup>.==
+**Les vidéos en ligne représentent 60 % du flux mondial de données et sont responsables de près de 1 % des émissions mondiales de gaz à effet de serre <sup>(1)</sup>.**
 
 Par ailleurs, les règles de qualité web indiquent qu'un contenu vidéo ou audio doit être accompagné de sa transcription textuelle. Il est également recommandé de laisser le visiteur du site activer la lecture des contenus multimédias, s'il le souhaite.
 
