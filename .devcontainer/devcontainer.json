@@ -1,8 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-  "name": "Gatsby (Node 16)",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-16",
+  "name": "Gatsby (Node 18)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
