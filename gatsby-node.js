@@ -174,6 +174,45 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
   })
+
+  // Page MDX
+  // https://v4.gatsbyjs.com/docs/tutorial/part-5/
+  // tu use w/ Gatsby v4 - npm i gatsby-plugin-mdx@^4.0.0
+  const _mdxPages = await graphql(`
+    {
+      allMdx(filter: { frontmatter: { toIndex: { eq: true } } }) {
+        nodes {
+          id
+          frontmatter {
+            path
+          }
+          internal {
+            contentFilePath
+          }
+        }
+      }
+    }
+  `)
+  if (_mdxPages.errors) {
+    reporter.panicOnBuild(
+      `GraphQL could not query pages. Create pages aborted.`
+    )
+    return
+  }
+  const mdxPages = _mdxPages.data.allMdx.nodes
+  mdxPages.forEach((node, index) => {
+    const templatePath = path.resolve(`./src/templates/pages-display.js`)
+    if (node.frontmatter?.path)
+      createPage({
+        path: `${node.frontmatter.path}`,
+        // component: templatePath,
+        component: `${templatePath}?__contentFilePath=${node.internal.contentFilePath}`,
+        context: {
+          id: node.id,
+          type: 'mdxPage',
+        },
+      })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

@@ -44,6 +44,15 @@ module.exports = {
   pathPrefix: '/wp',
   plugins: [
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-local-search',
       options: {
         // A unique name for the search index. This should be descriptive of

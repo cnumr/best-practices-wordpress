@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
             <span>&middot;</span>
             {data.site.siteMetadata?.secondaryNavigation.map((link, key) => {
               return (
-                <Link to={link.url} title={link.title}>
+                <Link to={link.url} title={link.title} key={key}>
                   {link.label}
                 </Link>
               )
