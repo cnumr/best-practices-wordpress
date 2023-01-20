@@ -9,21 +9,20 @@ function PagesDisplay({ data, pageContext, location, children }) {
 
   const MyCTA = props => {
     if (
-      props.to?.match(location.origin) ||
-      props.href?.match(location.origin) ||
+      props.to?.includes(location.origin) ||
+      props.href?.includes(location.origin) ||
       props.to?.startsWith('/') ||
       props.href?.startsWith('/')
     ) {
       return (
         <div className="text-center mt-12 mb-16">
-          <Link
-            {...props}
+          <a
+            href={props.href || props.to}
             className="btn btn-outline !no-underline inline-flex gap-2 items-center"
           >
-            <span>{props.children}</span>
-            {/* Bug with icon + target... */}
-            {/* {props.icon && <span>{props.icon}</span>} */}
-          </Link>
+            <span>{props.label}</span>
+            {props.icon && <span>{props.icon}</span>}
+          </a>
         </div>
       )
     } else {
@@ -36,9 +35,8 @@ function PagesDisplay({ data, pageContext, location, children }) {
             rel={`nofollow noopener noreferrer`}
             className="btn btn-outline !no-underline inline-flex gap-2 items-center"
           >
-            <span>{props.children}</span>
-            {/* Bug with icon + target... */}
-            {/* {props.icon && <span>{props.icon}</span>} */}
+            <span>{props.label}</span>
+            {props.icon && <span>{props.icon}</span>}
           </a>
         </div>
       )
@@ -83,12 +81,8 @@ function PagesDisplay({ data, pageContext, location, children }) {
   )
 
   const MyHref = props => {
-    if (props.href.match(location.origin)) {
-      return (
-        <Link {...props}>
-          <span>{props.children}</span>
-        </Link>
-      )
+    if (props.href.includes(location.origin)) {
+      return <a href={props.href}>{props.children}</a>
     } else {
       return (
         <a
