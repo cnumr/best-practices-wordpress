@@ -16,6 +16,26 @@ module.exports = {
       repoURL: `https://github.com/cnumr/best-practices-wordpress`,
       mainBanch: `main`,
     },
+    peoples: {
+      leads: [
+        { name: 'Dominique Nicole', url: 'https://www.pix-e.fr/' },
+        { name: 'Renaud Héluin', url: 'https://novagaia.fr/' },
+      ],
+      contributors: [
+        {
+          name: 'Frédéric Bordage',
+          url: 'https://fr.linkedin.com/in/fbordage',
+        },
+        { name: 'Catherine G', url: '' },
+        { name: 'Yann Gautreau', url: 'https://www.yanngautreau.fr/' },
+        { name: 'Yann Kozon', url: 'https://www.yannkozon.com/' },
+        { name: 'Florine Sueur', url: 'https://www.florinesueur.fr/' },
+      ],
+      reviewers: [
+        { name: 'Christian M.', url: 'https://www.nuweb.fr/' },
+        { name: 'Stéphanie Vachon', url: '' },
+      ],
+    },
     // in ./static folder
     seoImage: `/logo-cnumr.png`,
     favicon: `/icone-intro.svg`,
