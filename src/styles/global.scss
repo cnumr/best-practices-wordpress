@@ -74,7 +74,7 @@
     @apply font-bold underline;
   }
   a[target='_blank']:not(.no-out) {
-    @apply after:content-['⤴︎'] after:text-[.5rem] after:no-underline inline-flex gap-[.15rem] items-center;
+    @apply after:content-['⤴︎'] after:text-[.5rem] after:no-underline inline-flex gap-[.15rem] items-center no-underline;
   }
 
   // prismjs
