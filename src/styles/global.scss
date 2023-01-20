@@ -109,7 +109,7 @@
     -webkit-hyphens: auto;
     hyphens: auto;
     thead {
-      @apply bg-primary text-white text-center;
+      @apply bg-primary-transparent text-primary-dark text-center;
     }
     th {
       @apply p-2 border-2 border-primary;
@@ -175,7 +175,7 @@
     @apply bg-primary hover:bg-primary-focus text-primary-content;
   }
   .btn-outline {
-    @apply border-primary border-2 text-primary hover:bg-primary hover:text-white;
+    @apply border-primary border-2 bg-primary-transparent text-primary-dark hover:bg-primary hover:text-white;
   }
   .small-primary-btn {
     @apply bg-primary hover:bg-primary text-white cursor-pointer px-2 py-0 rounded-md text-sm;

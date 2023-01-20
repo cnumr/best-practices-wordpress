@@ -25,20 +25,21 @@
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        "GraphQL.vscode-graphql-syntax",
-        "oderwat.indent-rainbow",
-        "esbenp.prettier-vscode",
-        "amatiasq.sort-imports",
-        "bradlc.vscode-tailwindcss",
-        "vscode-icons-team.vscode-icons",
-        "dbaeumer.vscode-eslint",
-        "formulahendry.auto-rename-tag",
-        "dsznajder.es7-react-js-snippets",
-        "mutantdino.resourcemonitor",
-        "yzhang.markdown-all-in-one",
-        "adam-bender.commit-message-editor",
-        "mhutchie.git-graph"
-      ]
+		"GraphQL.vscode-graphql-syntax",
+		"oderwat.indent-rainbow",
+		"esbenp.prettier-vscode",
+		"amatiasq.sort-imports",
+		"bradlc.vscode-tailwindcss",
+		"vscode-icons-team.vscode-icons",
+		"dbaeumer.vscode-eslint",
+		"formulahendry.auto-rename-tag",
+		"dsznajder.es7-react-js-snippets",
+		"mutantdino.resourcemonitor",
+		"yzhang.markdown-all-in-one",
+		"adam-bender.commit-message-editor",
+		"mhutchie.git-graph",
+		"unifiedjs.vscode-mdx"
+	]
     }
   },
 
