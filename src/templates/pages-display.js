@@ -21,7 +21,8 @@ function PagesDisplay({ data, pageContext, location, children }) {
             className="btn btn-outline !no-underline inline-flex gap-2 items-center"
           >
             <span>{props.children}</span>
-            {props.icon && <span>{props.icon}</span>}
+            {/* Bug with icon + target... */}
+            {/* {props.icon && <span>{props.icon}</span>} */}
           </Link>
         </div>
       )
@@ -36,7 +37,8 @@ function PagesDisplay({ data, pageContext, location, children }) {
             className="btn btn-outline !no-underline inline-flex gap-2 items-center"
           >
             <span>{props.children}</span>
-            {props.icon && <span>{props.icon}</span>}
+            {/* Bug with icon + target... */}
+            {/* {props.icon && <span>{props.icon}</span>} */}
           </a>
         </div>
       )
