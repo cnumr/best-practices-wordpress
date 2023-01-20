@@ -207,6 +207,12 @@ module.exports = {
           {
             resolve: 'highlight-md',
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
         ],
       },
     },

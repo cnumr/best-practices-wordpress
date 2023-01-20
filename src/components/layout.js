@@ -67,10 +67,15 @@ const Layout = ({ children }) => {
           <Licence />
         </div>
         <div>
-          <a target="_blank" rel="noreferrer" href="https://www.greenit.fr/">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.greenit.fr/"
+            title={`Aller sur le site de l'assiciation GreenIT (site externe)`}
+          >
             <img
               src="/logo-asso-green-it.png"
-              alt="Logo association Green It"
+              alt={`Logo association Green It - lien sortant vers le site l'association GreenIT`}
             />
           </a>
         </div>

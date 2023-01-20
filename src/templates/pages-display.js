@@ -55,6 +55,23 @@ function PagesDisplay({ data, pageContext, location, children }) {
   const MyNbLexiques = props => (
     <span {...props}>{data.lexiqueNUM.totalCount}</span>
   )
+
+  const MyHref = props => {
+    if (props.href.match(location.origin)) {
+      return <a {...props} />
+    } else {
+      return (
+        <a
+          href={props.href}
+          title={`site externe`}
+          target={`_blank`}
+          rel={`nofollow noopener noreferrer`}
+        >
+          {props.children}
+        </a>
+      )
+    }
+  }
   const components = {
     CTA: MyCTA,
     Contributors: MyContributors,
@@ -62,6 +79,7 @@ function PagesDisplay({ data, pageContext, location, children }) {
     Reviewers: MyReviewers,
     NbFiches: MyNbFiches,
     NbLexiques: MyNbLexiques,
+    a: MyHref,
   }
   return (
     <Layout>
