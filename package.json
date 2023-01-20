@@ -26,6 +26,7 @@
     "gatsby-plugin-react-helmet": "^5.17.0",
     "gatsby-plugin-sass": "^5.17.0",
     "gatsby-plugin-sharp": "^4.21.0",
+    "gatsby-plugin-sitemap": "^5.25.0",
     "gatsby-plugin-tailwindcss": "^1.0.3",
     "gatsby-remark-autolink-headers": "^5.17.0",
     "gatsby-remark-images": "^6.17.0",
