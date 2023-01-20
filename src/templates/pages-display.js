@@ -7,17 +7,41 @@ import React from 'react'
 function PagesDisplay({ data, pageContext, location, children }) {
   const { frontmatter, excerpt } = data.page
 
-  const MyCTA = props => (
-    <div className="text-center mt-12 mb-16">
-      <Link
-        {...props}
-        className="btn btn-outline !no-underline inline-flex gap-2 items-center"
-      >
-        <span>{props.children}</span>
-        {props.icon && <span>{props.icon}</span>}
-      </Link>
-    </div>
-  )
+  const MyCTA = props => {
+    if (
+      props.to?.match(location.origin) ||
+      props.href?.match(location.origin) ||
+      props.to?.startsWith('/') ||
+      props.href?.startsWith('/')
+    ) {
+      return (
+        <div className="text-center mt-12 mb-16">
+          <Link
+            {...props}
+            className="btn btn-outline !no-underline inline-flex gap-2 items-center"
+          >
+            <span>{props.children}</span>
+            {props.icon && <span>{props.icon}</span>}
+          </Link>
+        </div>
+      )
+    } else {
+      return (
+        <div className="text-center mt-12 mb-16">
+          <a
+            href={props.href || props.to}
+            title={`site externe`}
+            target={`_blank`}
+            rel={`nofollow noopener noreferrer`}
+            className="btn btn-outline !no-underline inline-flex gap-2 items-center"
+          >
+            <span>{props.children}</span>
+            {props.icon && <span>{props.icon}</span>}
+          </a>
+        </div>
+      )
+    }
+  }
 
   const peopleList = (props, pList) => {
     return pList.map((people, index) => {
@@ -58,7 +82,11 @@ function PagesDisplay({ data, pageContext, location, children }) {
 
   const MyHref = props => {
     if (props.href.match(location.origin)) {
-      return <a {...props} />
+      return (
+        <Link {...props}>
+          <span>{props.children}</span>
+        </Link>
+      )
     } else {
       return (
         <a
