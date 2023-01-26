@@ -35,10 +35,11 @@ export default function Home({ data, location }) {
             meta: 'childMarkdownRemark.frontmatter.priority_implementation',
           },
         ]}
-        setList={setFichesWP}
-        setBackToAllItems={setBackToAllFiches}
+        filteredList={setFichesWP}
+        resetList={setBackToAllFiches}
         allItemsLabel="Toutes les fiches (RAZ)"
         itemsNotSetLabel="TBD"
+        filterType={FiltersBar.SEARCH_TYPE_AND}
         className="my-2 flex flex-row flex-wrap justify-start gap-5"
       />
       <ul className="wp-list">

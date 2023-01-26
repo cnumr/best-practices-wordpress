@@ -1,18 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 
 import classNames from 'classnames'
 
 var _ = require('lodash')
 
-const FiltersBar = ({
+FiltersBar.SEARCH_TYPE_AND = 'AND'
+FiltersBar.SEARCH_TYPE_OR = 'OR'
+
+function FiltersBar({
   fullList,
-  setList,
-  setBackToAllItems,
+  filteredList,
+  resetList,
   propertiesToMatch,
   allItemsLabel = 'All',
   className,
-}) => {
-  const [selectedFilter, setSelectedFilter] = useState(allItemsLabel)
+  filterType = FiltersBar.SEARCH_TYPE_OR,
+}) {
+  // to force refresh the bt color state aka, getBtState(type, label)
+  const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
+  const [selectedFilters, setSelectedFilters] = useState([
+    { type: 'reset', propertyToMatch: allItemsLabel },
+  ])
   const [openFilters, setOpenFilters] = useState(false)
 
   //   construct dataset
@@ -47,16 +55,75 @@ const FiltersBar = ({
   })
 
   // filter method
-  const filterList = (type, propertyToMatch) => {
+  const filterList = (type, propertyToMatch, forceOR = false) => {
+    // console.log(`selectedFilters`, selectedFilters)
     // console.log(type, propertyToMatch)
-    setSelectedFilter(propertyToMatch + type)
-    if (type === allItemsLabel) {
-      setBackToAllItems()
+
+    if (filterType === FiltersBar.SEARCH_TYPE_OR || forceOR) {
+      if (propertyToMatch === allItemsLabel) {
+        // fill w/ default/reset value
+        setSelectedFilters([{ propertyToMatch: allItemsLabel, type: `reset` }])
+        // send reseted list outside of the component
+        resetList()
+      } else {
+        setSelectedFilters([{ propertyToMatch: propertyToMatch, type: type }])
+        // filter list
+        const tmpList = fullList.filter(
+          item => _.get(item, type) === propertyToMatch
+        )
+        // send filtered list outside of the component
+        filteredList(tmpList)
+      }
     } else {
-      const tmpList = fullList.filter(
-        item => _.get(item, propertyToMatch) === type
-      )
-      setList(tmpList)
+      // console.log(type, propertyToMatch, selectedFilters)
+      // reset
+      if (type === 'reset') {
+        // console.log(`RESET`)
+        // fill w/ default/reset value
+        setSelectedFilters([{ propertyToMatch: allItemsLabel, type: `reset` }])
+        // send reseted list outside of the component
+        resetList()
+      } else {
+        // console.log(`FILTER`)
+        // rm reset filter
+        const tmpFilters = selectedFilters
+        if (tmpFilters[0]?.type === 'reset') {
+          tmpFilters.shift()
+        }
+        // add new filter only
+        let hasFilter = false
+        tmpFilters.map(filter => {
+          if (
+            filter?.type === type &&
+            filter?.propertyToMatch === propertyToMatch &&
+            hasFilter !== true
+          ) {
+            hasFilter = true
+          }
+        })
+        // console.log(`hasFilter`, hasFilter)
+        if (!hasFilter) {
+          // add to setSelectedFilters listened by buttons
+          tmpFilters.push({ propertyToMatch: propertyToMatch, type: type })
+          setSelectedFilters(tmpFilters)
+          // trics to refresh bt
+          forceUpdate()
+          // filter list
+          const tmpList = []
+          // console.log(`current`, type, propertyToMatch)
+          fullList.map(item => {
+            // console.log(`item`, _.get(item, type))
+            selectedFilters.map(selected => {
+              if (_.get(item, type) === selected.propertyToMatch) {
+                tmpList.push(item)
+              }
+            })
+          })
+          // send filtered list outside of the component
+          filteredList(tmpList)
+        }
+      }
+      console.log(type, propertyToMatch, selectedFilters)
     }
   }
 
@@ -64,7 +131,33 @@ const FiltersBar = ({
 
   const filterSelect = event => {
     const obj = JSON.parse(event.target.value)
-    filterList(obj.type, obj.propertiesToMatch)
+    filterList(obj.type, obj.propertiesToMatch, true)
+  }
+
+  const getBtState = (type, label) => {
+    let output = false
+    selectedFilters.map(filter => {
+      if (filter) {
+        if (
+          filter?.type === type &&
+          filter?.propertyToMatch === label &&
+          output !== true
+        ) {
+          // console.log(`output = true`)
+          output = true
+        } else {
+          // console.log(`filter?.type`, filter?.type, `->`, type)
+          // console.log(
+          //   `filter?.propertyToMatch`,
+          //   filter?.propertyToMatch,
+          //   `->`,
+          //   label
+          // )
+          // console.log(`---`)
+        }
+      }
+    })
+    return output
   }
 
   // Create button
@@ -81,10 +174,10 @@ const FiltersBar = ({
           className={classNames(
             `cursor-pointer badge text-sm transition hover:bg-primary-transparent text-neutral`,
             {
-              'bg-primary !text-white': type + label === selectedFilter,
+              'bg-primary !text-white': getBtState(type, label),
             }
           )}
-          onClick={() => filterList(label, type)}
+          onClick={() => filterList(type, label)}
         >
           {label}
           {` `}
@@ -114,14 +207,14 @@ const FiltersBar = ({
   const getOptions = object => {
     const output = []
     _.forEach(object.values, function (value, key) {
-      const val = { type: key, propertiesToMatch: object.type }
+      const val = { type: object.type, propertiesToMatch: key }
       output.push(
         <option
           key={key}
           // value={object.type}
           value={JSON.stringify(val)}
           label={`${key} (${value})`}
-          selected={selectedFilter === object.type + key || null}
+          selected={getBtState(object.type, key) || null}
         />
       )
     })
@@ -175,8 +268,8 @@ const FiltersBar = ({
           >
             <option
               value={JSON.stringify({
-                propertiesToMatch: multiplesTypes[allItemsLabel].type,
-                type: multiplesTypes[allItemsLabel].values,
+                type: multiplesTypes[allItemsLabel].type,
+                propertiesToMatch: multiplesTypes[allItemsLabel].values,
               })}
             >
               {multiplesTypes[allItemsLabel].values}
