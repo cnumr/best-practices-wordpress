@@ -4,4 +4,4 @@ path: /lexique/ecoconcevoir
 toIndex: true
 ---
 
-Démarche d'intégration continue visant à garder en tête la réduction des impacts environnementaux tout au long de son cyle de vie.
+Démarche d'amélioration continue consistant à intégrer l'environenemnt dès la conception d'un produit ou service, et lors de toutes les étapes de son cycle de vie.
