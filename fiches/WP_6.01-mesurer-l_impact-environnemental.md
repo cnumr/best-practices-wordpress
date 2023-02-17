@@ -22,8 +22,7 @@ toIndex: true
 
 ## Sujet
 
-**L'impact environnemental du numérique n'est pas mesurable en tant que tel (car le numérique est par définition immatériel). Il reste toutefois possible d'évaluer l'impact environnemental, même s'il n'existe à ce jour aucune méthodologie qui fasse l'unanimité. Il est recommandé de prendre en compte plusieurs indicateurs environnementaux afin de limiter les risques de transfert d'impact.**  
-Evaluer l'impact environnemental d'un site en développement ou déjà mis en ligne va permettre d'ajuster au mieux les composants de votre projet et permettre de faire des choix afin d'alléger l'impact de votre projet. Cette évaluation doit se faire sur l'ensemble d'un [[parcours-utilisateur]]. Elle va par exemple prendre en compte le poids et la complexité des composants de la page : HTML, CSS, JavaScript, chargement des bibliothèques externes (typographie, cartographie, etc.) et aussi dénombrer les requêtes serveurs. Attention toutefois car, en procédant ainsi, certains impacts risquent d'être omis (notamment l'impact des animations voire les traitements de fond liés par exemple aux services tiers tels que Google Analytics).
+Mesurer l'impact environnemental d'un site en développement ou déjà mis en ligne va permettre d'ajuster au mieux les composants de votre projet et permettre de faire des choix afin d'alléger l'impact de votre projet. Cette mesure doit se faire sur l'ensemble d'un [[parcours-utilisateur]]. Cette mesure va prendre en compte le poids et la complexité des composants de la page : HTML, CSS, JavaScript, chargement des bibliothèques externes (typographie, cartographie, etc.) et aussi mesurer les requêtes serveurs.
 
 ## GreenIT vous conseille
 
