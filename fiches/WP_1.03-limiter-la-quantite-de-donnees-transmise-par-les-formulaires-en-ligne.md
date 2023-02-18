@@ -43,7 +43,7 @@ Si vous ne veillez pas à la sécurité (Voir la fiche "[Sécuriser les formulai
 
 ## GreenIT vous conseille
 
-- Préférer l'affichage de vos coordonnées directes en premier lieu
+- Préférer l'affichage direct de vos coordonnées en premier lieu
 - Être vigilant à ne demander que les informations nécessaires au traitement de la demande (ne pas demander de date de naissance pour une demande de contact simple par exemple)
 - Sécuriser vos formulaires
 - Veiller à stocker vos messages reçus dans la base de données, plutôt que de les envoyer par email (moins il y a de mails qui transitent, mieux c'est)

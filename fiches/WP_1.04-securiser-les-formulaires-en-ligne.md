@@ -29,7 +29,7 @@ Le captcha est un système qui permet de vérifier, par une suite de lettres, un
 
 reCAPTCHA est un système de détection automatisée d'utilisateurs appartenant à Google et mettant à profit les capacités de reconnaissance de ces derniers, mobilisées par les tests CAPTCHA, pour améliorer par la même occasion le processus de reconnaissance des formes par les robots<sup>2</sup>.
 
-![recaptcha.jpg](./medias_35/recaptcha.jpg)
+![recaptcha.jpg](./medias_1-04/recaptcha.jpg)
 
 Il en existe de plusieurs types (reconnaissances d'images, de textes, validation automatique par Google).
 
@@ -37,7 +37,7 @@ Il en existe de plusieurs types (reconnaissances d'images, de textes, validation
 
 Vous pouvez ne pas utiliser Google reCAPTCHA, et créer vos propres questions/réponses ou questions mathématiques.
 
-![captcha-calcul.jpg](./medias_35/captcha-calcul.jpg)
+![captcha-calcul.jpg](./medias_1-04/captcha-calcul.jpg)
 
 ### Le Pot de miel
 

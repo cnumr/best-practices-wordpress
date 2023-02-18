@@ -22,11 +22,11 @@ toIndex: true
 
 ## Sujet
 
-![Exemple avec Google](./medias_02/pict1.png)
+![Exemple avec Google](./medias_3-01/pict1.png)
 
-La suggestion de réponse au moment de la saisie dans un champ de recherche (ou de toute liste) est pratique, mais à un réel impact réseau ainsi que sur les processeurs du serveur comme sur celui de la machine utilisée par le visiteur du site.
+La suggestion de réponse au moment de la saisie dans un champ de recherche (ou de toute liste) est pratique, mais a un réel impact réseau ainsi que sur les processeurs du serveur comme sur celui de la machine utilisée par le visiteur du site.
 
-Pour faire simple, **à chaque caractère saisi, une demande est envoyée au serveur, qui fait alors une requête en base pour rechercher le terme**. Sur WordPress, si la requête n'est pas filtrée, elle recherchera sur les diverses entités présentent (Post, Comments, etc.) et elle retournera les plus pertinentes qu'elle aura donc comparées et triées. Une fois cette recherche effectuée, le résultat est retourné comme liste qui s'affiche dans le navigateur.
+Pour faire simple, **à chaque caractère saisi, une demande est envoyée au serveur, qui fait alors une requête en base pour rechercher le terme**. Sur WordPress, si la requête n'est pas filtrée, elle recherchera sur les diverses entités présentes (Post, Comments, etc.) et elle retournera les plus pertinentes qu'elle aura donc comparées et triées. Une fois cette recherche effectuée, le résultat est retourné comme liste qui s'affiche dans le navigateur.
 
 **Ce n'est donc pas un type de fonctionnalité à privilégier**.
 
