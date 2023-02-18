@@ -17,9 +17,9 @@ toIndex: true
 
 ## Sujet
 
-Le Lazy Load ('chargement différé' en français) est une technique d’optimisation qui permet de charger le contenu d'une page d'un site au fur et à mesure que le visiteur la parcourt. Elle permet d'éviter de télécharger de contenus volumineux (images, vidéos, etc.) parfois non nécessaires, car non vus par le visiteur comme par exemple, si votre visiteur a atterri sur votre page par erreur ou s'il a besoin de consulter une seule partie de votre page.
+Le Lazy Load ('chargement différé' en français) est une technique d’optimisation qui permet de charger le contenu d'une page d'un site au fur et à mesure que le visiteur la parcourt. Elle permet d'éviter de télécharger de contenus volumineux (images, vidéos, etc.) parfois non nécessaires, car non vus par le visiteur. Par exemple, si votre visiteur a atterri sur votre page par erreur ou s'il a besoin de consulter une seule partie de votre page.
 
-> ⚠️ Avant d'utiliser cette technique, n'oubliez pas d'optimiser au préalable vos images et vidéos (voir bonnes pratiques du [[scope]] "Images"). Il permet de limiter le nombre d'images chargées inutilement.
+> ⚠️ Avant d'utiliser cette technique, n'oubliez pas d'optimiser au préalable vos images et vidéos (voir bonnes pratiques du [[scope]] "Images"). Le lazy load permet "seulement" de limiter le nombre d'images chargées inutilement.
 
 ## GreenIT vous conseille
 
@@ -37,7 +37,7 @@ Cependant, il est encore plus efficace d'utiliser la technique de lazy load de m
 
 Nota: si vous utilisez la fonction WP [get_the_post_thumbnail (EN)](https://developer.wordpress.org/reference/functions/get_the_post_thumbnail/), la balise image obtenue contiendra l'attribut `loading="lazy"` par défaut ([https://caniuse.com/?search=loading(EN)](https://caniuse.com/?search=loading)).
 
-Le lazy loading natif a l'avantage d'améliorer les performances globales de votre site, car il ne repose pas sur du code JavaScript en ligne ou des scripts externes.
+Le lazy loading natif a l'avantage d'améliorer les performances globales de votre site, car il ne repose pas sur du code JavaScript en ligne ni des scripts externes.
 
 ## Principe de validation
 

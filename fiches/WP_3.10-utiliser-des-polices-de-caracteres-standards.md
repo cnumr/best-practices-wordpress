@@ -23,11 +23,13 @@ Afin de donner un style personnalisé à son site, un des leviers est d'utiliser
 
 Pour que la "Gill Sans Extrabold", si nous poursuivons notre exemple plus haut, s'affiche correctement pour l'utilisateur, il faut qu'elle soit installée sur le terminal (ordinateur, tablette ou mobile) de l'utilisateur ou téléchargée automatiquement lors de l'affichage du site via un import `HTML` ou `CSS`, si la police n'est pas disponible le navigateur utilisera l'Arial et sinon la police `sans-serif` par défaut de votre navigateur sera affichée (polices [fallbacks (EN)](https://www.w3schools.com/cssref/css_fonts_fallbacks.asp)).
 
+Gardez également en tête que toutes les polices ne seront pas forcément aussi lisibles les unes que les autres. Ainsi, par exemple, les polices à empattement seront souvent plus difficiles à lire pour les personnes souffrant de dyslexie. 
+
 Pour résumé, il est possible :
 
-- d'utiliser des polices de caractères déployées sur internet, mais sur des CDN\* comme Google Font ou Adobe Font par exemple. Votre utilisateur va devoir les télécharger automatiquement lors de la navigation (polices web). Certaines polices web sont disponibles pour une utilisation hébergée comme sur Google Font.
-- de mettre à disposition lors du chargement du site vos polices de caractères que l'utilisateur va télécharger automatiquement en naviguant sur votre site (polices hébergées localement)
-- d'utiliser des polices de caractères installées, par défaut, sur le plus grand nombre de [[terminaux]] (polices intégrées ou Web safe)
+- D'utiliser des polices de caractères déployées sur internet, mais sur des CDN\* comme [Google Font](https://gomakethings.com/google-fonts-and-gdpr/) ou Adobe Font par exemple. Votre utilisateur va devoir les télécharger automatiquement lors de la navigation (polices web). Certaines polices web sont disponibles pour une utilisation hébergée comme sur Google Font (solution à privilégier).
+- De mettre à disposition lors du chargement du site vos polices de caractères que l'utilisateur va télécharger automatiquement en naviguant sur votre site (polices hébergées localement)
+- D'utiliser des polices de caractères installées, par défaut, sur le plus grand nombre de [[terminaux]] (polices intégrées ou Web safe)
 
 ## GreenIT vous conseille
 
@@ -58,7 +60,7 @@ Si vous avez réellement besoin d'une police de caractères spécifiques, nous v
 }
 ```
 
-> ⚠️ Il existe différents formats de police (Woff2, woff, ttf, otf, etc). "Les développeurs des principaux navigateurs se sont mis d'accord sur l'utilisation du format Web Open Font Format (woff) comme standard".
+> ⚠️ Il existe différents formats de police (Woff2, woff, ttf, otf, etc). "Les développeurs des principaux navigateurs se sont mis d'accord sur l'utilisation du format Web Open Font Format (woff) comme standard". Du point de vue de la compression, le format woff2 est légèrement plus performant que le format woff. 
 
 > ⚠️ Une font, police de caractères, typographie, existe en plusieurs graisses (light, regular, italic, bold, black, etc). Nous vous recommandons d'utiliser `<b>` ou `<strong>`, `<i>` ou `<em>` et les propriétés `CSS` qui en découle pour éviter le requêtage, le poids et le téléchargement de fichiers supplémentaires. S'il est d'une nécessité absolue d'avoir les fichiers à minima deux graisses d'une police alors, nous vous recommandons l'utilisation d'une police variable.
 

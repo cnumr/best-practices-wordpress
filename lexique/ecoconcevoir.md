@@ -4,4 +4,4 @@ path: /lexique/ecoconcevoir
 toIndex: true
 ---
 
-Concevoir un produit de façon à garantir un impact écologique réduit sur l’environnement.
+Démarche d'amélioration continue consistant à intégrer l'environenemnt dès la conception d'un produit ou service, et lors de toutes les étapes de son cycle de vie.

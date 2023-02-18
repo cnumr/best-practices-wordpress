@@ -22,7 +22,7 @@ toIndex: true
 
 Bien choisir sa solution d'hébergement est essentielle pour plusieurs raisons :
 
-- **Pour la sécurité de votre site** Plusieurs hébergeurs proposent des offres d'hébergements avec WordPress déjà installé ou installable en un clic et des mises à jour automatiques. Pour éviter les mauvaises surprises lors du déploiement de votre site ou suite à une mise à jour automatique, assurez-vous que l'installation est aux normes de sécurité (aucun dossier n'utilise l'identifiant administrateur par exemple), que vous avez bien accès aux fichiers sources et à la base de données, que le thème sélectionné est bien compatible avec les versions des différents logiciels utilisés que ce soit WordPress ou phpMyAdmin pour la gestion de votre base de données MySQL, etc.
+- **Pour la sécurité de votre site** Plusieurs hébergeurs proposent des offres d'hébergements avec WordPress déjà installé ou installable en un clic et des mises à jour automatiques. Pour éviter les mauvaises surprises lors du déploiement de votre site ou suite à une mise à jour automatique, assurez-vous que l'installation est aux normes de sécurité (aucun dossier n'utilise l'identifiant administrateur par exemple), que vous avez bien accès aux fichiers source et à la base de données, que le thème sélectionné est bien compatible avec les versions des différents logiciels utilisés que ce soit WordPress ou phpMyAdmin pour la gestion de votre base de données MySQL, etc.
 
 - **Pour la souveraineté des données hébergées qu'elles soient d'ordre commercial ou privé** Vérifiez toujours les conditions de vente ainsi que les conditions d'utilisation des services que vous utilisez et informez vos visiteurs si certaines de leurs données sont collectées.
 
@@ -44,7 +44,7 @@ Même s'il n'existe pas de label ou certification multi-critères permettant d'�
 - la compensation carbone.
 
 > Il est aussi fortement recommandé de vérifier [les prérequis nécessaires pour faire tourner WordPress](https://fr.wordpress.org/about/requirements/) et d'adapter l'architecture de votre solution d'hébergement aux besoins de votre site.
-> Cela veut dire qu'il faut adapter la dimension de son hébergement à la dimension de son site internet. Si vous en avez les compétences, référez-vous aux Bonnes pratiques 140 à 145 du livre "Ecoconception web / les 115 bonnes pratiques V4".
+> Cela veut dire qu'il faut adapter la dimension de son hébergement à la dimension de son site internet. Si vous en avez les compétences, référez-vous aux Bonnes pratiques 140 à 145 du [livre "Ecoconception web / les 115 bonnes pratiques V4"](https://www.greenit.fr/2022/05/11/mise-a-jour-majeure-du-referentiel-ecoconception-web-les-115-bonnes-pratiques/).
 > Par exemple : Un site qui ne pèsera pas plus de 1Go après 10 ans d'utilisation n'a pas besoin de 100Go d'espace disque. Les hébergeurs proposent des hébergements mutualisés, qui permettent de mettre plusieurs sites (les vôtres ou non) sur une même machine physique et donc, de réduire l'impact de votre site (ressources + énergie).
 
 ## Exemples

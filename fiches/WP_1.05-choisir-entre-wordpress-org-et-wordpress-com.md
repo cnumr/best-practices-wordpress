@@ -19,12 +19,12 @@ toIndex: true
 
 ## Sujet
 
-Il existe sur le marché 2 WordPress en apparence semblables, mais finalement assez différents en termes de possibilités d'utilisation et surtout, d'écoconception :
+Il existe sur le marché 2 WordPress en apparence semblables, mais finalement assez différents en termes de possibilités d'utilisation et surtout d'écoconception :
 
 - [WordPress.org](https://fr.wordpress.org/)
 - [WordPress.com](https://wordpress.com/fr/)
 
-Nous souhaitons attirer votre attention sur ces deux formules pour vous permettre de faire un choix éclairé sur les différents points de divergence en fonction de votre besoin. Sachez toutefois que l'ensemble est basé sur le même logiciel [[open source]] WordPress, c'est-à-dire le [[cms|CMS]] comprenant tous les fichiers nécessaires pour la construction d'un site et même si WordPress est rapide et pratique, car il permet un gain de temps pour créer son site internet, il est cependant pointé du doigt comme étant un système très polluant.
+Nous souhaitons attirer votre attention sur ces deux formules pour vous permettre de faire un choix éclairé sur les différents points de divergence en fonction de votre besoin. Sachez toutefois que l'ensemble est basé sur le même logiciel [[open source]] WordPress, c'est-à-dire le [[cms|CMS]] comprenant tous les fichiers nécessaires pour la construction d'un site et même si WordPress est rapide et pratique, car il permet un gain de temps pour créer son site internet, il est cependant pointé du doigt comme étant un système potentiellement très polluant.
 
 ### WordPress.com, la solution propriétaire
 
@@ -34,7 +34,7 @@ Appartenant à Automattic Inc. (société américaine et l'un des principaux con
 
 Sur ce site, vous pouvez télécharger directement le logiciel open source WordPress (le même utilisé chez Automattic Inc.). Cette solution nécessite l'achat d'un nom de domaine et de souscrire à une offre chez un hébergeur ainsi que de vous occupez, en suivant les recommandations des bonnes pratiques d'écoconception de ce référentiel, de l'optimisation, de la sécurité et de la maintenance.
 
-> Les hébergeurs proposent désormais l'installation de WordPress en un clic. Avant de se lancer sur une installation rapide, assurez-vous en lisant la documentation de l'hébergeur que vous aurez bien accès à vos fichiers et à votre base de données depuis votre hébergement. Aussi, il est important de vérifier l'emplacement d'installation de WordPress ainsi que les règles de sécurité sont respectées (aucun répertoire portant comme nom, votre identifiant administrateur par exemple).
+> Les hébergeurs proposent désormais l'installation de WordPress en un clic. Avant de se lancer dans une installation rapide, assurez-vous en lisant la documentation de l'hébergeur que vous aurez bien accès à vos fichiers et à votre base de données depuis votre hébergement. Aussi, il est important de vérifier l'emplacement d'installation de WordPress ainsi que les règles de sécurité sont respectées (aucun répertoire portant comme nom, votre identifiant administrateur par exemple).
 
 ### Récapitulatif
 
@@ -64,7 +64,7 @@ Nous pensons que vous l'aurez compris, que l'on utilise WordPress.com ou directe
 
 Vous le verrez tout au long de ces bonnes pratiques, il est plus facile d'agir quand nous sommes libres d'accéder, de désactiver et supprimer des fonctionnalités non essentielles, de mettre en [[cache]] les éléments durables, de choisir et modifier le thème qui correspond à notre besoin et aux conseils d'écoconception, etc.
 
-Si vous êtes totalement novices, sachez que WordPress est facile d'utilisation et que des ressources, des tutoriels sont disponibles sur internet pour vous guider pas-à-pas.
+Si vous êtes totalement novices, sachez que WordPress est facile d'utilisation et que des ressources et tutoriels sont disponibles sur internet pour vous guider pas-à-pas.
 
 ## Principe de validation
 

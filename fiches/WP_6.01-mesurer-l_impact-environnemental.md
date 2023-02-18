@@ -1,5 +1,5 @@
 ---
-title: 6.01 Mesurer l'impact environnemental
+title: 6.01 Evaluer l'impact environnemental
 people: Yann Gautreau
 scope: Test
 responsible:

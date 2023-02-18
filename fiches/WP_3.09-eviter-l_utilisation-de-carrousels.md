@@ -20,9 +20,9 @@ toIndex: true
 
 Le carrousel, souvent utilisé pour mettre en avant de multiples contenus, montre rapidement ses limites en matière de conversion<sup>1</sup>, avec un impact négatif sur l'expérience utilisateur. Sa présence implique plusieurs points critiques :
 
-- un alourdissement du poids des pages pour la présence de CSS et JavaScript dédié, mais également par le contenu présent sur chaque écran du carrousel<sup>2</sup> ;
-- une complexité en termes d'assurance qualité web<sup>3</sup> et d'accessibilité numérique<sup>4</sup> ;
-- une utilisation plus importante des ressources processeurs dans le cas d'un carrousel automatique.
+- Un alourdissement du poids des pages pour la présence de CSS et JavaScript dédié, mais également par le contenu présent sur chaque écran du carrousel<sup>2</sup> ;
+- Une complexité en termes d'assurance qualité web<sup>3</sup> et d'accessibilité numérique<sup>4</sup> ;
+- Une utilisation plus importante des ressources processeurs dans le cas d'un carrousel automatique.
 
 ## GreenIT vous conseille
 
@@ -33,7 +33,7 @@ Dans le cas contraire :
 - Mettre en place un contrôle simple et complet du composant (arrêt, écran suivant/précédent)
 - Préférez un chargement progressif des images présentes dans les différents écrans ([Privilégier le chargement différé des images](./WP_4.06-privilegier-le-chargement-differe-des-images-lazy-loading.md))
 - Préférez les animations impliquant une utilisation des ressources processeurs ([Éviter les animations](./WP_3.11-eviter-les-animations.md))
-- Limiter le nombre d'écrans présent dans le carrousel.
+- Limiter le nombre d'écrans présents dans le carrousel.
 
 ## Exemple
 
@@ -60,3 +60,5 @@ Les animations de certains attributs CSS implique un repaint/reflow des navigate
 3. Note 3 : [OPQUAST : Règle n° 121 - Les animations, sons et clignotements peuvent être mis en pause.](https://checklists.opquast.com/fr/assurance-qualite-web/les-animations-sons-et-clignotements-peuvent-etre-mis-en-pause)
 
 4. Note 4 : [RGAA : Critère 4.12 - La consultation de chaque média non temporel est-elle contrôlable par le clavier et tout dispositif de pointage ?](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-4-12)
+
+5. Should I use a carrousel? https://shouldiuseacarousel.com/

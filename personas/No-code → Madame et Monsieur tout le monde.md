@@ -8,8 +8,8 @@ toIndex: true
 
 ## Profil :
 
-- Vous avez envie de réaliser un site web ou une boutique en ligne et vous avez conscience que l'impact du numérique n'est pas nul (4% de la production de GES mondial) ;
-- Vous avez besoin d'informations, mais vous n'êtes développeur ou en tout cas pas un expert du developpement web. Vous avez donc besoin d'informations adaptées et compréhensibles.
+- Vous devez réaliser un site web (ou un site e-commerce) vous avez conscience que l'impact du numérique n'est pas nul ([4% de la production de GES mondial](https://www.greenit.fr/etude-empreinte-environnementale-du-numerique-mondial/)) ;
+- Vous avez besoin d'informations, mais vous n'êtes développeur ou en tout cas pas un expert du développement web. Vous avez donc besoin d'informations adaptées et compréhensibles.
 
 ### Vous vous retrouvez dans ces affirmations :
 
