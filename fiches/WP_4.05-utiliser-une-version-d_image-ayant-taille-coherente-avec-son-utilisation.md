@@ -1,5 +1,5 @@
 ---
-title: 4.05 Utiliser une version d'image ayant taille cohérente avec son utilisation
+title: 4.05 Utiliser une version d'image ayant une taille cohérente avec son utilisation
 people: Renaud H.
 scope: Images
 responsible:
@@ -21,11 +21,11 @@ toIndex: true
 
 ## Sujet
 
-Les images sont un des éléments les plus lourds des sites web. Une mauvaise compression ou **un mauvais dimensionnement de vos images auront un impact écologique négatif, ainsi que sur vos performances d'affichage et la notation Google de votre site en sera aussi pénalisée**.
+[Les images sont un des éléments les plus lourds des sites web](https://almanac.httparchive.org/en/2022/page-weight#content-type-and-file-formats). Une mauvaise compression ou **un mauvais dimensionnement de vos images auront un impact écologique négatif, ainsi que sur vos performances d'affichage. La notation Google de votre site en sera aussi pénalisée**.
 
 Lors de l'ajout d'une image dans l'interface d'une page, il faut se poser plusieurs questions, abordées sur d'autres fiches de ce guide :
 
-- Le type d'image (JPG, PNG, SVG, etc. voir [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md))
+- Le type d'image (JPG, PNG, SVG, etc. voir [5.02 Utiliser le format adéquat d'image](./WP_5.02-utiliser-le-format-adequat-d_image.md))
 - La compression possible ou le nombre de couleurs embarquées
 - La transparence ou non
 - Et ici, la taille de l'image.
@@ -38,7 +38,7 @@ Les [[theme|thèmes]], si c'est configuré dans le code, génèrent aussi des vi
 
 Lors de la création d'un site, il est important de configurer la génération des vignettes pour optimiser et accélérer l'affichage.
 
-Sachant que votre site va finalement n'utiliser que des versions de tailles réduites de vos images, il est aussi bon pour la planète de se poser la question lors de l'upload de votre média si une version en 2600 px est nécessaire alors que votre site n'affiche que des images de 800 px maximum. En effet, ces médias "gigantesques" resteront néanmoins stockés sur le serveur, devront transiter sur les réseaux lors de l'upload et seront conservés dans les sauvegardes de votre site.
+Sachant que votre site va finalement n'utiliser que des versions de tailles réduites de vos images, il est aussi bon pour la planète de se poser la question lors de l'upload de votre média si une version en 2600 px est nécessaire alors que votre site n'affiche que des images de 800 px maximum. En effet, ces médias "gigantesques" restent néanmoins stockés sur le serveur, devront transiter sur les réseaux lors de l'upload et sont conservés dans les sauvegardes de votre site.
 
 ## GreenIT vous conseille
 

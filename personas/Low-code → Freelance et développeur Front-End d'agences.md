@@ -8,15 +8,15 @@ toIndex: true
 
 ### Profil :
 
-- Vous avez devez réaliser un site web, un site e-commerce pour votre entreprise ou pour un de vos client et vous ou ce dernier avez conscience que l'impact du numérique n'est pas nul (4% de la production de GES mondial) ;
-- Vous devez délivrer vite, mais sans pour autant délivrer mal, un site ayant un fort impact ;
-- Vous avez besoin des bonnes informations rapidement et qu'elles soient applicables sans vous écartez de votre devis ;
-- Vous voulez connaitre tous les points à checker, de la conception à la livraison ;
+- Vous devez réaliser un site web (ou un site e-commerce) pour vous ou pour un de vos clients et vous ou ce dernier avez conscience que l'impact du numérique n'est pas nul ([4% de la production de GES mondial](https://www.greenit.fr/etude-empreinte-environnementale-du-numerique-mondial/)) ;
+- Vous devez délivrer vite tout en gardant sous contrôle autant que possible les impacts environnementaux ;
+- Vous avez besoin des bonnes informations rapidement et qu'elles soient applicables sans vous écarter de votre devis ;
+- Vous voulez connaître tous les points à checker, de la conception à la livraison ;
 - Vous n'êtes pourtant pas un développeur, vous avez donc besoin d'informations adaptées et compréhensibles.
 
 ### Vous vous retrouvez dans ces affirmations :
 
-> **LOW-CODE** → Il a des connaissances de base en HTML et CSS, il utilise un peu de code PHP en rustine ou en liant des plugins qu'il utilise Utilisant un thème joli (ou qu'il rendra joli) et répondant a ses besoins ou aux besoins de son client (voire embarquant plus que les besoins identifiés) et des "centaines" de plugins et souvent un constructeur de pages.
+> **LOW-CODE** → Iel a des connaissances de base en HTML et CSS, iel utilise un peu de code PHP en rustine ou en liant des plugins. Iel a recours à un thème joli (ou qu'iel rendra joli) et répondant a ses besoins ou aux besoins de son client (voire embarquant plus que les besoins identifiés) et des "centaines" de plugins et souvent un constructeur de pages.
 
 ### Si c'est le cas :
 

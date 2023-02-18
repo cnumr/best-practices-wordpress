@@ -29,21 +29,21 @@ Concrétement au chargement d'une page, WordPress vérifie si un transient exist
 
 Pour un maximum de gain, préférez utiliser cette méthode :
 
-- pour des contenus complexes à générer
-- pour un même contenu présent sur plusieurs pages
-- ou pour un contenu qui ne changera plus (transient sans délai d'expiration)
+- Pour des contenus complexes à générer
+- Pour un même contenu présent sur plusieurs pages
+- Pour un contenu qui ne changera plus (transient sans délai d'expiration)
 
 ## GreenIT vous conseille
 
 ### Solution no-code 🌱
 
-L'utilisation de l'[[api|API]] décrite ci-dessous reste une solution technique qui nécéssite de mettre les mains dans le code. Cependant, des extensions de système de cache peuvent plus ou moins finement gérer les données transitoires (voir la documentation de l'extension) sinon, des extensions complémentaires existent.
+L'utilisation de l'[[api|API]] décrite ci-dessous reste une solution technique qui nécéssite de mettre les mains dans le code. Cependant, des extensions de système de cache peuvent plus ou moins finement gérer les données transitoires (voir la documentation de l'extension). Sinon, des extensions complémentaires existent.
 
 ### Solution code 🌱🌱
 
 L'API WordPress Transient s'utilise de la même manière que l'API Options. Elle ajoute cependant la notion de durée de vie. À noter qu'une donnée transitoire expirée reste en base de données et peut résulter d'une désinstallation d'extension ou de changement de thème.
 
-Si la liste des derniers articles est affichée sur plusieurs pages, nous pouvons par exemple enregistrer cette liste (et son code HTML) dans un Transient. Ainsi, lors de l'affichage de ce bloque, vous n'aurez qu'une requête à faire pour ce bloc, au lieu d'une boucle qui récupère les X derniers articles.
+Si la liste des derniers articles est affichée sur plusieurs pages, nous pouvons par exemple enregistrer cette liste (et son code HTML) dans un Transient. Ainsi, lors de l'affichage de ce bloc, vous n'aurez qu'une requête à faire pour ce bloc, au lieu d'une boucle qui récupère les X derniers articles.
 
 Cette donnée transitoire pourra être remplacée lorsqu'un nouvel article sera ajouté.
 

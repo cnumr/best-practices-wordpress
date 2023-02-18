@@ -23,7 +23,7 @@ toIndex: true
 
 Plusieurs formats d'images sont possibles sur le web : le SVG, le JPG/JPEG, le PNG, le GIF et le WebP, le HEIF et le AVIF.
 
-Chaque format a un impact sur l'optimisation d'affichage et sur le poids final de l'image, qui est dû à leurs possibilités de compression. Si vous avez lu la bonne pratique : [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md), vous savez que les médias en général et que les images en particulier (sur une page web, 50 % du poids total de la page) sont un des éléments les plus lourds des sites web engendrant un surcoût environnemental parfois non nécessaire et coûteux, en stockage, réseau et bande passante pour des sociétés comme Google (Youtube), Netflix et Apple qui cherchent et proposent des formats de compression toujours plus optimisés.
+Chaque format a un impact sur l'optimisation d'affichage et sur le poids final de l'image, qui est dû à leurs possibilités de compression. Si vous avez lu la bonne pratique : [4.05 Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md), vous savez que les médias en général et que les images en particulier (sur une page web, 50 % du poids total de la page) sont un des éléments les plus lourds des sites web engendrant un surcoût environnemental parfois non nécessaire et coûteux, en stockage, réseau et bande passante pour des sociétés comme Google (Youtube), Netflix et Apple qui cherchent et proposent des formats de compression toujours plus optimisés.
 
 Le monde des extensions de formats est vivant et complexe, pour plus de clarté nous ne rentrerons pas dans les détails techniques.
 
@@ -51,7 +51,7 @@ C'est un format de compression (avec ou sans perte) d'images [[matricielle|matri
 
 Le WebP est en moyenne 26% plus légère qu’une image PNG, et jusqu’à 34% plus légère qu’une image JPEG. Adopté par Google Chrome, Microsoft Edge et Mozilla Firefox fin 2018, puis par tous les navigateurs chromium comme Opera, Vivaldi, Brave, il est supporté depuis 2020 par Safari d’Apple. Il supporte 97% des usages (https://caniuse.com/webp).
 
-À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour courvrir tous les usages/navigateurs
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour couvrir tous les usages/navigateurs.
 
 ### 🚫 Le HEIF (High Efficiency Image File Format) 🚫
 
@@ -65,19 +65,19 @@ Format encore jeune, à utiliser pour toute image [[matricielle|matricielle ou b
 
 ### ❓ Le JPG/JPEG (Joint Photographic Experts Group) ❓
 
-C'est un format de compression d'images [[matricielle|matricielles]] qui repose sur la suppression des couleurs non visibles pour réduire le poids du fichier. Dans des logiciels tels que : Photoshop, Gimp, Affinity Photo, et autres, vous pouvez contrôler le taux de compression pour obtenir le meilleur ratio entre qualité d'affichage et poids. Cependant, si vous la compression est trop importante, vous perdrez des informations de couleurs visibles. **Ce format fonctionne le mieux avec des photographies.**
+C'est un format de compression d'images [[matricielle|matricielles]] qui repose sur la suppression des couleurs non visibles pour réduire le poids du fichier. Dans des logiciels tels que : Photoshop, Gimp, Affinity Photo, et autres, vous pouvez contrôler le taux de compression pour obtenir le meilleur ratio entre qualité d'affichage et poids. Cependant, si la compression est trop importante, vous perdrez des informations de couleurs visibles. **Ce format fonctionne le mieux avec des photographies.**
 
-À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]], en complément d'un format WebP pour couvrir tous les usages/navigateurs
 
 ### ❓ Le PNG (Portable Network Graphics) ❓
 
-C'est un format de compression d'images [[matricielle|matricielles]] crée comme alternative du GIF qui été à l'époque sous brevet, **format parfait pour les images comportant un texte qui doit rester lisible comme des graphiques, par exemple.**
+C'est un format de compression d'images [[matricielle|matricielles]] créé comme alternative du GIF qui été à l'époque sous brevet, **format parfait pour les images comportant un texte qui doit rester lisible comme des graphiques, par exemple.**
 
 À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
 
 ### 🚫 Le GIF (Graphics Interchange Format) 🚫
 
-C'est un très vieux format de compression d'images [[matricielle|matricielles]] datant de la fin des années 80. Il autorise la transparence et permet d'afficher une séquence d'images similaire à des vidéos (GIF animé). **Le GIF est un format lourd, préférez l'utilisation de PNG, WebP, MP4, WebM ou autres codecs vidéos adaptés au web.**
+C'est un format de compression d'images [[matricielle|matricielles]] datant de la fin des années 80. Il autorise la transparence et permet d'afficher une séquence d'images similaire à des vidéos (GIF animé). **Le GIF est un format lourd, préférez l'utilisation de PNG, WebP, MP4, WebM ou autres codecs vidéos adaptés au web.**
 
 > 💡 Vous connaissez surement le site [Giphy (EN)](https://giphy.com/) ! Les animations, dont le style graphique correspond à celui d'un GIF, sont en `.webp` et `.mp4`. Sur [Twitter](https://twitter.com/), les "GIFs" sont en `.mp4`.
 
@@ -110,7 +110,7 @@ Google met à disposition le codec [libwebp](https://developers.google.com/speed
 
 ### Graphique vectoriel
 
-Nous avions sélectionné une image pour illustrer cette BP (ci-dessous).
+Nous avons sélectionné une image pour illustrer cette BP (ci-dessous).
 
 Le fichier de création est sûrement vectoriel cependant il a été utilisé en `.jpg`.
 Nous l'avons retravaillé comme il suit :
@@ -120,13 +120,10 @@ Nous l'avons retravaillé comme il suit :
 | Fichier d'origine en `.jpg`                                  | 999 ko | Fond blanc  |
 | Fichier revectorisé sous Illustrator puis exporter en `.svg` | 137 ko |             |
 
-<p align="center">
+![format-choice.svg](./medias_5-02/image2.png)
 
-![format-choice.svg](./medias_28/format-choice.svg)
-
-</p>
 <p align="center">
-<a href="https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61" target="_blank">Fig.1 - JPG vs PNG vs GIF vs SVG (EN)</a>
+<a href="https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61" target="_blank">Fig.1 - JPG vs PNG vs GIF vs SVG (source EN)</a>
 </p>
 
 ### Photographie

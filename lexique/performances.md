@@ -4,4 +4,5 @@ path: /lexique/performances
 toIndex: true
 ---
 
-Un site internet performant est un site qui va vite à l'affichage, qui permet au visiteur de trouver le contenu qu'il cherche rapidement.
+La performance web est une discipline technique qui doit être prise en compte au plus tôt lors de la création d'un site web puis tout au long de son cycle de vie. Elle consiste notamment à mesurer le temps de chargement des pages d'un site afin d'assurer une expérience optimale pour l'utilisateur.     
+Des retours d'expérience sur l'impact de la performance web sont facilement trouvables notamment sur ce site : https://wpostats.com/

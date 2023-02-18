@@ -21,7 +21,7 @@ toIndex: true
 
 ## Sujet
 
-Les [[extension|extensions]] ont contribué au succès du [[cms|CMS]], mais souvent ayant pour contre partie une baisse de performance générale et une augmentation accrue de l'empreinte environnementale du site.
+Les [[extension|extensions]] ont contribué au succès du [[cms|CMS]], mais ont souvent pour contre partie une baisse de performance générale et une augmentation de l'empreinte environnementale du site.
 
 Elles génèrent régulièrement des :
 

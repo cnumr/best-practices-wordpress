@@ -26,17 +26,17 @@ Entretenir son site WordPress régulièrement est essentiel non seulement pour g
 
 Ne pas entretenir son site est problématique, pouvant :
 
-- causer un mauvais référencement de votre site ;
-- donner une mauvaise image de votre organisme (entreprise, association, etc.), de votre service ou de votre produit ;
-- ralentir le chargement du site et ainsi dégrader l’expérience utilisateur ;
-- perdre ses visiteurs en affichant des informations inutiles;
-- consommer inutilement des ressources (dont de l’énergie) pour le stockage de données inutilisées ;
-- créer des incompatibilités avec d’autres outils installés jusqu'au possible crash sur votre site ;
-- être source d’attaques informatiques.
+- Causer un mauvais référencement de votre site ;
+- Donner une mauvaise image de votre organisme (entreprise, association, etc.), de votre service ou de votre produit ;
+- Ralentir le chargement du site et ainsi dégrader l’expérience utilisateur ;
+- Perdre ses visiteurs en affichant des informations inutiles;
+- Consommer inutilement des ressources (dont de l’énergie) pour le stockage de données inutilisées ;
+- Créer des incompatibilités avec d’autres outils installés jusqu'au possible crash sur votre site ;
+- Être source d’attaques informatiques.
 
 ## Green IT vous conseille
 
-Il faut prévoir dès l'installation, un plan de maintenance de votre site comprenant autant les mises à jour régulières des différents éléments que leur suppression à la manière du ménage régulier et du ménage de printemps ou de l'entretien d'un jardin.
+Il faut prévoir dès l'installation un plan de maintenance de votre site comprenant autant les mises à jour régulières des différents éléments que leur suppression à la manière du ménage régulier et du ménage de printemps ou de l'entretien d'un jardin.
 
 ### Solution no-code 🌱🌱🌱
 

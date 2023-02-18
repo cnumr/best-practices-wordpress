@@ -1,7 +1,7 @@
 ---
 title: 3.08 Choisir son thème
 people: Dominique N. & Yann G.
-scope: Thème
+scope: Thèmes
 responsible:
   - Low-code → Freelance et développeur Front-End d'agences
   - No-code → Madame et Monsieur tout le monde
@@ -23,7 +23,7 @@ toIndex: true
 ### Fonctionnalités essentielles
 
 **Ce sujet est récurrent parce qu'il est le facteur clé d'un site écoconçu !**
-Si vous avez cela en tête à chaque étape de la réalisation de votre site, votre thème sera aussi choisi parce qu'il ne propose pas plus que ce dont vous avez besoin. S'il propose des fonctionnalités supplémentaires, désactivez/supprimer les extensions en trop.
+Si vous avez la sobriété numérique en tête à chaque étape de la réalisation de votre site, votre thème sera aussi choisi parce qu'il ne propose pas plus que ce dont vous avez besoin. S'il propose des fonctionnalités supplémentaires, désactivez/supprimer les extensions en trop.
 
 ### Accessibilité web
 

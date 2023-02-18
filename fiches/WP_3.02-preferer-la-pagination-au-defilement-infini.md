@@ -1,7 +1,7 @@
 ---
 title: 3.02 Préférer la pagination au défilement infini
 people: Dominique N.
-scope: Front-Office
+scope: Front-office
 responsible:
   - Code(use·ur) → Développeu·se·r
   - Designeu(se·r)
@@ -21,16 +21,16 @@ toIndex: true
 
 ## Sujet
 
-Lorsqu'on affiche une liste de produits, d'articles, sur notre site, il est tentant de donner la possibilité au visiteur de tout voir en faisant simplement défiler la page en chargeant le contenu petit à petit.
+Lorsqu'on affiche une liste de produits ou d'articles sur notre site, il est tentant de donner la possibilité au visiteur de tout voir en faisant simplement défiler la page en chargeant le contenu petit à petit.
 
-Cet effet de style va générer le contenu pour l'afficher au fur et à mesure. Il va donc demander au serveur les x prochains articles/produits à chaque "scroll". Cela pourra entrainer une dépense environnementale non nécessaire couplée à des problèmes de performances, de référencement naturel et de respect de l'accessibilité web.
+Cet effet de style va générer le contenu pour l'afficher au fur et à mesure. Il va donc demander au serveur les x prochains articles/produits à chaque "scroll". Cela pourra entraîner une dépense environnementale non nécessaire couplée à des problèmes de performances, de référencement naturel et de respect de l'accessibilité web.
 
 ## GreenIT vous conseille
 
 ### Solution no-code 🌱🌱
 
-Mettez en place une pagination classique avec un système de filtre performant, le visiteur trouvera plus facilement le contenu qui l'intéresse et les robots d'indexation aussi.
-Par défaut sur la page "archive blog", WordPress intégre la pagination. Vous pouvez régler le nombre de posts à afficher sur une page via l'onglet réglages sous-menu lecture, label. Les pages du site doivent afficher au plus (10 par défaut).
+Mettez en place une pagination classique avec un système de filtre (et de tri) performant, le visiteur trouvera plus facilement le contenu qui l'intéresse et les robots d'indexation aussi.
+Par défaut sur la page "archive blog", WordPress intégre la pagination. Vous pouvez régler le nombre de posts à afficher sur une page via l'onglet réglages sous-menu lecture, label. Les pages du site doivent afficher au plus => 6 (10 par défaut).
 
 ### Solution code 🌱🌱
 

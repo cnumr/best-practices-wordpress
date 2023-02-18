@@ -17,7 +17,7 @@ toIndex: true
 
 ## Sujet
 
-Le poids numérique des fichiers CSS est en constante augmentation depuis 10 ans, les thèmes et les extensions de wordPress chargent chacun des fichiers CSS qui vont se superposer les uns aux autres. La maintenance de vos fichiers de style va garantir une optimisation du poids numérique.
+Le poids numérique des fichiers CSS est en constante augmentation depuis 10 ans, les thèmes et les extensions de WordPress chargent chacun des fichiers CSS qui vont se superposer les uns aux autres. La maintenance de vos fichiers de style va garantir une optimisation de leur poids.
 
 ## GreenIT vous conseille
 
@@ -27,7 +27,7 @@ Nous vous invitons à vous référer à la bonne pratique : [Utiliser un systèm
 
 ### Solution code 🌱🌱🌱
 
-Bien souvent par peur de dénaturer certaines pages, d'autres règles de style sont éditées au lieu de les adapter ou de les supprimer.
+Bien souvent, par peur de dénaturer certaines pages, d'autres règles de style sont éditées au lieu de les adapter ou de les supprimer.
 
 Nous vous recommandons de :
 
@@ -37,7 +37,7 @@ Nous vous recommandons de :
 - Privilégier l'intégration de vos fichiers CSS via la balise `<link>`, en tenant compte de la hiérarchisation des chargements des styles par le navigateur (pour un même sélécteur, c'est la dernière règle CSS déclarée qui est prise en compte par le navigateur)
 - Minifier les fichiers CSS
 - Éviter d'utiliser les propriétés coûteuses en ressources (`position : fixed`, `border-radius`, `box-shadow`, `text-shadow`, `opacity`, `transform`, `filter`)
-- Adopter une approche mobile-first (économie de style et de ressources) et ajoutons les styles à mesure que le support s’agrandit (Voir la fiche [Concevoir en Mobile First](./WP_3.07-concevoir-vos-sites-en-mobile-first.md)).
+- Adopter une approche mobile-first (économie de style et de ressources) et d'ajouter les styles à mesure que le support s’agrandit (Voir la fiche [Concevoir en Mobile First](./WP_3.07-concevoir-vos-sites-en-mobile-first.md)).
 
 ## Principe de validation
 

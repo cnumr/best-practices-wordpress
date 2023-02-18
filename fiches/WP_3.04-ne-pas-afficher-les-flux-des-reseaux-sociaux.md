@@ -34,7 +34,7 @@ Afin de limiter les appels à des ressources externes lourdes, préférez mettre
 
 ### Solution no-code 🌱🌱
 
-Vous l'aurez compris nul besoin d'ajout d'[[extension]] et encore moins pour afficher les flux de vos réseaux sociaux.
+Vous l'aurez compris, nul besoin d'ajout d'[[extension]] et encore moins pour afficher les flux de vos réseaux sociaux.
 Soit votre thème propose déjà la possibilité d'ajouter vos liens vers vos réseaux sociaux, soit vous pouvez [créer vous-même simplement et sans code un menu][1] placé en bas de page.
 
 ### Solution code 🌱🌱
@@ -61,4 +61,7 @@ Lien de la page LinkedIn de GreenIt.fr
 | -------------------------------------- | :--------: |
 | de flux de réseaux sociaux sur le site |     0      |
 
+## Source
+
 [1]: https://wordpress.com/fr/support/menus/menu-de-liens-vers-les-reseaux-sociaux/#:~:text=prises%20en%20charge-,Comment%20configurer%20le%20menu%20de%20liens%20vers%20les%20r%C3%A9seaux%20sociaux,ou%20Ic%C3%B4nes%20de%20r%C3%A9seaux%20sociaux.
+- L'impact des services tiers comme Twitter sur l'autonomie des batteries (Greenspector) : https://greenspector.com/fr/limpact-des-services-tiers-comme-twitter-sur-lautonomie-des-batteries/
