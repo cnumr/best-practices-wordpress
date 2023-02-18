@@ -16,7 +16,7 @@ toIndex: true
 
 ## Sujet
 
-Les animations présentes sur un site internet sont généralement là pour augmenter l'engagement de l'utilisateur, censé provoquer une émotion chez ce dernier, ce qui va augmenter son intérêt et ainsi captiver son attention. Il faut bien différencier une animation procédant de la pédagogie, à celles qui sont là uniquement dans un but esthétique. Ces dernières vont rajouter des ressources poids JavaScript et CSS non nécessaire à la lisibilité de votre projet.
+Les animations présentes sur un site internet sont généralement là pour augmenter l'engagement de l'utilisateur, censé provoquer une émotion chez ce dernier, ce qui va augmenter son intérêt et ainsi captiver son attention. Il faut bien différencier une animation procédant de la pédagogie, à celles qui sont là uniquement dans un but esthétique. Ces dernières vont rajouter des ressources poids JavaScript et CSS non nécessaires à la lisibilité de votre projet.
 
 ## GreenIT vous conseille
 

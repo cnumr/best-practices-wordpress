@@ -18,8 +18,8 @@ toIndex: true
 
 Il est répandu de trouver un formulaire de contact, sur une page dédiée ou sur toutes les pages (dans le pied de page) d'un site. Cela peut être au bénéfice de votre organisation, mais souvent au détriment de l'utilisateur et/ou de la législation (RGPD).
 
-Comme pour toute fonctionnalité ajoutée à votre site, il est essentiel de s'interroger sur la finalité de votre formulaire et de l'utilité des données collectées. S'il s'avère qu'aucune alternative n'est satisfaisante (numéro de téléphone ou adresse email directe par exemple) et que la mise en place de formulaires ne peut être évitée, il faudra être vigilant à n'imposer aucun champ superflu à vos utilisateurs.
-Lors de la réflexion autour de ce(s) formulaire(s), il faudra aussi décider si vous stockez les données dans votre base de données, si vous les envoyez par email, ou les deux.
+Comme pour toute fonctionnalité ajoutée à votre site, il est essentiel de s'interroger sur la finalité de votre formulaire et de l'utilité des données collectées. S'il s'avère qu'aucune alternative ne soit satisfaisante (numéro de téléphone ou adresse email directe par exemple) et que la mise en place de formulaires ne puisse être évitée, soyez vigilant à n'imposer aucun champ superflu à vos utilisateurs.
+Lors de la réflexion autour de ce(s) formulaire(s), il faut aussi décider si vous stockez les données dans votre base de données, si vous les envoyez par email, ou les deux.
 
 ### Données personnelles et réglementation
 

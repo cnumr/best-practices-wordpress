@@ -1,5 +1,5 @@
 ---
-title: 7.01 Ajouter les éléments de caching dans le .htaccess
+title: 7.01 Ajouter les éléments de caching et de compression dans le .htaccess
 people: Dominique N.
 scope: Cache
 responsible:
@@ -31,7 +31,7 @@ Nous allons directement indiquer au serveur Apache les paramétrages de [[compre
 
 Prenons pour exemple l'image du logo qui se trouve sur chaque page du site. Si nous ne mettons pas en place de cache, le navigateur la transférera depuis notre serveur à chaque affichage d'une nouvelle page.
 
-Maintenant, compressons notre image (gzip), elle est déjà plus rapide à charger (bien sûr, nous partons du principe qu'elle est bien dimensionnée, et au bon format. cf fiches [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_5.02-utiliser-le-format-adequat-d_image.md), [Utiliser le format adéquat d'image](./WP_5.02-utiliser-le-format-adequat-d_image.md) et [Compresser les médias](./WP_5.01-compresser-les-medias.md).
+Maintenant, compressons notre image (gzip ou brotli), elle est déjà plus rapide à charger (bien sûr, nous partons du principe qu'elle est bien dimensionnée, et au bon format. cf fiches [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_5.02-utiliser-le-format-adequat-d_image.md), [Utiliser le format adéquat d'image](./WP_5.02-utiliser-le-format-adequat-d_image.md) et [Compresser les médias](./WP_5.01-compresser-les-medias.md).
 
 Ensuite, indiquons que nous souhaitons qu'elle soit mise en cache pendant 1 an.
 Lors de sa première visite, le logo est transféré pour l'afficher dans le navigateur. Le visiteur change de page, le navigateur regarde si l'image existe déjà dans ses fichiers mis en cache : oui, alors il ne va pas la chercher sur le serveur.

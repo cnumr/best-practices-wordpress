@@ -51,7 +51,7 @@ C'est un format de compression (avec ou sans perte) d'images [[matricielle|matri
 
 Le WebP est en moyenne 26% plus légère qu’une image PNG, et jusqu’à 34% plus légère qu’une image JPEG. Adopté par Google Chrome, Microsoft Edge et Mozilla Firefox fin 2018, puis par tous les navigateurs chromium comme Opera, Vivaldi, Brave, il est supporté depuis 2020 par Safari d’Apple. Il supporte 97% des usages (https://caniuse.com/webp).
 
-À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour courvrir tous les usages/navigateurs
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour couvrir tous les usages/navigateurs.
 
 ### 🚫 Le HEIF (High Efficiency Image File Format) 🚫
 
@@ -65,19 +65,19 @@ Format encore jeune, à utiliser pour toute image [[matricielle|matricielle ou b
 
 ### ❓ Le JPG/JPEG (Joint Photographic Experts Group) ❓
 
-C'est un format de compression d'images [[matricielle|matricielles]] qui repose sur la suppression des couleurs non visibles pour réduire le poids du fichier. Dans des logiciels tels que : Photoshop, Gimp, Affinity Photo, et autres, vous pouvez contrôler le taux de compression pour obtenir le meilleur ratio entre qualité d'affichage et poids. Cependant, si vous la compression est trop importante, vous perdrez des informations de couleurs visibles. **Ce format fonctionne le mieux avec des photographies.**
+C'est un format de compression d'images [[matricielle|matricielles]] qui repose sur la suppression des couleurs non visibles pour réduire le poids du fichier. Dans des logiciels tels que : Photoshop, Gimp, Affinity Photo, et autres, vous pouvez contrôler le taux de compression pour obtenir le meilleur ratio entre qualité d'affichage et poids. Cependant, si la compression est trop importante, vous perdrez des informations de couleurs visibles. **Ce format fonctionne le mieux avec des photographies.**
 
-À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
+À utiliser pour toute image [[matricielle|matricielle ou bitmap]], en complément d'un format WebP pour couvrir tous les usages/navigateurs
 
 ### ❓ Le PNG (Portable Network Graphics) ❓
 
-C'est un format de compression d'images [[matricielle|matricielles]] crée comme alternative du GIF qui été à l'époque sous brevet, **format parfait pour les images comportant un texte qui doit rester lisible comme des graphiques, par exemple.**
+C'est un format de compression d'images [[matricielle|matricielles]] créé comme alternative du GIF qui été à l'époque sous brevet, **format parfait pour les images comportant un texte qui doit rester lisible comme des graphiques, par exemple.**
 
 À utiliser pour toute image [[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
 
 ### 🚫 Le GIF (Graphics Interchange Format) 🚫
 
-C'est un très vieux format de compression d'images [[matricielle|matricielles]] datant de la fin des années 80. Il autorise la transparence et permet d'afficher une séquence d'images similaire à des vidéos (GIF animé). **Le GIF est un format lourd, préférez l'utilisation de PNG, WebP, MP4, WebM ou autres codecs vidéos adaptés au web.**
+C'est un format de compression d'images [[matricielle|matricielles]] datant de la fin des années 80. Il autorise la transparence et permet d'afficher une séquence d'images similaire à des vidéos (GIF animé). **Le GIF est un format lourd, préférez l'utilisation de PNG, WebP, MP4, WebM ou autres codecs vidéos adaptés au web.**
 
 > 💡 Vous connaissez surement le site [Giphy (EN)](https://giphy.com/) ! Les animations, dont le style graphique correspond à celui d'un GIF, sont en `.webp` et `.mp4`. Sur [Twitter](https://twitter.com/), les "GIFs" sont en `.mp4`.
 
@@ -110,7 +110,7 @@ Google met à disposition le codec [libwebp](https://developers.google.com/speed
 
 ### Graphique vectoriel
 
-Nous avions sélectionné une image pour illustrer cette BP (ci-dessous).
+Nous avons sélectionné une image pour illustrer cette BP (ci-dessous).
 
 Le fichier de création est sûrement vectoriel cependant il a été utilisé en `.jpg`.
 Nous l'avons retravaillé comme il suit :

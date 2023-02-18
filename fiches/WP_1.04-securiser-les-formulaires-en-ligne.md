@@ -64,3 +64,5 @@ La méthode pot de miel est efficace pour éviter les spams. Un champ est ajout�
 
 - Note 1 : https://fr.wikipedia.org/wiki/CAPTCHA
 - Note 2 : https://fr.wikipedia.org/wiki/ReCAPTCHA
+- CAPTCHA et sobriété numérique (Greenspector) : https://greenspector.com/fr/captcha-et-sobriete-numerique/
+- Captcha et numérique responsable : quelles solutions? (Empreinte Digitale) : https://blog.empreintedigitale.fr/2022/09/05/captcha-et-numerique-responsable-quelles-solutions/
