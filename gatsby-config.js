@@ -8,37 +8,72 @@ const siteURL = process.env.SITE_URL || 'http://localhost:8000'
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'CNUMR WordPress Best Practices',
+    title: "Les bonnes pratiques d'écoconception pour WordPress",
     siteUrl: siteURL,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    repoURL: `https://github.com/cnumr/best-practices-wordpress`,
+    repo: {
+      repoURL: `https://github.com/cnumr/best-practices-wordpress`,
+      mainBanch: `main`,
+    },
+    peoples: {
+      leads: [
+        { name: 'Dominique Nicole', url: 'https://www.pix-e.fr/' },
+        { name: 'Renaud Héluin', url: 'https://novagaia.fr/' },
+      ],
+      contributors: [
+        {
+          name: 'Frédéric Bordage',
+          url: 'https://fr.linkedin.com/in/fbordage',
+        },
+        { name: 'Franklin Lecointre', url: '' },
+        { name: 'Catherine Guermont', url: '' },
+        { name: 'Yann Gautreau', url: 'https://www.yanngautreau.fr/' },
+        { name: 'Yann Kozon', url: 'https://www.yannkozon.com/' },
+        { name: 'Florine Sueur', url: 'https://www.florinesueur.fr/' },
+      ],
+      reviewers: [
+        { name: 'Jean-Baptiste Audras', url: '' },
+        { name: 'Christian Martin', url: 'https://www.nuweb.fr/' },
+        { name: 'Stéphanie Vachon', url: '' },
+      ],
+    },
+    // in ./static folder
     seoImage: `/logo-cnumr.png`,
+    favicon: `/icone-intro.svg`,
+    shareFB: `/asso-greenit-share-fb.png`,
+    shareTW: `/asso-greenit-share-tw.png`,
     navigation: [
       {
         url: `/fiches`,
         label: `Bonnes pratiques`,
-        title: `Voir les fiches`,
-      },
-      {
-        url: `/personas`,
-        label: `Personas`,
-        title: `Voir les Personas`,
+        title: `Voir les bonnes pratiques d'écoconception pour WordPress`,
       },
       {
         url: `/lexique`,
         label: `Lexique`,
         title: `Lexique des termes utilisés`,
       },
+    ],
+    secondaryNavigation: [
       {
-        url: `/recherche`,
-        label: `Rechercher`,
-        title: `Rechercher une Bonne pratique`,
+        url: `/mentions-legales`,
+        label: `Mentions légales`,
+        title: `Les Mentions légales du site.`,
       },
     ],
   },
   pathPrefix: '/wp',
   plugins: [
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-local-search',
       options: {
@@ -60,14 +95,18 @@ module.exports = {
         // required.
         query: `
           {
-            allMarkdownRemark (filter: {frontmatter: {toIndex: {eq: true}}}) {
+            allFile(
+              filter: {childMarkdownRemark: {frontmatter: {toIndex: {eq: true}}}, sourceInstanceName: {in: ["fiches", "lexique", "pages"]}}
+            ) {
               nodes {
                 id
-                frontmatter {
-                  path
-                  title
+                childMarkdownRemark {
+                  frontmatter {
+                    path
+                    title
+                  }
+                  rawMarkdownBody
                 }
-                rawMarkdownBody
               }
             }
           }
@@ -92,11 +131,11 @@ module.exports = {
         // containing properties to index. The objects must contain the `ref`
         // field above (default: 'id'). This is required.
         normalizer: ({ data }) =>
-          data.allMarkdownRemark.nodes.map(node => ({
+          data.allFile.nodes.map(node => ({
             id: node.id,
-            path: `${node.frontmatter.path}.md`,
-            title: node.frontmatter.title,
-            body: node.rawMarkdownBody,
+            path: `${node.childMarkdownRemark.frontmatter.path}.md`,
+            title: node.childMarkdownRemark.frontmatter.title,
+            body: node.childMarkdownRemark.rawMarkdownBody,
           })),
       },
     },
@@ -120,6 +159,13 @@ module.exports = {
       options: {
         name: `lexique`,
         path: `${__dirname}/lexique`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/pages`,
       },
     },
     {
@@ -163,11 +209,24 @@ module.exports = {
           {
             resolve: 'highlight-md',
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
         ],
       },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/personas/`],
+        output: `/`,
+      },
+    },
   ],
 }

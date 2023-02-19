@@ -1,4 +1,10 @@
-import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
+import {
+  ContributeCTA,
+  InternalNav,
+  Layout,
+  MarkdownDisplay,
+  Seo,
+} from '../components'
 
 import React from 'react'
 import { graphql } from 'gatsby'
@@ -10,9 +16,13 @@ export default function FichesDisplay({
 }) {
   // console.log('data', data)
   // console.log('pageContext', pageContext)
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { previous, next } = data
-  const { frontmatter, excerpt } = markdownRemark
+  const {
+    fiche,
+    fiche: { sourceInstanceName, relativePath },
+    previous,
+    next,
+  } = data // data.markdownRemark holds your post data
+  const { frontmatter, excerpt } = fiche.markdownRemark
   return (
     <Layout>
       <Seo
@@ -20,45 +30,47 @@ export default function FichesDisplay({
         location={location}
         description={excerpt}
       />
-      <article className="blog-post-container">
-        <MarkdownDisplay data={data} pageContext={pageContext} type="fiches" />
-        <InternalNav
-          className="mt-8"
-          pageContext={pageContext}
-          next={next}
-          previous={previous}
-        />
-      </article>
+
+      <MarkdownDisplay data={fiche} pageContext={pageContext} type="fiches" />
+      <ContributeCTA
+        relativePath={relativePath}
+        sourceInstanceName={sourceInstanceName}
+      />
+      <InternalNav
+        className="mt-8"
+        pageContext={pageContext}
+        next={next}
+        previous={previous}
+      />
     </Layout>
   )
 }
 
 export const ficheQuery = graphql`
-  query (
-    $remarkID: String!
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
-    markdownRemark(id: { eq: $remarkID }) {
-      html
-      rawMarkdownBody
-      excerpt
-      timeToRead
-      tableOfContents
-      frontmatter {
-        title
-        lifecycle
-        environmental_impact
-        scope
-        people
-        priority_implementation
-        saved_resources
-        responsible
+  query ($id: String!, $previousPostId: String, $nextPostId: String) {
+    fiche: file(id: { eq: $id }) {
+      relativePath
+      sourceInstanceName
+      fields {
+        gitUpdateTime
       }
-    }
-    file(id: { eq: $id }) {
-      id
+      markdownRemark: childMarkdownRemark {
+        html
+        rawMarkdownBody
+        excerpt
+        timeToRead
+        tableOfContents
+        frontmatter {
+          title
+          lifecycle
+          environmental_impact
+          scope
+          people
+          priority_implementation
+          saved_resources
+          responsible
+        }
+      }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       frontmatter {

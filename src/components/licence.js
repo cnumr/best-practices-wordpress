@@ -17,8 +17,9 @@ function Licence({ size = 'base' }) {
         'text-xs': size === 'sm',
         'text-base': size !== 'sm',
       })}
+      title={`Consulter le contenu de la licence CC BY-NC-ND 4.0 (site externe)`}
     >
-      sous licence CC BY-NC-ND 4.0 <FaCreativeCommons /> <FaCreativeCommonsBy />{' '}
+      Sous licence CC BY-NC-ND 4.0 <FaCreativeCommons /> <FaCreativeCommonsBy />{' '}
       <FaCreativeCommonsNc /> <FaCreativeCommonsNd />
     </a>
   )

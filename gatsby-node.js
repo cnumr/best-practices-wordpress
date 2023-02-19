@@ -1,8 +1,9 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { execSync } = require('child_process')
+// const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createNodeField } = actions
 
   // Fiches WP
   const _fiches = await graphql(`
@@ -60,62 +61,62 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
   })
 
-  // Presonnas
-  const _personas = await graphql(`
-    {
-      allFile(
-        filter: {
-          extension: { eq: "md" }
-          sourceInstanceName: { eq: "personas" }
-          childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
-        }
-        sort: {
-          fields: childrenMarkdownRemark___frontmatter___title
-          order: ASC
-        }
-      ) {
-        nodes {
-          id
-          childMarkdownRemark {
-            id
-            frontmatter {
-              title
-              path
-            }
-          }
-        }
-      }
-    }
-  `)
+  // Persona
+  // const _personas = await graphql(`
+  //   {
+  //     allFile(
+  //       filter: {
+  //         extension: { eq: "md" }
+  //         sourceInstanceName: { eq: "personas" }
+  //         childMarkdownRemark: { frontmatter: { toIndex: { eq: true } } }
+  //       }
+  //       sort: {
+  //         fields: childrenMarkdownRemark___frontmatter___title
+  //         order: ASC
+  //       }
+  //     ) {
+  //       nodes {
+  //         id
+  //         childMarkdownRemark {
+  //           id
+  //           frontmatter {
+  //             title
+  //             path
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  if (_personas.errors) {
-    reporter.panicOnBuild(
-      `GraphQL could not query pages. Create pages aborted.`
-    )
-    return
-  }
-  const personas = _personas.data.allFile.nodes
-  personas.forEach((node, index) => {
-    const templatePath = path.resolve(`./src/templates/personas-display.js`)
-    const previousPostId =
-      index === 0 ? null : personas[index - 1].childMarkdownRemark?.id
-    const nextPostId =
-      index === personas.length - 1
-        ? null
-        : personas[index + 1].childMarkdownRemark?.id
-    if (node.childMarkdownRemark?.frontmatter.path)
-      createPage({
-        path: `${node.childMarkdownRemark.frontmatter.path}.md`,
-        component: templatePath,
-        context: {
-          id: node.id,
-          remarkID: node.childMarkdownRemark.id,
-          type: 'personas',
-          previousPostId,
-          nextPostId,
-        },
-      })
-  })
+  // if (_personas.errors) {
+  //   reporter.panicOnBuild(
+  //     `GraphQL could not query pages. Create pages aborted.`
+  //   )
+  //   return
+  // }
+  // const personas = _personas.data.allFile.nodes
+  // personas.forEach((node, index) => {
+  //   const templatePath = path.resolve(`./src/templates/personas-display.js`)
+  //   const previousPostId =
+  //     index === 0 ? null : personas[index - 1].childMarkdownRemark?.id
+  //   const nextPostId =
+  //     index === personas.length - 1
+  //       ? null
+  //       : personas[index + 1].childMarkdownRemark?.id
+  //   if (node.childMarkdownRemark?.frontmatter.path)
+  //     createPage({
+  //       path: `${node.childMarkdownRemark.frontmatter.path}.md`,
+  //       component: templatePath,
+  //       context: {
+  //         id: node.id,
+  //         remarkID: node.childMarkdownRemark.id,
+  //         type: 'personas',
+  //         previousPostId,
+  //         nextPostId,
+  //       },
+  //     })
+  // })
 
   // Lexique
   const _lexique = await graphql(`
@@ -173,21 +174,74 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
   })
+
+  // Page MDX
+  // https://v4.gatsbyjs.com/docs/tutorial/part-5/
+  // tu use w/ Gatsby v4 - npm i gatsby-plugin-mdx@^4.0.0
+  const _mdxPages = await graphql(`
+    {
+      allMdx(filter: { frontmatter: { toIndex: { eq: true } } }) {
+        nodes {
+          id
+          frontmatter {
+            path
+          }
+          internal {
+            contentFilePath
+          }
+        }
+      }
+    }
+  `)
+  if (_mdxPages.errors) {
+    reporter.panicOnBuild(
+      `GraphQL could not query pages. Create pages aborted.`
+    )
+    return
+  }
+  const mdxPages = _mdxPages.data.allMdx.nodes
+  mdxPages.forEach((node, index) => {
+    const templatePath = path.resolve(`./src/templates/pages-display.js`)
+    if (node.frontmatter?.path)
+      createPage({
+        path: `${node.frontmatter.path}`,
+        // component: templatePath,
+        component: `${templatePath}?__contentFilePath=${node.internal.contentFilePath}`,
+        context: {
+          id: node.id,
+          type: 'mdxPage',
+        },
+      })
+  })
 }
 
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
+  if (node.internal.type === `File`) {
+    const gitUpdateTime = execSync(
+      `git log -1 --pretty=format:%aI -- "${node.sourceInstanceName}/${node.relativePath}"`
+    ).toString()
+    createNodeField(
+      {
+        node,
+        name: 'gitUpdateTime',
+        value: gitUpdateTime,
+      },
+      {
+        node,
+        name: 'gitUpdateTime',
+        value: gitUpdateTime,
+      }
+    )
+    // const value = createFilePath({ node, getNode })
+    // createNodeField({
+    //   name: `slug`,
+    //   node,
+    //   value,
+    // })
+  }
+}
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions

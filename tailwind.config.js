@@ -1,20 +1,67 @@
 /** @type {import('tailwindcss').Config} */
+
+// prettier-ignore
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: {
+    relative: true,
+    files: [
+      './src/**/*.{js,jsx,ts,tsx,mdx}',
+      './plugins/**/*.{js,jsx,ts,tsx,mdx}',
+    ],
+  },
   theme: {
     extend: {
       colors: {
-        primary: '#570DF8',
-        secondary: '#F000B8',
+        neutral: {
+          DEFAULT: 'hsl(var(--neutral) var(--neutral-saturation))',
+          focus: 'hsl(var(--neutral) calc(var(--neutral-saturation) - 10%))',
+          dark: 'hsl(var(--neutral) 0%)',
+          light: 'hsla(var(--neutral) calc(var(--neutral-saturation) + 77% ))',
+          transparent: 'hsla(var(--neutral) var(--neutral-saturation) / 0.1)',
+          content: 'white',
+        },
+        primary: {
+          DEFAULT: 'hsl(var(--green) var(--green-saturation))',
+          focus: 'hsl(var(--green) calc(var(--green-saturation) - 5%))',
+          dark: 'hsl(var(--green) calc(var(--green-saturation) - 10%))',
+          light: 'hsla(var(--green) calc(var(--green-saturation) + 55% ))',
+          transparent: 'hsla(var(--green) var(--green-saturation) / 0.1)',
+          content: 'white',
+        },
         accent: '#37CDBE',
-        neutral: '#3D4451',
-        'base-100': '#FFFFFF',
         info: '#3ABFF8',
         success: '#36D399',
         warning: '#FBBD23',
         error: '#F87272',
+        xiketic: '#171219',
+      },
+      fontFamily: {
+        base: [
+          'RedHatDisplay',
+          'Arial',
+          'Helvetica',
+          'Liberation Sans',
+          'FreeSans',
+          'sans-serif',
+        ],
+      },
+      fontSize: {
+        sm: ['var(--fs-sm)', { lineHeight: '1.5rem' }],
+        base: ['var(--fs-base)', { lineHeight: '1.688rem' }],
+        lg: ['var(--fs-lg)', { lineHeight: '1.8rem' }],
+        xl: ['var(--fs-xl)', { lineHeight: '2.1rem' }],
+        '2xl': ['var(--fs-2xl)', { lineHeight: 'var(--lh-2xl)' }],
+        '3xl': ['var(--fs-3xl)', { lineHeight: '3.25rem' }],
+        '4xl': ['var(--fs-4xl)', { lineHeight: 'var(--lh-4xl)' }],
       },
     },
   },
   plugins: [require('@tailwindcss/forms')],
+  // purge: {
+  //   enabled: true,
+  //   content: [
+  //     './src/**/*.{js,jsx,ts,tsx,mdx}',
+  //     './plugins/**/*.{js,jsx,ts,tsx,mdx}',
+  //   ],
+  // },
 }

@@ -5,37 +5,78 @@
 
 /* base styles */
 @layer base {
+  :root {
+    /*Color*/
+    --neutral: 0 0%;
+    --neutral-saturation: 16%;
+    --green: 143 96%;
+    --green-saturation: 25%;
+
+    /*Font Size : https://www.fluid-type-scale.com/*/
+    --fs-sm: clamp(0.85rem, -0.09vw + 0.87rem, 0.8rem);
+    --fs-base: clamp(1rem, 0vw + 1rem, 1rem);
+    --fs-lg: clamp(1.18rem, 0.14vw + 1.14rem, 1.25rem);
+    --fs-xl: clamp(1.38rem, 0.33vw + 1.3rem, 1.56rem);
+    --fs-2xl: clamp(1.62rem, 0.6vw + 1.47rem, 1.95rem);
+    --fs-3xl: clamp(1.91rem, 0.97vw + 1.66rem, 2.44rem);
+    --fs-4xl: clamp(2.24rem, 1.48vw + 1.87rem, 3.05rem);
+
+    /*Line height*/
+    --lh-2xl: clamp(
+      2.3rem,
+      1.5499999999999996rem + 1.8750000000000007vw,
+      2.75rem
+    );
+    --lh-4xl: clamp(
+      2.5rem,
+      0.31166666666666654rem + 5.470833333333334vw,
+      3.813rem
+    );
+  }
+
+  @font-face {
+    font-family: 'RedHatDisplay';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url(/fonts/RedHatDisplay-VariableFont_wght.woff2) format('woff2');
+  }
+
   html {
-    @apply scroll-pt-24; // fix for anchor
+    @apply bg-zinc-100 font-base text-neutral text-base scroll-pt-24 scroll-smooth;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
   h1,
   h2,
   h3,
   h4 {
-    @apply font-semibold text-primary mt-2 mb-8;
+    @apply mb-6 mt-8 font-medium;
   }
   p,
-  li {
-    @apply text-gray-600 mb-3 leading-8;
+  ul {
+    @apply mb-6;
   }
   h1 {
-    @apply text-5xl;
+    @apply text-4xl font-bold mb-10 mt-10;
   }
   h2 {
-    @apply text-4xl;
+    @apply text-2xl font-bold text-primary;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-xl font-bold;
   }
   h4 {
-    @apply text-2xl;
+    @apply text-lg;
   }
   a {
-    @apply font-medium hover:text-primary;
+    @apply font-bold underline;
   }
-  blockquote {
-    @apply border-l-4 border-l-teal-300 pl-4 py-2 text-base rounded bg-teal-50 shadow mb-2 pb-[0.1rem];
+  a[target='_blank']:not(.no-out) {
+    @apply after:content-['⤴︎'] after:text-[.5rem] after:no-underline inline-flex gap-[.15rem] items-center no-underline;
   }
+
   // prismjs
   // p code {
   //   @apply inline-block px-2;
@@ -54,47 +95,144 @@
 
 /* components styles */
 @layer components {
-  main li {
-    @apply list-disc ml-8;
+  /**** BOX ****/
+  .box {
+    @apply rounded-lg p-2 md:p-4 border-2 border-primary;
+  }
+  .box.interactive {
+    @apply hover:bg-neutral-transparent hover:shadow-lg hover:border-primary;
+  }
+
+  /**** TABLE ****/
+  table {
+    @apply w-full my-2 table-fixed rounded-lg border-2 border-primary font-medium break-words;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    thead {
+      @apply bg-primary-transparent text-primary-dark text-center;
+    }
+    th {
+      @apply p-2 border-2 border-primary;
+    }
+    td {
+      @apply p-2 border-2 border-primary;
+    }
+    tr:nth-child(even) {
+      @apply bg-neutral-transparent;
+    }
+    // tr td:last-of-type {
+    //   @apply font-bold;
+    // }
+  }
+
+  /**** GRID ****/
+  .wp-grid {
+    @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
+  }
+  .wp-list {
+    @apply noliststyle flex flex-col gap-2;
+  }
+
+  /**** LIST ****/
+  .content ul,
+  .markdown-content ul {
+    @apply list-none break-words;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  .content li,
+  .markdown-content li {
+    @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-primary before:mr-2;
+    ul {
+      @apply ml-8;
+      li {
+        @apply list-none mb-2 before:content-[''] before:relative before:float-left before:top-[0.4rem] before:inline-block before:w-3.5 before:h-3.5 before:rounded-full before:rounded-tr-3xl before:bg-transparent before:border-2 before:border-primary before:mr-2;
+      }
+    }
   }
   main .noliststyle li {
     @apply list-none ml-0;
   }
-  .box {
-    @apply rounded-md bg-slate-100 p-4 flex flex-col gap-1 border-2;
-  }
-  .box.interactive {
-    @apply hover:bg-stone-50 hover:shadow-lg;
-  }
-  table {
-    @apply w-full border-2 rounded-md shadow-lg;
-    thead {
-      @apply bg-slate-100;
-    }
-    td {
-      @apply p-4;
-    }
-  }
-  .wp-grid {
-    @apply noliststyle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2;
-  }
-  .btn {
-    @apply bg-primary px-2 py-1 border text-white uppercase cursor-pointer;
-  }
+
+  /**** FORM ****/
   input {
     @apply px-1;
   }
   .markdown-excerpt {
     @apply leading-5;
   }
-}
 
-/* Tooltip */
-.tooltip {
-  display: inline-block;
-  position: relative;
-  border-bottom: 1px dotted #666;
-  text-align: left;
+  /**** BADGE ****/
+  .badge {
+    @apply px-2 py-1 border-2 rounded-xl text-xs text-white font-bold whitespace-nowrap uppercase;
+  }
+
+  /**** BUTTON ****/
+  .btn {
+    @apply cursor-pointer normal-case p-3 px-4 rounded-lg no-underline hover:drop-shadow-lg duration-100;
+  }
+  .btn-bg {
+    @apply bg-primary hover:bg-primary-focus text-primary-content;
+  }
+  .btn-outline {
+    @apply border-primary border-2 bg-primary-transparent text-primary-dark hover:bg-primary hover:text-white;
+  }
+  .small-primary-btn {
+    @apply bg-primary hover:bg-primary text-white cursor-pointer px-2 py-0 rounded-md text-sm;
+    &:disabled {
+      @apply cursor-not-allowed opacity-50;
+    }
+  }
+
+  /**** TOOLTIP ****/
+  .tooltip {
+    @apply relative cursor-pointer inline-block no-underline border-b border-stone-800 border-dashed text-current font-normal;
+  }
+
+  /**** CONTENT ****/
+  .markdown-content {
+    &* {
+      @apply whitespace-pre-wrap;
+    }
+
+    /**** BLOCKQUOTE ****/
+    blockquote {
+      @apply rounded-lg my-2 p-2 md:p-4 border-2 border-primary bg-primary-transparent;
+      p {
+        @apply my-0 text-base;
+      }
+    }
+
+    /**** CODE ****/
+    pre[class*='language-'] code {
+      span {
+        // Pour gérer certains retour à la ligne qui font déborder la page
+        @apply whitespace-normal;
+      }
+    }
+    // :not(pre) > code[class*='language-'],
+    // code[class*='language-'],
+    // pre[class*='language-'] {
+    //   @apply bg-neutral;
+    // }
+
+    a:not(.tooltip) {
+      @apply underline;
+    }
+  }
+
+  /**** SUMMARY ARTICLE ****/
+  .summary-article ul,
+  .summary-article ul ul,
+  .summary-article p {
+    @apply mb-0;
+  }
+  .summary-article ul ul {
+    @apply pl-2;
+  }
+  .summary-article a {
+    @apply hover:text-primary font-normal;
+  }
 }
 
 .tooltip .bottom {
@@ -106,8 +244,8 @@
   padding: 20px;
   color: #666666;
   background-color: #eeeeee;
-  font-weight: normal;
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 1rem;
   border-radius: 8px;
   position: absolute;
   z-index: 99999999;

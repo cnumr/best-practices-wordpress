@@ -4,7 +4,10 @@ import classNames from 'classnames'
 
 function InternalNav({ pageContext, previous, next, className }) {
   return (
-    <nav className={classNames('blog-post-nav border-t-2 pt-4', className)}>
+    <nav
+      className={classNames('blog-post-nav border-t-2 pt-4', className)}
+      aria-label="Naviagtion entre les bonnes pratiques"
+    >
       <ul
         className={classNames('grid noliststyle', {
           'grid-cols-3': previous && next,
@@ -13,7 +16,11 @@ function InternalNav({ pageContext, previous, next, className }) {
       >
         {previous && (
           <li className="text-center md:text-left">
-            <Link to={`${previous.frontmatter.path}.md`} rel="prev">
+            <Link
+              to={`${previous.frontmatter.path}.md`}
+              rel="prev"
+              className="no-underline"
+            >
               ←{' '}
               <span className="hidden md:block">
                 {previous.frontmatter.title}
@@ -28,13 +35,17 @@ function InternalNav({ pageContext, previous, next, className }) {
             'text-center': next && previous,
           })}
         >
-          <Link to="/" rel="home">
+          {/* <Link to="/" rel="home">
             Accueil
-          </Link>
+          </Link> */}
         </li>
         {next && (
           <li className="text-center md:text-right">
-            <Link to={`${next.frontmatter.path}.md`} rel="next">
+            <Link
+              to={`${next.frontmatter.path}.md`}
+              rel="next"
+              className="no-underline"
+            >
               →{' '}
               <span className="hidden md:block">{next.frontmatter.title}</span>
             </Link>

@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - main-site-gatsby
-  pull_request:
-    branches:
-      - main-site-gatsby
+  # pull_request:
+  #   branches:
+  #     - main-site-gatsby
 
 jobs:
   build:

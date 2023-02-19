@@ -13,8 +13,8 @@ toIndex: true
 
 ### Vous vous retrouvez dans ces affirmations :
 
-> **NO-CODE** → pas un développeur, pas technique et n'a aucune connaissance des bonnes pratiques de base.  
-> Utilisant un thème joli et répondant a ses besoins (voire embarquant plus que ces besoins) et des "milliers" de plugins pour tout et n'importe quoi ainsi qu'un un constructeur de page.
+> **NO-CODE** → pas un développeur, qui n'est même pas technique et qui n'a aucune connaissance des bonnes pratiques de base.
+> Utilisant un thème joli et répondant a ses besoins (voire embarquant plus que ces besoins) et des "milliers" de plugins pour tout et n'importe quoi, un constructeur de page.
 
 ### Si c'est le cas :
 

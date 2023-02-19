@@ -1,66 +1,67 @@
-import { Link } from 'gatsby'
+import MetaItem from './meta-item'
 import React from 'react'
 import classNames from 'classnames'
-
-function Item({ frontmatter, item }) {
-  const values = frontmatter[item]
-  const toDisplay = values
-  if (Array.isArray(values)) {
-    return (
-      <li className="my-0">
-        <strong className="capitalize">→ {item.replace('_', ' ')}:</strong>
-        <ul className="ml-8">
-          {values.map((intItem, index) => {
-            if (item === 'responsible') {
-              return (
-                <li key={index} className="my-0">
-                  <Link to={`/personas/${intItem}.md`}>➡︎ {intItem}</Link>
-                </li>
-              )
-            }
-            return (
-              <li key={index} className="my-0">
-                ➡︎ {intItem}
-              </li>
-            )
-          })}
-        </ul>
-      </li>
-    )
-  }
-  return (
-    <li className="my-0">
-      <strong className="capitalize">→ {item.replace('_', ' ')}:</strong>{' '}
-      {toDisplay || 'TBD'}
-    </li>
-  )
-}
 
 function FichesMetasDisplay({ frontmatter, className, tableOfContents }) {
   return (
     <div
       className={classNames(
         className,
-        'grid grid-cols-1 md:grid-cols-3 gap-4 '
+        `box border-neutral-transparent flex flex-col
+        md:flex-row md:flex-wrap md:gap-4 md:justify-between
+        lg:flex-col lg:sticky lg:top-[80px] lg:mt-8`
       )}
     >
-      <ul
-        className={classNames(
-          'noliststyle flex flex-col gap-1 box col-span-1 md:col-span-2'
-        )}
-      >
-        <Item frontmatter={frontmatter} item="lifecycle" />
-        <Item frontmatter={frontmatter} item="environmental_impact" />
-        <Item frontmatter={frontmatter} item="scope" />
-        <Item frontmatter={frontmatter} item="people" />
-        <Item frontmatter={frontmatter} item="priority_implementation" />
-        <Item frontmatter={frontmatter} item="saved_resources" />
-        <Item frontmatter={frontmatter} item="state_validation" />
-        <Item frontmatter={frontmatter} item="responsible" />
+      <ul className="my-2 md:mb-0">
+        <MetaItem
+          frontmatter={frontmatter}
+          fontSize="sm"
+          meta="environmental_impact"
+          displayTitle
+        />
+        <MetaItem
+          frontmatter={frontmatter}
+          meta="priority_implementation"
+          fontSize="sm"
+          displayTitle
+        />
+        <MetaItem
+          frontmatter={frontmatter}
+          meta="lifecycle"
+          displayTitle
+          fontSize="sm"
+        />
+        <MetaItem
+          frontmatter={frontmatter}
+          meta="scope"
+          displayTitle
+          fontSize="sm"
+        />
+        {/* <MetaItem frontmatter={frontmatter} meta="people" displayTitle /> */}
+        {/* <MetaItem frontmatter={frontmatter} meta="state_validation" /> */}
+        {/* <MetaItem frontmatter={frontmatter} meta="responsible" /> */}
       </ul>
-      <div className="box">
+      <div className="border-t-2 border-neutral-transparent md:border-r-2 lg:border-t-2 " />
+      <ul className="my-2 md:mb-0">
+        <MetaItem
+          frontmatter={frontmatter}
+          meta="saved_resources"
+          displayTitle
+          fontSize="sm"
+        />
+      </ul>
+      <div className="border-t-2 border-neutral-transparent md:border-r-2 lg:border-r-0 " />
+      {/* <div className="box">
         <span className="font-black">Sommaire</span>
         <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+      </div> */}
+      <div className="text-sm my-2 md:mb-0">
+        <p className="font-bold mb-0">Sommaire :</p>
+        <nav
+          aria-label="navigation article"
+          className="summary-article"
+          dangerouslySetInnerHTML={{ __html: tableOfContents }}
+        />
       </div>
     </div>
   )

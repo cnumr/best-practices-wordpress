@@ -35,12 +35,12 @@ const plugin = ({ markdownAST }, options = {}) => {
             .replace(/^---[\s\S]+?---/, '')
 
           const tooltipLink = `
-            <a class="tooltip" href="/lexique${url}" title="">${title}
+            <span class="tooltip" title="">${title}
             <span class="bottom">
             <span>${content}</span>
             <i></i>
             </span>
-            </a>
+            </span>
             `
           html = html.replace(link, tooltipLink)
         }

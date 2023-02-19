@@ -1,4 +1,10 @@
-import { InternalNav, Layout, MarkdownDisplay, Seo } from '../components'
+import {
+  ContributeCTA,
+  InternalNav,
+  Layout,
+  MarkdownDisplay,
+  Seo,
+} from '../components'
 
 import React from 'react'
 import { graphql } from 'gatsby'
@@ -10,9 +16,13 @@ export default function PersonasDisplay({
 }) {
   // console.log('data', data)
   // console.log('pageContext', pageContext)
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { previous, next } = data
-  const { frontmatter, excerpt } = markdownRemark
+  const {
+    personna_or_lexique,
+    personna_or_lexique: { sourceInstanceName, relativePath },
+    previous,
+    next,
+  } = data // data.markdownRemark holds your post data
+  const { frontmatter, excerpt } = personna_or_lexique.markdownRemark
   return (
     <Layout>
       <Seo
@@ -22,9 +32,13 @@ export default function PersonasDisplay({
       />
       <div className="blog-post-container">
         <MarkdownDisplay
-          data={data}
+          data={personna_or_lexique}
           pageContext={pageContext}
-          type="personas"
+          type={pageContext.type}
+        />
+        <ContributeCTA
+          relativePath={relativePath}
+          sourceInstanceName={sourceInstanceName}
         />
         <InternalNav
           className="mt-8"
@@ -53,8 +67,21 @@ export const personasQuery = graphql`
         title
       }
     }
-    file(id: { eq: $id }) {
-      id
+    personna_or_lexique: file(id: { eq: $id }) {
+      relativePath
+      sourceInstanceName
+      fields {
+        gitUpdateTime
+      }
+      markdownRemark: childMarkdownRemark {
+        html
+        rawMarkdownBody
+        excerpt
+        timeToRead
+        frontmatter {
+          title
+        }
+      }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       frontmatter {
