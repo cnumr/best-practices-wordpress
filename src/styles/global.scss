@@ -234,7 +234,9 @@
     @apply hover:text-primary font-normal;
   }
 }
-
+.tooltip {
+  @apply relative border-dotted border-b-2 border-gray-500;
+}
 .tooltip .bottom {
   min-width: 300px;
   // max-width:100%;
