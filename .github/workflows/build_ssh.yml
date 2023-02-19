@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - main-site-gatsby
-  pull_request:
-    branches:
-      - main-site-gatsby
+  # pull_request:
+  #   branches:
+  #     - main-site-gatsby
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/16'
+          node-version: 'lts/*'
 
       - name: 'Cache Node dependencies'
         uses: actions/cache@v3
