@@ -234,8 +234,12 @@
     @apply hover:text-primary font-normal;
   }
 }
+/* Tooltip */
 .tooltip {
-  @apply relative border-dotted border-b-2 border-gray-500;
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px dotted #666;
+  text-align: left;
 }
 .tooltip .bottom {
   min-width: 300px;
