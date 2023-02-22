@@ -12,6 +12,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Header from './header'
 import Licence from './licence'
 import PropTypes from 'prop-types'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -73,8 +74,8 @@ const Layout = ({ children }) => {
             href="https://www.greenit.fr/"
             title={`Aller sur le site de l'assiciation GreenIT (site externe)`}
           >
-            <img
-              src="/logo-asso-green-it.png"
+            <StaticImage
+              src="../assets/logo-asso-green-it.png"
               alt={`Logo association Green It - lien sortant vers le site l'association GreenIT`}
             />
           </a>
