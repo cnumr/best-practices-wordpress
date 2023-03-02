@@ -36,7 +36,7 @@ function Seo({ description, lang, meta, title, location }) {
   const shareFB = `${location.origin}${site.siteMetadata?.shareFB}`
   const shareTW = `${location.origin}${site.siteMetadata?.shareTW}`
   const defaultTitle = site.siteMetadata?.title
-  const favicon = site.siteMetadata?.favicon
+  const favicon = `${location.origin}${site.siteMetadata?.favicon}`
 
   return (
     <Helmet
