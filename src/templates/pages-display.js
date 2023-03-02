@@ -12,7 +12,9 @@ function PagesDisplay({ data, pageContext, location, children }) {
       props.to?.includes(location.origin) ||
       props.href?.includes(location.origin) ||
       props.to?.startsWith('/') ||
-      props.href?.startsWith('/')
+      props.href?.startsWith('/')||
+      props.to?.startsWith('./')||
+      props.href?.startsWith('./')
     ) {
       return (
         <div className="text-center mt-12 mb-16">
