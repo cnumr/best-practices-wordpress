@@ -30,23 +30,13 @@ function Seo({ description, lang, meta, title, location }) {
       }
     `
   )
-
+  const siteURL = process.env.SITE_URL.replace(/\/$/, '')
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = `${withPrefix(location.origin)}${
-    site.siteMetadata?.seoImage
-  }`
-  const shareFB = `${withPrefix(location.origin)}${site.siteMetadata?.shareFB}`
-  const shareTW = `${withPrefix(location.origin)}${site.siteMetadata?.shareTW}`
+  const metaImage = `${withPrefix(siteURL)}${site.siteMetadata?.seoImage}`
+  const shareFB = `${withPrefix(siteURL)}${site.siteMetadata?.shareFB}`
+  const shareTW = `${withPrefix(siteURL)}${site.siteMetadata?.shareTW}`
   const defaultTitle = site.siteMetadata?.title
-  const favicon = `${withPrefix(location.origin)}${site.siteMetadata?.favicon}`
-  console.log(
-    `favicon without prefix`,
-    `${location.origin}${site.siteMetadata?.favicon}`
-  )
-  console.log(
-    `favicon with prefix`,
-    `${withPrefix(location.origin)}${site.siteMetadata?.favicon}`
-  )
+  const favicon = `${withPrefix(siteURL)}${site.siteMetadata?.favicon}`
 
   return (
     <Helmet
