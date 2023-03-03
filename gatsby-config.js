@@ -4,7 +4,7 @@ require(`dotenv`).config()
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-const siteURL = process.env.SITE_URL || 'http://localhost:8000'
+const siteURL = process.env.GATSBY_SITE_URL || 'http://localhost:8000'
 module.exports = {
   /* Your site config here */
   siteMetadata: {
