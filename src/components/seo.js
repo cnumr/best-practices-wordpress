@@ -31,7 +31,6 @@ function Seo({ description, lang, meta, title, location }) {
     `
   )
 
-  console.log(`process.env.GATSBY_SITE_URL`, process.env.GATSBY_SITE_URL)
   const siteURL = String(process.env.GATSBY_SITE_URL).replace(/\/$/, '')
   const metaDescription = description || site.siteMetadata.description
   const metaImage = `${withPrefix(siteURL)}${site.siteMetadata?.seoImage}`
