@@ -39,6 +39,14 @@ function Seo({ description, lang, meta, title, location }) {
   const shareTW = `${withPrefix(location.origin)}${site.siteMetadata?.shareTW}`
   const defaultTitle = site.siteMetadata?.title
   const favicon = `${withPrefix(location.origin)}${site.siteMetadata?.favicon}`
+  console.log(
+    `favicon without prefix`,
+    `${location.origin}${site.siteMetadata?.favicon}`
+  )
+  console.log(
+    `favicon with prefix`,
+    `${withPrefix(location.origin)}${site.siteMetadata?.favicon}`
+  )
 
   return (
     <Helmet
