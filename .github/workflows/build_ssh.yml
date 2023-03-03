@@ -32,6 +32,7 @@ jobs:
 
       - name: Run build task
         run: PREFIX_PATHS=true npm run build
+        env: GATSBY_SITE_URL=${{ secrets.GATSBY_SITE_URL }}
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.2.11
