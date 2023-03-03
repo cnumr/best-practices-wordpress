@@ -30,7 +30,9 @@ function Seo({ description, lang, meta, title, location }) {
       }
     `
   )
-  const siteURL = process.env.SITE_URL.replace(/\/$/, '')
+
+  console.log(`process.env.SITE_URL`, process.env.SITE_URL)
+  const siteURL = String(process.env.SITE_URL).replace(/\/$/, '')
   const metaDescription = description || site.siteMetadata.description
   const metaImage = `${withPrefix(siteURL)}${site.siteMetadata?.seoImage}`
   const shareFB = `${withPrefix(siteURL)}${site.siteMetadata?.shareFB}`
