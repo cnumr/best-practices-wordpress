@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       </main>
       <footer className="mx-auto px-4 pb-4 lg:px-0 lg:max-w-5xl border-t-2 border-neutral-light pt-4 flex flex-col items-center gap-5 md:flex-row md:justify-between">
         <div>
-          <div className="flex flex-row gap-1">
+          <div>
             <span>© {new Date().getFullYear()}</span>
             <span>&middot;</span>
             <span>Association Green IT</span>
