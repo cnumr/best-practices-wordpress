@@ -74,7 +74,7 @@ const Header = ({ className, repoURL, navigation }) => {
             <li className="!m-0">
               <a
                 href={`${repoURL}/blob/main/CONTRIBUTING.md`}
-                className={`text-white text-xl lg:text-base no-underline text-inherit font-medium`}
+                className={`text-white text-xl lg:text-base no-underline text-inherit font-medium inline-flex gap-[.15rem] items-center no-underline`}
                 target="_blank"
                 rel="noreferrer"
                 title="Voir la méthode de contribution sur le GitHub du CNUMR"
@@ -85,7 +85,7 @@ const Header = ({ className, repoURL, navigation }) => {
             <li className="!m-0">
               <a
                 href={repoURL}
-                className={`text-white text-xl lg:text-base no-underline text-inherit font-medium`}
+                className={`text-white text-xl lg:text-base no-underline text-inherit font-medium inline-flex gap-[.15rem] items-center no-underline`}
                 target="_blank"
                 rel="noreferrer"
                 title="Voir le repository GitHub de CNUMR"
