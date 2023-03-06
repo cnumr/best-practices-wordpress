@@ -217,7 +217,7 @@ function FiltersBar({
           label={`${key} (${value})`}
           textContent={`${key} (${value})`}
           selected={getBtState(object.type, key) || null}
-        />
+        >{`${key} (${value})`}</option>
       )
     })
     return output
