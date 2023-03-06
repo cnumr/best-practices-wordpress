@@ -69,6 +69,7 @@ const Layout = ({ children }) => {
         </div>
         <div>
           <a
+            className="inline-flex gap-[.15rem] items-center no-underline"
             target="_blank"
             rel="noreferrer"
             href="https://www.greenit.fr/"
