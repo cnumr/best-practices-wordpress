@@ -208,12 +208,14 @@ function FiltersBar({
     const output = []
     _.forEach(object.values, function (value, key) {
       const val = { type: object.type, propertiesToMatch: key }
+      // https://stackoverflow.com/questions/73586599/ios-safari-shows-blank-option-text-despite-setting-htmloptionelement-label-bu
       output.push(
         <option
           key={key}
           // value={object.type}
           value={JSON.stringify(val)}
           label={`${key} (${value})`}
+          textContent={`${key} (${value})`}
           selected={getBtState(object.type, key) || null}
         />
       )
