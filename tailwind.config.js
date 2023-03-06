@@ -37,7 +37,7 @@ module.exports = {
       },
       fontFamily: {
         base: [
-          'RedHatDisplay',
+          'Red Hat Display',
           'Arial',
           'Helvetica',
           'Liberation Sans',
