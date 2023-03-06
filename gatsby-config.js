@@ -66,6 +66,19 @@ module.exports = {
   pathPrefix: '/wp',
   plugins: [
     {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google2: [
+            {
+              family: 'Red Hat Display', // 'font-family' property
+              axes: 'wght@300..900',
+            },
+          ],
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         mdxOptions: {
