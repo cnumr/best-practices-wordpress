@@ -73,9 +73,9 @@
   a {
     @apply font-bold underline;
   }
-  a[target='_blank']:not(.no-out) {
-    @apply after:content-['⤴︎'] after:text-[.5rem] after:no-underline inline-flex gap-[.15rem] items-center no-underline;
-  }
+//   a[target='_blank']:not(.no-out) {
+//     @apply after:content-['⤴︎'] after:text-[.5rem] after:no-underline inline-flex gap-[.15rem] items-center no-underline;
+//   }
 
   // prismjs
   // p code {
@@ -234,7 +234,13 @@
     @apply hover:text-primary font-normal;
   }
 }
-
+/* Tooltip */
+.tooltip {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px dotted #666;
+  text-align: left;
+}
 .tooltip .bottom {
   min-width: 300px;
   // max-width:100%;

@@ -7,7 +7,7 @@
 
 import * as React from 'react'
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, withPrefix } from 'gatsby'
 
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
@@ -31,12 +31,13 @@ function Seo({ description, lang, meta, title, location }) {
     `
   )
 
+  const siteURL = String(process.env.GATSBY_SITE_URL).replace(/\/$/, '')
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = `${location.origin}${site.siteMetadata?.seoImage}`
-  const shareFB = `${location.origin}${site.siteMetadata?.shareFB}`
-  const shareTW = `${location.origin}${site.siteMetadata?.shareTW}`
+  const metaImage = `${withPrefix(siteURL)}${site.siteMetadata?.seoImage}`
+  const shareFB = `${withPrefix(siteURL)}${site.siteMetadata?.shareFB}`
+  const shareTW = `${withPrefix(siteURL)}${site.siteMetadata?.shareTW}`
   const defaultTitle = site.siteMetadata?.title
-  const favicon = site.siteMetadata?.favicon
+  const favicon = `${withPrefix(siteURL)}${site.siteMetadata?.favicon}`
 
   return (
     <Helmet

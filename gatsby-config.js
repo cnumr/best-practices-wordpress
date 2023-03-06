@@ -4,7 +4,7 @@ require(`dotenv`).config()
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-const siteURL = process.env.SITE_URL || 'http://localhost:8000'
+const siteURL = process.env.GATSBY_SITE_URL || 'http://localhost:8000'
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -40,7 +40,7 @@ module.exports = {
     },
     // in ./static folder
     seoImage: `/logo-cnumr.png`,
-    favicon: `/icone-intro.svg`,
+    favicon: `/icone-intro.png`,
     shareFB: `/asso-greenit-share-fb.png`,
     shareTW: `/asso-greenit-share-tw.png`,
     navigation: [
