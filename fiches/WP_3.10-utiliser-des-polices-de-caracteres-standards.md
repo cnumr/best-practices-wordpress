@@ -78,7 +78,6 @@ Si vous avez réellement besoin d'une police de caractères spécifiques, nous v
 ## Sources
 
 - https://www.w3schools.com/cssref/css_fonts_fallbacks.asp
-- https://google-webfonts-helper.herokuapp.com/fonts
 - https://www.w3schools.com/cssref/css_websafe_fonts.asp
 - https://kinsta.com/fr/blog/comment-changer-polices-wordpress/
 - https://fr.wikipedia.org/wiki/Typographie_sur_le_Web/

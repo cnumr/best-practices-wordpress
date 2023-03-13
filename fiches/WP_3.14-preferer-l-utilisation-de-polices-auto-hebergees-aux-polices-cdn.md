@@ -62,7 +62,9 @@ Ce plugin va détecter au fil de la consultation des pages les "Googles fonts" u
 
 ### Solution code 🌱🌱🌱
 
-1. Récupérez les variantes de la police que vous voulez utiliser (cf [Attention aux variantes ci-dessus](#attention-aux-variantes)) ;
+1. Récupérez les variantes de la police que vous voulez utiliser (cf [Attention aux variantes ci-dessus](#attention-aux-variantes))
+   1. Soit directement par le site des [Google Fonts](https://fonts.google.com/) ;
+   2. Soit en passant par ce service en ligne, [google-webfonts-helper](https://gwfh.mranftl.com/fonts).
 2. Ajoutez-les en FTP aux sources du thème ;
 3. Ajouter leurs références locales dans vos CSS.
 
@@ -87,6 +89,7 @@ Ce plugin va détecter au fil de la consultation des pages les "Googles fonts" u
 - https://helpx.adobe.com/fr/fonts/using/font-licensing.html
 - https://developers.google.com/fonts/faq#how_can_i_use_the_google_fonts_github
 
-### Plugins
+### Plugins et services
 
-- https://wordpress.org/plugins/host-webfonts-local/
+- [OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy](https://wordpress.org/plugins/host-webfonts-local/)
+- [google-webfonts-helper](https://gwfh.mranftl.com/fonts)
