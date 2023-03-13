@@ -55,9 +55,9 @@ body {
 Si vous avez réellement besoin d'une police de caractères spécifiques, nous vous invitons à inclure dans votre thème un dossier `font` avec le fichier de la police à installer. Avec l'ajout en `CSS`, par exemple :
 
 ```css
-@font-face{
-  font-family: ‘Lato';
-  src: url( “fonts/Lato.woff”) format(‘woff’);
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -66,7 +66,7 @@ Si vous avez réellement besoin d'une police de caractères spécifiques, nous v
 
 > ⚠️ Il existe différents formats de police (Woff2, woff, ttf, otf, etc). "Les développeurs des principaux navigateurs se sont mis d'accord sur l'utilisation du format Web Open Font Format (woff) comme standard". Du point de vue de la compression, le format woff2 est légèrement plus performant que le format woff.
 
-> ⚠️ Une font, police de caractères, typographie, existe en plusieurs graisses (light, regular, italic, bold, black, etc). Nous vous recommandons d'utiliser `<b>` ou `<strong>`, `<i>` ou `<em>` et les propriétés `CSS` qui en découle pour éviter le requêtage, le poids et le téléchargement de fichiers supplémentaires. S'il est d'une nécessité absolue d'avoir les fichiers à minima deux graisses d'une police alors, nous vous recommandons l'utilisation d'une police variable.
+> ⚠️ Une font, police de caractères, typographie, existe en plusieurs graisses (light, regular, italic, bold, black, etc.). Nous vous recommandons d'utiliser `<b>` ou `<strong>`, `<i>` ou `<em>` et les propriétés `CSS` qui en découle pour éviter le requêtage, le poids et le téléchargement de fichiers supplémentaires. S'il est d'une nécessité absolue d'avoir les fichiers à minima deux graisses d'une police alors, nous vous recommandons l'utilisation d'une police variable.
 
 ## Principe de validation
 
