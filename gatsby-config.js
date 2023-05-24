@@ -18,7 +18,7 @@ module.exports = {
     },
     peoples: {
       leads: [
-        { name: 'Dominique Nicole', url: 'https://www.pix-e.fr/' },
+        { name: 'Dominique Nicolle', url: 'https://www.pix-e.fr/' },
         { name: 'Renaud Héluin', url: 'https://novagaia.fr/' },
       ],
       contributors: [
