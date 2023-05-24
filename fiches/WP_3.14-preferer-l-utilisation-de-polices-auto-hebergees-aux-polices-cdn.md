@@ -54,7 +54,7 @@ Leurs usages étant libres d'utilisation, vous pouvez de ne pas utiliser la vers
 
 ### Solution no-code 🌱🌱🌱
 
-Nous vous proposons l'utilisation de ce plugin WordPress [OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy](https://wordpress.org/plugins/host-webfonts-local/) \*
+Nous vous proposons l'utilisation d'une [[extension]] WordPress [OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy](https://wordpress.org/plugins/host-webfonts-local/) \*
 
 Ce plugin va détecter au fil de la consultation des pages les "Googles fonts" utilisées et vous proposer de les ajouter aux sources de votre site et faire une partie des changements de configurations pour vous (la version PRO se charge d'un plus grand nombre d'actions).
 
