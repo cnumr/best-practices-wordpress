@@ -38,7 +38,7 @@ Et, cela pour plusieurs raisons :
 
 ## GreenIT vous conseille
 
-Vous l'aurez compris, notre préférence va à l'utilisation des polices déjà présentes sur les terminaux, cependant on n'a pas toujours le choix. La DA a été fait ainsi ou le client est décidé à les utiliser.
+Vous l'aurez compris, notre préférence va à l'utilisation des polices déjà présentes sur les terminaux, cependant on n'a pas toujours le choix. La direction artistique a été faite ainsi ou le client est décidé à les utiliser.
 
 ### Adobe Fonts
 
