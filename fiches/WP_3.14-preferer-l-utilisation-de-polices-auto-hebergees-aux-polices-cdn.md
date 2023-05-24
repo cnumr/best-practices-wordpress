@@ -38,15 +38,17 @@ Et, cela pour plusieurs raisons :
 
 ## GreenIT vous conseille
 
-Vous l'aurez compris, notre préférence va à l'utilisation des polices déjà présentes sur les terminaux, cependant on n'a pas toujours le choix. La direction artistique a été faite ainsi ou le client est décidé à les utiliser.
+### Polices sytèmes
+
+Vous l'aurez compris, notre préférence va à l'utilisation des polices déjà présentes sur les terminaux.
+
+### Google Fonts
+
+Leurs usages étant libres d'utilisation, vous pouvez de ne pas utiliser la version venant de leur CDN, et donc de **les auto-héberger dans votre site 🎉**
 
 ### Adobe Fonts
 
 Pour des raisons de licences d'utilisations, vous n'avez pas le choix, utilisez les polices venant de leur CDN 🤷‍♂️
-
-### Google Fonts
-
-Leurs usages étant libres d'utilisation, vous pouvez de ne pas utiliser la version venant de leur CDN, et donc de les auto-héberger dans votre site 🎉
 
 #### Attention aux variantes
 
