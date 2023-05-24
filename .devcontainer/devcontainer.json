@@ -38,7 +38,8 @@
 		"yzhang.markdown-all-in-one",
 		"adam-bender.commit-message-editor",
 		"mhutchie.git-graph",
-		"unifiedjs.vscode-mdx"
+		"unifiedjs.vscode-mdx",
+		"GitHub.vscode-pull-request-github"
 	]
     }
   },

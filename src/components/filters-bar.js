@@ -59,12 +59,19 @@ function FiltersBar({
     // console.log(`selectedFilters`, selectedFilters)
     // console.log(type, propertyToMatch)
 
+    // reset
+    if (type === 'reset') {
+      // console.log(`RESET`)
+      // fill w/ default/reset value
+      setSelectedFilters([{ propertyToMatch: allItemsLabel, type: `reset` }])
+      // send reseted list outside of the component
+      resetList()
+      return
+    }
+    // console.log(type, propertyToMatch, selectedFilters)
     if (filterType === FiltersBar.SEARCH_TYPE_OR || forceOR) {
-      if (propertyToMatch === allItemsLabel) {
-        // fill w/ default/reset value
-        setSelectedFilters([{ propertyToMatch: allItemsLabel, type: `reset` }])
-        // send reseted list outside of the component
-        resetList()
+      if (type === 'reset') {
+        // done upper in code
       } else {
         setSelectedFilters([{ propertyToMatch: propertyToMatch, type: type }])
         // filter list
@@ -78,11 +85,7 @@ function FiltersBar({
       // console.log(type, propertyToMatch, selectedFilters)
       // reset
       if (type === 'reset') {
-        // console.log(`RESET`)
-        // fill w/ default/reset value
-        setSelectedFilters([{ propertyToMatch: allItemsLabel, type: `reset` }])
-        // send reseted list outside of the component
-        resetList()
+        // done upper in code
       } else {
         // console.log(`FILTER`)
         // rm reset filter
@@ -92,7 +95,8 @@ function FiltersBar({
         }
         // add new filter only
         let hasFilter = false
-        tmpFilters.map(filter => {
+        let hasTypeFilter = false
+        tmpFilters.forEach(filter => {
           if (
             filter?.type === type &&
             filter?.propertyToMatch === propertyToMatch &&
@@ -100,31 +104,74 @@ function FiltersBar({
           ) {
             hasFilter = true
           }
+          if (filter?.type === type && hasTypeFilter !== true) {
+            hasTypeFilter = true
+          }
         })
         // console.log(`hasFilter`, hasFilter)
-        if (!hasFilter) {
-          // add to setSelectedFilters listened by buttons
-          tmpFilters.push({ propertyToMatch: propertyToMatch, type: type })
-          setSelectedFilters(tmpFilters)
-          // trics to refresh bt
-          forceUpdate()
-          // filter list
-          const tmpList = []
-          // console.log(`current`, type, propertyToMatch)
-          fullList.map(item => {
-            // console.log(`item`, _.get(item, type))
-            selectedFilters.map(selected => {
-              if (_.get(item, type) === selected.propertyToMatch) {
-                tmpList.push(item)
-              }
-            })
-          })
-          // send filtered list outside of the component
-          filteredList(tmpList)
+        if (hasTypeFilter && !hasFilter) {
+          // console.log(`rm and replace`)
+          removeFilter(tmpFilters, propertyToMatch, type)
+          addFilter(tmpFilters, propertyToMatch, type)
+          // return
+        } else if (hasTypeFilter && hasFilter) {
+          // console.log(`rm filter`)
+          // removeFilter(tmpFilters, propertyToMatch, type)
+        } else if (!hasFilter) {
+          // console.log(`add`)
+          addFilter(tmpFilters, propertyToMatch, type)
         }
       }
-      console.log(type, propertyToMatch, selectedFilters)
+      // console.log(type, propertyToMatch, selectedFilters)
     }
+  }
+
+  const addFilter = (tmpFilters = [], propertyToMatch, type) => {
+    // add to setSelectedFilters listened by buttons
+    // console.log(`addFilter`)
+    tmpFilters.push({ propertyToMatch: propertyToMatch, type: type })
+    setSelectedFilters(tmpFilters)
+    updateFilter()
+  }
+
+  const removeFilter = (tmpFilters = [], propertyToMatch, type) => {
+    // console.log(`removeFilter`)
+    let posExact = -1
+    let posType = -1
+    tmpFilters.forEach((item, index) => {
+      if (item.type === type) {
+        posType = index
+      }
+      if (item.propertyToMatch === propertyToMatch && item.type === type) {
+        posExact = index
+        posType = -1
+      }
+    })
+    if (posType !== -1) tmpFilters = _.pullAt(tmpFilters, [posType])
+    if (posExact !== -1) tmpFilters = _.pullAt(tmpFilters, [posExact])
+    setSelectedFilters(tmpFilters)
+    updateFilter()
+  }
+
+  const updateFilter = () => {
+    // console.log(`removeFilter`)
+    // trics to refresh bt
+    forceUpdate()
+    // filter list
+    const tmpList = []
+    // console.log(`current`, type, propertyToMatch)
+    fullList.forEach(item => {
+      let count = 0
+      selectedFilters.forEach(selected => {
+        // console.log(`item.${selected.type}`, _.get(item, selected.type))
+        if (_.get(item, selected.type) === selected.propertyToMatch) {
+          count = count + 1
+        }
+      })
+      if (selectedFilters.length === count) tmpList.push(item)
+    })
+    // send filtered list outside of the component
+    filteredList(tmpList)
   }
 
   // select method
@@ -215,7 +262,7 @@ function FiltersBar({
           // value={object.type}
           value={JSON.stringify(val)}
           label={`${key} (${value})`}
-          textContent={`${key} (${value})`}
+          // textContent={`${key} (${value})`}
           selected={getBtState(object.type, key) || null}
         >{`${key} (${value})`}</option>
       )
