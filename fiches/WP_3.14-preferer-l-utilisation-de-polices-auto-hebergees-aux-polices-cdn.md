@@ -1,5 +1,5 @@
 ---
-title: 3.14 Préférer les polices auto-hébergées aux Google et Adobe Fonts
+title: 3.14 Préférer les polices auto-hébergées aux polices CDN
 people: Renaud H.
 scope: Thèmes
 responsible:
