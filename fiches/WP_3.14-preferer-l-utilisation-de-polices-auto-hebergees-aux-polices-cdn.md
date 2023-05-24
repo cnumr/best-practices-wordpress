@@ -30,7 +30,7 @@ En tant que Designer, dans vos créations, si vous avez le choix dans les police
 
 Et, cela pour plusieurs raisons :
 
-- Au niveau **RGPD**, des sites se sont fait épingler en les utilisant, car cela partage l'adresse IP du visiteur du site avec le fournisseur de la police de caractère. _Il en va de même avec l'usage du reCaptcha_ ;
+- Au niveau **RGPD** : les utiliser, c'est autoriser le partage l'adresse IP du visiteur. _Il en va de même avec l'usage du reCaptcha_ ;
 - Au niveau **performance**, comme les navigateurs cloisonnent le cache des sites, il n'y a plus d'avantages à utiliser cette solution et cela produit des requêtes en plus sur un autre domain ;
 - Toujours au niveau **performance**, son usage demande une bonne implémentation pour éviter le blocage de rendu le temps de se connecter au domain et de télécharger celles-ci. Il faut ajouter `font-display:swap`, faire des prefetch.
 - **Performance** toujours, afin de limiter le poids des polices à télécharger, il faut indiquer précisément les graisses, variations utilisées et se poser la question du format de police à proposer (privilégier le WOF2 qui maintenant est bien pris en charge par les navigateurs) ;
