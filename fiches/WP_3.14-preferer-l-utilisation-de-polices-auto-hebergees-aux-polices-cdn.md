@@ -89,7 +89,7 @@ Ce plugin va détecter au fil de la consultation des pages les "Googles fonts" u
 - https://helpx.adobe.com/fr/fonts/using/font-licensing.html
 - https://developers.google.com/fonts/faq#how_can_i_use_the_google_fonts_github
 
-### Plugins et services
+### Extensions et services
 
 - [OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy](https://wordpress.org/plugins/host-webfonts-local/)
 - [google-webfonts-helper](https://gwfh.mranftl.com/fonts)
