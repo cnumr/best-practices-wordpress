@@ -35,11 +35,16 @@ Bien choisir sa solution d'hébergement est essentielle pour plusieurs raisons :
 Même s'il n'existe pas de label ou certification multi-critères permettant d'évaluer le caractère vertueux d'un service d'hébergement web, nous vous proposons ici quelques critères sur lesquels s'appuyer :
 
 - les certifications [ISO 50001](https://www.iso.org/fr/publication/PUB100400.html) et/ou [ISO 140001](https://www.iso.org/fr/iso-14001-environmental-management.html) afin de garantir le respect de certaines bonnes pratiques en matière de management de l'énergie et l'environnement ;
-- la présence de l'hébergeur sur la [liste des entreprises référencées comme conformes](https://e3p.jrc.ec.europa.eu/node/575) au Code de Conduite européen sur les datacenters ;
+- la présence de l'hébergeur sur la liste des entreprises référencées comme conformes :
+  - au [Code de Conduite européen <abbr title="European Energy Efficiency Platform">E3P</abbr> sur les datacenters](https://web.archive.org/web/20240918212256/https://e3p.jrc.ec.europa.eu/node/575) (archive) ;
+  - à un [<abbr title="Renewable Energy Factor">REF</abbr> de 100% sur The Green Web Foundation](https://www.thegreenwebfoundation.org/)  (l'énergie utilisée est 100% renouvelable) ;
 - la politique d’achat responsable avec la présence de labels sur le matériel comme des serveurs équipés d’une alimentation électrique conforme à l’écolabel 80Plus (niveaux Platinum et Titanium) et/ou les serveurs estampillés Energy Star ;
 - l'utilisation de serveurs fonctionnant en mode asynchrone (i.e. qui ne sont pas tenus de créer un processus ou un thread pour chaque requête) ;
 - la politique de l'hebergeur en matière de gestion de l'eau et des déchets électriques et électroniques (DEEE) ;
-- l'efficience énergétique du data center : Power Usage Effectiveness (PUE), Carbon Usage Effectiveness (CUE) et Water Usage Effectiveness (WUE) (indicateurs rarement publiés et difficilement vérifiables) ;
+- l'efficience énergétique du data center (les indicateurs sont rarement publiés, mais peuvent parfois être communiqués par mail, il n'en reste pas moins difficilement vérifiables) :
+  - Power Usage Effectiveness (PUE) < 1.6 ;
+  - Carbon Usage Effectiveness (CUE) < 0.3 ;
+  - Water Usage Effectiveness (WUE) < 0.5 ;
 - le respect de la dimension sociale ;
 - la compensation carbone.
 
@@ -51,20 +56,19 @@ Même s'il n'existe pas de label ou certification multi-critères permettant d'�
 
 Nous ne pouvons faire une liste exhaustive des hébergeurs. Voici quelques exemples :
 
-- **OVH**
-
-  - Normes ISO : https://www.ovhcloud.com/fr/enterprise/certification-conformity/
-  - Politiques et efficience énergétique : https://www.ovhcloud.com/fr/what-data-center/
-
 - **Scaleway**
 
   - Normes ISO : https://www.scaleway.com/fr/securite-et-resilience/
   - Politiques et efficience énergétique : https://www.scaleway.com/fr/leadership-environnemental/
 
-- **Stratosfair**
+- **Hosterra**
 
-  - Normes ISO et équipements : https://stratosfair.com/votre-datacenter/
-  - Politiques : https://stratosfair.com/manifeste-stratosfair/
+  - Normes ISO : Hosterra disposent de centres de données Scaleway
+  - Politiques et efficience énergitique (en temps réel) : https://hosterra.eu/fr/company/dc/
+
+- **Datacampus**
+
+  - Politiques : https://datacampus.fr/entreprise-a-mission/
 
 - **Neutral-it**
 
@@ -74,9 +78,18 @@ Nous ne pouvons faire une liste exhaustive des hébergeurs. Voici quelques exemp
   - Normes ISO : https://www.infomaniak.com/fr/ecologie/certificats-recompenses
   - Politiques : https://www.infomaniak.com/fr/ecologie/engagements
 
+- **OVH**
+
+  - Normes ISO : https://www.ovhcloud.com/fr/enterprise/certification-conformity/
+  - Politiques et efficience énergétique : https://www.ovhcloud.com/fr/what-data-center/
+
 ## Principe de validation
 
-| Le nombre                                                                                             | est inférieur ou égal à |
-| ----------------------------------------------------------------------------------------------------- | :---------------------: |
-| d'hébergeurs utilisé sans avoir vérifié les différents critères d'une démarche réelle d'écoconception |            0            |
-| de serveurs non adaptés à votre besoin                                                                |            0            |
+| Critères                                                                                                        | est                |
+| --------------------------------------------------------------------------------------------------------------- | :----------------: |
+| Le nombre d'hébergeurs utilisé sans avoir vérifié les différents critères d'une démarche réelle d'écoconception | &le;&nbsp;0        |
+| Le nombre de serveurs non adaptés à votre besoin                                                                | &le;&nbsp;0        |
+| Renewable Energy Factor (RFE)                                                                                   | ≥&nbsp;100&nbsp;%  |
+| Power Usage Effectiveness (PUE)                                                                                 | &le;&nbsp;1.6      |
+| Carbon Usage Effectiveness (CUE)                                                                                | &le;&nbsp;0.3      |
+| Water Usage Effectiveness (WUE)                                                                                 | &le;&nbsp;0.5      |
