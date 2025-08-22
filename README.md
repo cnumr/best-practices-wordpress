@@ -29,6 +29,10 @@ _Source : [W3Techs](https://w3techs.com/technologies/history_overview/content_ma
 
 Nous avons conçu ces BP en ayant les différents profils d'utilisateur, en ce sens ce référentiel s'adresse aussi bien à **Madame et Monsieur tout le monde qu'aux designers ou développeuses et développeurs**. Pour ce faire, sur certaines BP vous trouverez différents niveaux de solutions proposées en fonction de votre appétence pour le code.
 
+## Le projet
+
+TODO
+
 ## Les besoins
 
 Étant donné les évolutions continues du web, ce référentiel a besoin de régulièrement être mis à jour.
