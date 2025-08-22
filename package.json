@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "tinacms dev -v -c \"next dev\"",
-    "dev:prod": "TINA_PUBLIC_IS_LOCAL=false TINA_PUBLIC_REF_NAME=RWEB NEXT_PUBLIC_REF_NAME=RWEB tinacms dev -c \"next dev\"",
-    "build": "TINA_PUBLIC_IS_LOCAL=false TINA_PUBLIC_REF_NAME=RWEB NEXT_PUBLIC_REF_NAME=RWEB tinacms build --partial-reindex && next build",
+    "dev:prod": "TINA_PUBLIC_IS_LOCAL=false TINA_PUBLIC_REF_NAME=RWP NEXT_PUBLIC_REF_NAME=RWP tinacms dev -c \"next dev\"",
+    "build": "TINA_PUBLIC_IS_LOCAL=false TINA_PUBLIC_REF_NAME=RWP NEXT_PUBLIC_REF_NAME=RWP tinacms build --partial-reindex && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier . --write",
