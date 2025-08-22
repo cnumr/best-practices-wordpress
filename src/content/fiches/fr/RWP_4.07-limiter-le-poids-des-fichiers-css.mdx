@@ -1,0 +1,53 @@
+---
+refID: '4.07'
+title: Limiter le poids des fichiers CSS
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-27T12:40:36.347Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '4.07'
+people: Yann Gautreau.
+scope: themes
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+lifecycle: 4-integration-development
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+saved_resources:
+  - network
+  - requests
+validations:
+  - rule: de règles de style non utilisées
+    maxValue: '0'
+  - rule: de fichiers CSS non minifiés
+    maxValue: '0'
+---
+
+## Sujet
+
+Le poids numérique des fichiers CSS est en constante augmentation depuis 10 ans, les thèmes et les extensions de WordPress chargent chacun des fichiers CSS qui vont se superposer les uns aux autres. La maintenance de vos fichiers de style va garantir une optimisation de leur poids.
+
+## GreenIT vous conseille
+
+### Solution no-code 🌱
+
+Nous vous invitons à vous référer à la bonne pratique : [Utiliser un système de cache](./WP_7.02-utiliser-un-systeme-de-cache.md). La plupart des \[\[extension|extensions]] de cache propose à minima la minification du CSS.
+
+### Solution code 🌱🌱🌱
+
+Bien souvent, par peur de dénaturer certaines pages, d'autres règles de style sont éditées au lieu de les adapter ou de les supprimer.
+
+Nous vous recommandons de :
+
+- Supprimer les styles non utilisés
+- Diviser les fichiers CSS afin d’en faciliter la maintenance (grid.css, reset.css, element.css, widget.css, etc.)
+- Ne pas utiliser `@import` pour appeler un fichier de CSS, cela peut sembler pratique, mais bloque le rendu navigateur le temps du chargement de la ressource
+- Privilégier l'intégration de vos fichiers CSS via la balise `<link>`, en tenant compte de la hiérarchisation des chargements des styles par le navigateur (pour un même sélécteur, c'est la dernière règle CSS déclarée qui est prise en compte par le navigateur)
+- Minifier les fichiers CSS
+- Éviter d'utiliser les propriétés coûteuses en ressources (`position : fixed`, `border-radius`, `box-shadow`, `text-shadow`, `opacity`, `transform`, `filter`)
+- Adopter une approche mobile-first (économie de style et de ressources) et d'ajouter les styles à mesure que le support s’agrandit (Voir la fiche [Concevoir en Mobile First](./WP_3.07-concevoir-vos-sites-en-mobile-first.md)).

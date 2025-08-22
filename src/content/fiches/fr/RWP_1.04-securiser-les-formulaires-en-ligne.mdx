@@ -1,0 +1,85 @@
+---
+refID: '1.04'
+title: Sécuriser les formulaires en ligne
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-02-20T08:46:34.218Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '1.04'
+people: Dominique N.
+responsible:
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+lifecycle: 1-analyse-of-needs
+environmental_impact: medium_environmental_impact
+priority_implementation: high_priority
+scope: features
+saved_resources:
+  - storage
+  - network
+validations:
+  - rule: de formulaires non sécurisés
+    maxValue: '0'
+---
+
+## Sujet
+
+En supplément de la [sécurité globale de votre installation WordPress](#TODO) et pour reprendre les indications de la fiche [Limiter la quantité de données transmise par les formulaires en ligne](./WP_1.03-limiter-la-quantite-de-donnees-transmise-par-les-formulaires-en-ligne.md), il est indispensable de limiter le poids de votre base de données et/ou de limiter le nombre d'emails envoyés depuis vos formulaires en ligne.
+Que vous ayez choisi de stocker les données des formulaires dans votre base de données ou de les transmettre par email, les formulaires doivent être sécurisés afin de ne pas permettre aux robots d'envoyer des spams via les formulaires présents sur votre site.
+
+Il existe plusieurs méthodes pour sécuriser les formulaires en lignes : le captcha ou le pot de miel (HoneyPot)
+
+### Le captcha <sup>1</sup>
+
+Le captcha est un système qui permet de vérifier, par une suite de lettres, un calcul, la reconnaissance d'images, etc. que le formulaire en ligne est bien rempli par un être humain.
+
+#### Google reCAPTCHA
+
+reCAPTCHA est un système de détection automatisée d'utilisateurs appartenant à Google et mettant à profit les capacités de reconnaissance de ces derniers, mobilisées par les tests CAPTCHA, pour améliorer par la même occasion le processus de reconnaissance des formes par les robots<sup>2</sup>.
+
+<PositionableImage
+  src="/src/assets/fiches/1.04/1.04_recaptcha.jpg"
+  alt="reCaptcha"
+  caption="reCaptcha "
+  position="block"
+  imgWidth="auto"
+/>
+
+Il en existe de plusieurs types (reconnaissances d'images, de textes, validation automatique par Google).
+
+#### Captcha personnalisé
+
+Vous pouvez ne pas utiliser Google reCAPTCHA, et créer vos propres questions/réponses ou questions mathématiques.
+
+<PositionableImage
+  position="block"
+  imgWidth="auto"
+  src="/src/assets/fiches/1.04/1.04_captcha-calcul.jpg"
+  alt="captcha-calcul"
+  caption="captcha-calcul"
+/>
+
+### Le Pot de miel
+
+La méthode pot de miel est efficace pour éviter les spams. Un champ est ajouté dans le code du site, mais non visible pour les utilisateurs. Ainsi, s'il est rempli, c'est que l'utilisateur est un robot.
+
+## GreenIT vous conseille
+
+- Choisir une extension de gestion des formulaires qui intègre au moins une des méthodes ci-dessus
+- Veiller à ce que tous les utilisateurs puissent valider la méthode choisie
+- Nettoyer vos données lorsque la méthode choisie n'a pas été efficace (ce qui peut toujours arriver)
+
+> ⚠️ Le Google reCaptcha n'est pas la méthode la plus recommandée :
+
+- elle fait appel à des fichiers sources externes qui sont lourds
+- elle n'est pas utilisable par l'ensemble des utilisateurs
+
+## Sources
+
+- Note 1 : [https://fr.wikipedia.org/wiki/CAPTCHA](https://fr.wikipedia.org/wiki/CAPTCHA)
+- Note 2 : [https://fr.wikipedia.org/wiki/ReCAPTCHA](https://fr.wikipedia.org/wiki/ReCAPTCHA)
+- CAPTCHA et sobriété numérique (Greenspector) : [https://greenspector.com/fr/captcha-et-sobriete-numerique/](https://greenspector.com/fr/captcha-et-sobriete-numerique/)
+- Captcha et numérique responsable : quelles solutions? (Empreinte Digitale) : [https://blog.empreintedigitale.fr/2022/09/05/captcha-et-numerique-responsable-quelles-solutions/](https://blog.empreintedigitale.fr/2022/09/05/captcha-et-numerique-responsable-quelles-solutions/)

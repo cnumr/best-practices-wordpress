@@ -1,0 +1,63 @@
+---
+refID: '3.01'
+title: Limiter l'autocomplétion lors d'une recherche
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-02-20T09:08:22.151Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '3.01'
+people: Renaud H.
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: src/content/personas/fr/designeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+  - responsible: src/content/personas/fr/no-code-madame-et-monsieur-tout-le-monde.mdx
+lifecycle: 3-conception-design
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+scope: front-office
+saved_resources:
+  - cpu
+  - ram
+  - storage
+  - network
+  - requests
+validations:
+  - rule: de champ d'autocomplétion
+    maxValue: '1'
+  - rule: 'de caractères avant de déclencher la première requête '
+    maxValue: '5'
+---
+
+## Sujet
+
+<PositionableImage
+  position="block"
+  imgWidth="twoThirdWidth"
+  src="/src/assets/fiches/3.01/pict1.png"
+  alt="Exemple avec Google"
+  caption="Exemple avec Google search"
+/>
+
+La suggestion de réponse au moment de la saisie dans un champ de recherche (ou de toute liste) est pratique, mais a un réel impact réseau ainsi que sur les processeurs du serveur comme sur celui de la machine utilisée par le visiteur du site.
+
+Pour faire simple, **à chaque caractère saisi, une demande est envoyée au serveur, qui fait alors une requête en base pour rechercher le terme**. Sur WordPress, si la requête n'est pas filtrée, elle recherchera sur les diverses entités présentes (Post, Comments, etc.) et elle retournera les plus pertinentes qu'elle aura donc comparées et triées. Une fois cette recherche effectuée, le résultat est retourné comme liste qui s'affiche dans le navigateur.
+
+**Ce n'est donc pas un type de fonctionnalité à privilégier**.
+
+## GreenIT vous conseille
+
+Si elle est jugée indispensable, il y a des paramètres sur lesquelles on peut jouer pour limiter l'impact :
+
+- Augmenter le nombre de caractères à saisir avant de faire la première requête. La moyenne du nombre de caractères des mots en français étant de 4 (ou 5 suivant les sources), on peut donc configurer ce nombre de caractères minimal à 6.
+- On peut aussi omettre les mots de moins de 3-4 caractères et ainsi n'envoyer que les mots "pertinents" et ne pas rechercher les articles ou mots de coordination (de, du, ils, or...).
+- Cloisonner la recherche à certains types de posts, au titre, etc.
+- **Il faut privilégier l'utilisation de \[\[extension|extensions]] spécialisés et proposant de réaliser des recherches sur l'indexation qu'ils auront faite de votre site**. Les index sont des bases de données optimisées pour la recherche. Elles recensent les mots contenus par votre site qui sont sauvegardés, avec le nombre d'occurrences trouvées pour celui-ci et les pages liées et qui n'est mis à jour que lorsque le site est lui-même mis à jour. Tout le travail de "recherche" est donc fait lors de la création/mise à jour de l'index suivant les paramètres configurés et préoptimisés. Lors de la recherche utilisateur, le plug-in fait ses requêtes sur cette base/table spécifique et optimisée, ce qui allège la charge serveur et qui à l'avantage d'être aussi beaucoup plus rapide.
+
+## Sources
+
+- Réduire les impacts de l'autocomplétion (Greenspector) : [https://greenspector.com/fr/reduire-les-impacts-de-lautocompletion/](https://greenspector.com/fr/reduire-les-impacts-de-lautocompletion/)

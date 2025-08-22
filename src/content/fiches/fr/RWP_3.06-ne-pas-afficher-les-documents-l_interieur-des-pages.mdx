@@ -1,0 +1,45 @@
+---
+refID: '3.06'
+title: Ne pas afficher les documents à l'intérieur des pages
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-27T11:57:19.913Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '3.06'
+people: Yann G.
+scope: documents
+responsible:
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+lifecycle: 3-conception-design
+environmental_impact: medium_environmental_impact
+priority_implementation: high_priority
+saved_resources:
+  - storage
+  - network
+validations:
+  - rule: 'de documents visibles directement par page'
+    maxValue: '0'
+---
+
+## Sujet
+
+Lorsqu'un utilisateur affiche une page web permettant de visualiser un document (quel que soit son type : PDF, doc, xls, etc.), le chargement peut être non voulu. **Le téléchargement d'un document doit être une décision volontaire et non imposée.**
+Si l'utilisateur n'y consent pas, c'est-à-dire qu'il n'a nullement l'intention de lire ou d'utiliser le document, ce téléchargement imposé représente un poids numérique (donc environnemental) inutile qui sera renouvelé à chaque ouverture de la page puisque le document sera de nouveau chargé.
+
+Un autre point non négligeable est l'incapacité pour certains navigateurs à prendre en charge cet affichage directement dans la page. En effet pour compenser cela, il faudra ajouter le système de lecture directement dans votre site, et donc alourdir encore les ressources demandées par la page. Sans compter l'impact négatif pour des utilisateurs en connectivité limitée ou s'appuyant sur des outils supplémentaires tels que des lecteurs d'écran.
+
+## GreenIT vous conseille
+
+- Proposer vos documents via un lien de téléchargement (bloc fichier dans l'éditeur Gutenberg)
+- Optimiser et compresser vos documents PDF à télécharger (compresser vos documents avec des outils lors de l'export de ce dernier)
+- Notifier le poids du document à côté du lien de téléchargement, ainsi que son extension (et la langue de son contenu si elle différe de celle de la page)
+- Proposer un résumé du document à télécharger afin d'éviter les téléchargements inutiles
+- Pour les documents volumineux, proposer deux versions en téléchargement (une légère et une intégrale).
+
+## Exemple
+
+Dans le bloc fichier dans l'éditeur Gutenberg, par défaut le fichier s'affiche en lecture dans votre page de manière automatique. Décochez "Afficher le contenu embarqué en ligne" dans le panneau réglage.

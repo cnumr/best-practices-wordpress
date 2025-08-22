@@ -1,0 +1,55 @@
+---
+refID: '7.02'
+title: Utiliser un système de cache
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-06-17T17:40:25.158Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '7.02'
+people: Franklin L.
+responsible:
+  - responsible: src/content/personas/fr/designeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+  - responsible: src/content/personas/fr/no-code-madame-et-monsieur-tout-le-monde.mdx
+lifecycle: 7-deployment
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+scope: cache
+saved_resources:
+  - ram
+  - network
+validations:
+  - rule: de ressources non mises en cache
+    maxValue: 0%
+---
+
+## Sujet
+
+Toute page consultée sur un site WordPress est générée par le système. Afin de réduire la consommation de ressources matérielles et flux réseau, il est recommandé de mettre en place un système de cache.
+
+Le cache existe à différents niveaux. Il existe un cache sur votre navigateur Internet. Mais il est aussi possible de mettre en cache système WordPress. Ainsi, si la page, ou l'article appelé n'a pas été modifié depuis la dernière mise en cache, elle sera délivrée sans nouvel appel aux fonctions profondes de WordPress.
+
+## GreenIT vous conseille
+
+### Solution no-code 🌱🌱🌱
+
+La création d'un cache sur WordPress peut être réalisée via l'utilisation d'une \[\[extension]] spécifique apportant de nombreuses possibilités.
+
+Il existe de nombreuses extensions d'optimisation et de cache, chacune ayant des fonctions particulières ([https://fr.wordpress.org/plugins/tags/cache/](https://fr.wordpress.org/plugins/tags/cache/)). Selon l'hébergeur, la version de WordPress installée, elles n'auront pas les mêmes effets. Ainsi il n'est pas possible de vous proposer une en particulier, et il est recommandé d'en tester des différentes afin d'optimiser le résultat.
+
+### Solution code 🌱🌱🌱
+
+Il est possible d'activer le cache de Wordpress par l'ajout d'un paramètre dans le fichier `wp-config.php` qui se trouve en racine de votre site.
+Le paramètre à insérer est :
+`define('WP_CACHE', true);`
+
+## Exemple
+
+Nous avons testé différentes extensions.
+Les meilleurs résultats nous ont permis de gagner 1 niveau et de réduire drastiquement les erreurs signalées dans l'outil GreenIT Analysis disponible sur [Firefox](https://addons.mozilla.org/fr/firefox/addon/greenit-analysis/) et [Chrome](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad?hl=fr).
+
+<PositionableImage position="block" imgWidth="auto" zoomable={true} src="/deploy-vercel.gif" alt="alt" caption="captoin" />

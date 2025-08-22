@@ -1,0 +1,165 @@
+---
+refID: '5.02'
+title: Utiliser le format adéquat d'image
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-02-20T12:04:02.574Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '5.02'
+people: Renaud H. & Florine S.
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: src/content/personas/fr/designeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+  - responsible: src/content/personas/fr/no-code-madame-et-monsieur-tout-le-monde.mdx
+lifecycle: 5-content-media
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+scope: images
+saved_resources:
+  - cpu
+  - ram
+  - storage
+  - network
+validations:
+  - rule: d'images ayant un format inadapté à son contexte
+    maxValue: '0'
+---
+
+## Sujet
+
+Plusieurs formats d'images sont possibles sur le web : le SVG, le JPG/JPEG, le PNG, le GIF et le WebP, le HEIF et le AVIF.
+
+Chaque format a un impact sur l'optimisation d'affichage et sur le poids final de l'image, qui est dû à leurs possibilités de compression. Si vous avez lu la bonne pratique : [4.05 Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_4.05-utiliser-une-version-d_image-ayant-taille-coherente-avec-son-utilisation.md), vous savez que les médias en général et que les images en particulier (sur une page web, 50 % du poids total de la page) sont un des éléments les plus lourds des sites web engendrant un surcoût environnemental parfois non nécessaire et coûteux, en stockage, réseau et bande passante pour des sociétés comme Google (Youtube), Netflix et Apple qui cherchent et proposent des formats de compression toujours plus optimisés.
+
+Le monde des extensions de formats est vivant et complexe, pour plus de clarté nous ne rentrerons pas dans les détails techniques.
+
+Petites légendes des émoticons utilisées :
+
+- 🌱 - GreenIT recommande ces formats en respectant les conditions d'utilisation
+- ✋ - GreenIT vous recommande d'attendre une prise en charge significative
+- ❓ - GreenIT recommande d'être attentif au contexte d'utilisation de ces formats
+- 🚫 - GreenIT ne recommande pas l'utilisation de ces formats
+
+### 🌱 Le SVG (Scalable Vector Graphics ou Graphique Vectoriel Adaptable) 🌱
+
+Nous commençons par le seul format \[\[vectoriel]] de cette liste, c'est-à-dire, qu'il a pour principal avantage de ne jamais subir de \[\[pixellisation]] lors d'agrandissement comme les caractères de police qui à toute taille, restent un dessin précis et lisible contrairement à une image \[\[matricielle|matricielle ou bitmap]]. Ce format est souvent utilisé pour les logotypes, les icônes et les illustrations vectorielles. **Pour utiliser ce format, il faut que le format de création de l'image soit totalement vectoriel**, c'est-à-dire, créer avec des logiciels comme Inkscape, Affinity Designer, Illustrator, etc.
+
+À utiliser si votre image est vectorielle et si vous avez besoin d'une image flexible en matière de taille ou si vous avez besoin d'animer votre image via du code (`CSS3`, `SMIL` ou `JS`).
+
+> ⚠️ Il existe plusieurs méthodes pour intégrer un `.svg` dont la méthode qui permet sa manipulation/animation. L'intégration en tant qu'élément du \[\[dom|DOM]] `<svg>` provoquera, en fonction de la complexité de votre SVG, une augmentation de la taille du DOM.
+
+### 🌱 Le WebP (Web Picture ou Web Photo) 🌱
+
+C'est un format de compression (avec ou sans perte) d'images \[\[matricielle|matricielles]] crée par Google en 2010 en Open Source dans le but de remplacer `.jpeg`, `.jpg`, `.png`, `.gif`, etc. Développé spécialement pour le web, il possède les qualités de chaque format décrit ci-dessous à savoir :
+
+- la gestion de la transparence
+- l'affichage d'une séquence d'images (animation) comme un GIF
+
+Le WebP est en moyenne 26% plus légère qu’une image PNG, et jusqu’à 34% plus légère qu’une image JPEG. Adopté par Google Chrome, Microsoft Edge et Mozilla Firefox fin 2018, puis par tous les navigateurs chromium comme Opera, Vivaldi, Brave, il est supporté depuis 2020 par Safari d’Apple. Il supporte 97% des usages ([https://caniuse.com/webp](https://caniuse.com/webp)).
+
+À utiliser pour toute image \[\[matricielle|matricielle ou bitmap]] ou animé, en plus d'un format JPG, PNG ou MP4 pour couvrir tous les usages/navigateurs.
+
+### 🚫 Le HEIF (High Efficiency Image File Format) 🚫
+
+C'est un format de compression (avec ou sans perte) d'images \[\[matricielle|matricielles]] crée par Moving Picture Experts Group (MPEG) avec licence propriétaire en réponse au WebP et adopté uniquement par Apple depuis l'iOS 11 (2017) proposant un gain de 50% par rapport au JPG.
+
+### ✋ Le AVIF (AV1 Image File Format) ✋
+
+C'est un format de compression (avec ou sans perte) d'images \[\[matricielle|matricielles]] développé par le consortium Alliance for Open Media en Open Source en réponse au HEIF, finalisé en 2019 proposant un gain de 50% par rapport au JPG cependant, il demande plus de ressources (CPU) pour être décodé. Il n'est supporté que par 73% des usages ([https://caniuse.com/?search=avif](https://caniuse.com)).
+
+Format encore jeune, à utiliser pour toute image \[\[matricielle|matricielle ou bitmap]] ou animé, avec en complément d'un format WebP pour couvrir davantage d'usages/navigateurs
+
+### ❓ Le JPG/JPEG (Joint Photographic Experts Group) ❓
+
+C'est un format de compression d'images \[\[matricielle|matricielles]] qui repose sur la suppression des couleurs non visibles pour réduire le poids du fichier. Dans des logiciels tels que : Photoshop, Gimp, Affinity Photo, et autres, vous pouvez contrôler le taux de compression pour obtenir le meilleur ratio entre qualité d'affichage et poids. Cependant, si la compression est trop importante, vous perdrez des informations de couleurs visibles. **Ce format fonctionne le mieux avec des photographies.**
+
+À utiliser pour toute image \[\[matricielle|matricielle ou bitmap]], en complément d'un format WebP pour couvrir tous les usages/navigateurs
+
+### ❓ Le PNG (Portable Network Graphics) ❓
+
+C'est un format de compression d'images \[\[matricielle|matricielles]] créé comme alternative du GIF qui été à l'époque sous brevet, **format parfait pour les images comportant un texte qui doit rester lisible comme des graphiques, par exemple.**
+
+À utiliser pour toute image \[\[matricielle|matricielle ou bitmap]] ou animé, en complément d'un format WebP pour couvrir tous les usages/navigateurs
+
+### 🚫 Le GIF (Graphics Interchange Format) 🚫
+
+C'est un format de compression d'images \[\[matricielle|matricielles]] datant de la fin des années 80. Il autorise la transparence et permet d'afficher une séquence d'images similaire à des vidéos (GIF animé). **Le GIF est un format lourd, préférez l'utilisation de PNG, WebP, MP4, WebM ou autres codecs vidéos adaptés au web.**
+
+> 💡 Vous connaissez surement le site [Giphy (EN)](https://giphy.com/) ! Les animations, dont le style graphique correspond à celui d'un GIF, sont en `.webp` et `.mp4`. Sur [Twitter](https://twitter.com/), les "GIFs" sont en `.mp4`.
+
+## GreenIT vous conseille
+
+De bien identifier la nature de votre image et son contexte d'utilisation pour choisir le format le plus adapté.
+Il n'y a pas de bon format, pas de format unique, mais un meilleur format par usage !
+
+**Pour le SVG :**
+Par défaut, WordPress n'autorise pas l'upload de `.svg` pour des raisons de sécurité (possibilité d'injection lors de l'upload) cependant l'ajout d'une extension comme [SVG Support](https://fr.wordpress.org/plugins/svg-support/), active l'upload de SVG en toute sécurité.
+
+**Pour le WebP :**
+À partir de WordPress 5.8, vous pourrez utiliser le format d’image WebP de la même manière que les formats JPEG, PNG et GIF en téléversant les images dans la bibliothèque de média. WordPress ne prend pas en charge la conversion automatique des images au format WebP.
+
+### Solution no code 🌱🌱🌱
+
+**Pour le SVG :**
+Nous vous recommandons de travailler vos images en \[\[local]] avec des logiciels de dessins vectoriels tels que Inkscape, Affinity designer ou Illustrator. L'ajout d'une \[\[extension]] est nécessaire pour la prise en compte de ce format par WordPress et de manière sécurisée.
+
+**Pour le WebP :**
+Nous vous recommandons de travailler vos images en \[\[local]], évitant le transfert de données non essentielles et utilisation importante du \[\[cpu|CPU]] de votre serveur, avec des logiciels tels que Gimp, Affinity Photo ou Photoshop. À défaut, des \[\[extension|extensions]] proposent de convertir vos images automatiquement (-🌱).
+
+### Solution code 🌱🌱🌱
+
+**Pour le WebP :**
+Google met à disposition le codec [libwebp](https://developers.google.com/speed/webp/docs/using) incluant un encodeur et une API. Afin de limiter l'utilisation de la bande passante et du CPU, nous vous recommandons de travailler en local.
+`cwebp -q 80 image.png -o image.webp`
+
+## Exemples
+
+### Graphique vectoriel
+
+Nous avons sélectionné une image pour illustrer cette BP (ci-dessous).
+
+Le fichier de création est sûrement vectoriel cependant il a été utilisé en `.jpg`.
+Nous l'avons retravaillé comme il suit :
+
+| Format                                                       | Poids  | Inconvenant |
+| :----------------------------------------------------------- | :----- | :---------- |
+| Fichier d'origine en `.jpg`                                  | 999 ko | Fond blanc  |
+| Fichier revectorisé sous Illustrator puis exporter en `.svg` | 137 ko |             |
+
+<PositionableImage
+  position="block"
+  imgWidth="twoThirdWidth"
+  caption="Fig.1 - JPG vs PNG vs GIF vs SVG (source EN | https://modomodoagency.com/2019/01/22/jpg-vs-png-vs-gif-vs-svg-image-format-guide/)"
+  alt="format image choice chart"
+  src="/src/assets/fiches/5.02/image2.png"
+  zoomable={true}
+/>
+
+[Source de l'image](https://uxdesign.cc/jpg-vs-png-vs-gif-vs-svg-aefeca89f61)
+
+### Photographie
+
+Ce n'est pas une science exacte, il faut tenter des compromis entre qualité et poids.
+Changements de format réalisés avec Photoshop :
+
+| Format                                     | Poids   |
+| :----------------------------------------- | :------ |
+| Fichier d'origine en `.jpg`                | 1,32 Mo |
+| `.png`                                     | 7,77 Mo |
+| `.jpg` qualité 75% (pas de perte visible)  | 1,3 Mo  |
+| `.WebP` sans perte                         | 4,72 Mo |
+| `.WebP` qualité 75% (pas de perte visible) | 831 ko  |
+| `.WebP` qualité 50% (pas de perte visible) | 620 ko  |
+
+_Source de l'exemple : [https://www.pexels.com/fr-fr/photo/nature-troncs-foret-arbres-7604425/](https://www.pexels.com/fr-fr/photo/nature-troncs-foret-arbres-7604425/)_
+
+## Sources :
+
+- [Enabling WebP by default (EN)](https://make.wordpress.org/core/2022/03/28/enabling-webp-by-default/ 'Source EN')
+- [GIF, PNG, JPG or SVG. Which One To Use? (EN)](https://www.sitepoint.com/gif-png-jpg-which-one-to-use/ 'Source EN')
+- [JPG VS PNG VS GIF VS SVG: WHEN TO USE WHICH? (EN)](https://modomodoagency.com/2019/01/22/jpg-vs-png-vs-gif-vs-svg-image-format-guide/ 'Source EN')

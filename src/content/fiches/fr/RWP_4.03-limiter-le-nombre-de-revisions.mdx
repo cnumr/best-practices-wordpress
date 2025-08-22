@@ -1,0 +1,54 @@
+---
+refID: '4.03'
+title: Limiter le nombre de révisions
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-27T12:32:25.135Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '4.03'
+people: Dominique N.
+scope: storage
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+lifecycle: 4-integration-development
+environmental_impact: low_environmental_impact
+priority_implementation: low_priority
+saved_resources:
+  - storage
+validations:
+  - rule: de révisions par contenu
+    maxValue: '10'
+---
+
+## Sujet
+
+WordPress enregistre des révisions pour chaque mise à jour des contenus. Vous pouvez les limiter aux 10 dernières modifications afin de limiter le poids de la base de données et automatiser une partie de l'entretien de votre site [Entretenir son site régulièrement](./WP_8.01-entretenir-son-site-regulierement.md).
+
+Cette bonne pratique est à appliquer en complément de la fiche [Augmenter l'intervale de temps entre deux sauvegardes automatiques](./WP_4.02-augmenter-l_intervalle-de-temps-entre-deux-enregistrements-automatiques.md)
+
+## GreenIT vous conseille
+
+Placez cette ligne dans votre fichier de configuration `wp-config.php` où X étant le nombre de la limite :
+
+```php
+define('WP_POST_REVISIONS', X);
+```
+
+## Exemple :
+
+Pour enregistrer seulement les 10 dernières révisions :
+
+```php
+define('WP_POST_REVISIONS', 10);
+```
+
+Pour supprimer l'enregistrement des révisions :
+
+```php
+define('WP_POST_REVISIONS', false);
+```

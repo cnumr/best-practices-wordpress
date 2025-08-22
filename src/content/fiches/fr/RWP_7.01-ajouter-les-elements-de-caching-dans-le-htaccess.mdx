@@ -1,0 +1,117 @@
+---
+refID: '7.01'
+title: Ajouter les éléments de caching et de compression dans le .htaccess
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-27T12:54:31.007Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '7.01'
+people: Dominique N.
+scope: cache
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+lifecycle: 7-deployment
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+saved_resources:
+  - cpu
+  - ram
+  - storage
+  - network
+  - requests
+validations:
+  - rule: d'élements durables non mis en cache
+    maxValue: '0'
+---
+
+## Sujet
+
+La fiche [Utiliser un système Cache](./WP_7.02-utiliser-un-systeme-de-cache.md) nous parle de l'importance du \[\[cache]] et de sa mise en place via des \[\[extension|extensions]] WordPress.
+
+## GreenIT vous conseille
+
+### Solution code 🌱🌱🌱
+
+Nous allons directement indiquer au serveur Apache les paramétrages de \[\[compression]] et de contrôle du cache que nous souhaitons.
+
+## Exemple
+
+Prenons pour exemple l'image du logo qui se trouve sur chaque page du site. Si nous ne mettons pas en place de cache, le navigateur la transférera depuis notre serveur à chaque affichage d'une nouvelle page.
+
+Maintenant, compressons notre image (gzip ou brotli), elle est déjà plus rapide à charger (bien sûr, nous partons du principe qu'elle est bien dimensionnée, et au bon format. cf fiches [Utiliser une version d'image ayant taille cohérente avec son utilisation](./WP_5.02-utiliser-le-format-adequat-d_image.md), [Utiliser le format adéquat d'image](./WP_5.02-utiliser-le-format-adequat-d_image.md) et [Compresser les médias](./WP_5.01-compresser-les-medias.md).
+
+Ensuite, indiquons que nous souhaitons qu'elle soit mise en cache pendant 1 an.
+Lors de sa première visite, le logo est transféré pour l'afficher dans le navigateur. Le visiteur change de page, le navigateur regarde si l'image existe déjà dans ses fichiers mis en cache : oui, alors il ne va pas la chercher sur le serveur.
+
+> ⚠️ Attention, toucher au fichier .htaccess peut provoquer des erreurs, sauvegardez et testez.
+
+```apache
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+#Délai de cache des fonts
+ExpiresByType application/x-font-ttf "access plus 1 month"
+[...]
+#Délai de cache des Images
+ExpiresByType image/jpg "access plus 1 month"
+[...]
+#Délai de cache des Autres médias
+ExpiresByType video/ogg "access plus 1 month"
+[...]
+#Délai de cache des Assets
+ExpiresByType text/css "access plus 6 month"
+ExpiresByType application/javascript "access plus 6 month"
+</IfModule>
+
+# En-têtes
+Header unset ETag
+FileETag None
+
+<ifModule mod_headers.c>
+<filesMatch "\.(ico|jpe?g|png|gif)$">
+    Header set Cache-Control "public"
+</filesMatch>
+<filesMatch "\.(css)$">
+    Header set Cache-Control "public"
+</filesMatch>
+<filesMatch "\.(js)$">
+    Header set Cache-Control "private"
+</filesMatch>
+<filesMatch "\.(x?html?|php)$">
+    Header set Cache-Control "private, must-revalidate"
+</filesMatch>
+</ifModule>
+
+# Compressions des fichiers statiques
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/xhtml text/html text/plain text/xml text/javascript application/x-javascript text/css
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+    Header append Vary User-Agent env=!dont-vary
+</IfModule>
+
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+```
+
+## Principe de validation
+
+|              Le nombre               | est inférieur ou égal à |
+| :----------------------------------: | ----------------------- |
+| d'élements durables non mis en cache | 0                       |
+
+## Source
+
+- [https://www.seomix.fr/guide-htaccess-performances-et-temps-de-chargement/](https://www.seomix.fr/guide-htaccess-performances-et-temps-de-chargement/)

@@ -1,0 +1,43 @@
+---
+refID: '4.04'
+title: Limiter le poids des fichiers JS
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-27T12:34:07.768Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '4.04'
+people: Yann K.
+scope: themes
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+lifecycle: 4-integration-development
+environmental_impact: low_environmental_impact
+priority_implementation: low_priority
+saved_resources:
+  - network
+  - requests
+validations:
+  - rule: de fichiers JavaScript non minifiés
+    maxValue: '0'
+---
+
+## Sujet
+
+Selon [HTTP Archive (EN)](https://httparchive.org/reports/page-weight) d'octobre 2022, le JavaScript représente environ 22% du poids d'une page Web.
+En 5 ans, son poids a augmenté de plus de 43%, limiter son poids et son utilisation est devenu un levier pour réduire l'impact environnemental des sites.
+
+## GreenIT vous conseille
+
+### Solution no-code 🌱
+
+L'une des solutions les plus simples à mettre en place pour réduire le poids des fichiers est la [minification des fichiers JavaScript](https://checklists.opquast.com/fr/assurance-qualite-web/les-scripts-du-site-sont-minifies).
+De nombreuses extensions proposent cette fonctionnalité : WP Rocket, WP-Optimize, Autoptimize ou W3 Total Cache par exemple.
+
+### Solution code 🌱🌱🌱
+
+Afin d'optimiser au mieux le poids des fichiers JavaScript, il est conseillé de réaliser de multiples fichiers à utiliser sur le front-office du site en fonction des besoins.

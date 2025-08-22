@@ -1,0 +1,57 @@
+---
+refID: '3.05'
+title: Limiter le nombre d'extensions
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-26T09:51:59.137Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '3.05'
+people: Yann K.
+scope: features
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+  - responsible: src/content/personas/fr/no-code-madame-et-monsieur-tout-le-monde.mdx
+lifecycle: 3-conception-design
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+saved_resources:
+  - cpu
+  - ram
+  - storage
+  - network
+  - requests
+validations:
+  - rule: d'extensions
+    maxValue: '10'
+---
+
+## Sujet
+
+Les \[\[extension|extensions]] ont contribué au succès du \[\[cms|CMS]], mais ont souvent pour contre partie une baisse de performance générale et une augmentation de l'empreinte environnementale du site.
+
+Elles génèrent régulièrement des :
+
+- augmentations du nombre de \[\[requete|requêtes]]
+- augmentations du poids de pages
+- augmentations du temps de traitement des requêtes internes
+
+## GreenIT vous conseille
+
+- Limiter l'utilisation des extensions à des fonctions nécessaires et privilégier des extensions optimisées.
+- Supprimer les extensions non utilisées.
+- Pour les extensions ayant un impact côté client, il est également possible de regrouper les requêtes vers les fichiers statiques (CSS, JavaScript).
+
+## Exemple
+
+Préférer l'utilisation de Gutenberg, éditeur par défaut de WordPress, plutôt qu'une extension de constructeur de pages comme Divi, Elementor, GeneratePress etc.
+
+## Sources
+
+- [Les plugins ralentissent WordPress : mythe ou réalité](https://www.ex2.com/tutoriels/les-plugins-ralentissent-wordpress-mythe-ou-realite/)
+- [On a testé 10 Plugins de sliders pour WordPress, voici le meilleur](https://wpmarmite.com/slider-wordpress/)
+- [What’s the Fastest WordPress Page Builder? Performance Comparison (EN)](https://gobarrelroll.com/wordpress-page-builder-performance-comparison/)

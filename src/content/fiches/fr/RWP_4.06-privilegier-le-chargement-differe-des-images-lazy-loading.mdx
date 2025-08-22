@@ -1,0 +1,57 @@
+---
+refID: '4.06'
+title: Privilégier le chargement différé des images (lazy loading)
+createdAt: 2024-01-20T13:17:16.663Z
+updatedAt: 2024-01-27T12:38:39.762Z
+language: fr
+published: true
+refType: RWP
+versions:
+  - version: 1.0.0
+    idRef: '4.06'
+people: Dominique N. & Catherine G.
+scope: images
+responsible:
+  - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
+  - responsible: >-
+      src/content/personas/fr/low-code-freelance-et-developpeur-front-end-d-agences.mdx
+lifecycle: 4-integration-development
+environmental_impact: high_environmental_impact
+priority_implementation: high_priority
+saved_resources:
+  - cpu
+  - ram
+validations:
+  - rule: d'images chargées au-dessous de la ligne de flottaison
+    maxValue: '0'
+---
+
+## Sujet
+
+Le Lazy Load ('chargement différé' en français) est une technique d’optimisation qui permet de charger le contenu d'une page d'un site au fur et à mesure que le visiteur la parcourt. Elle permet d'éviter de télécharger de contenus volumineux (images, vidéos, etc.) parfois non nécessaires, car non vus par le visiteur. Par exemple, si votre visiteur a atterri sur votre page par erreur ou s'il a besoin de consulter une seule partie de votre page.
+
+> ⚠️ Avant d'utiliser cette technique, n'oubliez pas d'optimiser au préalable vos images et vidéos (voir bonnes pratiques du \[\[scope]] "Images"). Le lazy load permet "seulement" de limiter le nombre d'images chargées inutilement.
+
+## GreenIT vous conseille
+
+### Solution no-code 🌱🌱
+
+Il existe plusieurs \[\[extension|extensions]] WordPress permettant d'appliquer cette technique, certains proposant aussi l'optimisation des images (voir les bonnes pratiques du \[\[scope]] "Images").
+
+### Solution code 🌱🌱🌱
+
+Cependant, il est encore plus efficace d'utiliser la technique de lazy load de manière native en ajoutant l'attribut `loading=lazy` aux images et aux iframes que vous souhaitez charger progressivement.
+
+```html
+<img
+  src="image.jpg"
+  loading="lazy" />
+<iframe
+  src="video-player.html"
+  title="..."
+  loading="lazy"></iframe>
+```
+
+Nota: si vous utilisez la fonction WP [get_the_post_thumbnail (EN)](https://developer.wordpress.org/reference/functions/get_the_post_thumbnail/), la balise image obtenue contiendra l'attribut `loading="lazy"` par défaut ([https://caniuse.com/?search=loading(EN)](https://caniuse.com)).
+
+Le lazy loading natif a l'avantage d'améliorer les performances globales de votre site, car il ne repose pas sur du code JavaScript en ligne ni des scripts externes.

@@ -1,182 +1,157 @@
-# Contribuer au référentiel d'écoconception WordPress
+# Contribuer au référentiel de bonnes pratiques
 
-## Qui peut être contributrice ou contributeur ?
+> [!IMPORTANT]
+> Cette documentation est ancienne et ne correspond plus à la réalité. Il faut utiliser maintenant la plateforme de contribution [URL à définir].
 
-Toute personne qui le souhaite dans le but d'améliorer la version actuelle en proposant :
+Tout personne qui le souhaite peut se proposer pour contribuer au référentiel.
 
-- la suppression de BP (bonnes pratiques) obsolètes, non applicables ou sans effet ;
-- la modification de BP existantes pour correction ou amélioration ;
-- l'ajout de nouvelles BP issues du terrain ;
-- la suppression de définitions dans le lexique obsolètes, non applicables ou sans effet ;
-- la modification de définitions dans le lexique pour correction ou amélioration ;
-- l'ajout de nouvelles définitions dans le lexique ;
-- toute idée pour l'amélioration de ce référentiel ;
-- toute idée pour l'amélioration du site ;
-- toute idée pour l'amélioration du flux de travail ;
-  en respectant les quelques règles et instructions de ce document ou en apportant son avis, expertise, expérience sur les propositions en cours dans [discussion](https://github.com/cnumr/fiches-wordpress-greenit/discussions).
+Les règles du présent document devront être respectées.
 
-## Règles de bienséance
+L'équipe projet en charge de ce repository s'assure de la bonne tenue de ces règles.
+
+## But des contributions
+
+Les contributions ont pour but :
+
+- De supprimer les bonnes pratiques obsolètes, non applicables ou sans effet
+- D’ajouter des bonnes pratiques qui semblent pertinentes, sont issues du terrain
+- D’associer aux nouvelles bonnes pratiques une règle de conformité
+- De vérifier, améliorer le cas échéant les bonnes pratiques existantes ainsi que leur règle de conformité
+- De proposer toute idée qui pourrait améliorer le référentiel d'une manière générale et le cas échéant la mettre en place
+
+## Règles générales
 
 - Tout le monde a sa place, chacun peut apporter son expérience
-- Le respect, la conviviabilité, le partage et la bienveillance sont de mise
-- Il n'y a pas de bonne pratique bête ou trop simple
+- La convivialité, le partage, la courtoisie et la bienveillance sont des règles d'or dans les échanges
+- Chaque bonne pratique doit être le résultat d'un retour terrain ou d'une approche scientifique
+- Ces bonnes pratiques sont aussi un aide mémoire donc même une bonne pratique simple, de bon sens peut avoir sa place
 
-## L'équipe de pilotage
+## Equipe Projet
 
-L'équipe de pilotage est constituée de :
+L'équipe projet est constituée de:
 
-- Heluin Renaud
-- Dominique Nicolle
-- Florine Sueur
+- [Thomas Broyer](https://github.com/tbroyer)
+- [Raphaël Lemaire](https://github.com/rlemaire)
+- [Romuald Priol](https://github.com/DocRoms)
+- [Thomas Lemaire](https://github.com/ACTLEM)
 
-Les fonctions de cette équipe sont :
+Cette équipe s'assure que les règles instaurées pour la contribution soient respectées.
 
-- de s'assurer que les règles et instructions instaurées soient respectées ;
-- en cas de désaccord, de trancher une décision par consensus ;
-- de résoudre les discussions et d'initier la suite du processus par consensus ;
-- de valider les `Pull Request` pour intégration au référentiel et au site par consensus _(via le `merge` de la `PR` -> `develop`)_ ;
-- **d'aider tout contributeur en difficulté sur Github**.
+En cas de désaccord entre contributeurs, son rôle est aussi de trancher une décision.
 
-## Comment contribuer ?
+L'équipe projet fait preuve de transparence et fait en sorte que les décisions soient les plus collégiales possibles.
 
-Pour une meilleure organisation, nous avons établi un workflow identique pour les propositions au niveau :
+L'équipe projet est responsable de la validation définitive des `Pull Request` et donc de l'intégration de la proposition d'ajout, de modification ou de suppression dans le référentiel.
 
-- des bonnes pratiques
-- des définitions du lexique
+Un membre de l'équipe projet peut soumettre une proposition aux contributeurs mais ne peut pas être responsable seul de la validation ou non de celle-ci : il faut un consensus de l'équipe projet.
 
-Nous vous proposons une courte vidéo, encore brouillonne, des manipulations décrite ci-dessous : [https://youtu.be/BPOWY_QCc2g](https://youtu.be/BPOWY_QCc2g)
+## Proposition
 
-### 1. Tout commence par une discussion !
+Chaque proposition d'ajout, de modification majeure ou de suppression de bonnes pratiques doit passer par [une discussion](https://github.com/cnumr/best-practices/discussions/categories/bonnes-pratiques).
 
-Dans l'onglet [discussion](https://github.com/cnumr/fiches-wordpress-greenit/discussions), n'hésitez pas à regarder les discussions déjà ouvertes avant d'en créer une nouvelle, peut-être qu'une autre personne a eu la même idée que vous.
+Le titre de la discussion doit être explicite et doit spécifier s'il s'agit d'un ajout, d'une modification majeure ou d'une suppression.
 
-La nouvelle discussion doit :
+Une modification majeure peut être:
 
-- avoir un titre explicite,
-- être catégorisée (BP, définitions, site, etc.),
-- taggée en fonction d'un ajout, d'une modification ou d'une suppression.
+- Une modification importante du niveau de priorité, c'est à dire des niveaux de mise en oeuvre et d'impacts écologique
+- L'ajout ou la suppression d'élément dans la définition de la règle
+- L'ajout ou la suppression d'exemples
+- La modification de la règle de conformité
 
-Chaque contributrice et contributeur est libre de participer à la discussion et d'indiquer son accord via l'utilisation de "la flèche vers le haut" ou son désaccord, argumenté par un commentaire, avec un pouce vers le bas.
+Tout contributeur peut donner son avis sur la proposition:
 
-Une proposition avec plusieurs avis positifs fera l'objet d'une étude par l'équipe de pilotage qui prendra une décision par consensus, par commentaire ou réunion si nécessaire, sur les suites à donner.
+- En cas d'accord, un contributeur clique sur la "flèche vers le haut"
+- En cas de désaccord, un contributeur ajoute un "pouce bas" et devra obligatoirement expliquer via un commentaire les raisons de son désaccord
+- En cas d'incompréhension, il peut entamer une discussion pour demander des précisions
+- En cas d'idée d'amélioration, il peut la proposer
 
-Trois possibilités :
+Lorsqu'une proposition reçoit plusieurs votes positifs, l'équipe projet est sollicitée et évalue la pertinence de la bonne pratique.
 
-- la proposition doit être retravaillée, affinée
-- la proposition est définitivement rejetée avec justification
-- la proposition est validée
+Les cas suivants peuvent se produire:
 
-Une fois qu'une décision a été émise, un membre de l'équipe de pilotage clôt la discussion `answered` et crée une `issue` attachée à la discussion :
+- La proposition est validée et le contributeur peut créer une `Issue` avec la discussion en référence
+- La proposition est définitivement rejetée avec justification
+- La proposition doit être retravaillée avant une décision finale
 
-- en indiquant une liste de tâches à effectuer,
-- en la taguant,
-- en l'associant à la version du référentiel et board project,
-- en l'assignant au contributeur ou à une personne de la discussion volontaire pour traiter le sujet ou à un membre de l'équipe de pilotage en charge de ce sujet.
+L'`Issue` créée devra contenir le tag `création`, `modification` ou `suppression` suivant le type de proposition et être rattachée au projet [`Bonnes Pratiques V5`](https://github.com/cnumr/best-practices/projects/2).
 
-### 2. De l'issue à la Pull Request
+En cas d'ajout, le fichier sera nommé suivant le pattern suivant: `BP-5xxx-fr.md` avec `5xxx` le numéro de la bonne pratique qui sera défini par l'équipe projet.
 
-Dans l'onglet [Issues](https://github.com/cnumr/fiches-wordpress-greenit/issues), nous vous invitons à trier pour retrouver plus facilement celles qui vous incombent.
+Le fichier sera à copier à partir du [template](./resources/BP_xxxx_fr.md)
 
-Dans celle-ci, nous vous invitons à créer une branche (`create a branch`) en la nommant : `feat/` + nom de l'issue. Sur cette branche, vous pouvez faire vos ajouts, modifications ou suppressions en fonction du sujet de l'issue.
+Une `Pull Request` associée à l'`Issue` sera créée et soumise à l'équipe projet qui est en charge de la revue.
 
-**Pour tout ajout ou modification de BP, veuillez respecter le [template](./CONTRIBUTING/fiches/README.md).**
+La création de `Pull Request` suite le processus classique au sein de Github, à savoir:
 
-Lors de la rédaction de votre BP, nous vous recommandons d'utiliser le lexique déjà en place ou de l'augmenter en fonction de vos besoins.
+- Création d'un `fork` personnelle de la personne en charge de la `Pull Request`
+- Ajout du repository d'origine comme remote (`upstream`)
+- Création d'une branche sur le fork personnel
+- Créer une `Pull Request` à partir du fork en mettant comme cible la branche `main` du repository cible
 
-- Pour lier une définition à un mot, utilisez cette écriture : `[[nom du fichier de la définition sans .md|label à afficher]]` (ex: [[a|b]] b sera affiché et pointera vers le fichier du lexique a.md).
-- Pour surligner une notion importante, utilisez cette écriture : `==Phrase à surligner==`.
+## Amélioration
 
-Une fois que vous êtes satisfait de votre proposition et que vous avez coché les tâches, il est nécessaire de faire une `Pull Request` vers `develop` associée à l'issue. Une `Pull Request` peut-être `review` par tous les participants qui souhaitent soumettre des corrections au niveau de l'orthographe, de la syntaxe, de compréhension, de vulgarisation, etc.
+Pour les améliorations comme:
 
-**Seul un consensus de l'équipe de pilotage, via un message en commentaire ou réunion si nécessaire, peut merger la `Pull Request` sur `develop`.**
+- Une correction d'orthographe, de grammaire ou de conjugaison
+- Une autre formulation
+- Une autre mise en forme
 
-## Comment contribuer avec Git directement ?
+Il n'est pas nécessaire de passer par une discussion, il faut:
 
-Pour ceux qui ne sont pas à l'aise avec Git, voici un petit tour d'horizon où vous trouverez des notions et des mots du patois Git.
+- Créer une `Issue` avec un intitulé explicite et les tags `modification` et `mineur`
+- Développer et créer la PR associée sans oublier la référence à l'`Issue`
 
-> Ceux qui connaissent GIT par cœur n'apprendront rien dans cette partie et peuvent aller directement à la proposition de worflow.
+## Contenu d'une bonne pratique
 
-Git est un système de **versionning de code**, c'est-à-dire que comme Word ou autre, on a un historique des modifications du code. Le code chez nous étant le contenu des fiches.
+Chaque bonne pratique devra obligatoirement contenir:
 
-GitHub est un des services permettant la centralisation de ces modifications. Il en existe d'autres comme GitLab, Gitea, etc.
+- Un titre
+- Un degré de priorité (sur 5, 5 = prioritaire, 1 = non prioritaire)
+- Une difficulté de mise en oeuvre (sur 5, 5 = facile, 1 = difficile)
+- Un niveau d'impact écologique (sur 5, 5 = fort, 1 = faible)
+- Une description
+- Une règle de validation et un seuil de conformité
 
-En règle générale, on copie/`clone` (`clone` étant le mot utilisé dans le "langage de GIT") le `repository` sur son ordinateur, on fait ses modifications en local puis on les valide en faisant un `commit` (ce qui crée une version dans notre exemple avec Word) puis on pousse sa modification validée en réalisant un `push` ce qui la met à disposition des autres sur GitHub.
+Les éléments suivants sont facultatifs:
 
-Quand de multiples personnes collaborent, il se peut qu'ils aient modifié les mêmes fichiers, il faut alors fusionner leurs modifications.
-On fait une demande d'import de la dernière version du code présent sur GitHub (`git pull origine main`) et à ce moment-là, il y a deux scénarios possibles :
+- Un ou des exemples
+- Une solution alternative
 
-1. Git fait alors une fusion/`merge` des deux versions et ne rencontre aucun conflit qu'il ne sait pas résoudre tout seul.
-2. Lors de cette fusion, Git n'arrive pas à résoudre tout seul les conflits, on doit alors faire soi-même le `merge`. Git fusionne les modifications et l'on doit lui indiquer quelle est la bonne version, ligne à ligne. Une fois cela fait, on valide/commit et l'on pousse/`push` sur GitHub.
+### Règle de validation et seuil de conformité
 
-Une autre notion dans GIT est importante, les `branch`(es).
-Il y a une `branch`(e) centrale qui est définie comme la "bonne version", chez nous, la `branch`(e) **main**.
+La règle de validation permet de tester la mise en oeuvre de la bonne pratique avec une approche objective.
+Le seuil de conformité associe à la règle de validation une valeur numérique (seuil) qui permet de décider de façon binaire (oui/non) si la bonne pratique a été mise en oeuvre ou pas.
+L'ensemble des règles de validation et des seuils de conformité permettent d'établir un niveau de maturité atteint par le service numérique.
 
-Dans les équipes de développement, on a l'habitude de travailler chacun dans son coin. Chacun crée sa propre `branch`(e) puis quand on a fini, on transfère ces modifications à un responsable qui se charge de valider et fusionner sa branche.
-Pour ce faire, on crée une branche dans laquelle on fait toutes ces modifications. On commit et l'on `push` régulièrement et lorsqu'on a fini, on fait une demande de fusion/validation. Ce que l'on appelle un `Pull Request` (PR) sur GitHub ou une `Merge Request` (MR) sur GitLab.
-Ainsi le validateur regarde le contenu de la branche, il valide que les modifications sont valides, qu'elles correspondent aux normes par exemple.
+### Définition des niveaux
 
-- S'il n'est pas satisfait, il commente la PR et vous demande de faire des modifications. Vous faites les modifications demandées, puis nouveau `commit`+`push` et vous lui redemandez de regarder, en commentant la PR déjà ouverte.
-- S'il est satisfait, il va réaliser lui-même la fusion de cette branche dans la `branch` **develop**.
+Trois niveaux doivent être définis pour une bonne pratique :
+1. Mise en oeuvre (facilité ou difficulté à mettre en oeuvre la bonne pratique)
+2. Impacts environnemental (contribution plus ou moins forte à la réduction des impacts env.)
+3. Priorité (ce niveau est défini en fonction de 1. et 2.)
 
-### Branches du repo
+Chacun de ces niveaux est défini par une note de 1 à 5.
 
-- `main`: Branche principale des fiches (Release) ;
-- `develop`: Branche des fiches à valider (develop-fiche dans le diagramme) ;
-- `site-gatsby-generator`: Branche principale du site en Gatsby (Release) ;
-- `develop-site-gatsby`: Branch du site à valider ;
-- `feat/*`: Convention de nommage de branche pour les évolutions de fiches ;
-- `feat-site/*`: Convention de nommage de branche pour les évolutions du site.
+#### Mise en oeuvre (higher is better)
+   
+La facilité ou difficulté de mise en oeuvre peut être évaluée de la manière suivante :
 
-```mermaid
-  gitGraph
-       commit id: "init"
-       commit id: "create branches" type:HIGHLIGHT
-       branch develop-fiche
-       branch site-gatsby-generator
-       checkout develop-fiche
-       commit id: "change fiche 1"
-       commit id: "change fiche 2"
-       checkout site-gatsby-generator
-       commit id: "Init Gatsby" tag:"v0" type:HIGHLIGHT
-       branch develop-site-gatsby
-       commit
-       checkout develop-site-gatsby
-       commit
-       commit
-       checkout site-gatsby-generator
-       merge develop-site-gatsby tag:"Site Release-1"
-       checkout main
-       merge develop-fiche tag:"Fiches Release-1"
-       checkout site-gatsby-generator
-       merge main
-       checkout develop-fiche
-       commit id: "change fiche 3"
-       commit id: "change fiche 4"
-       checkout develop-site-gatsby
-       commit
-       commit
-       commit
-       checkout site-gatsby-generator
-       merge develop-site-gatsby tag:"Site Release-2"
-       checkout main
-       merge develop-fiche tag:"Fiches Release-2"
-       checkout site-gatsby-generator
-       merge main
-       checkout develop-fiche
-       commit id: "change fiche 5"
-       commit id: "change fiche 6"
-       checkout develop-fiche
-       commit id: "change fiche 7"
-       checkout main
-       merge develop-fiche tag:"Fiches Release-3"
-       checkout site-gatsby-generator
-       merge main
-       checkout develop-site-gatsby
-       commit
-       commit
-       checkout site-gatsby-generator
-       merge develop-site-gatsby tag:"Site Release-3"
-       checkout develop-fiche
-       commit id: "change fiche n"
-       #merge main
-```
+1. La mise en oeuvre nécessite un haut niveau d'expertise ET une refonte en profondeur du projet
+2. La mise en oeuvre nécessite un haut niveau d'expertise OU une refonte en profondeur du projet
+3. Le mise en oeuvre demande une compétence particulière sans être rare (ex: SEO, DBA, ...) ET n'a pas besoin de refonte en profondeur du projet
+4. La mise en oeuvre ne nécessite pas compétence particulière OU n'a pas d'effet de bord sur le reste du projet
+5. La mise en oeuvre ne nécessite pas compétence particulière ET n'a pas d'effet de bord sur le reste du projet
+
+#### Impact environnemental (higher is better)
+
+Cet apport peut être évalué de la manière suivante :
+
+1. Elle réduit la consommation électrique des réseaux ou serveurs à équipements constants
+2. Elle réduit la consommation électrique sur la majorité des terminaux utilisateurs
+3. Elle limite le besoin en ressources informatiques côté serveur
+4. Elle limite le risque de saturation des réseaux mobiles ou fixes
+5. Elle limite les risques d'obsolescence des terminaux utilisateurs
+
+#### Priorité (higher is better)
+
+Le niveau de priorité est proposé librement par le contributeur et s'appuie sur la Mise en oeuvre et l'Impact environnemental.
