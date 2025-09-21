@@ -65,7 +65,13 @@ export const FichesTableView: FunctionComponent<FichesTableViewProps> = ({
                     </td>
                     {getRefConfig().featuresEnabled.scope && (
                       // @ts-ignore
-                      <th>{capitalizeFirstLetter(t(node?.scope as any))}</th>
+                      <th>
+                        {node?.scope
+                          .map((scope) =>
+                            capitalizeFirstLetter(t(scope as any))
+                          )
+                          .join(' ')}
+                      </th>
                     )}
                     <td>{capitalizeFirstLetter(t(node?.lifecycle as any))}</td>
                     <td>
