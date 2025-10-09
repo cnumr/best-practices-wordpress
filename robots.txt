@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cnumr.github.io/lighthouse-plugin-ecoindex/sitemap.xml.gz
