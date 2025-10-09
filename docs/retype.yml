@@ -28,3 +28,7 @@ edit:
   base: './docs' # Optional base path to a directory within repo
   branch: 'main' # Point to a custom branch within the repo
   label: 'Modifier sur GitHub' # A custom label for the generated link
+
+include: # Files or folders to include in the build
+  # See also: exclude
+  - 'script.sh' # Wildcards are valid
