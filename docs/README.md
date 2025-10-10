@@ -29,6 +29,4 @@ Lors de la création du [Référentiel d'écoconception pour WordPress](https://
 
 Après plusieurs évaluations de solutions, plusieurs versions nous avons abouti à une "stack" qui répond à nos besoins et contraintes :
 
-- [TinaCMS](https://tina.io/), pour sa simplicité utilisation lors de la contribution, qu'il soit un `git-cms`, qu'il soit open-source et auto-hébergeable, et surtout qu'il utilise le format Markdown pour gérénerer ses contenus
-- [NextJS](https://nextjs.org/), pour sa bonne intégration à TinaCM
-- [Vercel](https://vercel.œom) comme hébergeur. Ce n'est pas par choix, mais c'est le seul moyen pour hébergé le CMS.
+[!button My Button]

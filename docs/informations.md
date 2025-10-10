@@ -9,10 +9,10 @@ order: 5
 ## Contributeurs
 
 - :icon-paintbrush: **Design et UX** :
-  - [Florine Sueur :icon-mark-github:florinesueur](https://github.com/orgs/cnumr/people/florinesueur)
+  - [Florine Sueur :icon-mark-github:florinesueur](https://github.com/florinesueur)
 - :icon-code: **Dévelopeurs** :
-  - [Renaud Héluin :icon-mark-github:hrenaud](https://github.com/orgs/cnumr/people/hrenaud)
-  - [Jean-Philippe Kha :icon-mark-github:hrenaud](https://github.com/orgs/cnumr/people/jpkha)
+  - [Renaud Héluin :icon-mark-github:hrenaud](https://github.com/hrenaud)
+  - [Jean-Philippe Kha :icon-mark-github:hrenaud](https://github.com/jpkha)
 
 ## Contacts
 
