@@ -12,6 +12,7 @@ order: 9
 - [NextJS](https://nextjs.org/) [!badge 14.2.14]
   - [next-plugin-preval](https://github.com/ricokahler/next-plugin-preval) [!badge 1.2.6]
   - [TailwindCSS](https://tailwindcss.com/) [!badge 3.4.17]
+  - [Fuse.js](https://www.fusejs.io/) [!badge 7.0.0]
 - [Vercel](https://vercel.com)
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - dependencies : `mongodb-level` [!badge ^0.0.4]
@@ -278,7 +279,7 @@ A faire évoluer quand le format du contenu évolue. Source : `./content/*.schem
 !!!danger Problème à resoudre
 !!!
 
-Le build ne fonctionne que sur Vercel, ou plutôt le build de fonctionne que couplé à [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) comme datalayer. Une tentative infructueuse d'avoir une base MongoDB en local n'a pas résolu le problème. Le problème vient surement de `next-plugin-preval`.
+Le build ne fonctionne que sur Vercel, ou plutôt le build de fonctionne que couplé à [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) comme datalayer. Une tentative infructueuse d'avoir une base MongoDB en local n'a pas résolu le problème. Le problème vient surement de `next-plugin-preval` utilisé par `Fuse.js`.
 
 ### Bug du composant `<PositionableImage />` ou **Adv. Image**
 
