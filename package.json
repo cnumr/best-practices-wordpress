@@ -7,8 +7,9 @@
     "dev": "tinacms dev -c \"next dev\"",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false TINA_PUBLIC_REF_NAME=RWP NEXT_PUBLIC_REF_NAME=RWP tinacms dev -c \"next dev\"",
     "build": "TINA_PUBLIC_IS_LOCAL=false TINA_PUBLIC_REF_NAME=RWP NEXT_PUBLIC_REF_NAME=RWP tinacms build --partial-reindex && next build",
-    "build-local": "TINA_PUBLIC_IS_LOCAL=true TINA_PUBLIC_REF_NAME=RWP NEXT_PUBLIC_REF_NAME=RWP tinacms build --local --skip-indexing --skip-cloud-checks && next build",
+    "build-local": "./scripts/build-local.sh",
     "start": "TINA_PUBLIC_IS_LOCAL=true TINA_PUBLIC_REF_NAME=RWP NEXT_PUBLIC_REF_NAME=RWP tinacms build && next start",
+    "serve-local": "TINA_PUBLIC_IS_LOCAL=true TINA_PUBLIC_REF_NAME=RWEB NEXT_PUBLIC_REF_NAME=RWEB next start",
     "lint": "pnpm lint:next && pnpm lint:md",
     "lint:next": "next lint",
     "lint:md": "eslint . -c .md.eslintrc --ext .md,.mdx",
@@ -35,7 +36,8 @@
     "remark-cli": "^12.0.1",
     "remark-frontmatter": "^5.0.0",
     "remark-lint-frontmatter-schema": "^3.15.4",
-    "tailwindcss": "3.4.17"
+    "tailwindcss": "3.4.17",
+    "unist-util-visit": "^5.0.0"
   },
   "dependencies": {
     "@tailwindcss/forms": "0.5.9",
@@ -44,6 +46,7 @@
     "clsx": "2.1.1",
     "fuse.js": "7.0.0",
     "itemsjs": "2.1.25",
+    "js-yaml": "^4.1.0",
     "mongodb-level": "0.0.4",
     "next": "14.2.14",
     "next-auth": "4.24.11",
