@@ -44,6 +44,12 @@ pnpm dev
 pnpm run dev
 ```
 
+```cmd Build la stack en local
+pnpm build-local && pnpm serve-local
+# ou
+pnpm run build-local && pnpm run serve-local
+```
+
 ## Problématiques résolues
 
 ### Un Code, de multiple déclinaisons, le **one for all**
@@ -272,14 +278,54 @@ pnpm validate:md
 A faire évoluer quand le format du contenu évolue. Source : `./content/*.schema.yaml` et `.remarkrc.mjs`.
 !!!
 
-## Problématiques à resoudre
+#### Scripts de maintenance
+
+##### Correction des références aux personas
+
+Le script `scripts/fix-persona-references.mjs` permet de synchroniser automatiquement les références aux personas dans les fiches traduites (EN et ES) en se basant sur les références de la version française.
+
+**Usage :**
+
+```bash
+node scripts/fix-persona-references.mjs
+```
+
+**Quand l'utiliser :**
+
+- Après avoir ajouté de nouvelles fiches dans les 3 langues
+- Si vous remarquez des références incorrectes après un merge
+- Après avoir modifié/ajouté des personas
+
+Le script :
+
+1. Parcourt toutes les fiches FR
+2. Extrait les refID et les responsables
+3. Trouve les fiches EN/ES correspondantes (même refID)
+4. Convertit les références personas FR vers EN/ES selon le mapping
+5. Met à jour les fichiers EN/ES avec les bonnes références
+
+**Exemple :** Si une fiche FR référence `src/content/personas/fr/referenceuser-seo.mdx`, le script mettra automatiquement à jour la version EN avec `src/content/personas/en/seo-specialist.mdx` et la version ES avec `src/content/personas/es/especialista-seo.mdx`.
 
 ### Build localement
 
-!!!danger Problème à resoudre
+!!!success Problème résolu
 !!!
 
-Le build ne fonctionne que sur Vercel, ou plutôt le build de fonctionne que couplé à [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) comme datalayer. Une tentative infructueuse d'avoir une base MongoDB en local n'a pas résolu le problème. Le problème vient surement de `next-plugin-preval` utilisé par `Fuse.js`.
+~~Le build ne fonctionne que sur Vercel, ou plutôt le build de fonctionne que couplé à [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) comme datalayer. Une tentative infructueuse d'avoir une base MongoDB en local n'a pas résolu le problème. Le problème vient surement de `next-plugin-preval` utilisé par `Fuse.js`.~~
+
+Le problème venait que le server TinaCMS ne fonctionnait plus quand le build Next.js était lancé.
+
+Un script pour gérer le build localement a été mis en place. cf `./scripts/build-local.sh`.
+
+```cmd Build localement
+pnpm build-local
+```
+
+```cmd Servir le build localement
+pnpm serve-local
+```
+
+## Problématiques à resoudre
 
 ### Bug du composant `<PositionableImage />` ou **Adv. Image**
 
