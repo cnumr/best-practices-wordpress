@@ -1,5 +1,11 @@
 # gen-referentiel-core
 
+## 0.4.3
+
+### Patch Changes
+
+- 7800fd0: fix(auth): corrige l'authentification TinaCMS sur Vercel en mettant à jour tinacms-authjs de 5.0.9 vers 8.0.2
+
 ## 0.4.2
 
 ### Patch Changes
