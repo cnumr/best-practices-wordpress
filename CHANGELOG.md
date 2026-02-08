@@ -1,5 +1,11 @@
 # gen-referentiel-core
 
+## 0.4.2
+
+### Patch Changes
+
+- d0f3d2c: Corrige l'URL du serveur Swagger sur Vercel - utilise maintenant VERCEL_URL pour générer dynamiquement l'URL correcte en production au lieu de localhost:3000
+
 ## 0.4.1
 
 ### Patch Changes
