@@ -1,5 +1,11 @@
 # gen-referentiel-core
 
+## 0.4.5
+
+### Patch Changes
+
+- cb939fb: Rétablit overrides react-dnd pour compatibilité runtime Vercel Functions
+
 ## 0.4.4
 
 ### Patch Changes
