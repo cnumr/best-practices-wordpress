@@ -1,5 +1,11 @@
 # gen-referentiel-core
 
+## 0.4.1
+
+### Patch Changes
+
+- 36b1ffc: Corrige le workflow de synchronisation upstream pour protéger le contenu local lors des merges
+
 ## 0.4.0
 
 ### Minor Changes

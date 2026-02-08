@@ -120,20 +120,37 @@ Votre repo est maintenant prêt à synchroniser avec upstream.
 
 ### Synchroniser avec upstream
 
+!!!danger Ne PAS utiliser `git merge upstream/main` directement
+Le `.gitattributes` configure `merge=ours` pour protéger `src/content/`, mais ce driver ne s'active **que lors de conflits**. Si seul upstream a modifié des fichiers (ajout de contenu fake, suppressions), Git applique ces changements sans conflit et **écrase votre contenu**. Utilisez toujours le workflow ci-dessous.
+!!!
+
 ```bash
 # Dans le repo du site (ex: rwp)
 git fetch upstream
-git merge upstream/main
 
+# 1. Merger SANS commiter
+git merge upstream/main --no-commit
 # Si les branches ont des historiques non liés (première sync)
-git merge upstream/main --allow-unrelated-histories
+# git merge upstream/main --no-commit --allow-unrelated-histories
 
-# Vérifier que src/content/ n'a pas été modifié
-git diff --stat HEAD~1 -- src/content/
+# 2. Réinitialiser l'index des dossiers protégés à l'état pré-merge
+git reset HEAD -- src/content/ public/img_fiches/
 
-# Pousser les changements
+# 3. Restaurer le working tree et supprimer les fichiers fake ajoutés par upstream
+git checkout HEAD -- src/content/ public/img_fiches/
+git clean -fd -- src/content/ public/img_fiches/
+
+# 4. Commiter le merge (contenu local préservé)
+git commit -m "chore: sync upstream (contenu local préservé)"
+
+# 5. Pousser les changements
 git push origin main
 ```
+
+**Explication des étapes 2 et 3 :**
+- `git reset HEAD` — dé-stage toutes les modifications upstream dans ces dossiers
+- `git checkout HEAD` — restaure les fichiers existants à leur état pré-merge
+- `git clean -fd` — supprime les fichiers **nouveaux** ajoutés par upstream (contenu fake) devenus untracked après le reset
 
 !!!warning Push avec divergence
 Si votre branche et `origin/main` ont divergé (après merge upstream), vous devrez forcer le push :
@@ -155,22 +172,47 @@ Créer `scripts/sync-upstream.sh` :
 #!/bin/bash
 set -e
 
+# Dossiers protégés (contenu spécifique au site)
+PROTECTED_DIRS="src/content/ public/img_fiches/"
+
 echo "Synchronisation avec upstream..."
 git fetch upstream
 
+COMMITS=$(git log --oneline HEAD..upstream/main)
+if [ -z "$COMMITS" ]; then
+    echo "Déjà à jour avec upstream."
+    exit 0
+fi
+
 echo "Changements à intégrer :"
-git log --oneline HEAD..upstream/main
+echo "$COMMITS"
 
 read -p "Continuer ? (y/n) " -n 1 -r
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    git merge upstream/main
-    echo "Merge effectué"
-    echo "Vérifiez que src/content/ n'a pas été modifié"
-    git diff --stat HEAD~1 -- src/content/
-else
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     echo "Annulé"
+    exit 0
 fi
+
+echo "Merge sans commit..."
+git merge upstream/main --no-commit || true
+
+echo "Protection du contenu local..."
+git reset HEAD -- $PROTECTED_DIRS
+git checkout HEAD -- $PROTECTED_DIRS
+git clean -fd -- $PROTECTED_DIRS
+
+echo "Commit du merge..."
+git commit -m "chore: sync upstream (contenu local préservé)"
+
+echo "Vérification :"
+echo "  - Fichiers modifiés dans le merge :"
+git diff --stat HEAD~1
+echo ""
+echo "  - Contenu local (doit être inchangé) :"
+git diff --stat HEAD~1 -- $PROTECTED_DIRS
+echo ""
+echo "Sync terminée. Pensez à lancer : pnpm check-types && pnpm lint && pnpm build-local"
 ```
 
 ===
@@ -186,7 +228,7 @@ chmod +x scripts/sync-upstream.sh
 
 ## Gestion des conflits
 
-Si un conflit survient (rare si `.gitattributes` est bien configuré).
+Si un conflit survient lors du merge (les conflits sur `src/content/` sont évités par le workflow `--no-commit` ci-dessus).
 
 ### Voir les fichiers en conflit
 
@@ -297,8 +339,13 @@ git remote -v
 # Voir les commits upstream non intégrés
 git log --oneline HEAD..upstream/main
 
-# Synchroniser avec upstream
-git fetch upstream && git merge upstream/main
+# Synchroniser avec upstream (voir section Workflow ci-dessus)
+git fetch upstream
+git merge upstream/main --no-commit
+git reset HEAD -- src/content/ public/img_fiches/
+git checkout HEAD -- src/content/ public/img_fiches/
+git clean -fd -- src/content/ public/img_fiches/
+git commit -m "chore: sync upstream (contenu local préservé)"
 
 # Voir ce qui a changé dans le dernier merge
 git diff HEAD~1 --stat
