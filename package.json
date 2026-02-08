@@ -64,7 +64,7 @@
     "swagger-ui-react": "^5.26.0",
     "tailwind-merge": "2.5.5",
     "tinacms": "2.10.1",
-    "tinacms-authjs": "5.0.9",
+    "tinacms-authjs": "8.0.2",
     "tinacms-gitprovider-github": "2.0.19",
     "typescript": "5.9.3",
     "upstash-redis-level": "1.1.1",

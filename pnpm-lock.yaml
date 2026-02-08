@@ -60,8 +60,8 @@ importers:
         specifier: 2.10.1
         version: 2.10.1(@types/react-dom@18.3.0)(@types/react@18.3.11)(abstract-level@1.0.4)(immer@10.1.1)(react-dnd-html5-backend@16.0.1)(react-dnd@16.0.1(@types/hoist-non-react-statics@3.3.6)(@types/node@22.15.2)(@types/react@18.3.11)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.114.0(slate@0.114.0))(slate@0.114.0)(sucrase@3.35.0)(typescript@5.9.3)(use-sync-external-store@1.5.0(react@18.3.1))
       tinacms-authjs:
-        specifier: 5.0.9
-        version: 5.0.9(next-auth@4.24.13(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tinacms@2.10.1(@types/react-dom@18.3.0)(@types/react@18.3.11)(abstract-level@1.0.4)(immer@10.1.1)(react-dnd-html5-backend@16.0.1)(react-dnd@16.0.1(@types/hoist-non-react-statics@3.3.6)(@types/node@22.15.2)(@types/react@18.3.11)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.114.0(slate@0.114.0))(slate@0.114.0)(sucrase@3.35.0)(typescript@5.9.3)(use-sync-external-store@1.5.0(react@18.3.1)))(yup@1.6.1)
+        specifier: 8.0.2
+        version: 8.0.2(next-auth@4.24.13(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tinacms@2.10.1(@types/react-dom@18.3.0)(@types/react@18.3.11)(abstract-level@1.0.4)(immer@10.1.1)(react-dnd-html5-backend@16.0.1)(react-dnd@16.0.1(@types/hoist-non-react-statics@3.3.6)(@types/node@22.15.2)(@types/react@18.3.11)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.114.0(slate@0.114.0))(slate@0.114.0)(sucrase@3.35.0)(typescript@5.9.3)(use-sync-external-store@1.5.0(react@18.3.1)))(yup@1.6.1)
       tinacms-gitprovider-github:
         specifier: 2.0.19
         version: 2.0.19(@tinacms/datalayer@1.4.3(react@18.3.1)(typescript@5.9.3))
@@ -2131,8 +2131,8 @@ packages:
       react: '>=16.14.0'
       yup: ^1.0.0
 
-  '@tinacms/schema-tools@1.6.5':
-    resolution: {integrity: sha512-9oClfJq/KLfvzeEbycg46Ne5kM5jbHzXz0OF2jmBEqalLvPAQ3FQz5ldvLIG5pqonEJhUE6DItvJF93uLx6mrQ==}
+  '@tinacms/schema-tools@1.6.9':
+    resolution: {integrity: sha512-NrbXN3Z8g1+O5Llmtd59Ovz+U7YiiTuXF67gzQ6zx3MXASZHeENXTuxMhjJ0lL9fa81uZEBtiNudYA//vIQp2A==}
     peerDependencies:
       react: '>=16.14.0'
       yup: ^0.32.0
@@ -6782,14 +6782,14 @@ packages:
     resolution: {integrity: sha512-dTEWWNu6JmeVXY0ZYoPuH5cRIwc0MeGbJwah9KUNYSJwommQpCzTySTpEe8Gs1J23aeWEuAobe4Ag7EHVt/LOg==}
     engines: {node: '>=10'}
 
-  tinacms-authjs@5.0.9:
-    resolution: {integrity: sha512-QIqwYPAJ1oWJR0cAExeDQ7RuW+/qiPjYi+JuftMWRzPGBsKoSoo2mtUY5BL3fl6xn1xcfoO3eFBvWxxHPeK69Q==}
+  tinacms-authjs@8.0.2:
+    resolution: {integrity: sha512-mS9iI3QQSixPmlO/ah6YzO3B7SFAEnnbUG6YQsZgcQ7xJC0kSgsHOY4D+s3GofdS7dHcxFqkCIzb6eTcdDvc/A==}
     peerDependencies:
       next: ^12.2.5 || ^13 || ^14
       next-auth: ^4.22.1
       react: ^17.0.2 || ^18
       react-dom: ^17.0.2 || ^18
-      tinacms: 2.2.9
+      tinacms: 2.5.2
 
   tinacms-gitprovider-github@2.0.19:
     resolution: {integrity: sha512-5oMwi50tGBkzYbcKV0HqqUS7xAz5nP2SOjVY8WWExm2fve+kZfnMHVhvhgPjpJg3wlvgyF9vBLc5zr10u2DqTA==}
@@ -9981,7 +9981,7 @@ snapshots:
       yup: 1.6.1
       zod: 3.24.3
 
-  '@tinacms/schema-tools@1.6.5(react@18.3.1)(yup@1.6.1)':
+  '@tinacms/schema-tools@1.6.9(react@18.3.1)(yup@1.6.1)':
     dependencies:
       picomatch-browser: 2.2.6
       react: 18.3.1
@@ -15630,9 +15630,9 @@ snapshots:
 
   throttle-debounce@3.0.1: {}
 
-  tinacms-authjs@5.0.9(next-auth@4.24.13(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tinacms@2.10.1(@types/react-dom@18.3.0)(@types/react@18.3.11)(abstract-level@1.0.4)(immer@10.1.1)(react-dnd-html5-backend@16.0.1)(react-dnd@16.0.1(@types/hoist-non-react-statics@3.3.6)(@types/node@22.15.2)(@types/react@18.3.11)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.114.0(slate@0.114.0))(slate@0.114.0)(sucrase@3.35.0)(typescript@5.9.3)(use-sync-external-store@1.5.0(react@18.3.1)))(yup@1.6.1):
+  tinacms-authjs@8.0.2(next-auth@4.24.13(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tinacms@2.10.1(@types/react-dom@18.3.0)(@types/react@18.3.11)(abstract-level@1.0.4)(immer@10.1.1)(react-dnd-html5-backend@16.0.1)(react-dnd@16.0.1(@types/hoist-non-react-statics@3.3.6)(@types/node@22.15.2)(@types/react@18.3.11)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.114.0(slate@0.114.0))(slate@0.114.0)(sucrase@3.35.0)(typescript@5.9.3)(use-sync-external-store@1.5.0(react@18.3.1)))(yup@1.6.1):
     dependencies:
-      '@tinacms/schema-tools': 1.6.5(react@18.3.1)(yup@1.6.1)
+      '@tinacms/schema-tools': 1.6.9(react@18.3.1)(yup@1.6.1)
       next: 14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-auth: 4.24.13(next@14.2.35(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
