@@ -1,5 +1,12 @@
 # gen-referentiel-core
 
+## 0.4.4
+
+### Patch Changes
+
+- 9cfaa3b: Utilise transpilePackages pour résoudre les problèmes ESM avec react-dnd sur Vercel
+- c839a97: Force react-dnd-html5-backend v15 pour compatibilité CommonJS sur Vercel
+
 ## 0.4.3
 
 ### Patch Changes
