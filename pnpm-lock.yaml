@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  nanoid: ^3.3.8
+
 importers:
 
   .:
@@ -5296,11 +5299,6 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanoid@5.1.6:
-    resolution: {integrity: sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==}
-    engines: {node: ^18 || >=20}
-    hasBin: true
-
   napi-build-utils@2.0.0:
     resolution: {integrity: sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA==}
 
@@ -10281,7 +10279,7 @@ snapshots:
       jotai-optics: 0.4.0(jotai@2.8.4(@types/react@18.3.11)(react@18.3.1))(optics-ts@2.4.1)
       jotai-x: 2.3.2(@types/react@18.3.11)(jotai@2.8.4(@types/react@18.3.11)(react@18.3.1))(react@18.3.1)
       lodash: 4.17.23
-      nanoid: 5.1.6
+      nanoid: 3.3.11
       optics-ts: 2.4.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -13931,8 +13929,6 @@ snapshots:
       stylis: 4.3.6
 
   nanoid@3.3.11: {}
-
-  nanoid@5.1.6: {}
 
   napi-build-utils@2.0.0: {}
 
