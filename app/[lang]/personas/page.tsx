@@ -1,17 +1,48 @@
 import { useTranslations } from '../../../i18n/utils';
+import { Metadata } from 'next';
 import { client } from '../../../tina/__generated__/databaseClient';
 import { getRefConfig } from '../../../referentiel-config';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ui } from '../../../i18n/ui';
+import { code_languages, ui } from '../../../i18n/ui';
 
 export async function generateStaticParams() {
   // Ne pas générer de pages si la feature est désactivée
   if (!getRefConfig().featuresEnabled.linkToPersonas) {
     return [];
   }
-  const lang = Object.keys(ui);
-  return lang.map((lang) => ({ lang }));
+  return code_languages.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: keyof typeof ui };
+}): Promise<Metadata> {
+  const { lang } = params;
+  const t = useTranslations(lang);
+  const title = `${t('Personas')} | ${t('seo.site_name')}`;
+  const description = t('Consulter les Personas');
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${t('seo.url')}/${lang}/personas`,
+      siteName: t('seo.site_name'),
+      images: [{ url: t('seo.fb.image.url'), alt: title }],
+      locale: lang,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [t('seo.tw.image.url')],
+    },
+  };
 }
 
 export default async function Home({ params }) {

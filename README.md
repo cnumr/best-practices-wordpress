@@ -1,54 +1,112 @@
 <p align="center">
   <a href="https://collectif.greenit.fr/">
-    <img align="center" alt="CNUMR" src="./public/logo-cnumr.png" width="160" />
-  </a> 
-    <img align="center" alt="Association Green IT" src="./public/logo-asso.png" width="200" />
+    <img align="center" alt="CNUMR" src="./public/assets/logo-cnumr.png" width="160" />
+  </a>
+    <img align="center" alt="Association Green IT" src="./public/assets/logo-asso.png" width="200" />
 </p>
 
-# Les bonnes pratiques d'écoconception pour WordPress
+# gen-referentiel-core
 
-**Accéder au site**
+**Repo source pour les référentiels de bonnes pratiques Green IT**
 
-| Version   | Date     |
-| :-------- | :------- |
-| version 1 | oct 2022 |
+Ce repository contient le code partagé entre plusieurs sites de référentiels. Il sert de source (`upstream`) pour synchroniser les évolutions de code vers les repos de production.
 
-## Pourquoi ce projet en plus des [115 bonnes pratiques web](https://github.com/cnumr/best-practices) ?
+## Architecture Multi-Sites
 
-**WordPress alimente plus d'un tier du web, 43% en octobre 2022 !**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    gen-referentiel-core                         │
+│                    (ce repo - source)                           │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
+│  │ app/        │  │ components/ │  │ tina/       │   CODE       │
+│  └─────────────┘  └─────────────┘  └─────────────┘              │
+│  ┌─────────────────────────────────────────────────┐            │
+│  │ src/content/  (contenu FAKE pour tests)         │   CONTENU  │
+│  └─────────────────────────────────────────────────┘            │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+            ┌─────────────────┼─────────────────┐
+            │ upstream        │ upstream        │ upstream
+            ▼                 ▼                 ▼
+     ┌──────────┐      ┌──────────┐      ┌──────────┐
+     │   RWP    │      │   RWEB   │      │  REIPRO  │
+     │WordPress │      │   Web    │      │Progiciels│
+     │          │      │          │      │          │
+     │ CONTENU: │      │ CONTENU: │      │ CONTENU: │
+     │ réel     │      │ réel     │      │ réel     │
+     └──────────┘      └──────────┘      └──────────┘
+```
 
-Pourquoi ? Simple d'installation avec de nombreux ajouts (extensions) possibles et une grande personnalisation sans pour autant avoir strictement besoin de connaître le fonctionnement d'un serveur ou celui d'une base de données ou même les bases du `Html` et du `CSS` en font ses points forts.
+### Principe
 
-Même pour les professionnels du web, WordPress représente un gain de temps important de développement, une maintenance facile, une prise en main rapide pour le client avec une grande autonomie pour un budget moindre qu'un développement sur-mesure.
+- **Code partagé** : Toutes les évolutions de code sont faites dans ce repo
+- **Contenu spécifique** : Chaque site a son propre contenu dans `src/content/`
+- **Synchronisation** : Les sites récupèrent les mises à jour via `git merge upstream/main`
 
-Malheureusement, WordPress a aussi ses points noirs voulant être une solution qui répond aux besoins de tous. Il peut rapidement devenir obèse avec un impact environnemental important où une vigilance particulière et adaptée à ce CMS en termes d'écoconception, que nous vous proposons via ce référentiel, doit lui être portée pour réduire au mieux son emprunte environnementale.
+## Contenu de test
 
-_Source : [W3Techs](https://w3techs.com/technologies/history_overview/content_management/all)_
+Ce repo contient du contenu fake minimal pour tester le build :
 
-## À qui s'adressent les Bonnes Pratiques (BP) WordPress ?
+| Type     | Fichiers               |
+| -------- | ---------------------- |
+| Fiches   | 3 fiches exemples      |
+| Personas | 2 personas de test     |
+| Lexique  | 3 termes               |
+| Home     | Page d'accueil de test |
 
-Nous avons conçu ces BP en ayant les différents profils d'utilisateur, en ce sens ce référentiel s'adresse aussi bien à **Madame et Monsieur tout le monde qu'aux designers ou développeuses et développeurs**. Pour ce faire, sur certaines BP vous trouverez différents niveaux de solutions proposées en fonction de votre appétence pour le code.
+## Développement
 
-## Le projet
+```bash
+# Installation
+pnpm install
 
-TODO
+# Développement local
+pnpm dev
 
-## Les besoins
+# Build local (sans MongoDB)
+pnpm build-local
 
-Étant donné les évolutions continues du web, ce référentiel a besoin de régulièrement être mis à jour.
-Toute proposition ou idée d'amélioration, de modification ou de suppression est bienvenue.
+# Vérifications
+pnpm check-types
+pnpm lint
+```
 
-## Comment contribuer ?
+## Pour les mainteneurs
 
-N'hésitez pas à lire [le guide des contributeurs](CONTRIBUTING.md).
+### Faire une évolution de code
 
-## La liste des Bonnes Pratiques
+1. Créer une branche depuis `main`
+2. Faire les modifications
+3. Tester avec `pnpm build-local`
+4. Créer une PR et merger dans `main`
 
-> [!IMPORTANT]
->
-> - [Dossier contenant les fiches de bonnes pratiques](src/content/fiches/fr/) ;
-> - [Dossier contenant le lexique](src/content/lexique/fr/) ;
-> - [Dossier contenant les personas](src/content/personas/fr/).
+### Synchroniser un site de production
+
+Voir la [documentation de synchronisation](./docs/synchronisation.md) pour le workflow complet.
+
+```bash
+# Dans le repo du site (ex: rwp)
+git fetch upstream
+git merge upstream/main
+git push origin main
+```
+
+Le `.gitattributes` protège automatiquement le contenu local (`src/content/`) lors du merge.
+
+## Sites utilisant ce repo
+
+| Site   | Repository                       | Description                |
+| ------ | -------------------------------- | -------------------------- |
+| RWP    | best-practices-wordpress         | Bonnes pratiques WordPress |
+| RWEB   | best-practices                   | Bonnes pratiques Web       |
+| REIPRO | best-practices-packaged-software | Intégration de progiciels  |
+| RIA    | (à venir)                        | Utilisation de l'IA        |
+
+## Documentation
+
+- [docs/](./docs/) - Documentation complète (Retype)
+- [CLAUDE.md](./CLAUDE.md) - Instructions pour Claude Code
+- [CONTRIBUTING.md](./CONTRIBUTING.md) - Guide de contribution
 
 ## Licence
 

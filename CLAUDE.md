@@ -18,6 +18,7 @@ Appliquer systématiquement la méthode **APEX** pour chaque tâche :
 - Toujours attendre la validation du plan avant d'exécuter
 - Toujours vérifier le résultat après implémentation
 - **Ne JAMAIS faire de commit sans demande explicite de l'utilisateur**
+- **Quand l'utilisateur demande un commit, toujours demander s'il veut aussi créer un changeset et une PR**
 
 **Commandes de validation (eXamine) :**
 ```bash
@@ -28,7 +29,13 @@ pnpm build-local  # Vérifier que le build fonctionne
 
 ## Project Overview
 
-This is the **WordPress Eco-design Best Practices Reference** (RWP - Référentiel WordPress) maintained by the Collectif Green IT (CNUMR). It's a Next.js web application that uses TinaCMS as a headless CMS to manage eco-design best practices content in MDX format.
+This is a **generic multi-referential platform** for eco-design best practices, maintained by the Collectif Green IT (CNUMR). It's a Next.js web application that uses TinaCMS as a headless CMS to manage eco-design best practices content in MDX format.
+
+The codebase serves as a shared core (`gen-referentiel-core`) that can be configured for different referentials (RWP, RWEB, REIPRO, RIA, etc.) via environment variables:
+- `NEXT_PUBLIC_REF_NAME` - Used by Next.js at runtime
+- `TINA_PUBLIC_REF_NAME` - Used by TinaCMS at build time
+
+Both variables must be set to the same value.
 
 ## Tech Stack
 
@@ -54,6 +61,9 @@ pnpm dev:prod
 # Production build (requires MongoDB)
 pnpm build
 
+# Local build (no MongoDB needed, for testing)
+pnpm build-local
+
 # Lint & Type check
 pnpm lint           # Run both Next.js and MDX linting
 pnpm lint:next      # Next.js linting only
@@ -65,6 +75,16 @@ pnpm prettier
 
 # Clean build artifacts
 pnpm clean
+
+# Serve local build (after build-local)
+pnpm serve-local
+
+# Local MongoDB with Docker
+pnpm docker:up      # Start MongoDB container
+pnpm docker:down    # Stop MongoDB container
+
+# Documentation (Retype)
+pnpm doc            # Start documentation server
 ```
 
 ## Architecture
@@ -98,13 +118,13 @@ Uses Next.js App Router with dynamic `[lang]` segment for i18n:
 ### Multi-Referential Configuration
 
 The codebase supports multiple referentials via `referentiel-config.ts`:
-- **RWP** (WordPress) - Current repository focus
-- **RWEB** (Web eco-design)
-- **REIPRO** (Software integration)
-- **RIA** (AI usage)
-- **REF_HOME** (Home portal)
+- **RWEB** (Web eco-design) - Default referential if not configured
+- **RWP** (WordPress eco-design)
+- **REIPRO** (Software integration - Intégration de progiciels)
+- **RIA** (Generative AI usage - Utilisation de l'IA générative)
+- **REF_HOME** (Home portal - aggregates all referentials)
 
-The active referential is set via `NEXT_PUBLIC_REF_NAME` environment variable.
+The active referential is set via `NEXT_PUBLIC_REF_NAME` and `TINA_PUBLIC_REF_NAME` environment variables (both must match). Each referential has its own feature flags (lexique, personas, filters, measurement scales, etc.) defined in `referentiel-config.ts`.
 
 ## Key Configuration Files
 
@@ -112,11 +132,52 @@ The active referential is set via `NEXT_PUBLIC_REF_NAME` environment variable.
 - `i18n/ui.ts` - UI translations
 - `src/content/constants/index.ts` - Field options for lifecycle, scope, saved_resources, etc.
 
+### MDX Content Validation (`content/`)
+
+Les schémas YAML valident le frontmatter des fichiers MDX via `pnpm lint:md`. Le schéma utilisé dépend de `NEXT_PUBLIC_REF_NAME` :
+
+| Schéma | Référentiels | Particularités |
+|--------|--------------|----------------|
+| `fiche.schema.yaml` | RWEB, REIPRO, RIA (défaut) | `environmental_impact`/`priority_implementation` = number, `scope` optionnel |
+| `fiche.schema.rwp.yaml` | RWP | `environmental_impact`/`priority_implementation` = string, `scope` requis |
+
+La sélection est faite dynamiquement dans `.remarkrc.mjs` selon la variable d'environnement.
+
 ## Content Editing
 
 Content can be edited:
 1. **Locally**: Direct MDX file editing in `src/content/`
 2. **Via TinaCMS Admin**: Access at `/admin` when running dev server
+
+## Versioning avec Changesets
+
+Le projet utilise [Changesets](https://github.com/changesets/changesets) pour gérer les versions. Cela permet de tracker la synchronisation entre les différentes instances (RWP, RWEB, REIPRO, etc.).
+
+### Workflow
+
+1. **Après un changement significatif**, créer un changeset :
+   ```bash
+   pnpm changeset
+   ```
+   Cela crée un fichier dans `.changeset/` décrivant le changement (patch/minor/major).
+
+2. **Pour publier une nouvelle version** :
+   ```bash
+   pnpm release
+   ```
+   Cela applique les changesets, met à jour la version dans `package.json`, génère le `CHANGELOG.md` et commit.
+
+### Types de versions
+
+| Type | Quand l'utiliser |
+|------|------------------|
+| `patch` | Bug fixes, corrections mineures |
+| `minor` | Nouvelles fonctionnalités rétro-compatibles |
+| `major` | Breaking changes, modifications majeures |
+
+### Vérifier la synchronisation
+
+Comparer la version dans `package.json` entre `gen-referentiel-core` et les projets dérivés permet de savoir s'ils sont synchronisés.
 
 ## Commit Message Convention (Conventional Commits - French)
 

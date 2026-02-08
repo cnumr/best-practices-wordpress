@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+# Generate API data from MDX files
+echo "Generating API data..."
+node scripts/generate-api-data.mjs
+
 # Build TinaCMS
 tinacms build --local --skip-indexing
 

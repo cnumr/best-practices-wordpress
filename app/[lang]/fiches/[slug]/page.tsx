@@ -1,11 +1,65 @@
 import { FichesPage } from '../../../../components/pages/fiches-page';
 import { InternalNavigation } from '../../../../components/pages/fiche/InternalNav';
+import { Metadata } from 'next';
 import { client } from '../../../../tina/__generated__/databaseClient';
 import { getRefConfig } from '../../../../referentiel-config';
 import { getStaticPathsFromFilesystem } from '../../../../utils/get-static-paths';
+import { ui } from '../../../../i18n/ui';
+import { useTranslations } from '../../../../i18n/utils';
 
 export function generateStaticParams() {
   return getStaticPathsFromFilesystem('fiches');
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: keyof typeof ui; slug: string };
+}): Promise<Metadata> {
+  const { lang, slug } = params;
+  const t = useTranslations(lang);
+
+  try {
+    const res = await client.queries.fiches({
+      relativePath: `${lang}/${slug}.mdx`,
+    });
+
+    const fiche = res.data.fiches;
+    const title = `${fiche.refID} - ${fiche.title} | ${t('seo.site_name')}`;
+    const description = fiche.title;
+    const imageUrl = t('seo.fb.image.url');
+    const siteUrl = t('seo.url');
+
+    return {
+      title,
+      description,
+      openGraph: {
+        title,
+        description,
+        url: `${siteUrl}/${lang}/fiches/${slug}`,
+        siteName: t('seo.site_name'),
+        images: [
+          {
+            url: imageUrl,
+            alt: fiche.title,
+          },
+        ],
+        locale: lang,
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: [t('seo.tw.image.url')],
+      },
+    };
+  } catch {
+    return {
+      title: t('seo.site_name'),
+      description: t('seo.default.description'),
+    };
+  }
 }
 export default async function Page({ params }) {
   const { lang, slug } = params;

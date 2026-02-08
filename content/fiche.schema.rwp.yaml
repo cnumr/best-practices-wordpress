@@ -1,6 +1,6 @@
-# Schema de validation pour les fiches (défaut: RWEB, REIPRO, RIA)
-# environmental_impact et priority_implementation sont des numbers (use-5-grades)
-# scope n'est pas requis, moe/tiers/rgesnField sont activés
+# Schema de validation pour les fiches RWP (WordPress)
+# environmental_impact et priority_implementation sont des strings (use-3-grades)
+# scope est requis
 allOf:
   - $ref: ./common.schema.yaml
   - properties:
@@ -36,16 +36,12 @@ allOf:
       lifecycle:
         type: string
       environmental_impact:
-        type: number
+        type: string
       priority_implementation:
-        type: number
-      moe:
-        type: number
-      tiers:
-        type: array
-        minItems: 1
+        type: string
       scope:
         type: array
+        minItems: 1
       saved_resources:
         type: array
         minItems: 1
@@ -69,5 +65,6 @@ allOf:
       - lifecycle
       - environmental_impact
       - priority_implementation
+      - scope
       - saved_resources
       - validations
