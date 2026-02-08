@@ -1,5 +1,11 @@
 # gen-referentiel-core
 
+## 0.4.7
+
+### Patch Changes
+
+- 6808827: Aligne configuration TinaCMS sur le repo officiel tina-self-hosted-demo
+
 ## 0.4.6
 
 ### Patch Changes
