@@ -1,37 +1,9 @@
 import { NextResponse } from 'next/server';
-import { createSwaggerSpec } from 'next-swagger-doc';
+import fs from 'fs';
+import path from 'path';
 
 // Force dynamic rendering pour que getBaseUrl() soit évalué au runtime
 export const dynamic = 'force-dynamic';
-
-// Générer la spec au build time (niveau module) pour que les fichiers source soient scannés
-// Sur Vercel serverless, les fichiers .ts ne sont pas disponibles au runtime
-const baseSpec = createSwaggerSpec({
-  apiFolder: 'app/api',
-  definition: {
-    openapi: '3.0.0',
-    info: {
-      title: 'API Référentiel GreenIT',
-      version: '1.0.0',
-      description:
-        "API pour accéder aux fiches du référentiel GreenIT. Cette API permet de récupérer la liste des fiches publiées, les détails d'une fiche spécifique, et la liste des langues disponibles.",
-      contact: {
-        name: 'Collectif Green IT (CNUMR)',
-        url: 'https://github.com/cnumr',
-      },
-    },
-    tags: [
-      {
-        name: 'Fiches',
-        description: 'Endpoints pour gérer les fiches du référentiel',
-      },
-      {
-        name: 'Languages',
-        description: 'Endpoints pour les langues disponibles',
-      },
-    ],
-  },
-});
 
 function getBaseUrl(): string {
   // Vercel définit automatiquement VERCEL_URL avec le domaine du déploiement
@@ -43,20 +15,44 @@ function getBaseUrl(): string {
 }
 
 export async function GET() {
-  // Modifier seulement l'URL du serveur au runtime
-  const spec = {
-    ...baseSpec,
-    servers: [
-      {
-        url: getBaseUrl(),
-        description: 'Serveur API',
-      },
-    ],
-  };
+  try {
+    // Charger la spec OpenAPI générée au build time
+    const specPath = path.join(process.cwd(), 'public/api-data/openapi-spec.json');
+    const specContent = fs.readFileSync(specPath, 'utf-8');
+    const baseSpec = JSON.parse(specContent);
 
-  return NextResponse.json(spec, {
-    headers: {
-      'Cache-Control': 'public, s-maxage=3600',
-    },
-  });
+    // Ajouter l'URL du serveur dynamiquement
+    const spec = {
+      ...baseSpec,
+      servers: [
+        {
+          url: getBaseUrl(),
+          description: 'Serveur API',
+        },
+      ],
+    };
+
+    return NextResponse.json(spec, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=3600',
+      },
+    });
+  } catch (error) {
+    console.error('Error loading OpenAPI spec:', error);
+
+    // Si le fichier n'existe pas, retourner une spec minimale avec un message d'erreur
+    return NextResponse.json(
+      {
+        openapi: '3.0.0',
+        info: {
+          title: 'API Référentiel GreenIT',
+          version: '1.0.0',
+          description:
+            'Erreur: La spec OpenAPI n\'a pas été générée. Exécutez "node scripts/generate-openapi-spec.mjs" au build time.',
+        },
+        paths: {},
+      },
+      { status: 500 }
+    );
+  }
 }

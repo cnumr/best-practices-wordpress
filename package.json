@@ -6,7 +6,7 @@
     "doc": "cd docs && retype start",
     "dev": "tinacms dev -c \"next dev\"",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
-    "build": "node scripts/generate-api-data.mjs && TINA_PUBLIC_IS_LOCAL=false tinacms build --partial-reindex && next build && npx pagefind --site .next/server/app --output-path public/pagefind",
+    "build": "node scripts/generate-api-data.mjs && node scripts/generate-openapi-spec.mjs && TINA_PUBLIC_IS_LOCAL=false tinacms build --partial-reindex && next build && npx pagefind --site .next/server/app --output-path public/pagefind",
     "build-local": "TINA_PUBLIC_IS_LOCAL=true ./scripts/build-local.sh",
     "start": "TINA_PUBLIC_IS_LOCAL=true tinacms build && next start",
     "serve-local": "TINA_PUBLIC_IS_LOCAL=true next start",

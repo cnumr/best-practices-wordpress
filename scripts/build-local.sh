@@ -5,6 +5,10 @@ set -e
 echo "Generating API data..."
 node scripts/generate-api-data.mjs
 
+# Generate OpenAPI spec
+echo "Generating OpenAPI spec..."
+node scripts/generate-openapi-spec.mjs
+
 # Build TinaCMS
 tinacms build --local --skip-indexing
 
