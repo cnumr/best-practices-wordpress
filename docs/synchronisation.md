@@ -397,6 +397,16 @@ Ce fichier est partagé. Les différences entre sites sont gérées automatiquem
 
 `tina-lock.json` et `tina/__generated__/` sont générés selon `TINA_PUBLIC_REF_NAME`. Ils sont protégés avec `merge=ours` dans `.gitattributes`.
 
+!!!warning Régénérer tina-lock.json après un merge
+Après chaque `git merge upstream/main`, il faut régénérer le fichier `tina/tina-lock.json` en lançant :
+
+```bash
+pnpm tinacms build
+```
+
+Ce fichier contient le schéma TinaCMS spécifique à votre configuration (`TINA_PUBLIC_REF_NAME`). Sans régénération, le build peut échouer.
+!!!
+
 ---
 
 ## Différence avec un "vrai" fork GitHub
