@@ -83,6 +83,9 @@ pnpm serve-local
 pnpm docker:up      # Start MongoDB container
 pnpm docker:down    # Stop MongoDB container
 
+# Synchronisation upstream (pour les repos dérivés)
+pnpm sync-upstream  # Sync avec gen-referentiel-core
+
 # Documentation (Retype)
 pnpm doc            # Start documentation server
 ```

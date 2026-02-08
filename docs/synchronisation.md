@@ -162,67 +162,27 @@ git push --force-with-lease origin main
 `--force-with-lease` est plus sûr que `--force` car il vérifie que vous n'écrasez pas des commits distants inconnus.
 !!!
 
-### Script d'aide (optionnel)
+### Script de synchronisation
 
-Créer `scripts/sync-upstream.sh` :
-
-==- Voir le script
+Le script `scripts/sync-upstream.sh` automatise tout le processus, que ce soit pour la **première synchronisation** ou les **suivantes** :
 
 ```bash
-#!/bin/bash
-set -e
-
-# Dossiers protégés (contenu spécifique au site)
-PROTECTED_DIRS="src/content/ public/img_fiches/"
-
-echo "Synchronisation avec upstream..."
-git fetch upstream
-
-COMMITS=$(git log --oneline HEAD..upstream/main)
-if [ -z "$COMMITS" ]; then
-    echo "Déjà à jour avec upstream."
-    exit 0
-fi
-
-echo "Changements à intégrer :"
-echo "$COMMITS"
-
-read -p "Continuer ? (y/n) " -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    echo "Annulé"
-    exit 0
-fi
-
-echo "Merge sans commit..."
-git merge upstream/main --no-commit || true
-
-echo "Protection du contenu local..."
-git reset HEAD -- $PROTECTED_DIRS
-git checkout HEAD -- $PROTECTED_DIRS
-git clean -fd -- $PROTECTED_DIRS
-
-echo "Commit du merge..."
-git commit -m "chore: sync upstream (contenu local préservé)"
-
-echo "Vérification :"
-echo "  - Fichiers modifiés dans le merge :"
-git diff --stat HEAD~1
-echo ""
-echo "  - Contenu local (doit être inchangé) :"
-git diff --stat HEAD~1 -- $PROTECTED_DIRS
-echo ""
-echo "Sync terminée. Pensez à lancer : pnpm check-types && pnpm lint && pnpm build-local"
-```
-
-===
-
-Utilisation :
-
-```bash
-chmod +x scripts/sync-upstream.sh
+pnpm sync-upstream
+# ou directement
 ./scripts/sync-upstream.sh
 ```
+
+**Ce script :**
+1. Vérifie que le remote `upstream` existe
+2. Détecte automatiquement si c'est la première sync (historiques non liés)
+3. Affiche les commits à intégrer et demande confirmation
+4. Merge avec protection du contenu local (`src/content/`, `public/img_fiches/`)
+5. Régénère `tina-lock.json` avec `pnpm tinacms build`
+6. Commit et push
+
+!!!success Recommandé
+Utilisez ce script plutôt que les commandes manuelles pour éviter les erreurs. Il gère automatiquement le cas `--allow-unrelated-histories` lors de la première sync.
+!!!
 
 ---
 
