@@ -1,5 +1,15 @@
 # gen-referentiel-core
 
+## 0.5.0
+
+### Minor Changes
+
+- c827fa0: Protège les branches main/master contre l'édition directe via TinaCMS
+
+  - Nouveau `ProtectedGitHubProvider` qui bloque les écritures sur les branches protégées
+  - Warning visuel `warnOnMainMasterBranch` affiché dans l'interface d'édition
+  - Les contributeurs doivent utiliser une branche de travail et soumettre une PR
+
 ## 0.4.8
 
 ### Patch Changes

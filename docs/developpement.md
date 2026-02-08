@@ -454,6 +454,35 @@ Cela applique les changesets, met à jour la version dans `package.json`, génè
 
 Comparer la version dans `package.json` entre `gen-referentiel-core` et les projets dérivés permet de savoir s'ils sont synchronisés.
 
+### Protection de la branche main
+
+!!!success Problème résolu
+!!!
+
+L'édition directe sur les branches `main` et `master` via TinaCMS est interdite pour éviter les modifications non revues.
+
+**Solution :** Un `ProtectedGitHubProvider` custom a été créé (`tina/ProtectedGitHubProvider.ts`) qui wrapper le `GitHubProvider` standard et refuse les écritures sur les branches bloquées.
+
+**Configuration :** Dans `tina/database.ts`, la liste des branches bloquées est configurable :
+
+```typescript
+gitProvider: new ProtectedGitHubProvider({
+  branch,
+  owner,
+  repo,
+  token,
+  blockedBranches: ['main', 'master'], // Branches protégées
+}),
+```
+
+**Comportement :**
+
+- Toute tentative de sauvegarde sur `main` affiche une erreur dans TinaCMS
+- Les contributeurs doivent utiliser une branche de travail (ex: `cms`, `content-update`)
+- Les modifications sont ensuite intégrées via Pull Request
+
+**Pour ajouter d'autres branches protégées :** Modifier le tableau `blockedBranches` dans `tina/database.ts`.
+
 ## Problématiques à resoudre
 
 ### Bug du composant `<PositionableImage />` ou **Adv. Image**

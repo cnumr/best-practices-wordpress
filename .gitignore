@@ -11,6 +11,9 @@
 /.next/
 /out/
 
+# TinaCMS (généré selon la config du référentiel)
+tina/tina-lock.json
+
 # pagefind (generated at build time)
 /public/pagefind/
 

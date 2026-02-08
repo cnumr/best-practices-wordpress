@@ -1,7 +1,7 @@
 import { createDatabase, createLocalDatabase } from '@tinacms/datalayer';
 
-import { GitHubProvider } from 'tinacms-gitprovider-github';
 import { MongodbLevel } from 'mongodb-level';
+import { ProtectedGitHubProvider } from './ProtectedGitHubProvider';
 
 // Manage this flag in your CI/CD pipeline and make sure it is set to false in production
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === 'true';
@@ -24,11 +24,12 @@ if (!branch) {
 export default isLocal
   ? createLocalDatabase()
   : createDatabase({
-      gitProvider: new GitHubProvider({
+      gitProvider: new ProtectedGitHubProvider({
         branch,
         owner,
         repo,
         token,
+        blockedBranches: ['main', 'master'],
       }),
       databaseAdapter: new MongodbLevel<string, Record<string, any>>({
         collectionName: `tinacms-${branch.replace(/\//g, '-')}`,
