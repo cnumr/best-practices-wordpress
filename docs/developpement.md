@@ -382,6 +382,41 @@ pnpm build-local
 pnpm serve-local
 ```
 
+### Erreur ERR_REQUIRE_ESM sur Vercel (react-dnd)
+
+!!!success Problème résolu
+!!!
+
+L'erreur `ERR_REQUIRE_ESM: require() of ES Module react-dnd-html5-backend` apparaissait sur Vercel lors de l'authentification TinaCMS.
+
+**Cause :** `@udecode/plate-dnd` (dépendance interne de TinaCMS) utilise `require()` pour importer `react-dnd@16` qui est **ESM-only**. Ce problème n'apparaît pas en local car le bundling est différent.
+
+**Solution :** Forcer `react-dnd` et `react-dnd-html5-backend` à la version **14.x** (CommonJS) via pnpm overrides :
+
+```json package.json
+"pnpm": {
+  "overrides": {
+    "react-dnd": "14.0.5",
+    "react-dnd-html5-backend": "14.1.0"
+  }
+}
+```
+
+Ces versions sont compatibles avec `@udecode/plate-dnd` qui demande `>=14.0.0`.
+
+**Après modification :** Régénérer le lockfile :
+
+```bash
+trash node_modules pnpm-lock.yaml && pnpm install
+# ou
+rm -rf node_modules && rm pnpm-lock.yaml && pnpm install
+```
+
+**Références :**
+
+- [Issue TinaCMS demo #131](https://github.com/tinacms/tina-self-hosted-demo/issues/131)
+- [Issue Plate #1609](https://github.com/udecode/plate/issues/1609)
+
 ### Versioning avec Changesets
 
 !!!success Problème résolu

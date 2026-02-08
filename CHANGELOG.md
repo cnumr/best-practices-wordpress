@@ -1,5 +1,13 @@
 # gen-referentiel-core
 
+## 0.4.8
+
+### Patch Changes
+
+- 82c479e: fix(deps): force react-dnd v14 pour compatibilité CommonJS sur Vercel
+
+  Corrige l'erreur ERR_REQUIRE_ESM causée par @udecode/plate-dnd qui utilise require() pour importer react-dnd v16 (ESM-only).
+
 ## 0.4.7
 
 ### Patch Changes

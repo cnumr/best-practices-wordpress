@@ -202,3 +202,28 @@ Examples:
 - **Production build** : `pnpm build` nécessite MongoDB et les variables d'environnement GitHub
 - When running locally with `pnpm dev`, MongoDB is not required (`TINA_PUBLIC_IS_LOCAL=true`)
 - Content changes trigger automatic Vercel deployments when pushed to GitHub
+
+## Problèmes connus et solutions
+
+### ERR_REQUIRE_ESM sur Vercel (react-dnd)
+
+**Problème** : L'erreur `ERR_REQUIRE_ESM: require() of ES Module react-dnd-html5-backend` apparaît sur Vercel lors de l'authentification TinaCMS.
+
+**Cause** : `@udecode/plate-dnd` (dépendance interne de TinaCMS) utilise `require()` pour importer `react-dnd@16` qui est ESM-only.
+
+**Solution** : Forcer react-dnd v14 (CommonJS) via pnpm overrides dans `package.json` :
+
+```json
+"pnpm": {
+  "overrides": {
+    "react-dnd": "14.0.5",
+    "react-dnd-html5-backend": "14.1.0"
+  }
+}
+```
+
+**Après modification** : Régénérer le lockfile avec `trash node_modules pnpm-lock.yaml && pnpm install`
+
+**Références** :
+- https://github.com/tinacms/tina-self-hosted-demo/issues/131
+- https://github.com/udecode/plate/issues/1609
