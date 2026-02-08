@@ -1,5 +1,11 @@
 # gen-referentiel-core
 
+## 0.4.6
+
+### Patch Changes
+
+- 78f3330: Ajoute react-dnd v16 en dépendance directe pour compatibilité TinaCMS/Vercel
+
 ## 0.4.5
 
 ### Patch Changes
