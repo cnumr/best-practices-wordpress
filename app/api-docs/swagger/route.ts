@@ -6,9 +6,12 @@ import path from 'path';
 export const dynamic = 'force-dynamic';
 
 function getBaseUrl(): string {
-  // Vercel définit automatiquement VERCEL_URL avec le domaine du déploiement
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
+  // Sur Vercel, utiliser l'URL de production sur main, sinon l'URL de branche
+  if (process.env.VERCEL_GIT_COMMIT_REF === 'main' && process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_BRANCH_URL) {
+    return `https://${process.env.VERCEL_BRANCH_URL}`;
   }
   // Fallback sur SITE_URL si défini, sinon localhost pour le dev
   return process.env.SITE_URL || 'http://localhost:3000';
