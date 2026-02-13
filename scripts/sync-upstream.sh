@@ -27,13 +27,6 @@ git fetch upstream
 MERGE_BASE=$(git merge-base HEAD upstream/main 2>/dev/null || echo "")
 if [ -z "$MERGE_BASE" ]; then
     echo -e "${YELLOW}Première synchronisation détectée (historiques non liés).${NC}"
-    FIRST_SYNC=true
-else
-    FIRST_SYNC=false
-fi
-
-# Vérifier s'il y a des changements à intégrer
-if [ "$FIRST_SYNC" = true ]; then
     COMMITS=$(git log --oneline upstream/main | head -10)
     echo -e "${YELLOW}Premiers commits upstream à intégrer :${NC}"
 else
@@ -56,13 +49,9 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 0
 fi
 
-# Merge sans commit
+# Merge sans commit (résout les conflits en faveur d'upstream)
 echo -e "${YELLOW}Merge upstream/main...${NC}"
-if [ "$FIRST_SYNC" = true ]; then
-    git merge upstream/main --no-commit --no-edit --allow-unrelated-histories || true
-else
-    git merge upstream/main --no-commit --no-edit || true
-fi
+git merge upstream/main --no-commit --allow-unrelated-histories -X theirs || true
 
 # Protéger le contenu local
 echo -e "${YELLOW}Protection du contenu local...${NC}"

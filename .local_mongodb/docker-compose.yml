@@ -2,7 +2,6 @@
 services:
   mongodb-service:
     image: mongodb/mongodb-atlas-local:latest
-    container_name: mongodb-container
     restart: always
     env_file:
       - .env
@@ -39,7 +38,6 @@ services:
 
   mongodb-express:
     image: mongo-express:latest
-    container_name: mongodb-express-container
     restart: always
     env_file:
       - .env
@@ -48,8 +46,8 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-      ME_CONFIG_MONGODB_SERVER: mongodb-container
-      ME_CONFIG_MONGODB_URL: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongodb-container:27017/
+      ME_CONFIG_MONGODB_SERVER: mongodb-service
+      ME_CONFIG_MONGODB_URL: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongodb-service:27017/
       ME_CONFIG_BASICAUTH: false
     deploy:
       resources:

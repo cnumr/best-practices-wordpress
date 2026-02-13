@@ -128,10 +128,8 @@ Le `.gitattributes` configure `merge=ours` pour protéger `src/content/`, mais c
 # Dans le repo du site (ex: rwp)
 git fetch upstream
 
-# 1. Merger SANS commiter
-git merge upstream/main --no-commit
-# Si les branches ont des historiques non liés (première sync)
-# git merge upstream/main --no-commit --allow-unrelated-histories
+# 1. Merger SANS commiter (résout les conflits en faveur d'upstream)
+git merge upstream/main --no-commit --allow-unrelated-histories -X theirs
 
 # 2. Réinitialiser l'index des dossiers protégés à l'état pré-merge
 git reset HEAD -- src/content/ public/img_fiches/
@@ -301,7 +299,7 @@ git log --oneline HEAD..upstream/main
 
 # Synchroniser avec upstream (voir section Workflow ci-dessus)
 git fetch upstream
-git merge upstream/main --no-commit
+git merge upstream/main --no-commit --allow-unrelated-histories -X theirs
 git reset HEAD -- src/content/ public/img_fiches/
 git checkout HEAD -- src/content/ public/img_fiches/
 git clean -fd -- src/content/ public/img_fiches/
