@@ -2,14 +2,14 @@
 refID: '1.01'
 title: Choisir un hébergeur adapté
 createdAt: 2024-01-20T12:02:38.020Z
-updatedAt: 2025-10-31T10:45:10.038Z
+updatedAt: 2025-12-19T15:04:29.268Z
 language: fr
 published: true
 refType: RWP
 versions:
-  - version: 1.0.0
+  - version: 1.1.0
     idRef: '1.01'
-people: Catherine G.
+people: 'Catherine G., Dareth N.'
 responsible:
   - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
   - responsible: src/content/personas/fr/designeuser.mdx
@@ -36,29 +36,31 @@ validations:
   - rule: Renewable Energy Factor (RFE)
     maxValue: ≥ 100 %
   - rule: Power Usage Effectiveness (PUE)
-    maxValue: '1.6'
+    maxValue: "<\_1.6"
   - rule: Carbon Usage Effectiveness (CUE)
-    maxValue: '0.3'
+    maxValue: < 0.3
   - rule: Water Usage Effectiveness (WUE)
-    maxValue: '0.5'
+    maxValue: < 0.5
 ---
 
 ## Sujet
 
 Bien choisir sa solution d'hébergement est essentielle pour plusieurs raisons :
 
-* **Pour la sécurité de votre site** Plusieurs hébergeurs proposent des offres d'hébergements avec WordPress déjà installé ou installable en un clic et des mises à jour automatiques. Pour éviter les mauvaises surprises lors du déploiement de votre site ou suite à une mise à jour automatique, assurez-vous que l'installation est aux normes de sécurité (aucun dossier n'utilise l'identifiant administrateur par exemple), que vous avez bien accès aux fichiers source et à la base de données, que le thème sélectionné est bien compatible avec les versions des différents logiciels utilisés que ce soit WordPress ou phpMyAdmin pour la gestion de votre base de données MySQL, etc.
+* **Pour la sécurité de votre site** Plusieurs hébergeurs proposent des offres d'hébergements avec WordPress déjà installé ou installable en un clic, et des mises-à-jour automatiques. Pour éviter les mauvaises surprises lors du déploiement de votre site ou suite à une mise à jour automatique, assurez-vous que l'installation est aux normes de sécurité (aucun dossier n'utilise l'identifiant administrateur par exemple), que vous avez bien accès aux fichiers source et à la base de données, que le thème sélectionné est bien compatible avec les versions des différents logiciels utilisés que ce soit WordPress ou phpMyAdmin pour la gestion de votre base de données MySQL, etc.
 * **Pour la souveraineté des données hébergées qu'elles soient d'ordre commercial ou privé** Vérifiez toujours les conditions de vente ainsi que les conditions d'utilisation des services que vous utilisez et informez vos visiteurs si certaines de leurs données sont collectées.
-* **Pour la conformité de votre site avec le règlement européen pour la protection des données personnelles (RGPD)** Nous vous invitons à vous référer au site de la [CNIL](https://www.cnil.fr/) pour plus d'informations. ⚠️ Ce n'est pas parce que votre site ne collecte pas directement de données personnelles qu'il est conforme au RGPD et ce n'est pas parce qu'un service tiers est conforme au RGPD qu'il ne collecte pas des données (non personnelles) sur vos utilisateurs !
+* **Pour la conformité de votre site avec le règlement européen pour la protection des données personnelles (RGPD)** Nous vous invitons à vous référer au site de la [CNIL](https://www.cnil.fr/) pour plus d'informations. ⚠️ Ce n'est pas parce que votre site ne collecte pas directement de données personnelles qu'il est conforme au RGPD et ce n'est pas parce qu'un service tiers est conforme au RGPD qu'il ne collecte pas des données (non-personnelles) sur vos utilisateurs !
 * **Pour renforcer votre démarche d'écoconception**
 
 ## GreenIT vous conseille
 
-Même s'il n'existe pas de label ou certification multi-critères permettant d'évaluer le caractère vertueux d'un service d'hébergement web, nous vous proposons ici quelques critères sur lesquels s'appuyer :
+\*\[E3P]: European Energy Efficiency Platform
+
+Même s'il n'existe pas de label ou certification multi-critères permettant d'évaluer le caractère vertueux d'un service d'hébergement web, nous vous proposons ici quelques critères sur lesquels s'appuyer :
 
 * les certifications [ISO 50001](https://www.iso.org/fr/publication/PUB100400.html) et/ou [ISO 140001](https://www.iso.org/fr/iso-14001-environmental-management.html) afin de garantir le respect de certaines bonnes pratiques en matière de management de l'énergie et l'environnement ;
-* la présence de l'hébergeur sur la liste des entreprises référencées comme conformes :
-  * au [Code de Conduite européen <abbr title="European Energy Efficiency Platform">E3P</abbr> sur les datacenters](https://web.archive.org/web/20240918212256/https://e3p.jrc.ec.europa.eu/node/575) (archive) ;
+* la présence de l'hébergeur sur la liste des entreprises référencées comme conformes :
+  * au [Code de Conduite européen E3P sur les datacenters](https://web.archive.org/web/20240918212256/https://e3p.jrc.ec.europa.eu/node/575) (archive) ;
   * à un [<abbr title="Renewable Energy Factor">REF</abbr> de 100% sur The Green Web Foundation](https://www.thegreenwebfoundation.org/) (l'énergie utilisée est 100% renouvelable) ;
 * la politique d’achat responsable avec la présence de labels sur le matériel comme des serveurs équipés d’une alimentation électrique conforme à l’écolabel 80Plus (niveaux Platinum et Titanium) et/ou les serveurs estampillés Energy Star ;
 * l'utilisation de serveurs fonctionnant en mode asynchrone (i.e. qui ne sont pas tenus de créer un processus ou un thread pour chaque requête) ;

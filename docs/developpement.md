@@ -8,15 +8,15 @@ order: 9
 
 ## Stack
 
-- [TinaCMS](https://tina.io/) [!badge 2.5.2]
-- [NextJS](https://nextjs.org/) [!badge 14.2.14]
-  - [next-plugin-preval](https://github.com/ricokahler/next-plugin-preval) [!badge 1.2.6]
+- [TinaCMS](https://tina.io/) [!badge 2.10.1]
+- [NextJS](https://nextjs.org/) [!badge 14.2.35]
   - [TailwindCSS](https://tailwindcss.com/) [!badge 3.4.17]
-  - [Fuse.js](https://www.fusejs.io/) [!badge 7.0.0]
+  - [Pagefind](https://pagefind.app/) [!badge 1.4.0] (recherche statique)
 - [Vercel](https://vercel.com)
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - dependencies : `mongodb-level` [!badge ^0.0.4]
-  - peerDependencies : `mongodb` [!badge ^4.12.1]
+  - devDependencies : `mongodb` [!badge ^7.0.0]
+  - peerDependencies : `mongodb` [!badge ^4.12.1] (pour compatibilité TinaCMS)
 
 #### Pourquoi TinaCMS ?
 
@@ -42,6 +42,12 @@ Dupliquer le fichier `.env.local` en `.env` et le remplir (demandez de l'aide).
 pnpm dev
 # ou
 pnpm run dev
+```
+
+```cmd Build la stack en local
+pnpm build-local && pnpm serve-local
+# ou
+pnpm run build-local && pnpm run serve-local
 ```
 
 ## Problématiques résolues
@@ -104,6 +110,7 @@ export const getRefConfig = (specificRef?: string): RefConfig => {
     },
     featuresEnabled: {
       lexique: false,
+      lexique_tooltips: false,
       fiches: true,
       linkToPersonas: false,
       priority_implementation: MESURE_ON_3,
@@ -129,11 +136,9 @@ export const getRefConfig = (specificRef?: string): RefConfig => {
   };
   switch (currentRef) {
     case 'RWP':
-      config.i18n.locales = ['fr', 'en', 'es'];
+      config.i18n.locales = ['fr'];
       config.i18n.languages = {
         fr: '🇫🇷 Français',
-        en: '🇬🇧 English',
-        es: '🇪🇸 Español',
       };
       config.i18n.refTitles = {
         es: { short: 'WordPress', long: ' para WordPress' },
@@ -152,6 +157,60 @@ export const getRefConfig = (specificRef?: string): RefConfig => {
       config.featuresEnabled.tiers = false;
       config.featuresEnabled.scope = true;
       config.featuresEnabled.rgesnField = false;
+      config.featuresEnabled.lexique_tooltips = true;
+      break;
+
+    case 'REIPRO':
+      config.i18n.locales = ['fr'];
+      config.i18n.languages = {
+        fr: '🇫🇷 Français',
+        en: '🇬🇧 English',
+        es: '🇪🇸 Español',
+      };
+      config.i18n.refTitles = {
+        es: { short: 'REIPRO', long: ' para REIPRO' },
+        en: { short: 'REIPRO', long: ' for REIPRO' },
+        fr: {
+          short: 'Intégration de progiciels',
+          long: " Référentiel de bonnes pratiques pour l'intégration de progiciels",
+        },
+      };
+      config.refInformations = {
+        currentVersion: '1.0.0',
+        creationYear: 2025,
+      };
+      config.featuresEnabled.lexique = true;
+      config.featuresEnabled.linkToPersonas = false;
+      config.featuresEnabled.priority_implementation = MESURE_ON_5;
+      config.featuresEnabled.environmental_impact = MESURE_ON_5;
+      config.featuresEnabled.moe = true;
+      config.featuresEnabled.tiers = true;
+      config.featuresEnabled.scope = false;
+      config.featuresEnabled.rgesnField = true;
+      break;
+
+    case 'RIA':
+      config.i18n.locales = ['fr'];
+      config.i18n.refTitles = {
+        es: { short: 'RIA', long: ' para RIA' },
+        en: { short: 'RIA', long: ' for RIA' },
+        fr: {
+          short: "Utilisation de l'IA générative",
+          long: " Référentiel de bonnes pratiques pour l'utilisation de l'IA générative",
+        },
+      };
+      config.refInformations = {
+        currentVersion: '1.0.0',
+        creationYear: 2025,
+      };
+      config.featuresEnabled.lexique = true;
+      config.featuresEnabled.linkToPersonas = false;
+      config.featuresEnabled.priority_implementation = MESURE_ON_5;
+      config.featuresEnabled.environmental_impact = MESURE_ON_5;
+      config.featuresEnabled.moe = true;
+      config.featuresEnabled.tiers = true;
+      config.featuresEnabled.scope = false;
+      config.featuresEnabled.rgesnField = true;
       break;
 
     case 'RWEB':
@@ -219,10 +278,10 @@ export const getRefConfig = (specificRef?: string): RefConfig => {
   return config;
 };
 
-export const getCurrentRef = () => {
-  // @ts-ignore
-  return process.env.NEXT_PUBLIC_REF_NAME || 'RWEB';
+export const getCurrentRef = (): string => {
+  return process.env.NEXT_PUBLIC_REF_NAME ?? 'RWEB';
 };
+
 ```
 
 ===
@@ -236,6 +295,8 @@ Cela ajoute de la complexité au code, mais cela permet d'avoir une code commun 
 _Un code cummun, ne veut pas dire une seule code base_.  
 **Comme un référentiel = un repo, le code du générateur est dupliqué dans chaque repo**. Donc chaque modification du `code` doit être reportée dans chaque repo.
 !!!
+
+[!ref text="Voir la section Synchronisation qui explique comment résoudre ce problème"](./synchronisation.md)
 
 #### Implémentation
 
@@ -260,10 +321,12 @@ _Un code cummun, ne veut pas dire une seule code base_.
 
 L'utilisation de TinaCMS permet de moins se préocuper du format des fichiers de contenus.
 
-Mais l'usage dans un IDE pour "aller plus vite" en édition reste tentante. Pour gérér les erreurs possible, un module de validation à été mis en place.
+Mais l'usage dans un IDE pour "aller plus vite" en édition reste tentante. Pour gérer les erreurs possibles, un module de validation a été mis en place.
 
-```cmd Lancer la validation des .(MD,MDX)
-pnpm validate:md
+```cmd Lancer la validation des fichiers MDX
+pnpm lint:md
+# ou validation complète
+pnpm lint
 ```
 
 **Il faut le lancer avant chaque commit !**
@@ -272,14 +335,155 @@ pnpm validate:md
 A faire évoluer quand le format du contenu évolue. Source : `./content/*.schema.yaml` et `.remarkrc.mjs`.
 !!!
 
-## Problématiques à resoudre
+#### Scripts de maintenance
+
+##### Correction des références aux personas
+
+Le script `scripts/fix-persona-references.mjs` permet de synchroniser automatiquement les références aux personas dans les fiches traduites (EN et ES) en se basant sur les références de la version française.
+
+**Usage :**
+
+```bash
+node scripts/fix-persona-references.mjs
+```
+
+**Quand l'utiliser :**
+
+- Après avoir ajouté de nouvelles fiches dans les 3 langues
+- Si vous remarquez des références incorrectes après un merge
+- Après avoir modifié/ajouté des personas
+
+Le script :
+
+1. Parcourt toutes les fiches FR
+2. Extrait les refID et les responsables
+3. Trouve les fiches EN/ES correspondantes (même refID)
+4. Convertit les références personas FR vers EN/ES selon le mapping
+5. Met à jour les fichiers EN/ES avec les bonnes références
+
+**Exemple :** Si une fiche FR référence `src/content/personas/fr/referenceuser-seo.mdx`, le script mettra automatiquement à jour la version EN avec `src/content/personas/en/seo-specialist.mdx` et la version ES avec `src/content/personas/es/especialista-seo.mdx`.
 
 ### Build localement
 
-!!!danger Problème à resoudre
+!!!success Problème résolu
 !!!
 
-Le build ne fonctionne que sur Vercel, ou plutôt le build de fonctionne que couplé à [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) comme datalayer. Une tentative infructueuse d'avoir une base MongoDB en local n'a pas résolu le problème. Le problème vient surement de `next-plugin-preval` utilisé par `Fuse.js`.
+~~Le build ne fonctionne que sur Vercel, ou plutôt le build de fonctionne que couplé à [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) comme datalayer. Une tentative infructueuse d'avoir une base MongoDB en local n'a pas résolu le problème. Le problème vient surement de `next-plugin-preval` utilisé par `Fuse.js`.~~
+
+Le problème venait que le server TinaCMS ne fonctionnait plus quand le build Next.js était lancé.
+
+Un script pour gérer le build localement a été mis en place. cf `./scripts/build-local.sh`.
+
+```cmd Build localement
+pnpm build-local
+```
+
+```cmd Servir le build localement
+pnpm serve-local
+```
+
+### Erreur ERR_REQUIRE_ESM sur Vercel (react-dnd)
+
+!!!success Problème résolu
+!!!
+
+L'erreur `ERR_REQUIRE_ESM: require() of ES Module react-dnd-html5-backend` apparaissait sur Vercel lors de l'authentification TinaCMS.
+
+**Cause :** `@udecode/plate-dnd` (dépendance interne de TinaCMS) utilise `require()` pour importer `react-dnd@16` qui est **ESM-only**. Ce problème n'apparaît pas en local car le bundling est différent.
+
+**Solution :** Forcer `react-dnd` et `react-dnd-html5-backend` à la version **14.x** (CommonJS) via pnpm overrides :
+
+```json package.json
+"pnpm": {
+  "overrides": {
+    "react-dnd": "14.0.5",
+    "react-dnd-html5-backend": "14.1.0"
+  }
+}
+```
+
+Ces versions sont compatibles avec `@udecode/plate-dnd` qui demande `>=14.0.0`.
+
+**Après modification :** Régénérer le lockfile :
+
+```bash
+trash node_modules pnpm-lock.yaml && pnpm install
+# ou
+rm -rf node_modules && rm pnpm-lock.yaml && pnpm install
+```
+
+**Références :**
+
+- [Issue TinaCMS demo #131](https://github.com/tinacms/tina-self-hosted-demo/issues/131)
+- [Issue Plate #1609](https://github.com/udecode/plate/issues/1609)
+
+### Versioning avec Changesets
+
+!!!success Problème résolu
+!!!
+
+Le projet utilise [Changesets](https://github.com/changesets/changesets) pour gérer les versions et le changelog. Cela permet de tracker la synchronisation entre les différentes instances (RWP, RWEB, REIPRO, etc.).
+
+**Workflow :**
+
+1. **Après un changement significatif**, créer un changeset :
+
+```bash
+pnpm changeset
+```
+
+Cela crée un fichier dans `.changeset/` décrivant le changement (patch/minor/major).
+
+2. **Pour publier une nouvelle version** :
+
+```bash
+pnpm release
+```
+
+Cela applique les changesets, met à jour la version dans `package.json`, génère le `CHANGELOG.md` et commit.
+
+**Types de versions :**
+
+| Type    | Quand l'utiliser                            |
+| ------- | ------------------------------------------- |
+| `patch` | Bug fixes, corrections mineures             |
+| `minor` | Nouvelles fonctionnalités rétro-compatibles |
+| `major` | Breaking changes, modifications majeures    |
+
+**Vérifier la synchronisation :**
+
+Comparer la version dans `package.json` entre `gen-referentiel-core` et les projets dérivés permet de savoir s'ils sont synchronisés.
+
+### Protection de la branche main
+
+!!!success Problème résolu
+!!!
+
+L'édition directe sur les branches `main` et `master` via TinaCMS est interdite pour éviter les modifications non revues.
+
+**Solution :** Un `ProtectedGitHubProvider` custom a été créé (`tina/ProtectedGitHubProvider.ts`) qui wrapper le `GitHubProvider` standard et refuse les écritures sur les branches bloquées.
+
+**Configuration :** Dans `tina/database.ts`, la liste des branches bloquées est configurable :
+
+```typescript
+gitProvider: new ProtectedGitHubProvider({
+  branch,
+  owner,
+  repo,
+  token,
+  blockedBranches: ['main', 'master'], // Branches protégées
+}),
+```
+
+**Comportement :**
+
+- Toute tentative de sauvegarde sur `main` affiche une erreur dans TinaCMS
+- Les contributeurs doivent utiliser une branche de travail (ex: `cms`, `content-update`)
+- Les modifications sont ensuite intégrées via Pull Request
+
+**Pour ajouter d'autres branches protégées :** Modifier le tableau `blockedBranches` dans `tina/database.ts`.
+
+## Problématiques à resoudre
 
 ### Bug du composant `<PositionableImage />` ou **Adv. Image**
 
@@ -300,8 +504,8 @@ Pour pouvoir profiter des dernières fonctionnalités de TinaCMS (a challenger) 
 
 **Checklist**
 
-- [ ] Repartir d'une des dernières versions démo du [tina-barebones-starter](https://github.com/tinacms/tina-barebones-starter) pour refaire la stack ;
-  - [ ] Si possible, ne pas utiliser `next-plugin-preval` ;
-  - [ ] Valider que le build en local fonctionne ;
-  - [ ] Valider que l'internationalisation fonctionne.
-- [ ] Créer et mettre en library un maximum de chose pour avoir une **vraie** code base.
+- [x] Repartir d'une des dernières versions démo du [tina-barebones-starter](https://github.com/tinacms/tina-barebones-starter) pour refaire la stack ;
+  - [x] Si possible, ne pas utiliser `next-plugin-preval` ;
+  - [x] Valider que le build en local fonctionne ;
+  - [x] Valider que l'internationalisation fonctionne.
+- [x] Créer et mettre en library un maximum de chose pour avoir une **vraie** code base.

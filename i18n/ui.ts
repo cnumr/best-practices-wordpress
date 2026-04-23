@@ -18,8 +18,8 @@ export const ui = {
     'seo.default.description': 'Directrices de buenas prácticas',
     'seo.url': siteURL + PUBLIC_BASE,
     'seo.titleTemplate': '%s | Colectivo de TI Verde',
-    'seo.fb.image.url': '/asso-greenit-share-fb.png',
-    'seo.tw.image.url': '/asso-greenit-share-tw.png',
+    'seo.fb.image.url': '/assets/asso-greenit-share.png',
+    'seo.tw.image.url': '/assets/asso-greenit-share.png',
     'seo.image.alt': 'Directrices de buenas prácticas',
     'seo.noRobots': true,
     'last-update': 'Última actualización',
@@ -45,6 +45,7 @@ export const ui = {
 
     // src/pages/[lang]/personas/index.astro
     Personas: 'Personas',
+    'Aucun contenu disponible.': 'No hay contenido disponible.',
     'Contribuez !': '¡Contribuir!',
     'Voir la méthode de contribution sur le GitHub du CNUMR':
       'Vea el método de contribución en CNUMR GitHub',
@@ -88,6 +89,13 @@ export const ui = {
     // src/components/mdx/MDXLexiqueTooltip.astro
     'Définition manquante, vérifier le formatage du lien ou si la fiche existe dans le Lexique.':
       'Falta definición, verifique el formato del enlace o si la entrada existe en el Glosario.',
+
+    // src/components/mdx/LexiqueTooltip.tsx
+    'lexique.aria-label':
+      'Definición de {term}. Presione Entrar o Espacio para mostrar.',
+    'lexique.aria-label-tooltip': 'Definición de {term}',
+    'lexique.loading': 'Cargando...',
+    'lexique.not-found': 'Término "{term}" no encontrado en el glosario',
 
     // src/components/CardView.astro
     Fort: 'Fuerte',
@@ -175,7 +183,15 @@ export const ui = {
     'e-waste': 'Residuos electrónicos',
     electricity: 'El consumo de energía',
     ghg: 'Emisiones de gases de efecto invernadero',
-    tdb: 'A definir',
+    // MoE
+    moe: 'implementación',
+    'priority-level': 'Nivel de prioridad',
+    // Tiers
+    tiers: 'Terceros afectados',
+    'user-device': 'Usuario/Terminal',
+    // "network": "Réseau",
+    datacenter: 'Centro de datos',
+    tdb: 'Por definir',
     'Previous REF ID': 'REF ID anterior',
     'No previous Version': 'Sin versión anterior',
   },
@@ -185,8 +201,8 @@ export const ui = {
     'seo.default.description': 'Best practice guidelines',
     'seo.url': siteURL + PUBLIC_BASE,
     'seo.titleTemplate': '%s | Green IT Collective',
-    'seo.fb.image.url': '/asso-greenit-share-fb.png',
-    'seo.tw.image.url': '/asso-greenit-share-tw.png',
+    'seo.fb.image.url': '/assets/asso-greenit-share.png',
+    'seo.tw.image.url': '/assets/asso-greenit-share.png',
     'seo.image.alt': 'Best practice guidelines',
     'seo.noRobots': true,
     'last-update': 'Last update',
@@ -212,6 +228,7 @@ export const ui = {
 
     // src/pages/[lang]/personas/index.astro
     Personas: 'Personas',
+    'Aucun contenu disponible.': 'No content available.',
     'Contribuez !': 'Contribute!',
     'Voir la méthode de contribution sur le GitHub du CNUMR':
       'See the contribution method on the CNUMR GitHub',
@@ -256,6 +273,13 @@ export const ui = {
     'Définition manquante, vérifier le formatage du lien ou si la fiche existe dans le Lexique.':
       'Missing definition, check the formatting of the link or if the entry exists in the Glossary.',
 
+    // src/components/mdx/LexiqueTooltip.tsx
+    'lexique.aria-label':
+      'Definition of {term}. Press Enter or Space to display.',
+    'lexique.aria-label-tooltip': 'Definition of {term}',
+    'lexique.loading': 'Loading...',
+    'lexique.not-found': 'Term "{term}" not found in the glossary',
+
     // src/components/CardView.astro
     Fort: 'Strong',
     Moyen: 'Average',
@@ -285,6 +309,7 @@ export const ui = {
 
     // src/components/FichesMetasDisplay.astro
     'Sommaire :': 'Summary :',
+    responsible: 'Responsible(s)',
 
     // src/components/LanguagePicker.astro
     'Language picker': 'Language selector',
@@ -341,6 +366,14 @@ export const ui = {
     'e-waste': 'Electronic waste',
     electricity: 'Power consumption',
     ghg: 'Greenhouse gas emissions',
+    // MoE
+    moe: 'implementation',
+    'priority-level': 'Priority level',
+    // Tiers
+    tiers: 'Third party impacted',
+    'user-device': 'User/Terminal',
+    // "network": "Réseau",
+    datacenter: 'Datacenter',
     tdb: 'To define',
     'Previous REF ID': 'Previous REF ID',
     'No previous Version': 'No previous Version',
@@ -352,8 +385,8 @@ export const ui = {
     'seo.default.description': 'Référentiel de bonnes pratiques',
     'seo.url': siteURL + PUBLIC_BASE,
     'seo.titleTemplate': '%s | Collectif Green IT',
-    'seo.fb.image.url': '/asso-greenit-share-fb.png',
-    'seo.tw.image.url': '/asso-greenit-share-tw.png',
+    'seo.fb.image.url': '/assets/asso-greenit-share.png',
+    'seo.tw.image.url': '/assets/asso-greenit-share.png',
     'seo.image.alt': 'Référentiel de bonnes pratiques',
     'seo.noRobots': true,
     'last-update': 'Dernière mise à jour',
@@ -380,6 +413,7 @@ export const ui = {
 
     // src/pages/[lang]/personas/index.astro
     Personas: 'Personas',
+    'Aucun contenu disponible.': 'Aucun contenu disponible.',
     'Contribuez !': 'Contribuez !',
     'Voir la méthode de contribution sur le GitHub du CNUMR':
       'Voir la méthode de contribution sur le GitHub du CNUMR',
@@ -423,6 +457,13 @@ export const ui = {
     // src/components/mdx/MDXLexiqueTooltip.astro
     'Définition manquante, vérifier le formatage du lien ou si la fiche existe dans le Lexique.':
       'Définition manquante, vérifier le formatage du lien ou si la fiche existe dans le Lexique.',
+
+    // src/components/mdx/LexiqueTooltip.tsx
+    'lexique.aria-label':
+      'Définition de {term}. Appuyez sur Entrée ou Espace pour afficher.',
+    'lexique.aria-label-tooltip': 'Définition de {term}',
+    'lexique.loading': 'Chargement...',
+    'lexique.not-found': 'Terme "{term}" non trouvé dans le lexique',
 
     // src/components/CardView.astro
     Fort: 'Fort',
@@ -514,12 +555,12 @@ export const ui = {
     // MoE
     moe: 'Mise en oeuvre',
     'priority-level': 'Degré de priorité',
-    tdb: 'À définir',
     // Tiers
     tiers: 'Tier impacté',
     'user-device': 'Utilisateur/Terminal',
     // "network": "Réseau",
     datacenter: 'Datacenter',
+    tdb: 'À définir',
     'Previous REF ID': 'REF ID précédente',
     'No previous Version': 'Pas de version précédente',
     rgesn: 'RGESN',

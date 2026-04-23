@@ -2,16 +2,14 @@
 refID: '1.02'
 title: Nettoyer dès l'installation
 createdAt: 2024-01-20T13:17:16.663Z
-updatedAt: 2024-02-13T16:32:53.214Z
+updatedAt: 2025-12-19T14:33:24.600Z
 language: fr
 published: true
 refType: RWP
 versions:
-  - version: 1.0.0
+  - version: 1.1.0
     idRef: '1.02'
-people: Florine & Dominique
-scope:
-  - features
+people: 'Florine & Dominique, Dareth'
 responsible:
   - responsible: src/content/personas/fr/codeuseur-developpeuser.mdx
   - responsible: >-
@@ -20,6 +18,8 @@ responsible:
 lifecycle: 2-installation
 environmental_impact: medium_environmental_impact
 priority_implementation: high_priority
+scope:
+  - features
 saved_resources:
   - storage
   - network
@@ -33,26 +33,27 @@ validations:
 
 ## Sujet
 
-Par défaut, WordPress comprend déjà un certain nombre de fonctionnalités (gestion des pages, des articles et de leurs catégories, des commentaires, des médias et des utilisateurs). Lors de l'installation, celui-ci embarque également son thème du moment avec son constructeur de pages, et deux extensions.
+Par défaut, WordPress comprend déjà un certain nombre de fonctionnalités (gestion des pages, des articles et de leurs catégories, des commentaires, des médias et des utilisateurs). Lors de l'installation, celui-ci embarque également les 4 derniers thèmes "TwentyTwentyXXXX", tous compatibles avec son constructeur de pages natif Gutenberg, et 2 extensions (Akismet, Hello Dolly).
 
-Tout cela nécessite un grand nombre de fichiers qui pèse environ 67Mo (en version 6.0.3) sur l'hébergement.
-Certaines fonctionnalités peuvent être inutiles ou avoir été définies comme non essentielles dans votre analyse préalable.
+En décembre 2025 ([version 6.9.3 en français](https://fr.wordpress.org/latest-fr_FR.zip)), WordPress représente un grand nombre de fichiers, et pèse environ 96,6 Mo sur l'hébergement. 
+
+Certaines fonctionnalités peuvent être inutiles ou avoir été définies comme non-essentielles dans votre analyse préalable.
 
 ## GreenIT vous conseille
 
-Pour éviter cette surcharge initiale, dès l'installation en \[\[local]] ou en ligne, nous vous invitons à faire un premier nettoyage de votre WordPress en désactivant ou supprimant, quand c'est possible, les éléments non désirés.
+Pour éviter cette surcharge initiale, dès l'installation en \[\[local]] ou en ligne, nous vous invitons à faire un premier nettoyage de votre WordPress en désactivant ou supprimant, quand c'est possible, les éléments non-désirés.
 
-- Dans les actualités et les pages, il existe un premier article d'exemple et une page d'exemple, que vous pouvez supprimer définitivement ;
-- L'extension Hello Dolly peut être supprimée, elle n'apporte aucune fonctionnalité essentielle.
-- Si vous n'avez pas l'utilité des commentaires sur votre site, désactivez-les et supprimez l'extension Akismet Anti-spam ;
-- WordPress permet de lire les emoticons (ex : :), ;), \:D, etc.) pour les afficher sous forme d'émojis pour les visiteurs. Si vous n'en avez pas l'utilité, désactivez cette fonctionnalité.
-- Gutenberg anticipe l'affichage de son système de dégradé en \[\[front-office|front]]. Si votre charte graphique n'en prévoit pas, vous pouvez nettoyer la structure HTML de ces éléments superflus.
+* Dans les actualités et les pages, il existe un premier article d'exemple et une page d'exemple, que vous pouvez supprimer définitivement ;
+* L'extension Hello Dolly peut être supprimée, elle n'apporte aucune fonctionnalité essentielle (Hello Dolly sert d'inspiration à la création de ses premiers plugins basiques).
+* Si vous n'avez pas l'utilité des commentaires sur votre site, désactivez-les et supprimez l'extension Akismet Anti-spam ;
+* WordPress permet de lire les emoticons (ex : :), ;), \:D, etc.) pour les afficher sous forme d'émojis pour les visiteurs. Si vous n'en avez pas l'utilité, désactivez cette fonctionnalité.
+* Gutenberg anticipe l'affichage de son système de dégradé en \[\[front-office|front]]. Si votre charte graphique n'en prévoit pas, vous pouvez nettoyer la structure HTML de ces éléments superflus.
 
 ### Solution no-code 🌱🌱
 
 **Pour désactiver les commentaires pour des contenus spécifiques**, rendez-vous dans la zone "Discussion" du contenu, puis décochez la case "Autoriser les commentaires"
 
-**Pour désactiver les commentaires de tout le site en \[\[front-office|front]]**, rendez-vous dans "Réglages > Commentaires > Réglages de publication par défaut", commencez par décocher les cases précochées, aussi décochez la case "Afficher les avatars". Ensuite, il existe des extensions qui permettent de désactiver complètement les commentaires. Ainsi, la fonctionnalité n'apparaîtra ni pour les visiteurs ni dans l'administration.
+**Pour désactiver les commentaires de tout le site en \[\[front-office|front]]**, rendez-vous dans "Réglages > Commentaires > Réglages de publication par défaut", commencez par décocher les cases précochées, aussi décochez la case "Afficher les avatars". Ensuite, il existe des extensions qui permettent de désactiver complètement les commentaires. Ainsi, la fonctionnalité n'apparaîtra ni pour les visiteurs, ni dans l'administration.
 
 **Pour désactiver complètement la fonctionnalité commentaire**, utilisez une extension dédiée (vérifiez que ce paramétrage n'est pas disponible dans une autre extension déjà présente).
 
@@ -75,9 +76,9 @@ Ajoutez ce code dans le fichier functions.php de votre thème enfant :
 
 **Pour désactiver les commentaires de tout le site en \[\[front-office|front]]**, créez votre thème enfant et surchargez les fichiers page.php et single.php pour ne plus appeler la fonction `comments_template()`;
 
-**Pour désactiver les Emojis**, vous pouvez ajouter du code dans le functions.php de votre thème enfant tel que présenté dans la source cité en bas de cette page.
+**Pour désactiver les Emojis**, vous pouvez créer une extenstion incluant le code présenté dans "Solution code pas-à-pas"  de cette page. Attention à [respecter les conventions de codage des extensions](https://developer.wordpress.org/plugins/plugin-basics/) (vous pouvez vous inspirez de Hello Dolly ou Akismet).
 
 ## Sources
 
-- [https://yesyouweb.com/retirer-commentaires-site-wordpress/](https://yesyouweb.com/retirer-commentaires-site-wordpress/)
-- [https://kinsta.com/fr/base-de-connaissances/desactiver-emojis-wordpress/](https://kinsta.com/fr/base-de-connaissances/desactiver-emojis-wordpress/)
+* [https://yesyouweb.com/retirer-commentaires-site-wordpress/](https://yesyouweb.com/retirer-commentaires-site-wordpress/)
+* [https://kinsta.com/fr/base-de-connaissances/desactiver-emojis-wordpress/](https://kinsta.com/fr/base-de-connaissances/desactiver-emojis-wordpress/)
