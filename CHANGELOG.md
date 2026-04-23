@@ -1,5 +1,39 @@
 # gen-referentiel-core
 
+## 0.7.0
+
+### Minor Changes
+
+- Add core-version to footer
+
+## 0.6.5
+
+### Patch Changes
+
+- nsures NEXT_PUBLIC_REF_NAME is set (defaults to REF_HOME) so the generate-api scripts (generate-api-data.mjs and generate-openapi-spec.mjs) see the correct ref and don't fall back to RWEB, which has no `src/content/fiches/` to scan and would fail
+
+## 0.6.4
+
+### Patch Changes
+
+- Les scripts de génération API vérifient maintenant la feature flag `api` du référentiel actif. Pour REF_HOME (et tout référentiel avec `api: false`), la génération est ignorée silencieusement sans erreur.
+
+## 0.6.3
+
+### Patch Changes
+
+- 5fe06ef: feat(footer): conditionne le lien API via le flag linkToAPI dans referentiel-config
+
+  Le lien vers la documentation API dans le footer est désormais conditionné par le flag `featuresEnabled.linkToAPI` dans `referentiel-config.ts`, permettant de l'activer ou désactiver par référentiel.
+
+- 18aaa18: fix(config): désactive le lien API pour REF_HOME
+
+  Le portail REF_HOME n'a pas de documentation API propre, le flag `linkToAPI` est donc positionné à `false` pour ce référentiel.
+
+- 82bec71: fix(tina): corrige le type de maxValue dans les validations de fiche
+
+  TinaCMS interprétait les valeurs numériques du champ `maxValue` comme `number` au lieu de `string`. Ajout de `ui.parse` et `ui.format` pour forcer la coercition en string.
+
 ## 0.6.2
 
 ### Patch Changes
